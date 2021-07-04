@@ -10,6 +10,8 @@ Vue.component("ValidationProvider", ValidationProvider);
 import Vuesax from "vuesax";
 
 import "vuesax/dist/vuesax.css"; //Vuesax styles
+import "material-icons/iconfont/material-icons.css";
+
 Vue.use(Vuesax, {
 	// eslint-disable-next-line prettier-vue/prettier
 	rtl: true,
