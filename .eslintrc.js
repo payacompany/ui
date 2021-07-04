@@ -80,8 +80,10 @@ module.exports = {
         useTabs: false,
         trailingComma: "none",
         printWidth: 80,
+        endOfLine: "off",
       },
     ],
+    "prettier/prettier": ["error", { endOfLine: "off" }],
     "vue/html-self-closing": [
       "error",
       {
