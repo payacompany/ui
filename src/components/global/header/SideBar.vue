@@ -5,6 +5,7 @@
 		</vs-button>
 		<vs-sidebar
 			v-model="active"
+			:hidden-background="true"
 			parent="body"
 			default-index="1"
 			color="primary"
