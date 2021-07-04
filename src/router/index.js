@@ -1,13 +1,23 @@
+/* eslint-disable prettier-vue/prettier */
 import Vue from "vue";
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
-const routes = [];
+const routes = [
+	{
+		path: "/dashboard",
+		name: "dashboard",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () => import("../views/dashboard/index.vue"),
+	},
+];
 
 const router = new VueRouter({
 	mode: "history",
 	base: process.env.BASE_URL,
-	routes
+	routes,
 });
 router.afterEach(() => {});
 

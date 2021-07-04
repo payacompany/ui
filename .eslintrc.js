@@ -4,7 +4,11 @@ module.exports = {
 		"plugin:prettier-vue/recommended",
 		"prettier",
 	],
-
+	parserOptions: {
+		parser: "babel-eslint",
+		sourceType: "module",
+		allowImportExportEverywhere: true,
+	},
 	settings: {
 		"prettier-vue": {
 			// Settings for how to process Vue SFC Blocks

@@ -1,6 +1,6 @@
 <template>
-	<div id="app">
-		ddsad
+	<div>
+		<slot />
 	</div>
 </template>
 
