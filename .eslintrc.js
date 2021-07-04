@@ -71,8 +71,6 @@ module.exports = {
 	},
 
 	rules: {
-		semi: ["error", "never"],
-		quotes: ["error", "single"],
 		"prettier-vue/prettier": [
 			"error",
 			{

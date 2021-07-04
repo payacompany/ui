@@ -9,5 +9,6 @@ Vue.component("ValidationProvider", ValidationProvider);
 Vue.config.productionTip = false;
 
 new Vue({
+	// eslint-disable-next-line prettier-vue/prettier
 	render: h => h(App),
 }).$mount("#app");
