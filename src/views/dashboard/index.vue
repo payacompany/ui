@@ -1,16 +1,13 @@
 <template>
-	<div>
-		<h1>
-			test
-		</h1>
+	<div class="container mx-auto">
+		<profile />
 	</div>
 </template>
 
 <script>
+import Profile from "../../components/pages/dashboard/profile/index.vue";
 export default {
-	created () {
-		console.log("herre");
-	}
+	components: { Profile }
 };
 </script>
 
