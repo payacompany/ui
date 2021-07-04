@@ -1,6 +1,6 @@
 <template lang="html">
 	<div id="parentx">
-		<vs-button @click="active = !active" color="primary" type="filled">
+		<vs-button color="primary" type="filled" @click="active = !active">
 			Open Sidebar
 		</vs-button>
 		<vs-sidebar
@@ -8,44 +8,40 @@
 			parent="body"
 			default-index="1"
 			color="primary"
-			class="sidebarx"
+			class="text-center"
 			spacer
 		>
 			<div slot="header" class="header-sidebar">
-				<vs-avatar
-					size="70px"
-					src="https://randomuser.me/api/portraits/men/85.jpg"
-				/>
-
-				<h4>
-					My Name
-				</h4>
+				<h4>جایگاه لوگو</h4>
 			</div>
 
 			<vs-sidebar-item index="1" icon="question_answer">
-				Dashboard
+				پروفایل شما
 			</vs-sidebar-item>
-
+			<vs-divider />
 			<vs-sidebar-item index="2" icon="gavel">
-				History
+				اتاق معاملات
 			</vs-sidebar-item>
-
-			<vs-divider icon="person" position="left">
-				User
-			</vs-divider>
 
 			<vs-sidebar-item index="3" icon="verified_user">
-				Configurations
+				کیف پول
 			</vs-sidebar-item>
 			<vs-sidebar-item index="4" icon="account_box">
-				Profile
+				سفارشات
 			</vs-sidebar-item>
-			<vs-sidebar-item index="5">
-				Card
+			<vs-sidebar-item index="5" icon="account_box">
+				سابقه
 			</vs-sidebar-item>
 
-			<div class="footer-sidebar" slot="footer">
-				<vs-button icon="reply" color="danger" type="flat">log out</vs-button>
+			<div slot="footer" class="text-center w-100">
+				<vs-button
+					icon="reply"
+					color="danger"
+					class="text-center w-100 flex justify-center"
+					type="flat"
+				>
+					خروج از حساب کاربری
+				</vs-button>
 			</div>
 		</vs-sidebar>
 	</div>
@@ -58,3 +54,11 @@ export default {
 	})
 };
 </script>
+
+<style lang="scss" scoped>
+::v-deep {
+	.vs-button-danger.vs-button-flat {
+		width: 100%;
+	}
+}
+</style>
