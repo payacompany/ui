@@ -15,6 +15,23 @@ export default {
 		layout () {
 			return this.$route.meta.layout || "default-layout";
 		}
+	},
+	mounted () {
+		console.log(this.$route);
 	}
 };
 </script>
+
+<style lang="scss">
+.fade-enter-active,
+.fade-leave-active {
+	transition-duration: 0.3s;
+	transition-property: opacity;
+	transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+	opacity: 0;
+}
+</style>

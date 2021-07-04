@@ -7,7 +7,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+	created () {
+		console.log("herre");
+	}
+};
 </script>
 
 <style></style>
