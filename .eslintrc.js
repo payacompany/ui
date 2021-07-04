@@ -77,6 +77,9 @@ module.exports = {
         htmlWhitespaceSensitivity: "ignore",
         semi: false,
         singleQuote: true,
+        useTabs: false,
+        trailingComma: "none",
+        printWidth: 80,
       },
     ],
     "vue/html-self-closing": [
