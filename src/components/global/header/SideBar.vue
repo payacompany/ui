@@ -1,8 +1,8 @@
 <template lang="html">
 	<div id="parentx">
-		<vs-button color="primary" type="filled" @click="active = !active">
-			Open Sidebar
-		</vs-button>
+		<span class="material-icons cursor-pointer" @click="active = !active">
+			menu
+		</span>
 		<vs-sidebar
 			v-model="active"
 			:hidden-background="true"
