@@ -2,7 +2,7 @@ module.exports = {
 	extends: [
 		"plugin:vue/recommended",
 		"plugin:prettier-vue/recommended",
-		"prettier",
+		"prettier"
 	],
 
 	settings: {
@@ -48,10 +48,10 @@ module.exports = {
 					module: { lang: "js" },
 
 					// Ignore `<comments>` block (omit it or set it to `false` to ignore the block)
-					comments: false,
+					comments: false
 
 					// Other custom blocks that are not listed here will be ignored
-				},
+				}
 			},
 
 			// Use prettierrc for prettier options or not (default: `true`)
@@ -65,9 +65,9 @@ module.exports = {
 				ignorePath: ".testignore",
 
 				// Process the files in `node_modules` or not (default: `false`)
-				withNodeModules: false,
-			},
-		},
+				withNodeModules: false
+			}
+		}
 	},
 
 	rules: {
@@ -76,30 +76,31 @@ module.exports = {
 			{
 				htmlWhitespaceSensitivity: "ignore",
 				semi: true,
+				singleQuote: true,
 				doubleQuote: true,
 				useTabs: true,
 				trailingComma: "none",
-				printWidth: 160,
-				tabWidth: 2,
+				printWidth: 80,
+				tabWidth: 4,
 				semi: true,
 				singleQuote: false,
 				bracketSpacing: true,
 				arrowParens: "avoid",
-				endOfLine: "auto",
-			},
+				endOfLine: "auto"
+			}
 		],
 		"vue/html-self-closing": [
 			"error",
 			{
 				html: {
-					void: "any",
-				},
-			},
+					void: "any"
+				}
+			}
 		],
 		"vue/no-use-v-if-with-v-for": ["off"],
 		"vue/component-name-in-template-casing": ["off"],
 		"vue/no-unused-components": ["off"],
 		eqeqeq: ["off"],
-		"no-new": ["off"],
-	},
+		"no-new": ["off"]
+	}
 };

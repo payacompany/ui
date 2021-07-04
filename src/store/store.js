@@ -9,15 +9,15 @@ import actions from "./actions";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  getters,
-  mutations,
-  state,
-  actions,
-  modules: {
-    auth,
-    wallet,
-    portfolio,
-    profile,
-  },
-  strict: process.env.NODE_ENV !== "production",
+	getters,
+	mutations,
+	state,
+	actions,
+	modules: {
+		auth,
+		wallet,
+		portfolio,
+		profile
+	},
+	strict: process.env.NODE_ENV !== "production"
 });
