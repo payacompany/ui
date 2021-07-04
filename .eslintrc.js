@@ -78,7 +78,6 @@ module.exports = {
 			{
 				htmlWhitespaceSensitivity: "ignore",
 				semi: true,
-				singleQuote: true,
 				doubleQuote: true,
 				useTabs: true,
 				trailingComma: "none",
