@@ -1,11 +1,25 @@
 <template>
-	<div class="bg-white shadow-md mt-3 rounded-md p-5">
-		profile
+	<div>
+		<card-with-header>
+			<template #header>
+				<p class="text-lg font-bold">
+					حساب کاربری شما
+				</p>
+			</template>
+			<template #body>
+				dsadlkj
+			</template>
+		</card-with-header>
 	</div>
 </template>
 
 <script>
-export default {};
+import CardWithHeader from "../../../global/cards/CardWithHeader.vue";
+export default {
+	components: {
+		CardWithHeader
+	}
+};
 </script>
 
 <style></style>
