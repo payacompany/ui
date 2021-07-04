@@ -1,101 +1,108 @@
 module.exports = {
-  extends: [
-    "plugin:vue/recommended",
-    "plugin:prettier-vue/recommended",
-    "prettier",
-  ],
+	extends: [
+		"plugin:vue/recommended",
+		"plugin:prettier-vue/recommended",
+		"prettier",
+	],
 
-  settings: {
-    "prettier-vue": {
-      // Settings for how to process Vue SFC Blocks
-      SFCBlocks: {
-        /**
-         * Use prettier to process `<template>` blocks or not
-         *
-         * If set to `false`, you may need to enable those vue rules that are disabled by `eslint-config-prettier`,
-         * because you need them to lint `<template>` blocks
-         *
-         * @default true
-         */
-        template: true,
+	settings: {
+		"prettier-vue": {
+			// Settings for how to process Vue SFC Blocks
+			SFCBlocks: {
+				/**
+				 * Use prettier to process `<template>` blocks or not
+				 *
+				 * If set to `false`, you may need to enable those vue rules that are disabled by `eslint-config-prettier`,
+				 * because you need them to lint `<template>` blocks
+				 *
+				 * @default true
+				 */
+				template: true,
 
-        /**
-         * Use prettier to process `<script>` blocks or not
-         *
-         * If set to `false`, you may need to enable those rules that are disabled by `eslint-config-prettier`,
-         * because you need them to lint `<script>` blocks
-         *
-         * @default true
-         */
-        script: true,
+				/**
+				 * Use prettier to process `<script>` blocks or not
+				 *
+				 * If set to `false`, you may need to enable those rules that are disabled by `eslint-config-prettier`,
+				 * because you need them to lint `<script>` blocks
+				 *
+				 * @default true
+				 */
+				script: true,
 
-        /**
-         * Use prettier to process `<style>` blocks or not
-         *
-         * @default true
-         */
-        style: true,
+				/**
+				 * Use prettier to process `<style>` blocks or not
+				 *
+				 * @default true
+				 */
+				style: true,
 
-        // Settings for how to process custom blocks
-        customBlocks: {
-          // Treat the `<docs>` block as a `.markdown` file
-          docs: { lang: "markdown" },
+				// Settings for how to process custom blocks
+				customBlocks: {
+					// Treat the `<docs>` block as a `.markdown` file
+					docs: { lang: "markdown" },
 
-          // Treat the `<config>` block as a `.json` file
-          config: { lang: "json" },
+					// Treat the `<config>` block as a `.json` file
+					config: { lang: "json" },
 
-          // Treat the `<module>` block as a `.js` file
-          module: { lang: "js" },
+					// Treat the `<module>` block as a `.js` file
+					module: { lang: "js" },
 
-          // Ignore `<comments>` block (omit it or set it to `false` to ignore the block)
-          comments: false,
+					// Ignore `<comments>` block (omit it or set it to `false` to ignore the block)
+					comments: false,
 
-          // Other custom blocks that are not listed here will be ignored
-        },
-      },
+					// Other custom blocks that are not listed here will be ignored
+				},
+			},
 
-      // Use prettierrc for prettier options or not (default: `true`)
-      usePrettierrc: true,
+			// Use prettierrc for prettier options or not (default: `true`)
+			usePrettierrc: true,
 
-      // Set the options for `prettier.getFileInfo`.
-      // @see https://prettier.io/docs/en/api.html#prettiergetfileinfofilepath-options
-      fileInfoOptions: {
-        // Path to ignore file (default: `'.prettierignore'`)
-        // Notice that the ignore file is only used for this plugin
-        ignorePath: ".testignore",
+			// Set the options for `prettier.getFileInfo`.
+			// @see https://prettier.io/docs/en/api.html#prettiergetfileinfofilepath-options
+			fileInfoOptions: {
+				// Path to ignore file (default: `'.prettierignore'`)
+				// Notice that the ignore file is only used for this plugin
+				ignorePath: ".testignore",
 
-        // Process the files in `node_modules` or not (default: `false`)
-        withNodeModules: false,
-      },
-    },
-  },
+				// Process the files in `node_modules` or not (default: `false`)
+				withNodeModules: false,
+			},
+		},
+	},
 
-  rules: {
-    "prettier-vue/prettier": [
-      "error",
-      {
-        htmlWhitespaceSensitivity: "ignore",
-        semi: false,
-        singleQuote: true,
-        useTabs: false,
-        trailingComma: "none",
-        printWidth: 80,
-        endOfLine: "off",
-      },
-    ],
-    "prettier/prettier": ["error", { endOfLine: "off" }],
-    "vue/html-self-closing": [
-      "error",
-      {
-        html: {
-          void: "any",
-        },
-      },
-    ],
-    "vue/no-use-v-if-with-v-for": ["off"],
-    "vue/component-name-in-template-casing": ["off"],
-    "vue/no-unused-components": ["off"],
-    eqeqeq: ["off"],
-    "no-new": ["off"],
-  },
+	rules: {
+		semi: ["error", "never"],
+		quotes: ["error", "single"],
+		"prettier-vue/prettier": [
+			"error",
+			{
+				htmlWhitespaceSensitivity: "ignore",
+				semi: true,
+				singleQuote: true,
+				doubleQuote: true,
+				useTabs: true,
+				trailingComma: "none",
+				printWidth: 160,
+				tabWidth: 2,
+				semi: true,
+				singleQuote: false,
+				bracketSpacing: true,
+				arrowParens: "avoid",
+				endOfLine: "auto",
+			},
+		],
+		"vue/html-self-closing": [
+			"error",
+			{
+				html: {
+					void: "any",
+				},
+			},
+		],
+		"vue/no-use-v-if-with-v-for": ["off"],
+		"vue/component-name-in-template-casing": ["off"],
+		"vue/no-unused-components": ["off"],
+		eqeqeq: ["off"],
+		"no-new": ["off"],
+	},
 };
