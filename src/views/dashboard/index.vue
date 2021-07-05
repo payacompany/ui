@@ -1,6 +1,6 @@
 <template>
 	<div class="container mx-auto">
-		<profile />
+		<profile class="w-8/12 mx-auto" />
 	</div>
 </template>
 

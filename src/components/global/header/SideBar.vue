@@ -34,7 +34,7 @@
 				سابقه
 			</vs-sidebar-item>
 
-			<div slot="footer" class="text-center w-100">
+			<div slot="footer" class="text-center w-full">
 				<vs-button
 					icon="reply"
 					color="danger"
