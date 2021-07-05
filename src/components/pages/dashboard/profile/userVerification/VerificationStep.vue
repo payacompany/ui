@@ -54,6 +54,9 @@ export default {
 				case 1:
 					return "/profile/confim-phone";
 					break;
+				case 2:
+					return "/profile/user-identify";
+					break;
 				default:
 					return "/";
 					break;
