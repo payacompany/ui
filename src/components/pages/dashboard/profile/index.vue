@@ -19,9 +19,7 @@
 									{{ user.password }}
 								</p>
 								<div class="mt-3">
-									<vs-button size="small">
-										تغییر گذرواژه
-									</vs-button>
+									<change-pass-modal ref="changePassModal" />
 								</div>
 							</div>
 						</div>
@@ -54,12 +52,14 @@
 <script>
 import CardWithHeader from "../../../global/cards/CardWithHeader.vue";
 import InputWithCopy from "../../../global/inputs/InputWithCopy.vue";
+import ChangePassModal from "./changePassModal.vue";
 import UserVerification from "./userVerification/index.vue";
 export default {
 	components: {
 		CardWithHeader,
 		InputWithCopy,
-		UserVerification
+		UserVerification,
+		ChangePassModal
 	},
 	data () {
 		return {
