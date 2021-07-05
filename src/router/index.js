@@ -37,6 +37,15 @@ const routes = [
 		component: () =>
 			import("../views/dashboard/profile/bankAccounts/index.vue"),
 	},
+	{
+		path: "/profile/residence-info",
+		name: "residenceInfo",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () =>
+			import("../views/dashboard/profile/residenceInfo/index.vue"),
+	},
 ];
 
 const router = new VueRouter({

@@ -60,6 +60,9 @@ export default {
 				case 3:
 					return "/profile/user-bank-accounts";
 					break;
+				case 4:
+					return "/profile/residence-info";
+					break;
 				default:
 					return "/";
 					break;
