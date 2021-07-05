@@ -6,6 +6,18 @@ import "./assets/styles/css/index.css";
 
 import "./assets/scss/app.scss";
 
+import Toast from "vue-toastification";
+import "vue-toastification/dist/index.css";
+Vue.use(Toast, {
+	position: "bottom-right",
+	rtl: true,
+	timeout: 1533,
+	transition: "Vue-Toastification__fade",
+	maxToasts: 20,
+	newestOnTop: true,
+	// registration props here
+});
+
 import { ValidationProvider } from "vee-validate";
 Vue.component("ValidationProvider", ValidationProvider);
 
