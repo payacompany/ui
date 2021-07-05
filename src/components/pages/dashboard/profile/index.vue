@@ -6,7 +6,7 @@
 			</template>
 			<template #body>
 				<div class="flex flex-row justify-between w-100">
-					<div class="w-100 d-flex justify-between">
+					<div class="width-50 ml-2 d-flex justify-between">
 						<p class="text-xl font-bold">
 							{{ user.email }}
 						</p>
@@ -24,7 +24,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="w-100">
+					<div class="width-50 mr-2">
 						test
 					</div>
 				</div>
@@ -51,4 +51,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.width-50 {
+	width: 50%;
+}
+</style>
