@@ -4,7 +4,13 @@
 			<template #header>
 				<p class="text-xl font-bold">مدیریت Api ها</p>
 			</template>
-			<template #body> dsad</template>
+			<template #body>
+				<div>
+					<p class="text-center text-bold text-gray-400 text-sm">
+						برای مدیریت Api ابتدا باید شناسایی دوعاملی خود را فعال کنید.
+					</p>
+				</div>
+			</template>
 		</card-with-header>
 	</div>
 </template>
