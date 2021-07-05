@@ -57,6 +57,9 @@ export default {
 				case 2:
 					return "/profile/user-identify";
 					break;
+				case 3:
+					return "/profile/user-bank-accounts";
+					break;
 				default:
 					return "/";
 					break;

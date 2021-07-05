@@ -28,6 +28,15 @@ const routes = [
 		component: () =>
 			import("../views/dashboard/profile/userIdentify/index.vue"),
 	},
+	{
+		path: "/profile/user-bank-accounts",
+		name: "userBankAccounts",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () =>
+			import("../views/dashboard/profile/bankAccounts/index.vue"),
+	},
 ];
 
 const router = new VueRouter({
