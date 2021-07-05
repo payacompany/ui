@@ -14,7 +14,7 @@
 							{{ user.refCode }}
 						</p>
 						<div class="flex">
-							<div class="flex justify-between items-baseline w-6/12 ml-2">
+							<div class="flex justify-between items-baseline w-full ml-2">
 								<p>
 									{{ user.password }}
 								</p>
@@ -24,13 +24,13 @@
 									</vs-button>
 								</div>
 							</div>
-							<div class="flex justify-between w-6/12 mt-4 items-center mr-2">
-								<p>
-									شناسایی دو عاملی:
-									<span> ({{ twoFactorAuth ? "فعال" : "غیرفعال" }}) </span>
-								</p>
-								<vs-switch v-model="twoFactorAuth" color="dark" />
-							</div>
+						</div>
+						<div class="flex justify-between w-full mt-8 items-center">
+							<p>
+								شناسایی دو عاملی:
+								<span> ({{ twoFactorAuth ? "فعال" : "غیرفعال" }}) </span>
+							</p>
+							<vs-switch v-model="twoFactorAuth" color="primary" class="ml-2" />
 						</div>
 						<input-with-copy />
 					</div>

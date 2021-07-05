@@ -1,5 +1,5 @@
 <template>
-	<div class="container mx-auto">
+	<div class="container mx-auto mt-12">
 		<profile class="w-8/12 mx-auto" />
 	</div>
 </template>
