@@ -5,7 +5,36 @@
 		</p>
 		<vs-divider />
 		<div class="px-8 mt-5">
-			<qr-code text="Text to encode" />
+			<div class="flex flex-start">
+				<qr-code text="Text to encode" :size="200" />
+				<div class="mr-8">
+					<p>
+						مراحل فعالسازی:
+					</p>
+					<ul class="text-gray-400">
+						<li class="mt-3 text-sm">
+							1.ابتدا نرم افزار googleAuthenticator را از
+							<strong class="text-blue-500 cursor-pointer">گوگل پلی</strong> یا
+							<strong class="text-blue-500 cursor-pointer">پلی استور</strong> یا
+							<strong class="text-blue-500 cursor-pointer">کافه بازار</strong>
+							دانلود کنید.
+						</li>
+						<li class="mt-3 text-sm">
+							2.با کمک نرم افزار دانلود شده میتوانید qrcode رو به رو را اسکن
+							کنید یا میتوانید کد زیر را وارد کنید.
+							<span>
+								(توجه داشته باشید کد زیر همواره درجایی امن نگه داری کنید.)
+							</span>
+							<vs-input class="mt-3 min-w-full" />
+						</li>
+						<li class="mt-3 text-sm">
+							3.در مرحله سوم کد نمایش داده شده در googleAuthenticator را وارد
+							نمایید
+							<vs-input class="mt-3 min-w-6/12" />
+						</li>
+					</ul>
+				</div>
+			</div>
 			<div class="mt-5">
 				<vs-button class="w-full">فعالسازی</vs-button>
 			</div>
