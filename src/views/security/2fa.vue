@@ -27,7 +27,7 @@
 							</span>
 							<vs-input class="mt-3 min-w-full" />
 						</li>
-						<li class="mt-3 text-sm">
+						<li class="mt-3 text-sm flex items-baseline justify-between">
 							3.در مرحله سوم کد نمایش داده شده در googleAuthenticator را وارد
 							نمایید
 							<vs-input class="mt-3 min-w-6/12" />
