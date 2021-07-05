@@ -1,11 +1,20 @@
 <template>
 	<div class="py-3 flex justify-between items-center">
-		<p class="text-bold" :class="[step.isCompleted ? 'text-gray-400' : '']">
-			<span> {{ index + 1 }}. </span>
-			{{ step.name }}
-		</p>
 		<div>
-			<vs-button v-if="!step.isCompleted" size="small">
+			<p class="text-bold" :class="[step.isCompleted ? 'text-gray-400' : '']">
+				<span> {{ index + 1 }}. </span>
+				{{ step.name }}
+			</p>
+			<p class="text-xs" :class="[step.isCompleted ? 'text-gray-400' : '']">
+				{{ step.accessTo }}
+			</p>
+		</div>
+		<div>
+			<vs-button
+				v-if="!step.isCompleted"
+				:disabled="!step.isAllow"
+				size="small"
+			>
 				اعتبارسنجی
 			</vs-button>
 			<p v-else class="text-xs text-success">
@@ -22,8 +31,8 @@
 export default {
 	props: {
 		index: {
-			type: String,
-			default: "1"
+			type: Number,
+			default: 1
 		},
 		step: {
 			type: Object,

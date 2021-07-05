@@ -28,30 +28,54 @@ export default {
 				{
 					title: "مرحله اول",
 					name: "احراز ایمیل",
-					isCompleted: true
+					isCompleted: true,
+					accessTo: "اجازه برداشت",
+					isAllow: false
 				},
 				{
 					title: "مرحله دوم",
 					name: "اعتبارسنجی شماره موبایل",
-					isCompleted: true
+					isCompleted: false,
+					accessTo: "دسترسی به اتاق معاملات و واریز",
+					isAllow: false
 				},
 				{
 					title: "مرحله سوم",
 					name: "تکمیل اطلاعات کاربری",
-					isCompleted: false
+					isCompleted: false,
+					accessTo: "اجازه برداشت روزانه تا حد مجاز 1 BTC",
+					isAllow: false
 				},
 				{
 					title: "مرحله چهارم",
 					name: "ارسال مدارک",
-					isCompleted: false
+					isCompleted: false,
+					accessTo: "اجازه برداشت روزانه تا حد مجاز 10 BTC",
+					isAllow: false
 				},
 				{
 					title: "مرحله پنجم",
 					name: "اطلاعات محل سکونت",
-					isCompleted: false
+					isCompleted: false,
+					accessTo: "اجازه برداشت روزانه تا حد مجاز 100 BTC",
+					isAllow: false
 				}
 			]
 		};
+	},
+	mounted () {
+		this.kycStepsAllow();
+	},
+	methods: {
+		kycStepsAllow () {
+			let allow = false;
+			this.kycSteps.forEach((step, index) => {
+				if (!step.isCompleted && !allow) {
+					step.isAllow = true;
+					allow = true;
+				}
+			});
+		}
 	}
 };
 </script>
