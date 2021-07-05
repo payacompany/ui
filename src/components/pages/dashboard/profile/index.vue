@@ -35,7 +35,7 @@
 						<input-with-copy />
 					</div>
 					<div class="width-50 mr-2">
-						test
+						<user-verification />
 					</div>
 				</div>
 			</template>
@@ -46,10 +46,12 @@
 <script>
 import CardWithHeader from "../../../global/cards/CardWithHeader.vue";
 import InputWithCopy from "../../../global/inputs/InputWithCopy.vue";
+import UserVerification from "./userVerification/index.vue";
 export default {
 	components: {
 		CardWithHeader,
-		InputWithCopy
+		InputWithCopy,
+		UserVerification
 	},
 	data () {
 		return {

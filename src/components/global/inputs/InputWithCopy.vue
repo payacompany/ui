@@ -27,9 +27,8 @@ export default {
 		};
 	},
 	methods: {
-		handleCopy (result) {
+		handleCopy () {
 			this.$toast.success("کد معرف با موفقیت کپی شد.");
-			console.log("onCopy", result);
 		}
 	}
 };
