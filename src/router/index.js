@@ -12,7 +12,7 @@ const routes = [
 		component: () => import("../views/dashboard/index.vue"),
 	},
 	{
-		path: "/profile/confimPhone",
+		path: "/profile/confim-phone",
 		name: "confimPhone",
 		meta: {
 			requiresAuth: true,

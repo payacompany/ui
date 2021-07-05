@@ -13,6 +13,7 @@
 			<vs-button
 				v-if="!step.isCompleted"
 				:disabled="!step.isAllow"
+				:to="{ path: setRoute }"
 				size="small"
 			>
 				اعتبارسنجی
@@ -37,6 +38,26 @@ export default {
 		step: {
 			type: Object,
 			default: () => {}
+		}
+	},
+	data () {
+		return {
+			routePath: "/"
+		};
+	},
+	computed: {
+		setRoute () {
+			switch (this.index) {
+				case 0:
+					return "/profile/confirm-email";
+					break;
+				case 1:
+					return "/profile/confim-phone";
+					break;
+				default:
+					return "/";
+					break;
+			}
 		}
 	}
 };
