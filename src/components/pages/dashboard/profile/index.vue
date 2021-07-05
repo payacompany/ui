@@ -25,12 +25,20 @@
 								</div>
 							</div>
 						</div>
-						<div class="flex justify-between w-full mt-8 items-center">
+						<div
+							class="flex justify-between w-full mt-8 items-center"
+							@click="$router.push({ name: '2fa' })"
+						>
 							<p>
 								شناسایی دو عاملی:
 								<span> ({{ twoFactorAuth ? "فعال" : "غیرفعال" }}) </span>
 							</p>
-							<vs-switch v-model="twoFactorAuth" color="primary" class="ml-2" />
+							<vs-switch
+								v-model="twoFactorAuth"
+								disabled
+								color="primary"
+								class="ml-2"
+							/>
 						</div>
 						<input-with-copy />
 					</div>

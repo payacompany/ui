@@ -46,6 +46,14 @@ const routes = [
 		component: () =>
 			import("../views/dashboard/profile/residenceInfo/index.vue"),
 	},
+	{
+		path: "/security/2fa",
+		name: "2fa",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () => import("../views/security/2fa.vue"),
+	},
 ];
 
 const router = new VueRouter({
