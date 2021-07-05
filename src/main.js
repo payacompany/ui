@@ -4,6 +4,8 @@ import router from "./router/index.js";
 
 import "./assets/styles/css/index.css";
 
+import "./assets/scss/app.scss";
+
 import { ValidationProvider } from "vee-validate";
 Vue.component("ValidationProvider", ValidationProvider);
 
