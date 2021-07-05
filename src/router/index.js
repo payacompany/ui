@@ -11,6 +11,14 @@ const routes = [
 		},
 		component: () => import("../views/dashboard/index.vue"),
 	},
+	{
+		path: "/profile/confimPhone",
+		name: "confimPhone",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () => import("../views/dashboard/profile/confimPhone/index.vue"),
+	},
 ];
 
 const router = new VueRouter({
