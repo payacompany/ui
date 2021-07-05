@@ -1,21 +1,25 @@
 <template>
-	<div class="mt-8 w-full flex flex-row w-full">
-		<vs-input
-			id="ref-input"
-			v-model="refCode"
-			disabled
-			label-placeholder="کد معرف شما"
-		/>
-		<div class="mt-4">
-			<vs-button class="text-sm" @click.prevent.stop="copyTestingCode">
-				کپی کردن
-			</vs-button>
+	<copy-to-clipboard :text="refCode" class="cursor-pointer" @copy="handleCopy">
+		<div class="mt-8 flex flex-row w-full">
+			<vs-input
+				id="ref-input"
+				v-model="refCode"
+				disabled
+				label-placeholder="کد معرف شما"
+				:value="refCode"
+			/>
+			<div class="mt-4">
+				<vs-button class="text-sm">کپی کردن</vs-button>
+			</div>
 		</div>
-	</div>
+	</copy-to-clipboard>
 </template>
 
 <script>
+import CopyToClipboard from "vue-copy-to-clipboard";
+
 export default {
+	components: { CopyToClipboard },
 	data () {
 		return {
 			testingCode: "1234",
@@ -23,17 +27,9 @@ export default {
 		};
 	},
 	methods: {
-		copyTestingCode () {
-			let codeToCopy = document.querySelector("#ref-input");
-			codeToCopy.setAttribute("type", "text"); // 不是 hidden 才能複製
-			codeToCopy.select();
-			try {
-				var successful = document.execCommand("copy");
-				var msg = successful ? "successful" : "unsuccessful";
-				alert("Testing code was copied " + msg, successful);
-			} catch (err) {
-				alert("Oops, unable to copy");
-			}
+		handleCopy (result) {
+			this.$toast.success("کد معرف با موفقیت کپی شد.");
+			console.log("onCopy", result);
 		}
 	}
 };

@@ -16,6 +16,7 @@
     "sass": "^1.35.1",
     "vee-validate": "^3.4.10",
     "vue": "^2.6.11",
+    "vue-copy-to-clipboard": "^1.0.3",
     "vue-router": "^3.5.2",
     "vue-sweetalert2": "^5.0.2",
     "vue-toastification": "^1.7.11",
