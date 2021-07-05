@@ -18,7 +18,6 @@
 				<div>
 					<p class="text-sm font-bold mb-2">تصویر کارت ملی</p>
 					<vs-upload
-						automatic
 						limit="1"
 						text="آپلود تصویر"
 						action="https://jsonplaceholder.typicode.com/posts/"
@@ -28,7 +27,6 @@
 				<div>
 					<p class="text-sm font-bold mb-2">سلفی با کارت ملی</p>
 					<vs-upload
-						automatic
 						limit="1"
 						text="آپلود تصویر"
 						action="https://jsonplaceholder.typicode.com/posts/"
@@ -51,13 +49,7 @@ export default {
 		};
 	},
 	methods: {
-		successUpload () {
-			this.$vs.notify({
-				color: "success",
-				title: "Upload Success",
-				text: "Lorem ipsum dolor sit amet, consectetur"
-			});
-		}
+		successUpload () {}
 	}
 };
 </script>
