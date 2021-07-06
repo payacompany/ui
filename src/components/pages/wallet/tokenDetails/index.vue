@@ -2,10 +2,10 @@
 	<div>
 		<vs-tabs alignment="left">
 			<vs-tab label="واریز">
-				<withdraw :coins="coins" />
+				<deposit />
 			</vs-tab>
 			<vs-tab label="برداشت">
-				<deposit />
+				<withdraw :coins="coins" />
 			</vs-tab>
 		</vs-tabs>
 	</div>

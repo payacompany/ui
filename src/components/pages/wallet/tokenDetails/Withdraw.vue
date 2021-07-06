@@ -1,55 +1,38 @@
 <template>
-	<div>
-		<div class="flex flex-row justify-start">
-			<div class="w-2/12">
-				<img :src="coins.logo" alt="" />
+	<div class="flex flex-col w-full">
+		<div class="w-min-full mt-2">
+			<vs-input
+				v-model="deposit.address"
+				class="min-w-full mb-3"
+				label-placeholder="آدرس والت مبدا را وارد کنید."
+				description-text="لطفا اطلاعات را بادقت تمام وارد نمایید"
+			/>
+			<vs-input
+				v-model="deposit.value"
+				class="min-w-full"
+				label-placeholder="مقدار "
+				description-text="موجودی : 0.0024045"
+			/>
+			<div class="flex justify-end">
+				<vs-button size="small" class="mb-3" type="border">
+					برداشت کل موجودی
+				</vs-button>
 			</div>
-			<div class="w-9/12 flex flex-row justify-between">
-				<div class="text-justify">
-					<p>موجودی قفل شده</p>
-					<p>0</p>
-				</div>
-				<div>
-					<p>
-						موجودی <span>{{ coins.symbol }}</span>
-					</p>
-					<p>0</p>
-				</div>
-			</div>
-		</div>
-		<vs-divider />
-		<div class="flex flex-col items-center">
-			<div>
-				<qr-code
-					text="16sAxN2jf2RutFdyyWMn4ktFn2PgfbszaR"
-					:size="200"
-					class="pl-5"
-				/>
-			</div>
-			<div class="pb-5">
-				<input-with-copy
-					placeholder="آدرس ولت"
-					ref-code="16sAxN2jf2RutFdyyWMn4ktFn2PgfbszaR"
-				/>
+			<div class="mb-3">
+				<vs-button class="w-full">
+					برداشت از حساب شما
+				</vs-button>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import InputWithCopy from "../../../global/inputs/InputWithCopy.vue";
-import VueQRCodeComponent from "vue-qrcode-component";
-
 export default {
-	components: {
-		InputWithCopy,
-		"qr-code": VueQRCodeComponent
-	},
-	props: {
-		coins: {
-			type: Array,
-			default: () => []
-		}
+	data () {
+		return {
+			deposit: {}
+		};
 	}
 };
 </script>
