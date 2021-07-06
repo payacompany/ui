@@ -2,9 +2,7 @@
 	<div>
 		<vs-tabs alignment="left">
 			<vs-tab label="واریز">
-				<div>
-					واریز
-				</div>
+				<withdraw :coins="coins" />
 			</vs-tab>
 			<vs-tab label="برداشت">
 				<div>
@@ -16,7 +14,18 @@
 </template>
 
 <script>
-export default {};
+import Withdraw from "./Withdraw.vue";
+export default {
+	components: {
+		Withdraw
+	},
+	props: {
+		coins: {
+			type: Array,
+			default: () => []
+		}
+	}
+};
 </script>
 
 <style></style>
