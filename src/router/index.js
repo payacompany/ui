@@ -54,6 +54,14 @@ const routes = [
 		},
 		component: () => import("../views/security/2fa.vue"),
 	},
+	{
+		path: "/wallet",
+		name: "wallet",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () => import("../views/wallet/index.vue"),
+	},
 ];
 
 const router = new VueRouter({

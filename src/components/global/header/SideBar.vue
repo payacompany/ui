@@ -24,7 +24,7 @@
 				اتاق معاملات
 			</vs-sidebar-item>
 
-			<vs-sidebar-item index="3" icon="verified_user">
+			<vs-sidebar-item index="3" to="/wallet">
 				کیف پول
 			</vs-sidebar-item>
 			<vs-sidebar-item index="4" icon="account_box">
