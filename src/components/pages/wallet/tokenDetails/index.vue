@@ -5,19 +5,19 @@
 				<withdraw :coins="coins" />
 			</vs-tab>
 			<vs-tab label="برداشت">
-				<div>
-					برداشت
-				</div>
+				<deposit />
 			</vs-tab>
 		</vs-tabs>
 	</div>
 </template>
 
 <script>
+import Deposit from "./Deposit.vue";
 import Withdraw from "./Withdraw.vue";
 export default {
 	components: {
-		Withdraw
+		Withdraw,
+		Deposit
 	},
 	props: {
 		coins: {
