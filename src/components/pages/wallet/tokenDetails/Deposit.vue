@@ -18,6 +18,7 @@
 			</div>
 		</div>
 		<vs-divider />
+		<deposit-rules class="mb-5" />
 		<div class="flex flex-col items-center">
 			<div>
 				<qr-code
@@ -39,10 +40,11 @@
 <script>
 import InputWithCopy from "../../../global/inputs/InputWithCopy.vue";
 import VueQRCodeComponent from "vue-qrcode-component";
-
+import DepositRules from "./DepositRules.vue";
 export default {
 	components: {
 		InputWithCopy,
+		DepositRules,
 		"qr-code": VueQRCodeComponent
 	},
 	props: {

@@ -1,7 +1,7 @@
 <template>
 	<div class="flex flex-col border border-gray-300 rounded-sm">
 		<div
-			v-for="(rule, index) in withdrawRules"
+			v-for="(rule, index) in DepositRules"
 			:key="index"
 			class="
 				flex flex-row
@@ -27,14 +27,18 @@
 export default {
 	data () {
 		return {
-			withdrawRules: [
+			DepositRules: [
 				{
-					title: "حداقل میزان برداشت به بیت کوین",
-					value: "0.00040000"
+					title: "بیشترین",
+					value: "100.00000000"
 				},
 				{
-					title: "حداکثر میزان برداشت به بیت کوین",
-					value: "3"
+					title: "کمترین",
+					value: "0.00000001"
+				},
+				{
+					title: "زمان واریز",
+					value: "کمتر از یک ساعت"
 				},
 				{
 					title: "کارمزد",
@@ -49,8 +53,8 @@ export default {
 					value: "0"
 				},
 				{
-					title: "باقی مانده روزانه",
-					value: "0.08783302"
+					title: "محدودیت",
+					value: "تراکنش های ارسالی از جایزه ماینینگ پشتیبانی نمیشود"
 				}
 			]
 		};
