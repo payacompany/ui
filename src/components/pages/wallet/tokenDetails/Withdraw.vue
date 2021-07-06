@@ -1,5 +1,6 @@
 <template>
 	<div class="flex flex-col w-full">
+		<withdraw-rules />
 		<div class="w-min-full mt-2">
 			<vs-input
 				v-model="deposit.address"
@@ -28,7 +29,9 @@
 </template>
 
 <script>
+import WithdrawRules from "./WithdrawRules.vue";
 export default {
+	components: { WithdrawRules },
 	data () {
 		return {
 			deposit: {}

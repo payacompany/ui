@@ -1,13 +1,13 @@
 <template>
 	<div>
 		<vs-tabs alignment="left">
-			<vs-tab label="واریز">
+			<vs-tab label="واریز" icon="add">
 				<deposit />
 			</vs-tab>
-			<vs-tab label="برداشت">
+			<vs-tab label="برداشت" icon="payments">
 				<withdraw :coins="coins" />
 			</vs-tab>
-			<vs-tab label="تاریخچه">
+			<vs-tab label="تاریخچه" icon="history">
 				<transactions />
 			</vs-tab>
 		</vs-tabs>
