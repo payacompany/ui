@@ -22,7 +22,8 @@ export default {
 					totalBalance: 12,
 					lockedBalance: 150,
 					price: "34000",
-					priceIRT: "800000000"
+					priceIRT: "800000000",
+					isActive: true
 				},
 				{
 					name: "Etherum",
@@ -31,7 +32,8 @@ export default {
 					totalBalance: 0,
 					lockedBalance: 0,
 					price: "1200",
-					priceIRT: "30000000"
+					priceIRT: "30000000",
+					isActive: false
 				}
 			]
 		};

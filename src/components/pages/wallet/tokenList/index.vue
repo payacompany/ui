@@ -4,16 +4,20 @@
 			v-for="(coin, index) in coins"
 			:key="index"
 			class="
-				py-5
+				
 				hover:bg-gray-100 
-				pl-3
+				
                 cursor-pointer
 				transition
 				ease-in
 				duration-300
 			"
 		>
-			<div class="flex flex-row justify-between ">
+			<div
+				@click="setActive(index)"
+				class="flex flex-row justify-between py-5 pl-3"
+				:class="[coin.isActive ? 'bg-gray-200 border-r-4 border-blue-500' : '']"
+			>
 				<img :src="coin.logo" alt="" />
 				<div class="flex flex-col w-11/12">
 					<div class="flex justify-between">
@@ -48,6 +52,17 @@ export default {
 		coins: {
 			type: Array,
 			default: () => []
+		}
+	},
+	methods: {
+		setActive (index) {
+			this.coins.forEach((coin, ind) => {
+				if (index === ind) {
+					coin.isActive = true;
+				} else {
+					coin.isActive = false;
+				}
+			});
 		}
 	}
 };
