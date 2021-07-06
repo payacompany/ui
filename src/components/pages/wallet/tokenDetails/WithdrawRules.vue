@@ -1,11 +1,60 @@
 <template>
-	<div>
-		withdraw ruls
+	<div class="flex flex-col border border-gray-500">
+		<div
+			v-for="(rule, index) in withdrawRules"
+			:key="index"
+			class="
+				flex flex-row
+				justify-between
+                odd:bg-gray-400
+				px-3
+				py-2
+				border-b border-gray-500
+			"
+		>
+			<p>
+				{{ rule.title }}
+			</p>
+			<p>
+				{{ rule.value }}
+			</p>
+		</div>
 	</div>
 </template>
 
 <script>
-export default {};
+export default {
+	data () {
+		return {
+			withdrawRules: [
+				{
+					title: "حداقل میزان برداشت به بیت کوین",
+					value: "0.00040000"
+				},
+				{
+					title: "حداکثر میزان برداشت به بیت کوین",
+					value: "3"
+				},
+				{
+					title: "کارمزد",
+					value: "0%"
+				},
+				{
+					title: "کارمزد ثابت",
+					value: "0"
+				},
+				{
+					title: "حداکثر کارمزد",
+					value: "0"
+				},
+				{
+					title: "باقی مانده روزانه",
+					value: "0.08783302"
+				}
+			]
+		};
+	}
+};
 </script>
 
 <style></style>
