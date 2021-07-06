@@ -8,26 +8,32 @@
 				hover:bg-gray-100 
 				pl-3
                 cursor-pointer
+				transition
+				ease-in
+				duration-300
 			"
 		>
-			<div class="flex flex-row justify-between">
+			<div class="flex flex-row justify-between ">
 				<img :src="coin.logo" alt="" />
 				<div class="flex flex-col w-11/12">
 					<div class="flex justify-between">
 						<p>
 							{{ coin.symbol }}
 						</p>
-						<p>{{ coin.totalBalance }}{{ coin.symbol }}</p>
+						<p>
+							<span class="pr-2">{{ coin.symbol }}</span>
+							{{ coin.totalBalance }}
+						</p>
 					</div>
 					<div class="flex justify-between">
 						<p>
 							{{ coin.name }}
 						</p>
 						<p class="flex items-center">
-							<span class="material-icons text-gray-500">
+							{{ coin.lockedBalance }}
+							<span class="material-icons text-gray-500 pr-3">
 								lock
 							</span>
-							{{ coin.lockedBalance }}
 						</p>
 					</div>
 				</div>
