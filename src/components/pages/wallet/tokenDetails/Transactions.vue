@@ -1,9 +1,14 @@
 <template>
-	<div>transactions</div>
+	<div>
+		<transactions-table />
+	</div>
 </template>
 
 <script>
-export default {};
+import TransactionsTable from "./TransactionsTable.vue";
+export default {
+	components: { TransactionsTable }
+};
 </script>
 
 <style></style>
