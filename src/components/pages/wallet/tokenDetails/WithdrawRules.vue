@@ -1,15 +1,16 @@
 <template>
-	<div class="flex flex-col border border-gray-500">
+	<div class="flex flex-col border border-gray-300">
 		<div
 			v-for="(rule, index) in withdrawRules"
 			:key="index"
 			class="
 				flex flex-row
 				justify-between
-                odd:bg-gray-400
+                odd:bg-gray-100
 				px-3
 				py-2
-				border-b border-gray-500
+				border-b border-gray-300
+				last:border-0
 			"
 		>
 			<p>
