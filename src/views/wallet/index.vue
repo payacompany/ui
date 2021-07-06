@@ -1,8 +1,22 @@
 <template>
-	<div class="container mx-auto mt-12">
-		<div class="w-8/12 mx-auto flex shadow-lg rounded-md">
-			<wallet class="w-1/3 border-l-1" :coins="coins" />
-			<token-details class="w-2/3" :coins="coins" />
+	<div class="container mx-auto mt-5">
+		<div class="w-8/12 mx-auto shadow-lg rounded-md">
+			<div class="mx-auto flex py-3 justify-evenly border-b rounded-t-lg">
+				<div class="flex justify-between w-8/12">
+					<p>
+						تخمین دارایی شما به ریال:
+						<span> {{ balanceIRT }} تومان </span>
+					</p>
+					<p>
+						تخمین دارایی شما به دلار:
+						<span> {{ balanceIRT }} دلار </span>
+					</p>
+				</div>
+			</div>
+			<div class="mx-auto flex ">
+				<wallet class="w-1/3 border-l-1" :coins="coins" />
+				<token-details class="w-2/3" :coins="coins" />
+			</div>
 		</div>
 	</div>
 </template>
@@ -14,6 +28,7 @@ export default {
 	components: { Wallet, TokenDetails },
 	data () {
 		return {
+			balanceIRT: 153000000,
 			coins: [
 				{
 					name: "BitCoin",
