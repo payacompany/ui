@@ -1,7 +1,7 @@
 <template>
 	<div class="container mx-auto mt-12">
 		<div class="w-8/12 mx-auto flex shadow-lg rounded-md">
-			<wallet class="w-1/3" :coins="coins" />
+			<wallet class="w-1/3 border-l-1" :coins="coins" />
 			<token-details class="w-2/3" :coins="coins" />
 		</div>
 	</div>
