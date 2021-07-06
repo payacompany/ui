@@ -1,5 +1,5 @@
 <template>
-	<div class="shadow-lg rounded-md p-8">
+	<div>
 		<token-list :coins="coins" />
 	</div>
 </template>
@@ -15,6 +15,8 @@ export default {
 					name: "BitCoin",
 					symbol: "BTC",
 					logo: null,
+					totalBalance: 0,
+					lockedBalance: 0,
 					price: "34000",
 					priceIRT: "800000000"
 				},
@@ -22,6 +24,8 @@ export default {
 					name: "Etherum",
 					symbol: "ETH",
 					logo: null,
+					totalBalance: 0,
+					lockedBalance: 0,
 					price: "1200",
 					priceIRT: "30000000"
 				}
