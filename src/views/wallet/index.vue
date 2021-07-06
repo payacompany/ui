@@ -19,8 +19,8 @@ export default {
 					name: "BitCoin",
 					symbol: "BTC",
 					logo: null,
-					totalBalance: 0,
-					lockedBalance: 0,
+					totalBalance: 12,
+					lockedBalance: 150,
 					price: "34000",
 					priceIRT: "800000000"
 				},

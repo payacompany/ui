@@ -4,8 +4,8 @@
 			<vs-input
 				id="ref-input"
 				v-model="refCode"
-				disabled
-				label-placeholder="کد معرف شما"
+				:disabled="disabled"
+				:label-placeholder="placeholder"
 				:value="refCode"
 			/>
 			<div class="mt-4">
@@ -19,16 +19,27 @@
 import CopyToClipboard from "vue-copy-to-clipboard";
 
 export default {
+	props: {
+		placeholder: {
+			type: String,
+			default: "کد معرف شما"
+		},
+		disabled: {
+			type: Boolean,
+			default: true
+		},
+		refCode: {
+			type: String,
+			default: "ID12345678"
+		}
+	},
 	components: { CopyToClipboard },
 	data () {
-		return {
-			testingCode: "1234",
-			refCode: "ID12345678"
-		};
+		return {};
 	},
 	methods: {
 		handleCopy () {
-			this.$toast.success("کد معرف با موفقیت کپی شد.");
+			this.$toast.success("کد با موفقیت کپی شد.");
 		}
 	}
 };
