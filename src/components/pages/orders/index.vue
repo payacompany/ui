@@ -2,7 +2,7 @@
 	<div class="w-8/12 mx-auto shadow-lg rounded-md">
 		<vs-tabs alignment="left">
 			<vs-tab label="سفارشات کل">
-				سفارشات
+				<all-orders />
 			</vs-tab>
 			<vs-tab label="سفارشات باز">
 				<open-orders />
@@ -17,8 +17,9 @@
 <script>
 import CloseOrders from "./CloseOrders.vue";
 import OpenOrders from "./OpenOrders.vue";
+import AllOrders from "./AllOrders.vue";
 export default {
-	components: { OpenOrders, CloseOrders }
+	components: { OpenOrders, CloseOrders, AllOrders }
 };
 </script>
 
