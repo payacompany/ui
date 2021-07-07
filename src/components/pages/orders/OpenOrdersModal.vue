@@ -5,17 +5,17 @@
 		</vs-button>
 		<vs-popup title="جزئیات سفارش" :active.sync="showModal">
 			<div class="flex flex-wrap justify-between">
-				<p>
+				<p class="pb-8">
 					شناسه سفارش:
 					<span>
 						{{ orderDetails.id }}
 					</span>
 				</p>
-				<p>
+				<p class="pb-8">
 					تاریخ سفارش:
 					<span> {{ orderDetails.date }} </span>
 				</p>
-				<p>
+				<p class="pb-8">
 					قیمت واحد سفارش:
 					<span> {{ orderDetails.priceInUnit }} تومان </span>
 				</p>
@@ -32,6 +32,9 @@
 					:diameter="100"
 					:completed-steps="orderDetails.volumeCompleted"
 					:total-steps="totalVol"
+					start-color="#CD113B"
+					stop-color="#4AA96C"
+					inner-stroke-color="#F1F6F9"
 				/>
 			</div>
 		</vs-popup>

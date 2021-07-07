@@ -57,7 +57,7 @@ export default {
 				priceInUnit: "800000000",
 				name: "بیت کوین(BTC)",
 				type: 0,
-				volumeCompleted: 0.011051,
+				volumeCompleted: 0.151603,
 				volume: 0.151603
 			}
 		]
