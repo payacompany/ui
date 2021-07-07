@@ -1,6 +1,9 @@
 <template>
-	<div>
-		place order
+	<div class="shadow-md rounded-md">
+		<vs-tabs alignment="center">
+			<vs-tab label="خرید"> test </vs-tab>
+			<vs-tab label="فروش"> test </vs-tab>
+		</vs-tabs>
 	</div>
 </template>
 
@@ -8,4 +11,10 @@
 export default {};
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+::v-deep {
+	.vs-tabs--li {
+		width: 50%;
+	}
+}
+</style>

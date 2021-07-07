@@ -1,11 +1,16 @@
 <template>
-	<div>
-		trading room
+	<div class="grid grid-cols-5 gap-4 my-3">
+		<place-order />
 	</div>
 </template>
 
 <script>
-export default {};
+import PlaceOrder from "../../components/pages/trading/PlaceOrder.vue";
+export default {
+	components: {
+		PlaceOrder
+	}
+};
 </script>
 
 <style></style>
