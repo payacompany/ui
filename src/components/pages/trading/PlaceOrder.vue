@@ -4,15 +4,18 @@
 			<vs-tab label="خرید" @click="borderColor = 'success'">
 				<buy-place-order />
 			</vs-tab>
-			<vs-tab label="فروش" @click="borderColor = 'danger'"> test </vs-tab>
+			<vs-tab label="فروش" @click="borderColor = 'danger'">
+				<sell-place-order />
+			</vs-tab>
 		</vs-tabs>
 	</div>
 </template>
 
 <script>
 import BuyPlaceOrder from "./BuyPlaceOrder.vue";
+import SellPlaceOrder from "./SellPlaceOrder.vue";
 export default {
-	components: { BuyPlaceOrder },
+	components: { BuyPlaceOrder, SellPlaceOrder },
 	data () {
 		return {
 			borderColor: "success"
