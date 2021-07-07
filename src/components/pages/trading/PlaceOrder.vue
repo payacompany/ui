@@ -1,10 +1,10 @@
 <template>
 	<div class="shadow-md rounded-md">
-		<vs-tabs alignment="center">
-			<vs-tab label="خرید">
+		<vs-tabs alignment="center" :color="borderColor">
+			<vs-tab label="خرید" @click="borderColor = 'success'">
 				<buy-place-order />
 			</vs-tab>
-			<vs-tab label="فروش"> test </vs-tab>
+			<vs-tab label="فروش" @click="borderColor = 'danger'"> test </vs-tab>
 		</vs-tabs>
 	</div>
 </template>
@@ -12,7 +12,12 @@
 <script>
 import BuyPlaceOrder from "./BuyPlaceOrder.vue";
 export default {
-	components: { BuyPlaceOrder }
+	components: { BuyPlaceOrder },
+	data () {
+		return {
+			borderColor: "success"
+		};
+	}
 };
 </script>
 
