@@ -8,6 +8,7 @@
 		<vs-divider />
 		<vs-tabs alignment="center" :color="borderColor">
 			<vs-tab label="کل" @click="borderColor = 'primary'">
+				<order-book-list class="height" />
 				<order-book-list />
 			</vs-tab>
 
@@ -42,5 +43,8 @@ export default {
 	.vs-tabs--li {
 		width: 33%;
 	}
+}
+.height {
+	min-height: 35vh;
 }
 </style>
