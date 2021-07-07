@@ -24,16 +24,27 @@
 					<span> {{ orderDetails.volume }} </span>
 				</p>
 				<p>
-					میزان پر شده:
-					<span> {{ orderDetails.volume }} </span>
+					حجم پرشده:
+					<span> {{ orderDetails.volumeCompleted }} </span>
 				</p>
+
+				<radial-progress-bar
+					:diameter="100"
+					:completed-steps="orderDetails.volumeCompleted"
+					:total-steps="totalVol"
+				/>
 			</div>
 		</vs-popup>
 	</div>
 </template>
 
 <script>
+import RadialProgressBar from "vue-radial-progress";
+
 export default {
+	components: {
+		RadialProgressBar
+	},
 	props: {
 		orderDetails: {
 			type: Object,
@@ -44,6 +55,14 @@ export default {
 		return {
 			showModal: false
 		};
+	},
+	computed: {
+		totalVol () {
+			return this.orderDetails.volume;
+		},
+		completedVol () {
+			return this.orderDetails.volumeCompleted;
+		}
 	}
 };
 </script>
