@@ -1,9 +1,12 @@
 <template>
-	<vs-table :data="markets" strip no-data-text="رکوردی موجود نیست">
+	<vs-table :data="openOrders" strip no-data-text="رکوردی موجود نیست">
 		<template slot="thead">
+			<vs-th>تاریخ</vs-th>
 			<vs-th>قیمت(واحد)</vs-th>
 			<vs-th>حجم</vs-th>
-			<vs-th>مبلغ کل(واحد)</vs-th>
+			<vs-th>مقدار</vs-th>
+			<vs-th>پرشده</vs-th>
+			<vs-th>عملیات</vs-th>
 		</template>
 
 		<template slot-scope="{ data }">
@@ -12,19 +15,30 @@
 				:key="indextr"
 				class="cursor-pointer"
 			>
-				<vs-td :data="data[indextr].name">
-					{{ data[indextr].name }}
+				<vs-td :data="data[indextr].date">
+					{{ data[indextr].date }}
 				</vs-td>
 
 				<vs-td :data="data[indextr].price">
 					{{ data[indextr].price }}
 				</vs-td>
 
-				<vs-td
-					:data="data[indextr].changes"
-					:class="[data[indextr].changes >= 0 ? 'text-success' : 'text-danger']"
-				>
-					{{ data[indextr].changes }}%
+				<vs-td :data="data[indextr].amount">
+					{{ data[indextr].amount }}
+				</vs-td>
+
+				<vs-td :data="data[indextr].value">
+					{{ data[indextr].value }}
+				</vs-td>
+
+				<vs-td :data="data[indextr].filled">
+					{{ data[indextr].filled }}
+				</vs-td>
+
+				<vs-td>
+					<vs-button size="small" type="gradient" color="danger" class="w-full">
+						لغو
+					</vs-button>
 				</vs-td>
 			</vs-tr>
 		</template>
@@ -35,14 +49,42 @@
 export default {
 	data () {
 		return {
-			markets: [
-				{ name: "BTC/USDT", price: 30000, changes: 0 },
-				{ name: "ETH/USDT", price: 1200, changes: -5 },
-				{ name: "BTC/USDT", price: 30000, changes: 0 },
-				{ name: "ETH/USDT", price: 1200, changes: -5 },
-				{ name: "BTC/USDT", price: 30000, changes: 0 },
-				{ name: "ETH/USDT", price: 1200, changes: -5 },
-				{ name: "ETH/USDT", price: 1200, changes: -5 }
+			openOrders: [
+				{
+					date: "1400/1/6",
+					price: 30000,
+					amount: 1,
+					value: 5,
+					filled: 0
+				},
+				{
+					date: "1400/1/6",
+					price: 30000,
+					amount: 1,
+					value: 5,
+					filled: 0
+				},
+				{
+					date: "1400/1/6",
+					price: 30000,
+					amount: 1,
+					value: 5,
+					filled: 0
+				},
+				{
+					date: "1400/1/6",
+					price: 30000,
+					amount: 1,
+					value: 5,
+					filled: 0
+				},
+				{
+					date: "1400/1/6",
+					price: 30000,
+					amount: 1,
+					value: 5,
+					filled: 0
+				}
 			]
 		};
 	}
