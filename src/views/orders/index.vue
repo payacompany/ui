@@ -1,11 +1,14 @@
 <template>
-	<div>
-		orders
+	<div class="container mx-auto mt-5">
+		<orders />
 	</div>
 </template>
 
 <script>
-export default {};
+import Orders from "../../components/pages/orders/index.vue";
+export default {
+	components: { Orders }
+};
 </script>
 
 <style></style>

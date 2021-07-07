@@ -27,7 +27,7 @@
 			<vs-sidebar-item index="3" to="/wallet">
 				کیف پول
 			</vs-sidebar-item>
-			<vs-sidebar-item index="4" icon="account_box">
+			<vs-sidebar-item index="4" icon="account_box" to="/orders">
 				سفارشات
 			</vs-sidebar-item>
 			<vs-sidebar-item index="5" icon="account_box">
