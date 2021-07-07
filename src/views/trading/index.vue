@@ -11,6 +11,9 @@
 			<trading-view />
 			<open-orders />
 		</div>
+		<div class="grid-flow-row auto-rows-max">
+			<trades />
+		</div>
 	</div>
 </template>
 
@@ -20,13 +23,15 @@ import Markets from "../../components/pages/trading/markets/index.vue";
 import OrderBook from "../../components/pages/trading/orderBook/index.vue";
 import TradingView from "../../components/pages/trading/tradingView/index.vue";
 import OpenOrders from "../../components/pages/trading/openOrders/index.vue";
+import Trades from "../../components/pages/trading/trades/index.vue";
 export default {
 	components: {
 		PlaceOrder,
 		Markets,
 		OrderBook,
 		TradingView,
-		OpenOrders
+		OpenOrders,
+		Trades
 	}
 };
 </script>
