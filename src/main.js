@@ -35,6 +35,9 @@ import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 Vue.use(VueSweetalert2);
 
+import VueCircle from "vue2-circle-progress";
+Vue.use("vue-circle", VueCircle);
+
 Vue.config.productionTip = false;
 
 new Vue({
