@@ -3,3 +3,6 @@
     --tw-border-opacity: 1;
     border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
+.vuesax-app-is-rtl .vs-input--input.hasIcon+.vs-input--placeholder{
+    padding-top: 0.6rem;
+}
