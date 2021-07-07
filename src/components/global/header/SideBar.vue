@@ -30,8 +30,8 @@
 			<vs-sidebar-item index="4" icon="account_box" to="/orders">
 				سفارشات
 			</vs-sidebar-item>
-			<vs-sidebar-item index="5" icon="account_box">
-				سابقه
+			<vs-sidebar-item index="5" icon="account_box" to="/history">
+				تاریخچه
 			</vs-sidebar-item>
 
 			<div slot="footer" class="text-center w-full">

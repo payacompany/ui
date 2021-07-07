@@ -70,6 +70,14 @@ const routes = [
 		},
 		component: () => import("../views/orders/index.vue"),
 	},
+	{
+		path: "/history",
+		name: "history",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () => import("../views/history/index.vue"),
+	},
 ];
 
 const router = new VueRouter({
