@@ -18,11 +18,27 @@
 			label="حجم"
 			placeholder="حجم مورد نظر را وارد نمایید"
 		/>
+		<rages />
+		<div class="flex justify-between font-bold text-sm">
+			<p>
+				کل موجودی در دسترس:
+			</p>
+			<p>
+				0
+			</p>
+		</div>
+		<div>
+			<vs-button class="w-full mt-3" type="gradient" color="success">
+				خرید
+			</vs-button>
+		</div>
 	</div>
 </template>
 
 <script>
+import Rages from "./Rages.vue";
 export default {
+	components: { Rages },
 	data () {
 		return {
 			selectedType: 0,
