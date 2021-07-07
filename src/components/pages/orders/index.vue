@@ -8,16 +8,17 @@
 				<open-orders />
 			</vs-tab>
 			<vs-tab label="سفارشات تکمیل شده">
-				سفارشات
+				<close-orders />
 			</vs-tab>
 		</vs-tabs>
 	</div>
 </template>
 
 <script>
+import CloseOrders from "./CloseOrders.vue";
 import OpenOrders from "./OpenOrders.vue";
 export default {
-	components: { OpenOrders }
+	components: { OpenOrders, CloseOrders }
 };
 </script>
 
