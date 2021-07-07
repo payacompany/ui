@@ -78,6 +78,14 @@ const routes = [
 		},
 		component: () => import("../views/history/index.vue"),
 	},
+	{
+		path: "/trading",
+		name: "	trading",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () => import("../views/trading/index.vue"),
+	},
 ];
 
 const router = new VueRouter({

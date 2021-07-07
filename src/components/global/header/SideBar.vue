@@ -20,7 +20,7 @@
 				پروفایل شما
 			</vs-sidebar-item>
 			<vs-divider />
-			<vs-sidebar-item index="2" icon="gavel">
+			<vs-sidebar-item index="2" icon="gavel" to="/trading">
 				اتاق معاملات
 			</vs-sidebar-item>
 
