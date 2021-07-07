@@ -1,11 +1,6 @@
 <template>
-	<div class="shadow-md">
-		<VueTradingView
-			:options="{
-				symbol: 'NASDAQ:AAPL',
-				theme: 'light'
-			}"
-		/>
+	<div class="shadow-md rounded-md p-1">
+		<VueTradingView :options="options" />
 	</div>
 </template>
 
@@ -13,12 +8,18 @@
 import VueTradingView from "vue-trading-view";
 
 export default {
-	name: "HelloWorld",
-	props: {
-		msg: String
-	},
 	components: {
 		VueTradingView
+	},
+	data () {
+		return {
+			options: {
+				symbol: "BTCUSD",
+				theme: "light",
+				locale: "fa_IR",
+				allow_symbol_change: true
+			}
+		};
 	}
 };
 </script>
