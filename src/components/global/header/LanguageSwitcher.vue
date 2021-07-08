@@ -40,7 +40,11 @@ export default {
 	},
 	methods: {
 		setLocale (locale) {
+			this.$vs.loading();
 			this.$i18n.locale = locale.value;
+			setTimeout(() => {
+				this.$vs.loading.close();
+			}, 3000);
 		}
 	},
 	mounted () {}

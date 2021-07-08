@@ -1,6 +1,8 @@
 <template>
 	<div class="shadow-lg">
-		<div class="container-fluid mx-4 py-4 flex flex-row justify-between">
+		<div
+			class="container-fluid mx-4 py-4 flex flex-row items-center justify-between"
+		>
 			<!-- <night-mode /> -->
 			<language-switcher />
 			<side-bar />
