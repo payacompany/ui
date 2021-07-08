@@ -17,7 +17,7 @@
 			</div>
 
 			<vs-sidebar-item index="1" icon="question_answer">
-				پروفایل شما
+				{{ $t("nav.profile") }}
 			</vs-sidebar-item>
 			<vs-divider />
 			<vs-sidebar-item index="2" icon="gavel" to="/trading">
@@ -52,7 +52,8 @@
 export default {
 	data: () => ({
 		active: false
-	})
+	}),
+	mounted () {}
 };
 </script>
 

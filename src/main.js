@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router/index.js";
-
+import i18n from "./i18n/index.js";
 import "./assets/styles/css/index.css";
 
 import "./assets/scss/app.scss";
@@ -39,6 +39,7 @@ Vue.config.productionTip = false;
 
 new Vue({
 	router,
+	i18n,
 	// eslint-disable-next-line prettier-vue/prettier
 	render: h => h(App),
 }).$mount("#app");
