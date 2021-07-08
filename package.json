@@ -17,6 +17,7 @@
     "vee-validate": "^3.4.10",
     "vue": "^2.6.11",
     "vue-copy-to-clipboard": "^1.0.3",
+    "vue-i18n": "^8.24.5",
     "vue-qrcode-component": "^2.1.1",
     "vue-radial-progress": "^0.3.2",
     "vue-router": "^3.5.2",
