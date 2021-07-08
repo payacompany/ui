@@ -43,8 +43,6 @@ export default {
 			this.$i18n.locale = locale.value;
 		}
 	},
-	mounted () {
-		console.log("Active locale: ", i18n.locale);
-	}
+	mounted () {}
 };
 </script>
