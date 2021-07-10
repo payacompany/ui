@@ -16,7 +16,7 @@
 				<h4>جایگاه لوگو</h4>
 			</div>
 
-			<vs-sidebar-item index="1" icon="question_answer">
+			<vs-sidebar-item index="1" icon="question_answer" to="/">
 				{{ $t("nav.profile") }}
 			</vs-sidebar-item>
 			<vs-divider />
