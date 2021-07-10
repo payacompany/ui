@@ -342,6 +342,16 @@ export default {
 		},
 		trade: {
 			placeOrder: {
+				filterTitle: "نوع سفارش",
+				filters: [
+					{ text: "محدود", value: 0 },
+					{ text: "بازار", value: 1 },
+				],
+				price: "قیمت",
+				pricePlaceHolder: "قیمت مورد نظر را وارد نمایید",
+				volume: "حجم",
+				volumePlaceHolder: "حجم مورد نظر را وارد نمایید",
+				totalBalance: "کل موجودی در دسترس",
 				buy: {
 					title: "خرید",
 				},

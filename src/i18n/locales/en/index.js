@@ -338,5 +338,25 @@ export default {
 				},
 			},
 		},
+		trade: {
+			placeOrder: {
+				filterTitle: "order type",
+				filters: [
+					{ text: "Limit", value: 0 },
+					{ text: "Market", value: 1 },
+				],
+				price: "Price",
+				pricePlaceHolder: "Enter price here",
+				volume: "Volume",
+				volumePlaceHolder: "Enter volume here",
+				totalBalance: "Total Balance",
+				buy: {
+					title: "Buy",
+				},
+				sell: {
+					title: "Sell",
+				},
+			},
+		},
 	},
 };
