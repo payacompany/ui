@@ -1,12 +1,12 @@
 <template>
 	<vs-table :data="openOrders" strip no-data-text="رکوردی موجود نیست">
 		<template slot="thead">
-			<vs-th>تاریخ</vs-th>
-			<vs-th>قیمت(واحد)</vs-th>
-			<vs-th>حجم</vs-th>
-			<vs-th>مقدار</vs-th>
-			<vs-th>پرشده</vs-th>
-			<vs-th>عملیات</vs-th>
+			<vs-th
+				v-for="(th, index) in $t('pages.trade.openOrders.table.fields')"
+				:key="index"
+			>
+				{{ th.title }}
+			</vs-th>
 		</template>
 
 		<template slot-scope="{ data }">
@@ -37,7 +37,7 @@
 
 				<vs-td>
 					<vs-button size="small" type="gradient" color="danger" class="w-full">
-						لغو
+						{{ $t("pages.trade.openOrders.cancel") }}
 					</vs-button>
 				</vs-td>
 			</vs-tr>

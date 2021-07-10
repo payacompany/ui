@@ -401,6 +401,33 @@ export default {
 					title: "فروش",
 				},
 			},
+			openOrders: {
+				title: "سفارشات باز شما",
+				closeAll: "بسته همه",
+				cancel: "لغو",
+				table: {
+					fields: [
+						{
+							title: "تاریخ",
+						},
+						{
+							title: "قیمت(واحد)",
+						},
+						{
+							title: "حجم",
+						},
+						{
+							title: "مقدار",
+						},
+						{
+							title: "پرشده",
+						},
+						{
+							title: "عملیات",
+						},
+					],
+				},
+			},
 		},
 	},
 };

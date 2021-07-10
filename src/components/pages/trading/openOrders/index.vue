@@ -2,11 +2,11 @@
 	<div class="shadow-md rounded-md mt-2">
 		<div class="px-5 pt-2 flex justify-between items-center">
 			<p class="font-bold text-sm">
-				سفارشات باز شما
+				{{ $t("pages.trade.openOrders.title") }}
 			</p>
 			<div>
-				<vs-button size="small">
-					بستن همه
+				<vs-button size="small" icon="close">
+					{{ $t("pages.trade.openOrders.closeAll") }}
 				</vs-button>
 			</div>
 		</div>

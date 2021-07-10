@@ -399,6 +399,33 @@ export default {
 					title: "Sell",
 				},
 			},
+			openOrders: {
+				title: "Your open oreders",
+				closeAll: "Close All",
+				cancel: "cancel",
+				table: {
+					fields: [
+						{
+							title: "Date",
+						},
+						{
+							title: "Price(unit)",
+						},
+						{
+							title: "Volume",
+						},
+						{
+							title: "Amount",
+						},
+						{
+							title: "Filled",
+						},
+						{
+							title: "Operation",
+						},
+					],
+				},
+			},
 		},
 	},
 };
