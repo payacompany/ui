@@ -340,5 +340,15 @@ export default {
 				},
 			},
 		},
+		trade: {
+			placeOrder: {
+				buy: {
+					title: "خرید",
+				},
+				sell: {
+					title: "فروش",
+				},
+			},
+		},
 	},
 };

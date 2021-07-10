@@ -1,10 +1,16 @@
 <template>
 	<div class="shadow-md rounded-md">
 		<vs-tabs alignment="center" :color="borderColor">
-			<vs-tab label="خرید" @click="borderColor = 'success'">
+			<vs-tab
+				:label="$t('pages.trade.placeOrder.buy.title')"
+				@click="borderColor = 'success'"
+			>
 				<buy-place-order />
 			</vs-tab>
-			<vs-tab label="فروش" @click="borderColor = 'danger'">
+			<vs-tab
+				:label="$t('pages.trade.placeOrder.sell.title')"
+				@click="borderColor = 'danger'"
+			>
 				<sell-place-order />
 			</vs-tab>
 		</vs-tabs>
