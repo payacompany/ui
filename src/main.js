@@ -28,7 +28,7 @@ import "material-icons/iconfont/material-icons.css";
 
 Vue.use(Vuesax, {
 	// eslint-disable-next-line prettier-vue/prettier
-	// rtl: false,
+	rtl: true,
 });
 
 import VueSweetalert2 from "vue-sweetalert2";

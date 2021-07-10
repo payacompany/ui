@@ -1,18 +1,18 @@
 <template>
 	<div class="grid grid-cols-6 gap-3 my-3">
 		<div class="grid-flow-row auto-rows-max">
-			<place-order />
-			<markets />
-		</div>
-		<div class="grid-flow-row auto-rows-max">
-			<order-book />
+			<trades />
 		</div>
 		<div class="col-span-3 grid-flow-row auto-rows-max">
 			<trading-view />
 			<open-orders />
 		</div>
 		<div class="grid-flow-row auto-rows-max">
-			<trades />
+			<order-book />
+		</div>
+		<div class="grid-flow-row auto-rows-max">
+			<place-order />
+			<markets />
 		</div>
 	</div>
 </template>
