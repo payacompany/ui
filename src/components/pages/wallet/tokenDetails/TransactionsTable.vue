@@ -2,11 +2,12 @@
 	<div>
 		<vs-table :max-items="8" pagination :data="users">
 			<template slot="thead">
-				<vs-th>تاریخ</vs-th>
-				<vs-th>نام</vs-th>
-				<vs-th>نوع</vs-th>
-				<vs-th>تغییر</vs-th>
-				<vs-th>موجودی</vs-th>
+				<vs-th
+					v-for="(th, index) in $t('pages.wallet.history.table.fields')"
+					:key="index"
+				>
+					{{ th.title }}
+				</vs-th>
 			</template>
 
 			<template slot-scope="{ data }">

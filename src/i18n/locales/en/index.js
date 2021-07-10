@@ -137,6 +137,25 @@ export default {
 			},
 			history: {
 				title: "history",
+				table: {
+					fields: [
+						{
+							title: "Date",
+						},
+						{
+							title: "Name",
+						},
+						{
+							title: "Type",
+						},
+						{
+							title: "Changes",
+						},
+						{
+							title: "Balance",
+						},
+					],
+				},
 			},
 		},
 	},

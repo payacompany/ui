@@ -135,10 +135,28 @@ export default {
 				amount: "مقدار",
 				balance: "موجودی",
 				inventory: "برداشت کل موجودی",
-				submit: "برداشت",
 			},
 			history: {
 				title: "تاریخچه",
+				table: {
+					fields: [
+						{
+							title: "تاریخ",
+						},
+						{
+							title: "نام",
+						},
+						{
+							title: "نوع",
+						},
+						{
+							title: "تغییر",
+						},
+						{
+							title: "موجودی",
+						},
+					],
+				},
 			},
 		},
 	},
