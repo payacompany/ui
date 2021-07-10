@@ -158,6 +158,82 @@ export default {
 				},
 			},
 		},
-		orders: {},
+		orders: {
+			allOrders: {
+				title: "All orders",
+				table: {
+					fields: [
+						{
+							title: "Date",
+						},
+						{
+							title: "Name",
+						},
+						{
+							title: "Amount",
+						},
+						{
+							title: "Type",
+						},
+						{
+							title: "Status",
+						},
+						{
+							title: "Info",
+						},
+					],
+				},
+			},
+			openOrders: {
+				title: "Open orders",
+				table: {
+					fields: [
+						{
+							title: "Date",
+						},
+						{
+							title: "Name",
+						},
+						{
+							title: "Amount",
+						},
+						{
+							title: "Type",
+						},
+						{
+							title: "Status",
+						},
+						{
+							title: "Info",
+						},
+					],
+				},
+			},
+			closeOrders: {
+				title: "Close orders",
+				table: {
+					fields: [
+						{
+							title: "Date",
+						},
+						{
+							title: "Name",
+						},
+						{
+							title: "Amount",
+						},
+						{
+							title: "Type",
+						},
+						{
+							title: "Status",
+						},
+						{
+							title: "Info",
+						},
+					],
+				},
+			},
+		},
 	},
 };

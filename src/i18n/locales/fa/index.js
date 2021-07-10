@@ -159,6 +159,82 @@ export default {
 				},
 			},
 		},
-		orders: {},
+		orders: {
+			allOrders: {
+				title: "سفارشات کل",
+				table: {
+					fields: [
+						{
+							title: "تاریخ",
+						},
+						{
+							title: "نام",
+						},
+						{
+							title: "مقدار",
+						},
+						{
+							title: "نوع",
+						},
+						{
+							title: "وضعیت",
+						},
+						{
+							title: "اطلاعات بیشتر",
+						},
+					],
+				},
+			},
+			openOrders: {
+				title: "سفارشات باز",
+				table: {
+					fields: [
+						{
+							title: "تاریخ",
+						},
+						{
+							title: "نام",
+						},
+						{
+							title: "مقدار",
+						},
+						{
+							title: "نوع",
+						},
+						{
+							title: "وضعیت",
+						},
+						{
+							title: "اطلاعات بیشتر",
+						},
+					],
+				},
+			},
+			closeOrders: {
+				title: "سفارشات تکمیل شده",
+				table: {
+					fields: [
+						{
+							title: "تاریخ",
+						},
+						{
+							title: "نام",
+						},
+						{
+							title: "مقدار",
+						},
+						{
+							title: "نوع",
+						},
+						{
+							title: "وضعیت",
+						},
+						{
+							title: "اطلاعات بیشتر",
+						},
+					],
+				},
+			},
+		},
 	},
 };

@@ -1,13 +1,13 @@
 <template>
 	<div class="w-8/12 mx-auto shadow-lg rounded-md">
 		<vs-tabs alignment="left">
-			<vs-tab label="سفارشات کل">
+			<vs-tab :label="$t('pages.orders.allOrders.title')">
 				<all-orders />
 			</vs-tab>
-			<vs-tab label="سفارشات باز">
+			<vs-tab :label="$t('pages.orders.openOrders.title')">
 				<open-orders />
 			</vs-tab>
-			<vs-tab label="سفارشات تکمیل شده">
+			<vs-tab :label="$t('pages.orders.closeOrders.title')">
 				<close-orders />
 			</vs-tab>
 		</vs-tabs>
