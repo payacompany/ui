@@ -162,6 +162,10 @@ export default {
 		orders: {
 			allOrders: {
 				title: "سفارشات کل",
+				close: "بسته",
+				open: "باز",
+				sell: "فروش",
+				buy: "خرید",
 				table: {
 					fields: [
 						{

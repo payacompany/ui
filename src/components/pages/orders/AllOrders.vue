@@ -25,11 +25,19 @@
 					</vs-td>
 
 					<vs-td :data="data[indextr].type">
-						{{ data[indextr].type ? "فروش" : "خرید" }}
+						{{
+							data[indextr].type
+								? $t("pages.orders.allOrders.buy")
+								: $t("pages.orders.allOrders.sell")
+						}}
 					</vs-td>
 
 					<vs-td :data="data[indextr].status">
-						{{ data[indextr].status ? "بسته" : "باز" }}
+						{{
+							data[indextr].status
+								? $t("pages.orders.allOrders.open")
+								: $t("pages.orders.allOrders.close")
+						}}
 					</vs-td>
 
 					<vs-td>

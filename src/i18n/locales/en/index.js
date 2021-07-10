@@ -161,6 +161,10 @@ export default {
 		orders: {
 			allOrders: {
 				title: "All orders",
+				close: "Close",
+				open: "Open",
+				sell: "Sell",
+				buy: "Buy",
 				table: {
 					fields: [
 						{
