@@ -259,5 +259,41 @@ export default {
 				},
 			},
 		},
+		history: {
+			bankTransactions: {
+				title: "Bank transactions",
+				table: {
+					fields: [
+						{
+							title: "ID",
+						},
+						{
+							title: "type",
+						},
+						{
+							title: "Amount",
+						},
+						{
+							title: "Fee",
+						},
+						{
+							title: "Status",
+						},
+						{
+							title: "IBan",
+						},
+						{
+							title: "Created at",
+						},
+						{
+							title: "Updated at",
+						},
+					],
+				},
+			},
+			cryptoTransations: {
+				title: "Crypto transactions",
+			},
+		},
 	},
 };

@@ -15,14 +15,14 @@
 			no-data-text="رکوردی موجود نیست"
 		>
 			<template slot="thead">
-				<vs-th>شناسه</vs-th>
-				<vs-th>نوع</vs-th>
-				<vs-th>مقدار</vs-th>
-				<vs-th>کارمزد</vs-th>
-				<vs-th>وضعیت</vs-th>
-				<vs-th>شماره کارت / شبا</vs-th>
-				<vs-th>زمان ایجاد</vs-th>
-				<vs-th>زمان تغییر</vs-th>
+				<vs-th
+					v-for="(th, index) in $t(
+						'pages.history.bankTransactions.table.fields'
+					)"
+					:key="index"
+				>
+					{{ th.title }}
+				</vs-th>
 			</template>
 
 			<template slot-scope="{ data }">

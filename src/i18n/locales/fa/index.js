@@ -262,8 +262,40 @@ export default {
 			},
 		},
 		history: {
-			bankTransactions: {},
-			cryptoTransations: {},
+			bankTransactions: {
+				title: "تاریخچه تراکنش های بانکی",
+				table: {
+					fields: [
+						{
+							title: "شناسه",
+						},
+						{
+							title: "نوع",
+						},
+						{
+							title: "مقدار",
+						},
+						{
+							title: "کارمزد",
+						},
+						{
+							title: "وضعیت",
+						},
+						{
+							title: "شماره کارت / شبا",
+						},
+						{
+							title: "زمان ایجاد",
+						},
+						{
+							title: "زمان تغییر",
+						},
+					],
+				},
+			},
+			cryptoTransations: {
+				title: "تاریخچه تراکنش ها رمزارز",
+			},
 		},
 	},
 };

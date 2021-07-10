@@ -1,10 +1,10 @@
 <template>
 	<div class="w-8/12 mx-auto shadow-lg rounded-md">
 		<vs-tabs alignment="left">
-			<vs-tab label="تاریخچه تراکنش های بانکی">
+			<vs-tab :label="$t('pages.history.bankTransactions.title')">
 				<bank-history />
 			</vs-tab>
-			<vs-tab label="تاریخچه تراکنش های رمزارز">
+			<vs-tab :label="$t('pages.history.cryptoTransations.title')">
 				<crypto-history />
 			</vs-tab>
 		</vs-tabs>

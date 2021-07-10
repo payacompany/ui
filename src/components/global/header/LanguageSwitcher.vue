@@ -44,7 +44,7 @@ export default {
 			this.$i18n.locale = locale.value;
 			setTimeout(() => {
 				this.$vs.loading.close();
-			}, 3000);
+			}, 300);
 		}
 	},
 	mounted () {}
