@@ -71,6 +71,30 @@ export default {
 				title: "API Management",
 				description: "Enable 2fa for activation",
 			},
+			AccountActivity: {
+				title: "Account activity",
+				successful: "successful",
+				unsuccessful: "unsuccessful",
+				table: {
+					fields: [
+						{
+							title: "Date",
+						},
+						{
+							title: "operation",
+						},
+						{
+							title: "status",
+						},
+						{
+							title: "IP Address",
+						},
+						{
+							title: "OS",
+						},
+					],
+				},
+			},
 		},
 	},
 };

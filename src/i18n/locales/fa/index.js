@@ -72,6 +72,30 @@ export default {
 				description:
 					"برای مدیریت Api ابتدا باید شناسایی دوعاملی خود را فعال کنید.",
 			},
+			AccountActivity: {
+				title: "فعالیت های اخیر اکانت شما",
+				successful: "موفق",
+				unsuccessful: "ناموفق",
+				table: {
+					fields: [
+						{
+							title: "تاریخ",
+						},
+						{
+							title: "عملیات",
+						},
+						{
+							title: "وضعیت",
+						},
+						{
+							title: "آدرس آی پی",
+						},
+						{
+							title: "سیستم عامل",
+						},
+					],
+				},
+			},
 		},
 	},
 };

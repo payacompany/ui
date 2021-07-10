@@ -2,11 +2,15 @@
 	<div>
 		<vs-table :max-items="8" pagination :data="users">
 			<template slot="thead">
-				<vs-th>تاریخ</vs-th>
-				<vs-th>عملیات</vs-th>
-				<vs-th>وضعیت</vs-th>
-				<vs-th>آدرس آی پی</vs-th>
-				<vs-th>دستگاه مربوط</vs-th>
+				<vs-th
+					v-for="(th, index) in $t(
+						'pages.profile.AccountActivity.table.fields'
+					)"
+					:key="index"
+					class="font-bold"
+				>
+					{{ th.title }}
+				</vs-th>
 			</template>
 
 			<template slot-scope="{ data }">
@@ -20,7 +24,11 @@
 					</vs-td>
 
 					<vs-td :data="data[indextr].status">
-						{{ data[indextr].status ? "موفق" : "ناموقق" }}
+						{{
+							data[indextr].status
+								? $t("pages.profile.AccountActivity.successful")
+								: $t("pages.profile.AccountActivity.unsuccessful")
+						}}
 					</vs-td>
 
 					<vs-td :data="data[indextr].ip">

@@ -2,7 +2,9 @@
 	<div>
 		<card-with-header>
 			<template #header>
-				<p class="text-xl font-bold">فعالیت های اخیر اکانت شما</p>
+				<p class="text-xl font-bold">
+					{{ $t("pages.profile.AccountActivity.title") }}
+				</p>
 			</template>
 			<template #body>
 				<div>
