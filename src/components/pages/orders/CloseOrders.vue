@@ -2,11 +2,12 @@
 	<div>
 		<vs-table :max-items="8" pagination :data="orders">
 			<template slot="thead">
-				<vs-th>تاریخ</vs-th>
-				<vs-th>نام</vs-th>
-				<vs-th>مقدار</vs-th>
-				<vs-th>نوع</vs-th>
-				<vs-th>اطلاعات بیشتر</vs-th>
+				<vs-th
+					v-for="(th, index) in $t('pages.orders.openOrders.table.fields')"
+					:key="index"
+				>
+					{{ th.title }}
+				</vs-th>
 			</template>
 
 			<template slot-scope="{ data }">
@@ -24,7 +25,11 @@
 					</vs-td>
 
 					<vs-td :data="data[indextr].type">
-						{{ data[indextr].type ? "فروش" : "خرید" }}
+						{{
+							data[indextr].type
+								? $t("pages.orders.allOrders.buy")
+								: $t("pages.orders.allOrders.sell")
+						}}
 					</vs-td>
 
 					<vs-td>
