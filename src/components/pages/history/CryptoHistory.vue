@@ -1,8 +1,12 @@
 <template>
 	<div>
-		<vs-select v-model="selectedType" label="نوع" class="mb-3">
+		<vs-select
+			v-model="selectedType"
+			:label="$t('pages.history.filterTitle')"
+			class="mb-3"
+		>
 			<vs-select-item
-				v-for="(item, index) in types"
+				v-for="(item, index) in $t('pages.history.filters')"
 				:key="index"
 				:value="item.value"
 				:text="item.text"
@@ -15,14 +19,14 @@
 			no-data-text="رکوردی موجود نیست"
 		>
 			<template slot="thead">
-				<vs-th>شناسه</vs-th>
-				<vs-th>واحد پول </vs-th>
-				<vs-th>مقدار</vs-th>
-				<vs-th>کارمزد</vs-th>
-				<vs-th>وضعیت</vs-th>
-				<vs-th>آدرس</vs-th>
-				<vs-th>زمان ایجاد</vs-th>
-				<vs-th>زمان تغییر</vs-th>
+				<vs-th
+					v-for="(th, index) in $t(
+						'pages.history.cryptoTransations.table.fields'
+					)"
+					:key="index"
+				>
+					{{ th.title }}
+				</vs-th>
 			</template>
 
 			<template slot-scope="{ data }">
@@ -57,20 +61,6 @@ export default {
 	data () {
 		return {
 			selectedType: 0,
-			types: [
-				{
-					text: "همه",
-					value: 0
-				},
-				{
-					text: "واریز",
-					value: 1
-				},
-				{
-					text: "برداشت",
-					value: 2
-				}
-			],
 			history: []
 		};
 	}

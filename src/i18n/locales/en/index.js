@@ -260,6 +260,21 @@ export default {
 			},
 		},
 		history: {
+			filterTitle: "type",
+			filters: [
+				{
+					text: "All",
+					value: 0,
+				},
+				{
+					text: "Deposit",
+					value: 1,
+				},
+				{
+					text: "Withdraw",
+					value: 2,
+				},
+			],
 			bankTransactions: {
 				title: "Bank transactions",
 				table: {
@@ -293,6 +308,34 @@ export default {
 			},
 			cryptoTransations: {
 				title: "Crypto transactions",
+				table: {
+					fields: [
+						{
+							title: "ID",
+						},
+						{
+							title: "Unit",
+						},
+						{
+							title: "Amount",
+						},
+						{
+							title: "Fee",
+						},
+						{
+							title: "Status",
+						},
+						{
+							title: "Address",
+						},
+						{
+							title: "Created at",
+						},
+						{
+							title: "Updated at",
+						},
+					],
+				},
 			},
 		},
 	},

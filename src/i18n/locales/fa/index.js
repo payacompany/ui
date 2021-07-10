@@ -262,6 +262,21 @@ export default {
 			},
 		},
 		history: {
+			filterTitle: "نوع",
+			filters: [
+				{
+					text: "همه",
+					value: 0,
+				},
+				{
+					text: "واریز",
+					value: 1,
+				},
+				{
+					text: "برداشت",
+					value: 2,
+				},
+			],
 			bankTransactions: {
 				title: "تاریخچه تراکنش های بانکی",
 				table: {
@@ -295,6 +310,34 @@ export default {
 			},
 			cryptoTransations: {
 				title: "تاریخچه تراکنش ها رمزارز",
+				table: {
+					fields: [
+						{
+							title: "شناسه",
+						},
+						{
+							title: "واحد پول",
+						},
+						{
+							title: "مقدار",
+						},
+						{
+							title: "کارمزد",
+						},
+						{
+							title: "وضعیت",
+						},
+						{
+							title: "آدرس",
+						},
+						{
+							title: "زمان ایجاد",
+						},
+						{
+							title: "زمان تغییر",
+						},
+					],
+				},
 			},
 		},
 	},
