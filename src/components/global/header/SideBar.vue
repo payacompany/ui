@@ -21,17 +21,17 @@
 			</vs-sidebar-item>
 			<vs-divider />
 			<vs-sidebar-item index="2" icon="gavel" to="/trading">
-				اتاق معاملات
+				{{ $t("nav.trade") }}
 			</vs-sidebar-item>
 
 			<vs-sidebar-item index="3" to="/wallet">
 				{{ $t("nav.wallet") }}
 			</vs-sidebar-item>
 			<vs-sidebar-item index="4" icon="account_box" to="/orders">
-				سفارشات
+				{{ $t("nav.orders") }}
 			</vs-sidebar-item>
 			<vs-sidebar-item index="5" icon="account_box" to="/history">
-				تاریخچه
+				{{ $t("nav.history") }}
 			</vs-sidebar-item>
 
 			<div slot="footer" class="text-center w-full">
