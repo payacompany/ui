@@ -2,9 +2,12 @@
 	<div>
 		<vs-table :data="markets" strip no-data-text="رکوردی موجود نیست">
 			<template slot="thead">
-				<vs-th>بازار</vs-th>
-				<vs-th>قیمت</vs-th>
-				<vs-th>درصد تغییرات</vs-th>
+				<vs-th
+					v-for="(th, index) in $t('pages.trade.markets.table.fields')"
+					:key="index"
+				>
+					{{ th.title }}
+				</vs-th>
 			</template>
 
 			<template slot-scope="{ data }">

@@ -2,7 +2,7 @@
 	<div class="shadow-md rounded-md mt-2 py-1">
 		<div class="px-5 pt-2">
 			<p class="font-bold text-sm">
-				بازار ها
+				{{ $t("pages.trade.markets.title") }}
 			</p>
 		</div>
 		<vs-divider />
@@ -11,7 +11,7 @@
 			v-model="search"
 			class="min-w-full px-3"
 			icon="search"
-			placeholder="جستجو بازار مورد نظر"
+			:placeholder="$t('pages.trade.markets.searchText')"
 		/>
 	</div>
 </template>

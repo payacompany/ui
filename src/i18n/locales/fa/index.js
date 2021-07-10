@@ -359,6 +359,23 @@ export default {
 					title: "فروش",
 				},
 			},
+			markets: {
+				title: "بازار ها",
+				searchText: "جستجو بازار مورد نظر",
+				table: {
+					fields: [
+						{
+							title: "بازار",
+						},
+						{
+							title: "قیمت",
+						},
+						{
+							title: "درصد تغییرات",
+						},
+					],
+				},
+			},
 		},
 	},
 };

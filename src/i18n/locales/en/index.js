@@ -357,6 +357,23 @@ export default {
 					title: "Sell",
 				},
 			},
+			markets: {
+				title: "Markets",
+				searchText: "Search market...",
+				table: {
+					fields: [
+						{
+							title: "market",
+						},
+						{
+							title: "price",
+						},
+						{
+							title: "changes",
+						},
+					],
+				},
+			},
 		},
 	},
 };
