@@ -16,6 +16,11 @@ export default {
 				newPassword: "رمز عبور جدید شما",
 				repeatNewPassword: "تکرار رمز عبور جدید شما",
 			},
+			twoAuth: {
+				title: "شناسایی دوعاملی",
+				active: "فعال",
+				deactive: "غیرفعال",
+			},
 		},
 	},
 };

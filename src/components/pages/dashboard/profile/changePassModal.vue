@@ -4,13 +4,13 @@
 			size="small"
 			color="primary"
 			type="filled"
-			@click="popupActivo2 = true"
+			@click="changePassModalActive = true"
 		>
 			{{ $t("pages.profile.changePassword.title") }}
 		</vs-button>
 		<vs-popup
 			:title="$t('pages.profile.changePassword.title')"
-			:active.sync="popupActivo2"
+			:active.sync="changePassModalActive"
 		>
 			<vs-input
 				v-model="user.password"
@@ -41,8 +41,7 @@ export default {
 	data () {
 		return {
 			user: {},
-			popupActivo2: false,
-			popupActivo3: false
+			changePassModalActive: false
 		};
 	}
 };

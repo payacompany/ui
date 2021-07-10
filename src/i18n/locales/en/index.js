@@ -16,6 +16,11 @@ export default {
 				newPassword: "New Password",
 				repeatNewPassword: "Repeat New Password",
 			},
+			twoAuth: {
+				title: "two factor authentication",
+				active: "active",
+				deactive: "deactive",
+			},
 		},
 	},
 };

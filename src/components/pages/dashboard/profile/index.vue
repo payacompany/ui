@@ -30,8 +30,14 @@
 							@click="$router.push({ name: '2fa' })"
 						>
 							<p>
-								شناسایی دو عاملی:
-								<span> ({{ twoFactorAuth ? "فعال" : "غیرفعال" }}) </span>
+								{{ $t("pages.profile.twoAuth.title") }}
+								<span>
+									({{
+										twoFactorAuth
+											? $t("pages.profile.twoAuth.active")
+											: $t("pages.profile.twoAuth.deactive")
+									}})
+								</span>
 							</p>
 							<vs-switch
 								v-model="twoFactorAuth"
