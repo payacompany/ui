@@ -67,6 +67,10 @@ export default {
 					},
 				],
 			},
+			ApiManagement: {
+				title: "API Management",
+				description: "Enable 2fa for activation",
+			},
 		},
 	},
 };

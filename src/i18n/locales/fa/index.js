@@ -67,6 +67,11 @@ export default {
 					},
 				],
 			},
+			ApiManagement: {
+				title: "مدیریت API ها",
+				description:
+					"برای مدیریت Api ابتدا باید شناسایی دوعاملی خود را فعال کنید.",
+			},
 		},
 	},
 };

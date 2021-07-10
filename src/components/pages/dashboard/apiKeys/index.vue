@@ -2,12 +2,14 @@
 	<div>
 		<card-with-header>
 			<template #header>
-				<p class="text-xl font-bold">مدیریت Api ها</p>
+				<p class="text-xl font-bold">
+					{{ $t("pages.profile.ApiManagement.title") }}
+				</p>
 			</template>
 			<template #body>
 				<div>
 					<p class="text-center text-bold text-gray-400 text-sm">
-						برای مدیریت Api ابتدا باید شناسایی دوعاملی خود را فعال کنید.
+						{{ $t("pages.profile.ApiManagement.description") }}
 					</p>
 				</div>
 			</template>
