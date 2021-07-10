@@ -25,7 +25,7 @@
 			</vs-sidebar-item>
 
 			<vs-sidebar-item index="3" to="/wallet">
-				کیف پول
+				{{ $t("nav.wallet") }}
 			</vs-sidebar-item>
 			<vs-sidebar-item index="4" icon="account_box" to="/orders">
 				سفارشات
