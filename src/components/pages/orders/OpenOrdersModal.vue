@@ -1,30 +1,33 @@
 <template lang="html">
 	<div class="centerx">
 		<vs-button color="primary" type="filled" @click="showModal = true">
-			اطلاعات بیشتر
+			{{ $t("pages.orders.openOrders.modal.title") }}
 		</vs-button>
-		<vs-popup title="جزئیات سفارش" :active.sync="showModal">
+		<vs-popup
+			:title="$t('pages.orders.openOrders.modal.orderDetails')"
+			:active.sync="showModal"
+		>
 			<div class="flex flex-wrap justify-between">
 				<p class="pb-8">
-					شناسه سفارش:
+					{{ $t("pages.orders.openOrders.modal.orderId") }}:
 					<span>
 						{{ orderDetails.id }}
 					</span>
 				</p>
 				<p class="pb-8">
-					تاریخ سفارش:
+					{{ $t("pages.orders.openOrders.modal.orderCreatedAt") }}: :
 					<span> {{ orderDetails.date }} </span>
 				</p>
 				<p class="pb-8">
-					قیمت واحد سفارش:
+					{{ $t("pages.orders.openOrders.modal.unitPerPrice") }}: : :
 					<span> {{ orderDetails.priceInUnit }} تومان </span>
 				</p>
 				<p>
-					حجم سفارش:
+					{{ $t("pages.orders.openOrders.modal.volume") }}: : :
 					<span> {{ orderDetails.volume }} </span>
 				</p>
 				<p>
-					حجم پرشده:
+					{{ $t("pages.orders.openOrders.modal.filledVolume") }}: : :
 					<span> {{ orderDetails.volumeCompleted }} </span>
 				</p>
 

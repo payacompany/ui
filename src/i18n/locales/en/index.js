@@ -200,6 +200,19 @@ export default {
 			},
 			openOrders: {
 				title: "Open orders",
+				open: "Open",
+				sell: "Sell",
+				modal: {
+					title: "more info",
+					orderDetails: "Order details",
+					orderId: "ID",
+					orderCreatedAt: "Created at",
+					unitPerPrice: "Unit per price",
+					volume: "Volume",
+					feeOrder: "Fee order",
+					totalPrice: "Total price",
+					filledVolume: "Filled Volume",
+				},
 				table: {
 					fields: [
 						{
@@ -213,9 +226,6 @@ export default {
 						},
 						{
 							title: "Type",
-						},
-						{
-							title: "Status",
 						},
 						{
 							title: "Info",

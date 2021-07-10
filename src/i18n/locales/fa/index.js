@@ -201,6 +201,19 @@ export default {
 			},
 			openOrders: {
 				title: "سفارشات باز",
+				sell: "فروش",
+				buy: "خرید",
+				modal: {
+					title: "اطلاعات بیشتر",
+					orderDetails: "جزئیات سفارش",
+					orderId: "شناسه سفارش",
+					orderCreatedAt: "تاریخ سفارش",
+					unitPerPrice: "قیمت واحد سفارش",
+					volume: "حجم سفارش",
+					feeOrder: "کارمزد سفارش",
+					totalPrice: "قیمت کل سفارش",
+					filledVolume: "حجم پر شده",
+				},
 				table: {
 					fields: [
 						{
@@ -215,9 +228,7 @@ export default {
 						{
 							title: "نوع",
 						},
-						{
-							title: "وضعیت",
-						},
+
 						{
 							title: "اطلاعات بیشتر",
 						},
