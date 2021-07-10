@@ -165,6 +165,16 @@ export default {
 				open: "Open",
 				sell: "Sell",
 				buy: "Buy",
+				modal: {
+					title: "more info",
+					orderDetails: "Order details",
+					orderId: "ID",
+					orderCreatedAt: "Created at",
+					unitPerPrice: "Unit per price",
+					volume: "Volume",
+					feeOrder: "Fee order",
+					totalPrice: "Total price",
+				},
 				table: {
 					fields: [
 						{
