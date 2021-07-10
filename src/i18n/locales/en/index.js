@@ -426,6 +426,9 @@ export default {
 					],
 				},
 			},
+			trades: {
+				title: "Recent Transactions",
+			},
 		},
 	},
 };

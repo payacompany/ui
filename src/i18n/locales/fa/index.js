@@ -428,6 +428,9 @@ export default {
 					],
 				},
 			},
+			trades: {
+				title: "معاملات اخیر",
+			},
 		},
 	},
 };
