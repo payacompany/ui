@@ -16,10 +16,10 @@
 				:to="{ path: setRoute }"
 				size="small"
 			>
-				اعتبارسنجی
+				{{ $t("pages.profile.userVerification.verify") }}
 			</vs-button>
 			<p v-else class="text-xs text-success">
-				اطلاعات تایید شده
+				{{ $t("pages.profile.userVerification.confirmed") }}
 				<span class="material-icons">
 					check
 				</span>

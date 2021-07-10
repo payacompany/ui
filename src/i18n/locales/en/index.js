@@ -27,12 +27,45 @@ export default {
 			},
 			userVerification: {
 				title: "User Verification",
-				steps: {
-					stepOne: {
+				verify: "verify",
+				confirmed: "confirmed",
+				kycSteps: [
+					{
 						title: "Step 1",
 						name: "Email Verification",
+						isCompleted: true,
+						accessTo: "withdraw Access",
+						isAllow: false,
 					},
-				},
+					{
+						title: "Step 2",
+						name: "Phone Verification",
+						isCompleted: true,
+						accessTo: "Access to trading room",
+						isAllow: false,
+					},
+					{
+						title: "Step 3",
+						name: "user identify",
+						isCompleted: true,
+						accessTo: "maximum withdraw 1 BTC",
+						isAllow: false,
+					},
+					{
+						title: "Step 4",
+						name: "Bank Verification",
+						isCompleted: true,
+						accessTo: "maximum withdraw 10 BTC",
+						isAllow: false,
+					},
+					{
+						title: "Step 5",
+						name: "Residence Verification",
+						isCompleted: false,
+						accessTo: "maximum withdraw 100 BTC",
+						isAllow: false,
+					},
+				],
 			},
 		},
 	},
