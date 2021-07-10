@@ -261,5 +261,9 @@ export default {
 				},
 			},
 		},
+		history: {
+			bankTransactions: {},
+			cryptoTransations: {},
+		},
 	},
 };
