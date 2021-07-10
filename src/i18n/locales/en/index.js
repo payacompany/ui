@@ -428,6 +428,25 @@ export default {
 			},
 			trades: {
 				title: "Recent Transactions",
+				myTransactions: {
+					title: "Yours",
+				},
+				marketTransactions: {
+					title: "Market",
+				},
+				table: {
+					fields: [
+						{
+							title: "price(unit)",
+						},
+						{
+							title: "volume",
+						},
+						{
+							title: "tprice(unit)",
+						},
+					],
+				},
 			},
 		},
 	},

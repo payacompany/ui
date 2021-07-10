@@ -430,6 +430,25 @@ export default {
 			},
 			trades: {
 				title: "معاملات اخیر",
+				myTransactions: {
+					title: "معاملات اخیر شما",
+				},
+				marketTransactions: {
+					title: "معاملات بازار",
+				},
+				table: {
+					fields: [
+						{
+							title: "قیمت(واحد)",
+						},
+						{
+							title: "حجم",
+						},
+						{
+							title: "مبلغ کل(واحد)",
+						},
+					],
+				},
 			},
 		},
 	},
