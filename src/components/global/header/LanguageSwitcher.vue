@@ -42,11 +42,19 @@ export default {
 		setLocale (locale) {
 			this.$vs.loading();
 			this.$i18n.locale = locale.value;
+			if (this.$i18n.locale === "En") {
+				document.getElementsByTagName("body")[0].style = "direction:ltr";
+				console.log(document.getElementsByTagName("body")[0]);
+			} else {
+				document.getElementsByTagName("body")[0].style = "direction:rtl";
+			}
 			setTimeout(() => {
 				this.$vs.loading.close();
 			}, 300);
 		}
 	},
-	mounted () {}
+	mounted () {
+		document.getElementsByTagName("body")[0].style = "direction:rtl";
+	}
 };
 </script>
