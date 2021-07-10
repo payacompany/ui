@@ -28,7 +28,7 @@ import "material-icons/iconfont/material-icons.css";
 
 Vue.use(Vuesax, {
 	// eslint-disable-next-line prettier-vue/prettier
-	rtl: true,
+	rtl: i18n.locale == "Fa" ? true : false,
 });
 
 import VueSweetalert2 from "vue-sweetalert2";

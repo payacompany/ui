@@ -130,6 +130,12 @@ export default {
 			},
 			withdraw: {
 				title: "برداشت",
+				destinationAddressWallet: "آدرس والت مقصد را وارد کنید.",
+				descriptionText: "لطفا اطلاعات را بادقت تمام وارد نمایید",
+				amount: "مقدار",
+				balance: "موجودی",
+				inventory: "برداشت کل موجودی",
+				submit: "برداشت",
 			},
 			history: {
 				title: "تاریخچه",

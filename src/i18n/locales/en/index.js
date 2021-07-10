@@ -129,6 +129,11 @@ export default {
 			},
 			withdraw: {
 				title: "withdraw",
+				destinationAddressWallet: "Enter destination wallet address",
+				descriptionText: "Please enter the information carefully",
+				amount: "Amount",
+				balance: "Balance",
+				inventory: "Total inventory withdrawals",
 			},
 			history: {
 				title: "history",

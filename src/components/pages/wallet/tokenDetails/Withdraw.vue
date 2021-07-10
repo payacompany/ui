@@ -5,23 +5,25 @@
 			<vs-input
 				v-model="deposit.address"
 				class="min-w-full mb-3"
-				label-placeholder="آدرس والت مبدا را وارد کنید."
-				description-text="لطفا اطلاعات را بادقت تمام وارد نمایید"
+				:label-placeholder="
+					$t('pages.wallet.withdraw.destinationAddressWallet')
+				"
+				:description-text="$t('pages.wallet.withdraw.descriptionText')"
 			/>
 			<vs-input
 				v-model="deposit.value"
 				class="min-w-full"
-				label-placeholder="مقدار "
-				description-text="موجودی : 0.0024045"
+				:label-placeholder="$t('pages.wallet.withdraw.amount')"
+				:description-text="$t('pages.wallet.withdraw.amount') + ':' + 165151"
 			/>
 			<div class="flex justify-end">
 				<vs-button size="small" class="mb-3" type="border">
-					برداشت کل موجودی
+					{{ $t("pages.wallet.withdraw.inventory") }}
 				</vs-button>
 			</div>
 			<div class="mb-3">
 				<vs-button class="w-full">
-					برداشت از حساب شما
+					{{ $t("pages.wallet.withdraw.title") }}
 				</vs-button>
 			</div>
 		</div>
