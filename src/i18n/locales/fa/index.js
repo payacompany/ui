@@ -7,4 +7,10 @@ export default {
 		logout: "خروج از حساب کاربری",
 		orders: "سفارشات",
 	},
+	pages: {
+		profile: {
+			title: "حساب کاربری شما",
+			changePassword: "تغییر گذرواژه",
+		},
+	},
 };

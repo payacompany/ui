@@ -6,9 +6,12 @@
 			type="filled"
 			@click="popupActivo2 = true"
 		>
-			تغییر گذرواژه
+			{{ $t("pages.profile.changePassword") }}
 		</vs-button>
-		<vs-popup title="تغییر گذرواژه" :active.sync="popupActivo2">
+		<vs-popup
+			:title="$t('pages.profile.changePassword')"
+			:active.sync="popupActivo2"
+		>
 			<vs-input
 				v-model="user.password"
 				class="min-w-full mb-3"
@@ -26,7 +29,7 @@
 			/>
 			<div class="mt-3">
 				<vs-button class="w-full">
-					تغییر گذرواژه
+					{{ $t("pages.profile.changePassword") }}
 				</vs-button>
 			</div>
 		</vs-popup>

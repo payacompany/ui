@@ -7,4 +7,10 @@ export default {
 		logout: "logout",
 		orders: "orders",
 	},
+	pages: {
+		profile: {
+			title: "profile",
+			changePassword: "Change password",
+		},
+	},
 };

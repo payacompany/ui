@@ -2,7 +2,9 @@
 	<div>
 		<card-with-header>
 			<template #header>
-				<p class="text-xl font-bold">حساب کاربری شما</p>
+				<p class="text-xl font-bold">
+					{{ $t("pages.profile.title") }}
+				</p>
 			</template>
 			<template #body>
 				<div class="flex flex-row justify-between w-full">
