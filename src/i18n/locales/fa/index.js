@@ -10,7 +10,12 @@ export default {
 	pages: {
 		profile: {
 			title: "حساب کاربری شما",
-			changePassword: "تغییر گذرواژه",
+			changePassword: {
+				title: "تغییر گذرواژه",
+				currentPassword: "رمز عبور فعلی شما",
+				newPassword: "رمز عبور جدید شما",
+				repeatNewPassword: "تکرار رمز عبور جدید شما",
+			},
 		},
 	},
 };

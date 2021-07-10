@@ -10,7 +10,12 @@ export default {
 	pages: {
 		profile: {
 			title: "profile",
-			changePassword: "Change password",
+			changePassword: {
+				title: "Change password",
+				currentPassword: "Current Password",
+				newPassword: "New Password",
+				repeatNewPassword: "Repeat New Password",
+			},
 		},
 	},
 };

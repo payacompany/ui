@@ -6,30 +6,30 @@
 			type="filled"
 			@click="popupActivo2 = true"
 		>
-			{{ $t("pages.profile.changePassword") }}
+			{{ $t("pages.profile.changePassword.title") }}
 		</vs-button>
 		<vs-popup
-			:title="$t('pages.profile.changePassword')"
+			:title="$t('pages.profile.changePassword.title')"
 			:active.sync="popupActivo2"
 		>
 			<vs-input
 				v-model="user.password"
 				class="min-w-full mb-3"
-				placeholder="رمز عبور فعلی شما"
+				:placeholder="$t('pages.profile.changePassword.currentPassword')"
 			/>
 			<vs-input
 				v-model="user.password"
 				class="min-w-full mb-3"
-				placeholder="رمز عبور جدید شما"
+				:placeholder="$t('pages.profile.changePassword.newPassword')"
 			/>
 			<vs-input
 				v-model="user.password"
 				class="min-w-full"
-				placeholder="تکرار رمز عبور جدید شما"
+				:placeholder="$t('pages.profile.changePassword.repeatNewPassword')"
 			/>
 			<div class="mt-3">
 				<vs-button class="w-full">
-					{{ $t("pages.profile.changePassword") }}
+					{{ $t("pages.profile.changePassword.title") }}
 				</vs-button>
 			</div>
 		</vs-popup>
