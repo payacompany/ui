@@ -6,12 +6,13 @@
 			</div>
 			<div class="w-9/12 flex flex-row justify-between">
 				<div class="text-justify">
-					<p>موجودی قفل شده</p>
+					<p>{{ $t("pages.wallet.lockedBalance") }}</p>
 					<p>0</p>
 				</div>
 				<div>
 					<p>
-						موجودی <span>{{ coins.symbol }}</span>
+						{{ $t("pages.wallet.balance") }}
+						<span>{{ coins.symbol }}</span>
 					</p>
 					<p>0</p>
 				</div>

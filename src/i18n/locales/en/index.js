@@ -96,6 +96,43 @@ export default {
 				},
 			},
 		},
-		wallet: {},
+		wallet: {
+			IRTestimate: "Estimate your assets to IRT",
+			USDestimate: "Estimate your assets to USD",
+			balance: "Balance",
+			lockedBalance: "Locked Balance",
+			deposit: {
+				title: "deposit",
+				rules: [
+					{
+						title: "Max",
+					},
+					{
+						title: "Min",
+					},
+					{
+						title: "Deposit Time",
+					},
+					{
+						title: "Fee",
+					},
+					{
+						title: "Fixed fee",
+					},
+					{
+						title: "Maximum fee",
+					},
+					{
+						title: "Limitaion",
+					},
+				],
+			},
+			withdraw: {
+				title: "withdraw",
+			},
+			history: {
+				title: "history",
+			},
+		},
 	},
 };

@@ -97,6 +97,43 @@ export default {
 				},
 			},
 		},
-		wallet: {},
+		wallet: {
+			IRTestimate: "تخمین دارایی شما به ریال",
+			USDestimate: "تخمین دارایی شما به دلار",
+			balance: "موجودی",
+			lockedBalance: "موجودی قفل شده",
+			deposit: {
+				title: "واریز",
+				rules: [
+					{
+						title: "بیشترین",
+					},
+					{
+						title: "کمترین",
+					},
+					{
+						title: "زمان واریز",
+					},
+					{
+						title: "کارمزد",
+					},
+					{
+						title: "کارمزد ثابت",
+					},
+					{
+						title: "حداکثر کارمزد",
+					},
+					{
+						title: "محدودیت",
+					},
+				],
+			},
+			withdraw: {
+				title: "برداشت",
+			},
+			history: {
+				title: "تاریخچه",
+			},
+		},
 	},
 };

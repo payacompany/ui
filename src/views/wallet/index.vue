@@ -4,12 +4,12 @@
 			<div class="mx-auto flex py-3 justify-evenly border-b rounded-t-lg">
 				<div class="flex justify-between w-8/12">
 					<p>
-						تخمین دارایی شما به ریال:
-						<span> {{ balanceIRT }} تومان </span>
+						{{ $t("pages.wallet.IRTestimate") }}:
+						<span> {{ balanceIRT }} </span>
 					</p>
 					<p>
-						تخمین دارایی شما به دلار:
-						<span> {{ balanceIRT }} دلار </span>
+						{{ $t("pages.wallet.USDestimate") }}:
+						<span> {{ balanceIRT }} </span>
 					</p>
 				</div>
 			</div>

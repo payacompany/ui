@@ -1,13 +1,13 @@
 <template>
 	<div>
 		<vs-tabs alignment="left">
-			<vs-tab label="واریز" icon="add">
+			<vs-tab :label="$t('pages.wallet.deposit.title')" icon="add">
 				<deposit />
 			</vs-tab>
-			<vs-tab label="برداشت" icon="payments">
+			<vs-tab :label="$t('pages.wallet.withdraw.title')" icon="payments">
 				<withdraw :coins="coins" />
 			</vs-tab>
-			<vs-tab label="تاریخچه" icon="history">
+			<vs-tab :label="$t('pages.wallet.history.title')" icon="history">
 				<transactions />
 			</vs-tab>
 		</vs-tabs>

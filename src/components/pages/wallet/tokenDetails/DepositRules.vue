@@ -1,7 +1,7 @@
 <template>
 	<div class="flex flex-col border border-gray-300 rounded-sm">
 		<div
-			v-for="(rule, index) in DepositRules"
+			v-for="(rule, index) in $t('pages.wallet.deposit.rules')"
 			:key="index"
 			class="
 				flex flex-row
@@ -17,7 +17,7 @@
 				{{ rule.title }}
 			</p>
 			<p>
-				{{ rule.value }}
+				{{ DepositRules[index].value }}
 			</p>
 		</div>
 	</div>
@@ -29,31 +29,24 @@ export default {
 		return {
 			DepositRules: [
 				{
-					title: "بیشترین",
 					value: "100.00000000"
 				},
 				{
-					title: "کمترین",
 					value: "0.00000001"
 				},
 				{
-					title: "زمان واریز",
 					value: "کمتر از یک ساعت"
 				},
 				{
-					title: "کارمزد",
 					value: "0%"
 				},
 				{
-					title: "کارمزد ثابت",
 					value: "0"
 				},
 				{
-					title: "حداکثر کارمزد",
 					value: "0"
 				},
 				{
-					title: "محدودیت",
 					value: "تراکنش های ارسالی از جایزه ماینینگ پشتیبانی نمیشود"
 				}
 			]
