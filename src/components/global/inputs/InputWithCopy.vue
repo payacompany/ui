@@ -9,7 +9,9 @@
 				:value="refCode"
 			/>
 			<div class="mt-4">
-				<vs-button class="text-sm">کپی کردن</vs-button>
+				<vs-button class="text-sm">
+					{{ $t("pages.profile.copyText.title") }}
+				</vs-button>
 			</div>
 		</div>
 	</copy-to-clipboard>
@@ -21,8 +23,11 @@ import CopyToClipboard from "vue-copy-to-clipboard";
 export default {
 	props: {
 		placeholder: {
+			required: false,
 			type: String,
-			default: "کد معرف شما"
+			default: function () {
+				return this.$t("pages.profile.copyText.placeHolder");
+			}
 		},
 		disabled: {
 			type: Boolean,

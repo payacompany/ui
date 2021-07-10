@@ -21,6 +21,19 @@ export default {
 				active: "فعال",
 				deactive: "غیرفعال",
 			},
+			copyText: {
+				title: "کپی کردن!",
+				placeHolder: "کد معرف شما",
+			},
+			userVerification: {
+				title: "احراز هویت",
+				kycSteps: [
+					{
+						title: "مرحله اول",
+						name: "احراز ایمیل",
+					},
+				],
+			},
 		},
 	},
 };

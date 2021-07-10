@@ -21,6 +21,19 @@ export default {
 				active: "active",
 				deactive: "deactive",
 			},
+			copyText: {
+				title: "copy!",
+				placeHolder: "referral code",
+			},
+			userVerification: {
+				title: "User Verification",
+				steps: {
+					stepOne: {
+						title: "Step 1",
+						name: "Email Verification",
+					},
+				},
+			},
 		},
 	},
 };

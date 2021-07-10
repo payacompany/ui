@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<p class="text-base font-bold">احراز هویت</p>
+		<p class="text-base font-bold">
+			{{ $t("pages.profile.userVerification.title") }}
+		</p>
 		<div class="flex flex-row justify-between">
 			<div v-for="(step, index) in kycSteps" :key="index" class="mt-2">
 				<vs-button
@@ -12,7 +14,11 @@
 				</vs-button>
 			</div>
 		</div>
-		<div v-for="(step, index) in kycSteps" :key="index" class="mt-2">
+		<div
+			v-for="(step, index) in $t('pages.profile.userVerification.kycSteps')"
+			:key="index"
+			class="mt-2"
+		>
 			<verification-step :step="step" :index="index" />
 		</div>
 	</div>
@@ -26,8 +32,8 @@ export default {
 		return {
 			kycSteps: [
 				{
-					title: "مرحله اول",
-					name: "احراز ایمیل",
+					title: this.$t("pages.profile.userVerification.steps.stepOne.title"),
+					name: this.$t("pages.profile.userVerification.steps.stepOne.name"),
 					isCompleted: true,
 					accessTo: "اجازه برداشت",
 					isAllow: false
