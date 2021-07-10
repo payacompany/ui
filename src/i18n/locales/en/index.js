@@ -374,6 +374,31 @@ export default {
 					],
 				},
 			},
+			orderBook: {
+				title: "Order book",
+				table: {
+					fields: [
+						{
+							title: "price(unit)",
+						},
+						{
+							title: "volume",
+						},
+						{
+							title: "changes(%)",
+						},
+					],
+				},
+				all: {
+					title: "All",
+				},
+				buy: {
+					title: "Buy",
+				},
+				sell: {
+					title: "Sell",
+				},
+			},
 		},
 	},
 };

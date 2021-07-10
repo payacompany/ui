@@ -376,6 +376,31 @@ export default {
 					],
 				},
 			},
+			orderBook: {
+				title: "پیشنهادات بازار",
+				table: {
+					fields: [
+						{
+							title: "قیمت(واحد)",
+						},
+						{
+							title: "حجم",
+						},
+						{
+							title: "تغییر(%)",
+						},
+					],
+				},
+				all: {
+					title: "کل",
+				},
+				buy: {
+					title: "خرید",
+				},
+				sell: {
+					title: "فروش",
+				},
+			},
 		},
 	},
 };

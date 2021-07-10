@@ -2,20 +2,29 @@
 	<div class="shadow-md rounded-md mt-2 py-1 min-h-screen">
 		<div class="px-5 pt-2">
 			<p class="font-bold text-sm">
-				پیشنهادات بازار
+				{{ $t("pages.trade.orderBook.title") }}
 			</p>
 		</div>
 		<vs-divider />
 		<vs-tabs alignment="center" :color="borderColor">
-			<vs-tab label="کل" @click="borderColor = 'primary'">
+			<vs-tab
+				:label="$t('pages.trade.orderBook.all.title')"
+				@click="borderColor = 'primary'"
+			>
 				<order-book-list class="height" />
 				<order-book-list />
 			</vs-tab>
 
-			<vs-tab label="خرید" @click="borderColor = 'success'">
+			<vs-tab
+				:label="$t('pages.trade.orderBook.buy.title')"
+				@click="borderColor = 'success'"
+			>
 				<order-book-list />
 			</vs-tab>
-			<vs-tab label="فروش" @click="borderColor = 'danger'">
+			<vs-tab
+				:label="$t('pages.trade.orderBook.sell.title')"
+				@click="borderColor = 'danger'"
+			>
 				<order-book-list />
 			</vs-tab>
 		</vs-tabs>
