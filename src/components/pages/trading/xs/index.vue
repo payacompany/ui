@@ -5,7 +5,7 @@
 		</div>
 		<vs-tabs alignment="left" class="text-xs">
 			<vs-tab :label="$t('pages.trade.xs.tabs.placeOrder')">
-				d
+				<place-order />
 			</vs-tab>
 			<vs-tab :label="$t('pages.trade.xs.tabs.charts')"> d </vs-tab>
 			<vs-tab :label="$t('pages.trade.xs.tabs.orders')"> d </vs-tab>
@@ -14,10 +14,12 @@
 </template>
 
 <script>
+import PlaceOrder from "./placeOrder/index.vue";
 import Markets from "./markets/index.vue";
 export default {
 	components: {
-		Markets
+		Markets,
+		PlaceOrder
 	}
 };
 </script>

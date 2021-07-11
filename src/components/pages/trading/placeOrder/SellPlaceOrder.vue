@@ -22,7 +22,7 @@
 			:label="$t('pages.trade.placeOrder.volume')"
 			:laceholder="$t('pages.trade.placeOrder.volumePlaceHolder')"
 		/>
-		<rages />
+		<ranges />
 		<div class="flex justify-between font-bold text-sm">
 			<p>{{ $t("pages.trade.placeOrder.totalBalance") }}:</p>
 			<p>
@@ -38,9 +38,9 @@
 </template>
 
 <script>
-import Rages from "./Rages.vue";
+import Ranges from "./Ranges.vue";
 export default {
-	components: { Rages },
+	components: { Ranges },
 	data () {
 		return {
 			selectedType: 0
