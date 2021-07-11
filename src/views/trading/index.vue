@@ -1,23 +1,27 @@
 <template>
-	<div class="grid grid-cols-6 gap-3 my-3">
-		<div class="grid-flow-row auto-rows-max">
-			<trades />
+	<div>
+		<div class="hidden md:grid md:grid-cols-6 gap-3 my-3">
+			<div class="grid-flow-row auto-rows-max">
+				<trades />
+			</div>
+			<div class="col-span-3 grid-flow-row auto-rows-max">
+				<trading-view />
+				<open-orders />
+			</div>
+			<div class="grid-flow-row auto-rows-max">
+				<order-book />
+			</div>
+			<div class="grid-flow-row auto-rows-max">
+				<place-order />
+				<markets />
+			</div>
 		</div>
-		<div class="col-span-3 grid-flow-row auto-rows-max">
-			<trading-view />
-			<open-orders />
-		</div>
-		<div class="grid-flow-row auto-rows-max">
-			<order-book />
-		</div>
-		<div class="grid-flow-row auto-rows-max">
-			<place-order />
-			<markets />
-		</div>
+		<trading-xs class="block md:hidden" />
 	</div>
 </template>
 
 <script>
+import TradingXs from "../../components/pages/trading/xs/index.vue";
 import PlaceOrder from "../../components/pages/trading/placeOrder/PlaceOrder.vue";
 import Markets from "../../components/pages/trading/markets/index.vue";
 import OrderBook from "../../components/pages/trading/orderBook/index.vue";
@@ -31,7 +35,8 @@ export default {
 		OrderBook,
 		TradingView,
 		OpenOrders,
-		Trades
+		Trades,
+		TradingXs
 	}
 };
 </script>
