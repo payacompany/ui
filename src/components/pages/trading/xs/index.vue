@@ -1,11 +1,18 @@
 <template>
 	<div>
-		trading xs
+		<div>
+			<markets />
+		</div>
 	</div>
 </template>
 
 <script>
-export default {};
+import Markets from "./markets/index.vue";
+export default {
+	components: {
+		Markets
+	}
+};
 </script>
 
 <style></style>

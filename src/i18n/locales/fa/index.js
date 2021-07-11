@@ -419,6 +419,13 @@ export default {
 			},
 		},
 		trade: {
+			xs: {
+				markets: {
+					volume: "حجم",
+					high: "بالاترین",
+					low: "کمترین",
+				},
+			},
 			placeOrder: {
 				filterTitle: "نوع سفارش",
 				filters: [

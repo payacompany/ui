@@ -417,6 +417,13 @@ export default {
 			},
 		},
 		trade: {
+			xs: {
+				markets: {
+					volume: "Vol",
+					high: "High",
+					low: "Low",
+				},
+			},
 			placeOrder: {
 				filterTitle: "order type",
 				filters: [
