@@ -253,6 +253,19 @@ export default {
 					filledVolume: "Filled Volume",
 				},
 				table: {
+					xs: {
+						fields: [
+							{
+								title: "Date",
+							},
+							{
+								title: "Name",
+							},
+							{
+								title: "Info",
+							},
+						],
+					},
 					fields: [
 						{
 							title: "Date",

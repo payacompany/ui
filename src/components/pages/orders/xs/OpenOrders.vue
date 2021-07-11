@@ -21,7 +21,7 @@
 					</vs-td>
 
 					<vs-td>
-						<close-orders-modal :order-details="data[indextr]" />
+						<open-orders-modal :order-details="data[indextr]" />
 					</vs-td>
 				</vs-tr>
 			</template>
@@ -30,9 +30,9 @@
 </template>
 
 <script>
-import CloseOrdersModal from "./CloseOrdersModal.vue";
+import OpenOrdersModal from "./OpenOrdersModal.vue";
 export default {
-	components: { CloseOrdersModal },
+	components: { OpenOrdersModal },
 	data: () => ({
 		orders: [
 			{
@@ -42,8 +42,7 @@ export default {
 				name: "بیت کوین(BTC)",
 				type: 1,
 				volumeCompleted: 0.00051,
-				volume: 0.151603,
-				fee: 13000
+				volume: 0.151603
 			},
 			{
 				id: "123456789",
@@ -52,8 +51,7 @@ export default {
 				name: "بیت کوین(BTC)",
 				type: 0,
 				volumeCompleted: 0.151603,
-				volume: 0.151603,
-				fee: 13000
+				volume: 0.151603
 			}
 		]
 	})

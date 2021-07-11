@@ -254,6 +254,19 @@ export default {
 					filledVolume: "حجم پر شده",
 				},
 				table: {
+					xs: {
+						fields: [
+							{
+								title: "تاریخ",
+							},
+							{
+								title: "نام",
+							},
+							{
+								title: "اطلاعات بیشتر",
+							},
+						],
+					},
 					fields: [
 						{
 							title: "تاریخ",

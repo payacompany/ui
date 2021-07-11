@@ -15,9 +15,11 @@
 </template>
 
 <script>
+import CloseOrders from "./CloseOrders.vue";
+import OpenOrders from "./OpenOrders.vue";
 import AllOrders from "./AllOrders.vue";
 export default {
-	components: { AllOrders }
+	components: { OpenOrders, CloseOrders, AllOrders }
 };
 </script>
 
