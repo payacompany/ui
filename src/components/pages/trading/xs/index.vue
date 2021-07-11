@@ -3,6 +3,13 @@
 		<div>
 			<markets />
 		</div>
+		<vs-tabs alignment="left" class="text-xs">
+			<vs-tab :label="$t('pages.trade.xs.tabs.placeOrder')">
+				d
+			</vs-tab>
+			<vs-tab :label="$t('pages.trade.xs.tabs.charts')"> d </vs-tab>
+			<vs-tab :label="$t('pages.trade.xs.tabs.orders')"> d </vs-tab>
+		</vs-tabs>
 	</div>
 </template>
 
@@ -15,4 +22,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+::v-deep {
+	.vs-tabs--li {
+		width: 33%;
+	}
+}
+</style>

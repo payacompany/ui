@@ -423,6 +423,11 @@ export default {
 					high: "High",
 					low: "Low",
 				},
+				tabs: {
+					placeOrder: "Place order",
+					charts: "Charts",
+					orders: "Orders",
+				},
 			},
 			placeOrder: {
 				filterTitle: "order type",

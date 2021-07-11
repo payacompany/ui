@@ -425,6 +425,11 @@ export default {
 					high: "بالاترین",
 					low: "کمترین",
 				},
+				tabs: {
+					placeOrder: "ایجاد سفارش",
+					charts: "نمودار",
+					orders: "سفارشات",
+				},
 			},
 			placeOrder: {
 				filterTitle: "نوع سفارش",
