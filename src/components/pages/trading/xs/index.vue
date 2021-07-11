@@ -8,8 +8,10 @@
 				<place-order />
 				<order-book />
 			</vs-tab>
-			<vs-tab :label="$t('pages.trade.xs.tabs.charts')"> d </vs-tab>
-			<vs-tab :label="$t('pages.trade.xs.tabs.orders')"> d </vs-tab>
+			<vs-tab :label="$t('pages.trade.xs.tabs.charts')"> tradingview</vs-tab>
+			<vs-tab :label="$t('pages.trade.xs.tabs.orders')">
+				<order-book />
+			</vs-tab>
 		</vs-tabs>
 	</div>
 </template>
