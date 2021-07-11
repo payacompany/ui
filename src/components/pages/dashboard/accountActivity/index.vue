@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<card-with-header>
+		<card-with-header class="hidden md:block">
 			<template #header>
 				<p class="text-xl font-bold">
 					{{ $t("pages.profile.AccountActivity.title") }}

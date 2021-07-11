@@ -41,12 +41,12 @@ export default {
 	methods: {
 		kycStepsAllow () {
 			let allow = false;
-			this.kycSteps.forEach((step, index) => {
-				if (!step.isCompleted && !allow) {
-					step.isAllow = true;
-					allow = true;
-				}
-			});
+			// this.kycSteps.forEach((step, index) => {
+			// 	if (!step.isCompleted && !allow) {
+			// 		step.isAllow = true;
+			// 		allow = true;
+			// 	}
+			// });
 		}
 	}
 };

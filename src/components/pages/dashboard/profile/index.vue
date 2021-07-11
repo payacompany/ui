@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<card-with-header>
+		<card-with-header class="hidden md:block">
 			<template #header>
 				<p class="text-xl font-bold">
 					{{ $t("pages.profile.title") }}
@@ -54,10 +54,12 @@
 				</div>
 			</template>
 		</card-with-header>
+		<profile-xs />
 	</div>
 </template>
 
 <script>
+import ProfileXs from "./xs/index.vue";
 import CardWithHeader from "../../../global/cards/CardWithHeader.vue";
 import InputWithCopy from "../../../global/inputs/InputWithCopy.vue";
 import ChangePassModal from "./changePassModal.vue";
@@ -67,7 +69,8 @@ export default {
 		CardWithHeader,
 		InputWithCopy,
 		UserVerification,
-		ChangePassModal
+		ChangePassModal,
+		ProfileXs
 	},
 	data () {
 		return {

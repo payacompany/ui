@@ -1,6 +1,6 @@
 <template>
-	<div class="container mx-auto mt-12">
-		<div class="w-8/12 mx-auto">
+	<div class="container mx-auto md:mt-12">
+		<div class="md:w-full lg:8/12 mx-auto ">
 			<profile />
 			<api-keys />
 			<account-activity />
