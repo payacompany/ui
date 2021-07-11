@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="footer shadow-md">
 		footer xs
 	</div>
 </template>
@@ -8,4 +8,9 @@
 export default {};
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.footer {
+	position: relative;
+	bottom: 0;
+}
+</style>

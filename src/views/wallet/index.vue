@@ -1,6 +1,6 @@
 <template>
-	<div class="container mx-auto mt-5 hidden md:block">
-		<div class="w-8/12 mx-auto shadow-lg rounded-md">
+	<div class="container mx-auto mt-5">
+		<div class="w-8/12 mx-auto shadow-lg rounded-md hidden md:block">
 			<div class="mx-auto flex py-3 justify-evenly border-b rounded-t-lg">
 				<div class="flex justify-between w-8/12">
 					<p>
@@ -18,14 +18,16 @@
 				<token-details class="w-2/3" :coins="coins" />
 			</div>
 		</div>
+		<wallet-xs class="block md:hidden" />
 	</div>
 </template>
 
 <script>
 import Wallet from "../../components/pages/wallet/index.vue";
+import WalletXs from "../../components/pages/wallet/xs/index.vue";
 import TokenDetails from "../../components/pages/wallet/tokenDetails/index.vue";
 export default {
-	components: { Wallet, TokenDetails },
+	components: { Wallet, TokenDetails, WalletXs },
 	data () {
 		return {
 			balanceIRT: 153000000,
