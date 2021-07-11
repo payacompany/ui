@@ -1,14 +1,19 @@
 <template>
-	<div class="container mx-auto mt-12">
-		<history />
+	<div>
+		<div class="container mx-auto mt-12 hidden md:block">
+			<history />
+		</div>
+		<history-xs />
 	</div>
 </template>
 
 <script>
 import History from "../../components/pages/history/index.vue";
+import HistoryXs from "../../components/pages/history/xs/index.vue";
 export default {
 	components: {
-		History
+		History,
+		HistoryXs
 	}
 };
 </script>
