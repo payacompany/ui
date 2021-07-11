@@ -1,6 +1,15 @@
 <template>
-	<div class="border-b px-3 py-4 shadow-md">
-		header xs
+	<div
+		class="border-b px-3 py-2 shadow-md flex flex-row justify-between items-center"
+	>
+		<div class="text-gray-500">
+			<span class="material-icons">
+				account_circle
+			</span>
+		</div>
+		<div>
+			logo
+		</div>
 	</div>
 </template>
 
@@ -8,4 +17,10 @@
 export default {};
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+::v-deep {
+	span {
+		font-size: 30px !important;
+	}
+}
+</style>
