@@ -9,6 +9,29 @@ export default {
 	},
 	pages: {
 		profile: {
+			xs: [
+				{
+					title: "Profile Verification",
+				},
+				{
+					title: "Two-factor authentication",
+				},
+				{
+					title: "Change password",
+				},
+				{
+					title: "Account activity",
+				},
+				{
+					title: "My API key",
+				},
+				{
+					title: "Language",
+				},
+				{
+					title: "Theme",
+				},
+			],
 			title: "profile",
 			changePassword: {
 				title: "Change password",
