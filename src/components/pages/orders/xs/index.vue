@@ -15,7 +15,10 @@
 </template>
 
 <script>
-export default {};
+import AllOrders from "./AllOrders.vue";
+export default {
+	components: { AllOrders }
+};
 </script>
 
 <style lang="scss" scoped>

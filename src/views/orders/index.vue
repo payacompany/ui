@@ -3,7 +3,7 @@
 		<div class="container mx-auto md:mt-12 hidden md:block">
 			<orders />
 		</div>
-		<orders-xs />
+		<orders-xs class="block md:hidden" />
 	</div>
 </template>
 

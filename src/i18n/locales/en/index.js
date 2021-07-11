@@ -202,6 +202,19 @@ export default {
 					totalPrice: "Total price",
 				},
 				table: {
+					xs: {
+						fields: [
+							{
+								title: "Date",
+							},
+							{
+								title: "Name",
+							},
+							{
+								title: "Info",
+							},
+						],
+					},
 					fields: [
 						{
 							title: "Date",

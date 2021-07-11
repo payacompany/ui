@@ -203,6 +203,19 @@ export default {
 					totalPrice: "قیمت کل سفارش",
 				},
 				table: {
+					xs: {
+						fields: [
+							{
+								title: "تاریخ",
+							},
+							{
+								title: "نام",
+							},
+							{
+								title: "اطلاعات بیشتر",
+							},
+						],
+					},
 					fields: [
 						{
 							title: "تاریخ",
