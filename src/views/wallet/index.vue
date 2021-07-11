@@ -18,7 +18,7 @@
 				<token-details class="w-2/3" :coins="coins" />
 			</div>
 		</div>
-		<wallet-xs class="block md:hidden" />
+		<wallet-xs class="block md:hidden" :coins="coins" />
 	</div>
 </template>
 
