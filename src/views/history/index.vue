@@ -3,7 +3,7 @@
 		<div class="container mx-auto mt-12 hidden md:block">
 			<history />
 		</div>
-		<history-xs />
+		<history-xs class="block md:hidden" />
 	</div>
 </template>
 

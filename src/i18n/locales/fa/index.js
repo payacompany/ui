@@ -332,6 +332,19 @@ export default {
 			bankTransactions: {
 				title: "تاریخچه تراکنش های بانکی",
 				table: {
+					xs: {
+						fields: [
+							{
+								title: "شناسه",
+							},
+							{
+								title: "نوع",
+							},
+							{
+								title: "بیشتر",
+							},
+						],
+					},
 					fields: [
 						{
 							title: "شناسه",
@@ -363,6 +376,19 @@ export default {
 			cryptoTransations: {
 				title: "تاریخچه تراکنش ها رمزارز",
 				table: {
+					xs: {
+						fields: [
+							{
+								title: "شناسه",
+							},
+							{
+								title: "واحد پول",
+							},
+							{
+								title: "بیشتر",
+							},
+						],
+					},
 					fields: [
 						{
 							title: "شناسه",

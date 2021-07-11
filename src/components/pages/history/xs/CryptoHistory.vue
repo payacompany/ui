@@ -21,7 +21,7 @@
 			<template slot="thead">
 				<vs-th
 					v-for="(th, index) in $t(
-						'pages.history.cryptoTransations.table.fields'
+						'pages.history.cryptoTransations.table.xs.fields'
 					)"
 					:key="index"
 				>
@@ -137,6 +137,7 @@ export default {
 			th {
 				padding-top: 1rem;
 				padding-bottom: 1rem;
+				// white-space: nowrap;
 				.vs-table-text {
 					color: black;
 					text-transform: uppercase;

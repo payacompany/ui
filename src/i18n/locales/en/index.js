@@ -330,6 +330,19 @@ export default {
 			bankTransactions: {
 				title: "Bank transactions",
 				table: {
+					xs: {
+						fields: [
+							{
+								title: "ID",
+							},
+							{
+								title: "type",
+							},
+							{
+								title: "more info",
+							},
+						],
+					},
 					fields: [
 						{
 							title: "ID",
@@ -361,6 +374,19 @@ export default {
 			cryptoTransations: {
 				title: "Crypto transactions",
 				table: {
+					xs: {
+						fields: [
+							{
+								title: "ID",
+							},
+							{
+								title: "Unit",
+							},
+							{
+								title: "more info",
+							},
+						],
+					},
 					fields: [
 						{
 							title: "ID",

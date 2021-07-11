@@ -21,7 +21,7 @@
 			<template slot="thead">
 				<vs-th
 					v-for="(th, index) in $t(
-						'pages.history.bankTransactions.table.fields'
+						'pages.history.bankTransactions.table.xs.fields'
 					)"
 					:key="index"
 				>
@@ -37,14 +37,6 @@
 
 					<vs-td :data="data[indextr].name">
 						{{ data[indextr].name }}
-					</vs-td>
-
-					<vs-td :data="data[indextr].volume">
-						{{ data[indextr].volume }}
-					</vs-td>
-
-					<vs-td :data="data[indextr].type">
-						{{ data[indextr].type ? "فروش" : "خرید" }}
 					</vs-td>
 
 					<vs-td>
@@ -137,7 +129,7 @@ export default {
 			th {
 				padding-top: 1rem;
 				padding-bottom: 1rem;
-				white-space: nowrap;
+				// white-space: nowrap;
 				.vs-table-text {
 					color: black;
 					text-transform: uppercase;
