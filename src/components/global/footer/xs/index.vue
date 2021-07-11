@@ -63,13 +63,16 @@ export default {
 					this.$router.push("/");
 					break;
 				case 1:
-					this.$router.push("/trade");
+					this.$router.push("/trading");
 					break;
 				case 2:
 					this.$router.push("/wallet");
 					break;
 				case 3:
 					this.$router.push("/orders");
+					break;
+				case 4:
+					this.$router.push("/history");
 					break;
 				default:
 					break;
