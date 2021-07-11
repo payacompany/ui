@@ -9,7 +9,6 @@
 					<span class="material-icons">
 						account_circle
 					</span>
-
 					{{ $t("nav.profile") }}
 				</li>
 				<li
@@ -17,7 +16,7 @@
 					@click="changeRoute(1)"
 				>
 					<span class="material-icons">
-						account_balance_wallet
+						signal_cellular_alt
 					</span>
 					{{ $t("nav.trade") }}
 				</li>
@@ -27,7 +26,7 @@
 					@click="changeRoute(2)"
 				>
 					<span class="material-icons">
-						signal_cellular_alt
+						account_balance_wallet
 					</span>
 					{{ $t("nav.wallet") }}
 				</li>
