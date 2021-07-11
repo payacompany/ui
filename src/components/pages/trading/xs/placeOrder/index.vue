@@ -17,7 +17,7 @@
 			>
 				{{ $t("pages.trade.placeOrder.sell.title") }}
 			</vs-button>
-			<div class="w-11/12 mt-2 mx-auto">
+			<div class="w-full mt-2 mx-auto">
 				<vs-select
 					v-model="selectedType"
 					:label="$t('pages.trade.placeOrder.filterTitle')"
