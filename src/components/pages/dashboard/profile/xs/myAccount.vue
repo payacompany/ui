@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-row justify-between shadow-inner border-b p-4">
+	<div class="flex flex-row justify-between shadow-inner border-b py-2 px-3">
 		<div>
 			<p>{{ user.email }}</p>
 			<p><span>آی دی شما:</span>{{ user.refCode }}</p>

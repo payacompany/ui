@@ -1,5 +1,5 @@
 <template>
-	<div class="footer block md:hidden shadow-inner border-t border-gray-300">
+	<div class="footer block md:hidden border-t border-gray-300 bg-white">
 		<nav class="flex flex-row items-baseline pt-2 w-full">
 			<ul class="w-full flex flex-row justify-between px-3 text-xs">
 				<li class="flex flex-col justify-center text-center text-gray-500">
@@ -49,6 +49,7 @@ export default {};
 	width: 100%;
 	bottom: 0;
 	height: 54px;
+	z-index: 99999;
 }
 span {
 	font-size: 18px;
