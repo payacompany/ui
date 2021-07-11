@@ -12,6 +12,7 @@ export default {
 			xs: [
 				{
 					title: "Profile Verification",
+					level: "Level",
 				},
 				{
 					title: "Two-factor authentication",
@@ -28,11 +29,13 @@ export default {
 				{
 					title: "Language",
 				},
-				{
-					title: "Theme",
-				},
+				// {
+				// 	title: "Theme",
+				// },
 			],
 			title: "profile",
+			disable: "Disable",
+			enable: "Enable",
 			changePassword: {
 				title: "Change password",
 				currentPassword: "Current Password",

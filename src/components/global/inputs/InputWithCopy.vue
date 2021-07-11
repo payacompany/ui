@@ -1,6 +1,6 @@
 <template>
 	<copy-to-clipboard :text="refCode" class="cursor-pointer" @copy="handleCopy">
-		<div class="mt-8 flex flex-row w-full">
+		<div class="md:mt-8 flex flex-row w-full">
 			<vs-input
 				id="ref-input"
 				v-model="refCode"

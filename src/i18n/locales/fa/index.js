@@ -12,6 +12,7 @@ export default {
 			xs: [
 				{
 					title: "احراز هویت حساب کاربری",
+					level: "سطح",
 				},
 				{
 					title: "شناسایی دوعاملی",
@@ -28,11 +29,13 @@ export default {
 				{
 					title: "زبان",
 				},
-				{
-					title: "تم",
-				},
+				// {
+				// 	title: "تم",
+				// },
 			],
 			title: "حساب کاربری شما",
+			disable: "فعال",
+			enable: "غیرفعال",
 			changePassword: {
 				title: "تغییر گذرواژه",
 				currentPassword: "رمز عبور فعلی شما",
