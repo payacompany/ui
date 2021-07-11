@@ -1,5 +1,5 @@
 <template>
-	<div class="container mx-auto mt-5">
+	<div class="container mx-auto mt-5 hidden md:block">
 		<div class="w-8/12 mx-auto shadow-lg rounded-md">
 			<div class="mx-auto flex py-3 justify-evenly border-b rounded-t-lg">
 				<div class="flex justify-between w-8/12">
