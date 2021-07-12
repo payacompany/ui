@@ -41,12 +41,13 @@ export default {
 	methods: {
 		kycStepsAllow () {
 			let allow = false;
-			// this.kycSteps.forEach((step, index) => {
-			// 	if (!step.isCompleted && !allow) {
-			// 		step.isAllow = true;
-			// 		allow = true;
-			// 	}
-			// });
+			let steps = this.$t("pages.profile.userVerification.kycSteps");
+			steps.forEach(step => {
+				if (!step.isCompleted && !allow) {
+					step.isAllow = true;
+					allow = true;
+				}
+			});
 		}
 	}
 };
