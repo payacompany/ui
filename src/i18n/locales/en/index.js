@@ -12,11 +12,21 @@ export default {
 			verifiyStep: {
 				emailVerification: {},
 				phoneVerification: {
-					title: "Phone verifications",
+					title: "Phone verification",
 					exampleText: "example : 09120002548",
 					placeHolder: "phone number",
 					acceptCode: "accept code",
 					sendCode: "Send code",
+					submit: "Submit",
+				},
+				userIdentifyVerification: {
+					title: "User identify verification",
+					fname: "First Name",
+					lname: "Last Name",
+					nationalCode: "National Code",
+					selfie: "Selfie with idCard",
+					idCardImage: "Id card picture",
+					uploadImage: "Upload image",
 					submit: "Submit",
 				},
 			},

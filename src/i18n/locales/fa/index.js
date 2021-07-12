@@ -19,6 +19,16 @@ export default {
 					sendCode: "ارسال کد",
 					submit: "ثبت اطلاعات",
 				},
+				userIdentifyVerification: {
+					title: "تکمیل اطلاعات هویتی",
+					fname: "نام",
+					lname: "نام خانوادگی",
+					nationalCode: "کد ملی",
+					selfie: "عکس سلفی با کارت ملی",
+					idCardImage: "عکس کارت ملی",
+					uploadImage: "آپلود تصویر",
+					submit: "ارسال مدارک",
+				},
 			},
 			xs: [
 				{

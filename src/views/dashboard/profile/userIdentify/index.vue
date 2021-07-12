@@ -1,7 +1,7 @@
 <template>
 	<div class="shadow-xl w-11/12 md:w-6/12 center rounded-md py-8">
 		<p class="text-bold text-xl text-center md:px-8">
-			تکمیل اطلاعات هویتی
+			{{ $t("pages.profile.verifiyStep.userIdentifyVerification.title") }}
 		</p>
 		<vs-divider />
 		<div class="px-8 mt-5">
@@ -9,16 +9,24 @@
 				<vs-input
 					v-model="user.phone"
 					class="min-w-full md:min-w-5/12"
-					label-placeholder="نام"
+					:label-placeholder="
+						$t('pages.profile.verifiyStep.userIdentifyVerification.fname')
+					"
 				/>
 				<vs-input
 					v-model="user.phone"
-					label-placeholder="نام خانوادگی"
+					:label-placeholder="
+						$t('pages.profile.verifiyStep.userIdentifyVerification.lname')
+					"
 					class="min-w-full md:min-w-5/12"
 				/>
 				<vs-input
 					v-model="user.phone"
-					label-placeholder="کد ملی"
+					:label-placeholder="
+						$t(
+							'pages.profile.verifiyStep.userIdentifyVerification.nationalCode'
+						)
+					"
 					class="min-w-full md:min-w-5/12"
 				/>
 			</div>
@@ -26,26 +34,46 @@
 				class="flex flex-col justify-center md:flex-row flex-wrap md:justify-between mt-5"
 			>
 				<div>
-					<p class="text-sm font-bold mb-2">تصویر کارت ملی</p>
+					<p class="text-sm font-bold mb-2">
+						{{
+							$t(
+								"pages.profile.verifiyStep.userIdentifyVerification.idCardImage"
+							)
+						}}
+					</p>
 					<vs-upload
 						limit="1"
-						text="آپلود تصویر"
+						:text="
+							$t(
+								'pages.profile.verifiyStep.userIdentifyVerification.uploadImage'
+							)
+						"
 						action="https://jsonplaceholder.typicode.com/posts/"
 						@on-success="successUpload"
 					/>
 				</div>
 				<div>
-					<p class="text-sm font-bold mb-2">سلفی با کارت ملی</p>
+					<p class="text-sm font-bold mb-2">
+						{{
+							$t("pages.profile.verifiyStep.userIdentifyVerification.selfie")
+						}}
+					</p>
 					<vs-upload
 						limit="1"
-						text="آپلود تصویر"
+						:text="
+							$t(
+								'pages.profile.verifiyStep.userIdentifyVerification.uploadImage'
+							)
+						"
 						action="https://jsonplaceholder.typicode.com/posts/"
 						@on-success="successUpload"
 					/>
 				</div>
 			</div>
 			<div class="mt-5">
-				<vs-button class="w-full">ارسال مدارک</vs-button>
+				<vs-button class="w-full">
+					{{ $t("pages.profile.verifiyStep.userIdentifyVerification.submit") }}
+				</vs-button>
 			</div>
 		</div>
 	</div>
