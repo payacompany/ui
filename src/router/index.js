@@ -94,6 +94,14 @@ const routes = [
 		},
 		component: () => import("../views/trading/index.vue"),
 	},
+	{
+		path: "/auth/login",
+		name: "	login",
+		meta: {
+			requiresAuth: false,
+		},
+		component: () => import("../views/auth/login.vue"),
+	},
 ];
 
 const router = new VueRouter({
