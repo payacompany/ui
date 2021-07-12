@@ -1,5 +1,7 @@
 <template>
-	<div class="shadow-xl w-3/12 center rounded-md py-8">
+	<div
+		class="shadow-xl w-11-12 md:w-8/12 lg:w-5/12 xl:w-3/12 center rounded-md py-8"
+	>
 		<p class="text-bold text-xl text-center px-8">
 			اطلاعات حساب بانکی
 		</p>
@@ -8,11 +10,13 @@
 			<div class="flex flex-col justify-between">
 				<vs-input
 					v-model="bankAccounts.shabaNum"
+					class="min-w-full"
 					label-placeholder="شماره شبا"
 				/>
 				<div class="mt-2">
 					<vs-input
 						v-model="bankAccounts.shabaNum"
+						class="min-w-full"
 						label-placeholder="شماره کارت"
 					/>
 				</div>
@@ -39,8 +43,8 @@ export default {
 
 <style lang="scss" scoped>
 ::v-deep {
-	.vs-input--input.normal {
-		width: 21.5vw;
-	}
+	// .vs-input--input.normal {
+	// 	width: 21.5vw;
+	// }
 }
 </style>

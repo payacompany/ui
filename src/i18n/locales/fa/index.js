@@ -73,14 +73,14 @@ export default {
 					{
 						title: "مرحله سوم",
 						name: "تکمیل اطلاعات کاربری",
-						isCompleted: false,
+						isCompleted: true,
 						accessTo: "اجازه برداشت روزانه تا حد مجاز 1 BTC",
 						isAllow: false,
 					},
 					{
 						title: "مرحله چهارم",
 						name: "اطلاعات بانکی",
-						isCompleted: false,
+						isCompleted: true,
 						accessTo: "اجازه برداشت روزانه تا حد مجاز 10 BTC",
 						isAllow: false,
 					},
