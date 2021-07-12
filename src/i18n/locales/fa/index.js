@@ -29,6 +29,12 @@ export default {
 					uploadImage: "آپلود تصویر",
 					submit: "ارسال مدارک",
 				},
+				bankAccountVarification: {
+					title: "اطلاعات حساب بانکی",
+					iban: "شمار شبا",
+					cardNumber: "شماره کارت",
+					submit: "ثبت کارت بانکی",
+				},
 			},
 			xs: [
 				{

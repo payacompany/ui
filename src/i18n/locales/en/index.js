@@ -29,6 +29,12 @@ export default {
 					uploadImage: "Upload image",
 					submit: "Submit",
 				},
+				bankAccountVarification: {
+					title: "Bank account Verification",
+					iban: "iban",
+					cardNumber: "Card number",
+					submit: "Submit",
+				},
 			},
 			xs: [
 				{

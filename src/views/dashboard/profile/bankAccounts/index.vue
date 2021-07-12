@@ -3,7 +3,7 @@
 		class="shadow-xl w-11-12 md:w-8/12 lg:w-5/12 xl:w-3/12 center rounded-md py-8"
 	>
 		<p class="text-bold text-xl text-center px-8">
-			اطلاعات حساب بانکی
+			{{ $t("pages.profile.verifiyStep.bankAccountVarification.title") }}
 		</p>
 		<vs-divider />
 		<div class="px-8 mt-2">
@@ -11,19 +11,25 @@
 				<vs-input
 					v-model="bankAccounts.shabaNum"
 					class="min-w-full"
-					label-placeholder="شماره شبا"
+					:label-placeholder="
+						$t('pages.profile.verifiyStep.bankAccountVarification.title')
+					"
 				/>
 				<div class="mt-2">
 					<vs-input
 						v-model="bankAccounts.shabaNum"
 						class="min-w-full"
-						label-placeholder="شماره کارت"
+						:label-placeholder="
+							$t('pages.profile.verifiyStep.bankAccountVarification.title')
+						"
 					/>
 				</div>
 			</div>
 		</div>
 		<div class="mt-5 px-8">
-			<vs-button class="w-full">ثبت اطلاعات بانکی</vs-button>
+			<vs-button class="w-full">
+				{{ $t("pages.profile.verifiyStep.bankAccountVarification.submit") }}
+			</vs-button>
 		</div>
 	</div>
 </template>
