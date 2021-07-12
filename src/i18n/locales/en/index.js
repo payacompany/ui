@@ -35,6 +35,15 @@ export default {
 					cardNumber: "Card number",
 					submit: "Submit",
 				},
+				residenceInfoVerification: {
+					title: "Residence information",
+					state: "State",
+					city: "City",
+					address: "Address",
+					postalCode: "Postal Code",
+					phone: "Phone number",
+					submit: "Submit",
+				},
 			},
 			xs: [
 				{

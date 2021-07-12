@@ -35,6 +35,15 @@ export default {
 					cardNumber: "شماره کارت",
 					submit: "ثبت کارت بانکی",
 				},
+				residenceInfoVerification: {
+					title: "اطلاعات محل سکونت",
+					state: "استان",
+					city: "شهر",
+					address: "آدرس",
+					postalCode: "کد پستی",
+					phone: "تلفن",
+					submit: "ثبت اطلاعات",
+				},
 			},
 			xs: [
 				{

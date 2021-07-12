@@ -3,7 +3,7 @@
 		class="shadow-xl w-11-12 md:w-8/12 lg:w-5/12 xl:w-3/12 center rounded-md py-8"
 	>
 		<p class="text-bold text-xl text-center px-8">
-			اطلاعات محل سکونت
+			{{ $t("pages.profile.verifiyStep.residenceInfoVerification.title") }}
 		</p>
 		<vs-divider />
 		<div class="px-8 mt-2">
@@ -11,40 +11,54 @@
 				<vs-input
 					v-model="residence.state"
 					class="min-w-full"
-					label-placeholder="استان"
+					:label-placeholder="
+						$t('pages.profile.verifiyStep.residenceInfoVerification.state')
+					"
 				/>
 				<div class="mt-2">
 					<vs-input
 						v-model="residence.state"
 						class="min-w-full"
-						label-placeholder="شهر"
+						:label-placeholder="
+							$t('pages.profile.verifiyStep.residenceInfoVerification.city')
+						"
 					/>
 				</div>
 				<div class="mt-2">
 					<vs-input
 						v-model="residence.address"
 						class="min-w-full"
-						label-placeholder="آدرس"
+						:label-placeholder="
+							$t('pages.profile.verifiyStep.residenceInfoVerification.address')
+						"
 					/>
 				</div>
 				<div class="mt-2">
 					<vs-input
 						v-model="residence.postalCode"
 						class="min-w-full"
-						label-placeholder="کد پستی"
+						:label-placeholder="
+							$t(
+								'pages.profile.verifiyStep.residenceInfoVerification.postalCode'
+							)
+						"
 					/>
 				</div>
 				<div class="mt-2">
 					<vs-input
 						v-model="residence.tel"
 						class="min-w-full"
-						label-placeholder="تلفن"
+						:label-placeholder="
+							$t('pages.profile.verifiyStep.residenceInfoVerification.phone')
+						"
 					/>
 				</div>
 			</div>
 		</div>
 		<div class="mt-5 px-8">
-			<vs-button class="w-full">ثبت اطلاعات محل سکونت</vs-button>
+			<vs-button class="w-full">
+				{{ $t("pages.profile.verifiyStep.residenceInfoVerification.submit") }}
+			</vs-button>
 		</div>
 	</div>
 </template>
