@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="container mx-auto md:mt-12 hidden md:block">
-			<div class="md:w-full lg:8/12 mx-auto ">
+			<div class="md:w-8/12 lg:w-10/12 mx-auto ">
 				<profile />
 				<api-keys />
 				<account-activity />
