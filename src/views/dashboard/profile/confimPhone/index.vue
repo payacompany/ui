@@ -3,7 +3,7 @@
 		class="shadow-xl w-11-12 md:w-8/12 lg:w-5/12 xl:w-3/12 center rounded-md py-8"
 	>
 		<p class="text-bold text-xl text-center px-8">
-			اعتبارسنجی شماره موبایل
+			{{ $t("pages.profile.verifiyStep.phoneVerification.title") }}
 		</p>
 		<vs-divider />
 		<div class="px-8 mt-8">
@@ -11,24 +11,34 @@
 				<div class="w-8/12 lg:w-9/12">
 					<vs-input
 						v-model="user.phone"
-						description-text="مثال:09120000000"
+						:description-text="
+							$t('pages.profile.verifiyStep.phoneVerification.exampleText')
+						"
 						class="inline-block min-w-full"
-						label-placeholder="شماره موبایل"
+						:label-placeholder="
+							$t('pages.profile.verifiyStep.phoneVerification.placeHolder')
+						"
 					/>
 				</div>
 				<div class="mt-4">
-					<vs-button class="inline-block text-sm">ارسال کد</vs-button>
+					<vs-button class="inline-block text-sm">
+						{{ $t("pages.profile.verifiyStep.phoneVerification.sendCode") }}
+					</vs-button>
 				</div>
 			</div>
 			<div>
 				<vs-input
 					v-model="user.phone"
 					class="my-6 min-w-full"
-					label-placeholder="کد تایید"
+					:label-placeholder="
+						$t('pages.profile.verifiyStep.phoneVerification.acceptCode')
+					"
 				/>
 			</div>
 			<div class="w-full">
-				<vs-button class="text-sm w-full">ارسال کد</vs-button>
+				<vs-button class="text-sm w-full">
+					{{ $t("pages.profile.verifiyStep.phoneVerification.submit") }}
+				</vs-button>
 			</div>
 		</div>
 	</div>

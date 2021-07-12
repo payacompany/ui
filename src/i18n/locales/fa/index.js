@@ -9,6 +9,17 @@ export default {
 	},
 	pages: {
 		profile: {
+			verifiyStep: {
+				emailVerification: {},
+				phoneVerification: {
+					title: "اعتبارسنجی شماره موبایل",
+					exampleText: "مثال : 09120002548",
+					placeHolder: "شماره موبایل",
+					acceptCode: "کد تایید",
+					sendCode: "ارسال کد",
+					submit: "ثبت اطلاعات",
+				},
+			},
 			xs: [
 				{
 					title: "احراز هویت حساب کاربری",

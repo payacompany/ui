@@ -9,6 +9,17 @@ export default {
 	},
 	pages: {
 		profile: {
+			verifiyStep: {
+				emailVerification: {},
+				phoneVerification: {
+					title: "Phone verifications",
+					exampleText: "example : 09120002548",
+					placeHolder: "phone number",
+					acceptCode: "accept code",
+					sendCode: "Send code",
+					submit: "Submit",
+				},
+			},
 			xs: [
 				{
 					title: "Profile Verification",
