@@ -4,6 +4,7 @@
 			v-for="(operation, index) in $t('pages.profile.xs')"
 			:key="index"
 			class="py-3 border-b flex flex-row justify-between px-3 items-center"
+			@click="$router.push('/profile/verification')"
 		>
 			<p>
 				{{ operation.title }}

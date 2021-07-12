@@ -12,6 +12,14 @@ const routes = [
 		component: () => import("../views/dashboard/index.vue"),
 	},
 	{
+		path: "/profile/verification",
+		name: "confimPhone",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () => import("../views/dashboard/xs/index.vue"),
+	},
+	{
 		path: "/profile/confim-phone",
 		name: "confimPhone",
 		meta: {
