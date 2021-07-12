@@ -9,6 +9,21 @@ export default {
 	},
 	pages: {
 		auth: {
+			signUp: {
+				title: "ثبت نام در سایت",
+				userName: "نام کاربری",
+				userNamePlaceHolder: "نام کاربری خود را اینجا وارد نمایید",
+				password: "رمز عبور",
+				passwordPlaceHodler: "رمز عبور خود را اینجا وارد نمایید",
+				repeatPassword: "تکرار رمز عبور",
+				repeatPasswordPlaceHodler: "تکرار رمز عبور خود را اینجا وارد نمایید",
+				faq: {
+					start: "تمامی",
+					middle: "قوانین و مقررات",
+					end: "را مطالعه و قبول دارم.",
+				},
+				submit: "ثبت نام",
+			},
 			login: {
 				title: "ورود به حساب کاربری",
 				userName: "نام کاربری",

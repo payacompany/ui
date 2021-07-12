@@ -9,6 +9,21 @@ export default {
 	},
 	pages: {
 		auth: {
+			signUp: {
+				title: "sign in",
+				userName: "Username",
+				userNamePlaceHolder: "Enter the username",
+				password: "Password",
+				passwordPlaceHodler: "Enter the password",
+				repeatPassword: "Enter repeat password",
+				repeatPasswordPlaceHodler: "Enter the repeat password",
+				faq: {
+					start: "I accept and read",
+					middle: "faq",
+					end: "all",
+				},
+				submit: "sign in",
+			},
 			login: {
 				title: "Login",
 				userName: "Username",

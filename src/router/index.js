@@ -96,11 +96,19 @@ const routes = [
 	},
 	{
 		path: "/auth/login",
-		name: "	login",
+		name: "login",
 		meta: {
 			requiresAuth: false,
 		},
 		component: () => import("../views/auth/login.vue"),
+	},
+	{
+		path: "/auth/sign-up",
+		name: "signUp",
+		meta: {
+			requiresAuth: false,
+		},
+		component: () => import("../views/auth/signUp.vue"),
 	},
 ];
 
