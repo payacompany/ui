@@ -1,27 +1,27 @@
 <template>
-	<div class="w-4/12 mx-auto center rounded-md p-8">
+	<div class="w-11/12 lg:w-4/12 mx-auto center rounded-md p-8">
 		<card-with-header>
 			<template #header>
 				<p class="text-center font-bold text-lg">
-					ورود به حساب کاربری
+					{{ $t("pages.auth.login.title") }}
 				</p>
 			</template>
 			<template #body>
 				<vs-input
 					v-model="user.username"
 					class="min-w-full"
-					label="نام کاربری"
-					placeholder="نام کاربری خود را اینجا وارد نمایید"
+					:label="$t('pages.auth.login.userName')"
+					:placeholder="$t('pages.auth.login.userNamePlaceHolder')"
 				/>
 				<vs-input
-					v-model="user.username"
+					v-model="user.password"
 					class="min-w-full"
-					label="رمز عبور"
-					placeholder="رمز عبور خود را اینجا وارد نمایید"
+					:label="$t('pages.auth.login.password')"
+					:placeholder="$t('pages.auth.login.passwordPlaceHodler')"
 				/>
 				<div>
 					<vs-button class="w-full mt-5" type="gradient">
-						ورود به حساب کاربری
+						{{ $t("pages.auth.login.submit") }}
 					</vs-button>
 				</div>
 			</template>
@@ -37,7 +37,10 @@ export default {
 	},
 	data () {
 		return {
-			user: {}
+			user: {
+				username: null,
+				password: null
+			}
 		};
 	}
 };

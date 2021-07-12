@@ -8,6 +8,16 @@ export default {
 		orders: "سفارشات",
 	},
 	pages: {
+		auth: {
+			login: {
+				title: "ورود به حساب کاربری",
+				userName: "نام کاربری",
+				userNamePlaceHolder: "نام کاربری خود را اینجا وارد نمایید",
+				password: "رمز عبور",
+				passwordPlaceHodler: "رمز عبور خود را اینجا وارد نمایید",
+				submit: "ورود به حساب کاربری",
+			},
+		},
 		profile: {
 			verifiyStep: {
 				emailVerification: {},

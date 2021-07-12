@@ -8,6 +8,16 @@ export default {
 		orders: "orders",
 	},
 	pages: {
+		auth: {
+			login: {
+				title: "Login",
+				userName: "Username",
+				userNamePlaceHolder: "Enter the username",
+				password: "Password",
+				passwordPlaceHodler: "Enter the password",
+				submit: "Login",
+			},
+		},
 		profile: {
 			verifiyStep: {
 				emailVerification: {},
