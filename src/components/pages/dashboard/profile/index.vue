@@ -48,7 +48,7 @@
 						</div>
 						<input-with-copy />
 					</div>
-					<div class="width-50 mr-2">
+					<div class="width-50 mx-3">
 						<user-verification />
 					</div>
 				</div>
