@@ -21,7 +21,7 @@
 		<div
 			v-for="(step, index) in $t('pages.profile.userVerification.kycSteps')"
 			:key="index"
-			class="mt-2"
+			class="mt-2  border-b last:border-b-0"
 		>
 			<verification-step :step="step" :index="index" />
 		</div>

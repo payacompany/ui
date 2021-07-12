@@ -13,7 +13,7 @@ const routes = [
 	},
 	{
 		path: "/profile/verification",
-		name: "confimPhone",
+		name: "verification",
 		meta: {
 			requiresAuth: true,
 		},
