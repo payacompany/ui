@@ -66,7 +66,7 @@ export default {
 					{
 						title: "مرحله دوم",
 						name: "اعتبارسنجی شماره موبایل",
-						isCompleted: false,
+						isCompleted: true,
 						accessTo: "دسترسی به اتاق معاملات و واریز",
 						isAllow: false,
 					},

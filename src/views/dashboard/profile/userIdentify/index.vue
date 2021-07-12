@@ -1,20 +1,30 @@
 <template>
-	<div class="shadow-xl w-6/12 center rounded-md py-8">
-		<p class="text-bold text-xl text-center px-8">
+	<div class="shadow-xl w-11/12 md:w-6/12 center rounded-md py-8">
+		<p class="text-bold text-xl text-center md:px-8">
 			تکمیل اطلاعات هویتی
 		</p>
 		<vs-divider />
 		<div class="px-8 mt-5">
-			<div class="flex flex-row justify-between">
+			<div class="flex flex-col md:flex-row flex-wrap justify-between">
 				<vs-input
 					v-model="user.phone"
-					class="w-11/12"
+					class="min-w-full md:min-w-5/12"
 					label-placeholder="نام"
 				/>
-				<vs-input v-model="user.phone" label-placeholder="نام خانوادگی" />
-				<vs-input v-model="user.phone" label-placeholder="کد ملی" />
+				<vs-input
+					v-model="user.phone"
+					label-placeholder="نام خانوادگی"
+					class="min-w-full md:min-w-5/12"
+				/>
+				<vs-input
+					v-model="user.phone"
+					label-placeholder="کد ملی"
+					class="min-w-full md:min-w-5/12"
+				/>
 			</div>
-			<div class="flex flex-row justify-between mt-5">
+			<div
+				class="flex flex-col justify-center md:flex-row flex-wrap md:justify-between mt-5"
+			>
 				<div>
 					<p class="text-sm font-bold mb-2">تصویر کارت ملی</p>
 					<vs-upload
