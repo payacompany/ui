@@ -1,14 +1,10 @@
 <template>
 	<div>
-		<div
-			class="hidden md:grid md:gap-2 lg:grid-cols-6 lg:gap-3 lg:grid-rows-6 my-3"
-		>
+		<div class="hidden md:grid lg:grid-cols-6 gap-3 lg:grid-rows-6 my-3">
 			<div class="col-span-6 lg:col-span-1 xl:col-span-1 row-span-6">
 				<trades />
 			</div>
-			<div
-				class="col-span-6 md:col-span-6 lg:col-span-3 xl:col-span-3 row-span-6"
-			>
+			<div class="col-span-6 lg:col-span-3 xl:col-span-3 row-span-6">
 				<trading-view />
 				<open-orders />
 			</div>
@@ -16,8 +12,8 @@
 				<order-book />
 			</div>
 			<div class="col-span-6 lg:col-span-1 xl:col-span-1 row-span-6">
-				<place-order class="row-span-3" />
-				<markets class="row-span-3" />
+				<place-order />
+				<markets />
 			</div>
 		</div>
 		<trading-xs class="block md:hidden" />
