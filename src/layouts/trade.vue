@@ -1,11 +1,13 @@
 <template>
 	<div>
-		trade layout
+		<slot />
 	</div>
 </template>
 
 <script>
-export default {};
+export default {
+	name: "Trade"
+};
 </script>
 
 <style></style>

@@ -1,11 +1,13 @@
 <template>
 	<div>
-		error layout
+		<slot />
 	</div>
 </template>
 
 <script>
-export default {};
+export default {
+	name: "Error"
+};
 </script>
 
 <style></style>

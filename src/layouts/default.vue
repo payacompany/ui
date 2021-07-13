@@ -1,6 +1,6 @@
 <template>
 	<div>
-		defaul Layout
+		<slot />
 	</div>
 </template>
 

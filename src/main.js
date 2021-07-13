@@ -35,6 +35,15 @@ import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 Vue.use(VueSweetalert2);
 
+//import layouts in here
+import Default from "./layouts/default.vue";
+import Error from "./layouts/error.vue";
+import Trade from "./layouts/trade.vue";
+
+Vue.component("default-layout", Default);
+Vue.component("error", Error);
+Vue.component("trade", Trade);
+
 Vue.config.productionTip = false;
 
 new Vue({
