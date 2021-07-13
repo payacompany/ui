@@ -10,6 +10,7 @@
 				<vs-dropdown-item
 					v-for="(lang, index) in langs"
 					:key="index"
+					:disabled="isRtl == lang.nameEn"
 					@click="setLocale(lang)"
 				>
 					{{ lang.nameEn }}
@@ -38,6 +39,14 @@ export default {
 			]
 		};
 	},
+	mounted () {
+		document.getElementsByTagName("body")[0].style = "direction:rtl";
+	},
+	computed: {
+		isRtl () {
+			return this.$i18n.locale;
+		}
+	},
 	methods: {
 		setLocale (locale) {
 			this.$vs.loading();
@@ -52,9 +61,6 @@ export default {
 				this.$vs.loading.close();
 			}, 300);
 		}
-	},
-	mounted () {
-		document.getElementsByTagName("body")[0].style = "direction:rtl";
 	}
 };
 </script>
