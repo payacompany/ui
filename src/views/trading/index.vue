@@ -1,17 +1,17 @@
 <template>
 	<div>
-		<div class="hidden md:grid md:grid-cols-6 gap-3 my-3">
-			<div class="grid-flow-row auto-rows-max">
+		<div class="hidden md:grid lg:grid-cols-6 gap-3 lg:grid-rows-6 my-3">
+			<div class="col-span-6 lg:col-span-1 xl:col-span-1 row-span-6">
 				<trades />
 			</div>
-			<div class="col-span-3 grid-flow-row auto-rows-max">
+			<div class="col-span-6 lg:col-span-3 xl:col-span-3 row-span-6">
 				<trading-view />
 				<open-orders />
 			</div>
-			<div class="grid-flow-row auto-rows-max">
+			<div class="col-span-6 lg:col-span-1 xl:col-span-1 row-span-6">
 				<order-book />
 			</div>
-			<div class="grid-flow-row auto-rows-max">
+			<div class="col-span-6 lg:col-span-1 xl:col-span-1 row-span-6">
 				<place-order />
 				<markets />
 			</div>

@@ -1,7 +1,7 @@
 <template>
 	<div class="shadow-lg">
 		<div
-			class="container-fluid mx-4 py-4 flex flex-row items-center justify-between"
+			class="container-fluid mx-4 pt-2 flex flex-row items-center justify-between"
 		>
 			<!-- <night-mode /> -->
 			<language-switcher />

@@ -1,22 +1,21 @@
 <template>
 	<div id="app">
-		<header-bar class="hidden md:block" />
-		<header-xs />
-		<router-view />
-		<footer-xs />
+		<component :is="layout">
+			<transition name="fade" mode="out-in">
+				<router-view :layout="layout" />
+			</transition>
+		</component>
 	</div>
 </template>
 
 <script>
-import HeaderBar from "./components/global/header/index.vue";
-import FooterXs from "./components/global/footer/xs/index.vue";
-import HeaderXs from "./components/global/header/xs/index.vue";
 export default {
 	/* eslint-disable prettier-vue/prettier */
-	components: {
-		HeaderBar,
-		FooterXs,
-		HeaderXs
+
+	computed: {
+		layout () {
+			return this.$route.meta.layout || "default-layout";
+		}
 	}
 };
 </script>
