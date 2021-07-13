@@ -20,8 +20,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.trade {
-	height: 100vh;
-	overflow: hidden;
+@media screen and (min-width: 1800px) {
+	.trade {
+		height: 100vh;
+		overflow: hidden;
+	}
 }
 </style>

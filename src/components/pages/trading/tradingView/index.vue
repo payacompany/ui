@@ -1,6 +1,6 @@
 <template>
-	<div class="shadow-md rounded-md p-1">
-		<VueTradingView :options="options" />
+	<div class="shadow-md rounded-md p-1 overflow-hidden">
+		<VueTradingView :options="{ options }" />
 	</div>
 </template>
 
