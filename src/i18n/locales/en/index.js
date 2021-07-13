@@ -7,6 +7,9 @@ export default {
 		logout: "logout",
 		orders: "orders",
 	},
+	attribute: {
+		yourId: "Your id",
+	},
 	pages: {
 		auth: {
 			signUp: {
@@ -35,7 +38,14 @@ export default {
 		},
 		profile: {
 			verifiyStep: {
-				emailVerification: {},
+				emailVerification: {
+					title: "Email verification",
+					exampleText: "example : example@gmail.com",
+					placeHolder: "Mail",
+					acceptCode: "accept code",
+					sendCode: "Send code",
+					submit: "Submit",
+				},
 				phoneVerification: {
 					title: "Phone verification",
 					exampleText: "example : 09120002548",

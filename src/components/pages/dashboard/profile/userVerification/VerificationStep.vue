@@ -52,7 +52,7 @@ export default {
 					return "/profile/confirm-email";
 					break;
 				case 1:
-					return "/profile/confim-phone";
+					return "/profile/confirm-phone";
 					break;
 				case 2:
 					return "/profile/user-identify";

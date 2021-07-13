@@ -20,12 +20,22 @@ const routes = [
 		component: () => import("../views/dashboard/xs/index.vue"),
 	},
 	{
-		path: "/profile/confim-phone",
-		name: "confimPhone",
+		path: "/profile/confirm-phone",
+		name: "confirmPhone",
 		meta: {
 			requiresAuth: true,
 		},
-		component: () => import("../views/dashboard/profile/confimPhone/index.vue"),
+		component: () =>
+			import("../views/dashboard/profile/confirmPhone/index.vue"),
+	},
+	{
+		path: "/profile/confirm-email",
+		name: "confirmEmail",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () =>
+			import("../views/dashboard/profile/confirmEmail/index.vue"),
 	},
 	{
 		path: "/profile/user-identify",

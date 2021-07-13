@@ -24,7 +24,7 @@
 					}}
 				</span>
 				<span class="material-icons text-gray-400">
-					chevron_left
+					{{ isRtl }}
 				</span>
 			</p>
 		</div>
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import i18n from "@/i18n/index.js";
 export default {
 	data () {
 		return {
@@ -40,6 +41,11 @@ export default {
 				twoFactorAuth: false
 			}
 		};
+	},
+	computed: {
+		isRtl () {
+			return this.$i18n.locale === "Fa" ? "chevron_left" : "chevron_right";
+		}
 	}
 };
 </script>

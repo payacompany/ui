@@ -4,8 +4,11 @@ export default {
 		wallet: "کیف پول",
 		trade: "بازار",
 		history: "تاریخچه",
-		logout: "خروج از حساب کاربری",
+		logout: "خروج",
 		orders: "سفارشات",
+	},
+	attribute: {
+		yourId: "آی دی شما",
 	},
 	pages: {
 		auth: {
@@ -36,6 +39,14 @@ export default {
 		profile: {
 			verifiyStep: {
 				emailVerification: {},
+				emailVerification: {
+					title: "اعتبارسنجی ایمیل",
+					exampleText: "مثال : example@gmail.com",
+					placeHolder: "ایمیل شما",
+					acceptCode: "کد تایید",
+					sendCode: "ارسال کد",
+					submit: "ثبت اطلاعات",
+				},
 				phoneVerification: {
 					title: "اعتبارسنجی شماره موبایل",
 					exampleText: "مثال : 09120002548",
