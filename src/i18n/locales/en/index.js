@@ -151,7 +151,7 @@ export default {
 					{
 						title: "Step 4",
 						name: "Bank Verification",
-						isCompleted: true,
+						isCompleted: false,
 						accessTo: "maximum withdraw 10 BTC",
 						isAllow: false,
 					},

@@ -1,6 +1,6 @@
 <template>
 	<div class="shadow-md rounded-md overflow-hidden">
-		<VueTradingView :options="{ options }" auto-size />
+		<VueTradingView :options="{ options }" />
 	</div>
 </template>
 
@@ -17,7 +17,9 @@ export default {
 				symbol: "BTC/USD",
 				theme: "light",
 				locale: "fa_IR",
-				allow_symbol_change: true
+				allow_symbol_change: true,
+				fullscreen: false,
+				autosize: true
 			}
 		};
 	}

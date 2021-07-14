@@ -152,7 +152,7 @@ export default {
 					{
 						title: "مرحله چهارم",
 						name: "اطلاعات بانکی",
-						isCompleted: true,
+						isCompleted: false,
 						accessTo: "اجازه برداشت روزانه تا حد مجاز 10 BTC",
 						isAllow: false,
 					},
