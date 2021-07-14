@@ -1,18 +1,18 @@
 <template>
 	<div>
-		<div class="flex flex-row justify-between">
+		<div class="hidden md:flex flex-row justify-between">
 			<trades class="" />
 			<div class="flex flex-col flex-grow">
 				<trading-view />
 				<open-orders />
 			</div>
 			<order-book class="flex-grow" />
-			<div class="flex flex-col flex-grow">
+			<div class="flex flex-col flex-grow flex-grow-0">
 				<place-order />
 				<markets />
 			</div>
 		</div>
-		<!-- <trading-xs class="block md:hidden" /> -->
+		<trading-xs class="block md:hidden" />
 	</div>
 </template>
 
