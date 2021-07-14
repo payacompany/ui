@@ -19,9 +19,13 @@
 				@click="$router.push(`/wallet/${coin.symbol}`)"
 				class="border-b py-3 px-5 flex flex-row justify-between items-center"
 			>
-				<div class="flex">
-					<img src="" alt="coin" />
-					<p class="text-gray-400">
+				<div class="flex items-center">
+					<img
+						src="@/assets/img/BTC.png"
+						alt="coin"
+						class="h-6 w-6 object-cover"
+					/>
+					<p class="text-gray-400 pr-2 pt-1">
 						{{ coin.name }}
 					</p>
 					<p class="px-2">{{ coin.symbol }}</p>

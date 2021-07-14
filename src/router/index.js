@@ -90,6 +90,22 @@ const routes = [
 		component: () => import("../views/wallet/id/id.vue"),
 	},
 	{
+		path: "/wallet/:name/withdraw",
+		name: "wallet-id-withdraw",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () => import("../views/wallet/id/withdraw.vue"),
+	},
+	{
+		path: "/wallet/:name/deposit",
+		name: "wallet-id-deposit",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () => import("../views/wallet/id/deposit.vue"),
+	},
+	{
 		path: "/orders",
 		name: "orders",
 		meta: {

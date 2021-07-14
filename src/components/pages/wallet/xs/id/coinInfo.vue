@@ -31,6 +31,7 @@
 				<p class="font-nor text-md px-3">0 <strong>BTC</strong></p>
 			</div>
 		</div>
+		<slot name="details" />
 	</div>
 </template>
 
