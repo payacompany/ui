@@ -125,7 +125,6 @@ const routes = [
 		path: "/trading",
 		name: "	trading",
 		meta: {
-			layout: "trade",
 			requiresAuth: true,
 		},
 		component: () => import("../views/trading/index.vue"),
