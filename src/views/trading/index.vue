@@ -1,15 +1,22 @@
 <template>
 	<div>
 		<div
-			class="hidden md:flex flex-col-reverse lg:flex-row justify-between mx-1"
+			class="
+				hidden
+				md:flex
+				flex-col-reverse
+				lg:flex-row
+				justify-between
+				mx-1
+			"
 		>
 			<trades class="" />
 			<div class="flex flex-col flex-grow mx-1">
 				<trading-view class="trading-view" />
 				<open-orders />
 			</div>
-			<order-book class="flex-grow mx-1" />
-			<div class="flex flex-col flex-grow flex-grow-0 mx-1">
+			<order-book class="flex-grow-0 mx-1" />
+			<div class="flex flex-col flex-grow-0 mx-1">
 				<place-order />
 				<markets class="markets" />
 			</div>
