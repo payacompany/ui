@@ -1,5 +1,5 @@
 <template>
-	<div class="shadow-md rounded-md overflow-hidden">
+	<div class="shadow-md bg-white rounded-md mt-1 overflow-hidden">
 		<VueTradingView :options="{ options }" />
 	</div>
 </template>

@@ -1,5 +1,11 @@
 <template>
-	<vs-table :data="openOrders" strip no-data-text="رکوردی موجود نیست">
+	<vs-table
+		:data="openOrders"
+		:max-items="2"
+		pagination
+		strip
+		no-data-text="رکوردی موجود نیست"
+	>
 		<template slot="thead">
 			<vs-th
 				v-for="(th, index) in $t('pages.trade.openOrders.table.fields')"

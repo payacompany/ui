@@ -1,5 +1,5 @@
 <template>
-	<div class="shadow-md rounded-md">
+	<div class="bg-white mt-1 shadow-md rounded-md">
 		<vs-tabs alignment="center" :color="borderColor">
 			<vs-tab
 				:label="$t('pages.trade.placeOrder.buy.title')"

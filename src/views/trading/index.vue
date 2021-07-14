@@ -1,13 +1,13 @@
 <template>
 	<div>
-		<div class="hidden md:flex flex-row justify-between">
+		<div class="hidden md:flex flex-row justify-between mx-1">
 			<trades class="" />
-			<div class="flex flex-col flex-grow">
-				<trading-view />
+			<div class="flex flex-col flex-grow mx-1">
+				<trading-view class="trading-view" />
 				<open-orders />
 			</div>
-			<order-book class="flex-grow" />
-			<div class="flex flex-col flex-grow flex-grow-0">
+			<order-book class="flex-grow mx-1" />
+			<div class="flex flex-col flex-grow flex-grow-0 mx-1">
 				<place-order />
 				<markets />
 			</div>
@@ -37,4 +37,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.trading-view {
+	height: 60vh;
+}
+</style>
