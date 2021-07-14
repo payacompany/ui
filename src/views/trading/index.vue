@@ -9,7 +9,7 @@
 			<order-book class="flex-grow mx-1" />
 			<div class="flex flex-col flex-grow flex-grow-0 mx-1">
 				<place-order />
-				<markets />
+				<markets class="markets" />
 			</div>
 		</div>
 		<trading-xs class="block md:hidden" />
@@ -40,5 +40,8 @@ export default {
 <style lang="scss" scoped>
 .trading-view {
 	height: 60vh;
+}
+.markets {
+	height: 41vh;
 }
 </style>

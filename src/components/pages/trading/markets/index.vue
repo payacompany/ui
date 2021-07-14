@@ -6,7 +6,7 @@
 			</p>
 		</div>
 		<vs-divider />
-		<market-list />
+		<market-list class="market-list" />
 		<vs-input
 			v-model="search"
 			class="min-w-full px-3"
@@ -32,5 +32,8 @@ export default {
 <style lang="scss" scoped>
 .vs-divider {
 	margin: 10px 0;
+}
+.market-list {
+	height: 28vh;
 }
 </style>
