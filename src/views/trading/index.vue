@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<div class="hidden md:flex flex-row justify-between mx-1">
+		<div
+			class="hidden md:flex flex-col-reverse lg:flex-row justify-between mx-1"
+		>
 			<trades class="" />
 			<div class="flex flex-col flex-grow mx-1">
 				<trading-view class="trading-view" />

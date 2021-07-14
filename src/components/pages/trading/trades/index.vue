@@ -6,7 +6,7 @@
 			</p>
 		</div>
 		<vs-divider />
-		<vs-tabs alignment="center" :color="borderColor">
+		<vs-tabs alignment="center" class="text-sm" :color="borderColor">
 			<vs-tab
 				:label="$t('pages.trade.trades.myTransactions.title')"
 				@click="borderColor = 'success'"

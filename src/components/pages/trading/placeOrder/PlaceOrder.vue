@@ -1,6 +1,6 @@
 <template>
 	<div class="bg-white mt-1 shadow-md rounded-md">
-		<vs-tabs alignment="center" :color="borderColor">
+		<vs-tabs alignment="center" class="text-sm" :color="borderColor">
 			<vs-tab
 				:label="$t('pages.trade.placeOrder.buy.title')"
 				@click="borderColor = 'success'"
