@@ -8,7 +8,9 @@
 				<place-order />
 				<order-book />
 			</vs-tab>
-			<vs-tab :label="$t('pages.trade.xs.tabs.charts')"> tradingview</vs-tab>
+			<vs-tab :label="$t('pages.trade.xs.tabs.charts')">
+				<VueTradingView :options="{ options }" />
+			</vs-tab>
 			<vs-tab :label="$t('pages.trade.xs.tabs.orders')">
 				<order-book />
 			</vs-tab>
@@ -20,11 +22,26 @@
 import PlaceOrder from "./placeOrder/index.vue";
 import Markets from "./markets/index.vue";
 import OrderBook from "./orderBook/index.vue";
+import VueTradingView from "vue-trading-view";
+
 export default {
 	components: {
 		Markets,
 		PlaceOrder,
-		OrderBook
+		OrderBook,
+		VueTradingView
+	},
+	data () {
+		return {
+			options: {
+				symbol: "BTC/USD",
+				theme: "light",
+				locale: "fa_IR",
+				allow_symbol_change: true,
+				fullscreen: false,
+				autosize: true
+			}
+		};
 	}
 };
 </script>
