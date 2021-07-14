@@ -16,6 +16,7 @@
 		</div>
 		<div v-for="(coin, index) in coins" :key="index">
 			<div
+				@click="$router.push(`/wallet/${coin.symbol}`)"
 				class="border-b py-3 px-5 flex flex-row justify-between items-center"
 			>
 				<div class="flex">

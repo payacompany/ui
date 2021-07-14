@@ -81,6 +81,15 @@ const routes = [
 		component: () => import("../views/wallet/index.vue"),
 	},
 	{
+		path: "/wallet/:name",
+		name: "wallet-id",
+		meta: {
+			layout: "trade",
+			requiresAuth: true,
+		},
+		component: () => import("../views/wallet/id/id.vue"),
+	},
+	{
 		path: "/orders",
 		name: "orders",
 		meta: {
