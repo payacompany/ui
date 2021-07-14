@@ -11,7 +11,7 @@
 			hover:bg-gray-200 hover:transition
 			ease-in
 			font-bold
-			text-sm
+			text-xs
 			duration-100
 		"
 	>
