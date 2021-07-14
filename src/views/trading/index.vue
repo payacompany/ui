@@ -1,19 +1,15 @@
 <template>
 	<div>
-		<div class="hidden md:grid lg:grid-cols-6 gap-3 lg:grid-rows-6 my-3">
-			<div class="col-span-6 lg:col-span-1 xl:col-span-1 row-span-6">
-				<trades />
-			</div>
-			<div class="col-span-6 lg:col-span-3 xl:col-span-3 row-span-6">
-				<trading-view />
+		<div class="hidden md:flex flex-row justify-between mx-1">
+			<trades class="" />
+			<div class="flex flex-col flex-grow mx-1">
+				<trading-view class="trading-view" />
 				<open-orders />
 			</div>
-			<div class="col-span-6 lg:col-span-1 xl:col-span-1 row-span-6">
-				<order-book />
-			</div>
-			<div class="col-span-6 lg:col-span-1 xl:col-span-1 row-span-6">
+			<order-book class="flex-grow mx-1" />
+			<div class="flex flex-col flex-grow flex-grow-0 mx-1">
 				<place-order />
-				<markets />
+				<markets class="markets" />
 			</div>
 		</div>
 		<trading-xs class="block md:hidden" />
@@ -41,4 +37,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.trading-view {
+	height: 60vh;
+}
+.markets {
+	height: 41vh;
+}
+</style>
