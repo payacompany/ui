@@ -1,13 +1,13 @@
 <template>
 	<div>
 		<div class="flex flex-row justify-between">
-			<trades class="block" />
-			<div class="flex flex-col">
+			<trades class="" />
+			<div class="flex flex-col flex-grow">
 				<trading-view />
 				<open-orders />
 			</div>
-			<order-book />
-			<div class="flex flex-col">
+			<order-book class="flex-grow" />
+			<div class="flex flex-col flex-grow">
 				<place-order />
 				<markets />
 			</div>
