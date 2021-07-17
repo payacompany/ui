@@ -1,19 +1,10 @@
 <template>
-	<div>
+	<div class="w-11/12 md:w-8/12 lg:w-10/12 mx-auto mt-5">
 		<card-with-header>
 			<template #header>
-				<div class="flex justify-between items-baseline">
-					<p class="text-xl font-bold">
-						{{ $t("pages.profile.ApiManagement.title") }}
-					</p>
-					<vs-button
-						size="small"
-						type="gradient"
-						:to="{ path: '/profile/api-management' }"
-					>
-						بیشتر...
-					</vs-button>
-				</div>
+				<p class="text-xl font-bold">
+					{{ $t("pages.profile.ApiManagement.title") }}
+				</p>
 			</template>
 			<template #body>
 				<div>
@@ -27,7 +18,7 @@
 </template>
 
 <script>
-import CardWithHeader from "../../../global/cards/CardWithHeader.vue";
+import CardWithHeader from "../../../../components/global/cards/CardWithHeader.vue";
 export default {
 	components: {
 		CardWithHeader

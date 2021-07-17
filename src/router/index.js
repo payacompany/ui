@@ -47,6 +47,15 @@ const routes = [
 			import("../views/dashboard/profile/accountActivity/index.vue"),
 	},
 	{
+		path: "/profile/api-management",
+		name: "apiManagement",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () =>
+			import("../views/dashboard/profile/apiManagement/index.vue"),
+	},
+	{
 		path: "/profile/confirm-email",
 		name: "confirmEmail",
 		meta: {

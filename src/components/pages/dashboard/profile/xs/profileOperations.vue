@@ -57,6 +57,10 @@ export default {
 				case 3:
 					this.$router.push("/profile/account-activity");
 					break;
+				case 4:
+					this.$router.push("/profile/api-management");
+					break;
+
 				default:
 					break;
 			}
