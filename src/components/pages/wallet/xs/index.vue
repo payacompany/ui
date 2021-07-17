@@ -1,6 +1,6 @@
 <template>
-	<div class="shadow-lg mx-3">
-		<vs-collapse v-for="(coin, index) in coins" :key="index">
+	<div class="mx-3">
+		<vs-collapse v-for="(coin, index) in coins" :key="index" type="margin">
 			<vs-collapse-item>
 				<div slot="header">
 					{{ coin.name }}
