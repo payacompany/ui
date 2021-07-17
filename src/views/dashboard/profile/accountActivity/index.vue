@@ -1,18 +1,11 @@
 <template>
-	<div>
+	<div class="w-11/12 md:w-8/12 lg:w-8/12 mx-auto mt-5">
 		<card-with-header>
 			<template #header>
 				<div class="flex justify-between items-baseline">
 					<p class="text-xl font-bold">
 						{{ $t("pages.profile.AccountActivity.title") }}
 					</p>
-					<vs-button
-						size="small"
-						type="gradient"
-						:to="{ path: '/profile/account-activity' }"
-					>
-						بیشتر...
-					</vs-button>
 				</div>
 			</template>
 			<template #body>
@@ -27,8 +20,8 @@
 </template>
 
 <script>
-import CardWithHeader from "../../../global/cards/CardWithHeader.vue";
-import AccountActivityTable from "./accountActivityTable.vue";
+import CardWithHeader from "../../../../components/global/cards/CardWithHeader.vue";
+import AccountActivityTable from "../../../../components/pages/dashboard/accountActivity/accountActivityTable.vue";
 export default {
 	components: {
 		CardWithHeader,

@@ -38,6 +38,15 @@ const routes = [
 			import("../views/dashboard/profile/changePassword/index.vue"),
 	},
 	{
+		path: "/profile/account-activity",
+		name: "accountActivity",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () =>
+			import("../views/dashboard/profile/accountActivity/index.vue"),
+	},
+	{
 		path: "/profile/confirm-email",
 		name: "confirmEmail",
 		meta: {
