@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="shadow-xl w-11-12 md:w-8/12 lg:w-5/12 xl:w-3/12 center rounded-md py-8"
+		class="shadow-xl w-11/12 md:w-8/12 lg:w-5/12 xl:w-3/12 center rounded-md py-8"
 	>
 		<p class="text-bold text-xl text-center px-8">
 			{{ $t("pages.profile.verifiyStep.phoneVerification.title") }}

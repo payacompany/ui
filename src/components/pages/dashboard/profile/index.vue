@@ -21,7 +21,15 @@
 									{{ user.password }}
 								</p>
 								<div class="mt-3">
-									<change-pass-modal ref="changePassModal" />
+									<vs-button
+										size="small"
+										color="primary"
+										type="filled"
+										@click="$router.push('/profile/change-password')"
+									>
+										{{ $t("pages.profile.changePassword.title") }}
+									</vs-button>
+									<!-- <change-pass-modal ref="changePassModal" /> -->
 								</div>
 							</div>
 						</div>

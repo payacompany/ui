@@ -29,6 +29,15 @@ const routes = [
 			import("../views/dashboard/profile/confirmPhone/index.vue"),
 	},
 	{
+		path: "/profile/change-password",
+		name: "changePassword",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () =>
+			import("../views/dashboard/profile/changePassword/index.vue"),
+	},
+	{
 		path: "/profile/confirm-email",
 		name: "confirmEmail",
 		meta: {
