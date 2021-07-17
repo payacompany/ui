@@ -97,14 +97,15 @@ export default {
 				{
 					title: "My API key",
 				},
-				{
-					title: "Language",
-				},
+				// {
+				// 	title: "Language",
+				// },
 				// {
 				// 	title: "Theme",
 				// },
 			],
 			title: "profile",
+			language: "Language",
 			disable: "Disable",
 			enable: "Enable",
 			changePassword: {

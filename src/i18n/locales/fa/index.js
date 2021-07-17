@@ -98,14 +98,15 @@ export default {
 				{
 					title: "مدیریت API ها",
 				},
-				{
-					title: "زبان",
-				},
+				// {
+				// 	title: "زبان",
+				// },
 				// {
 				// 	title: "تم",
 				// },
 			],
 			title: "حساب کاربری شما",
+			language: "زبان",
 			disable: "فعال",
 			enable: "غیرفعال",
 			changePassword: {
