@@ -24,15 +24,15 @@
 					<span> {{ orderDetails.date }} </span>
 				</p>
 				<p class="pb-8">
-					{{ $t("pages.orders.openOrders.modal.unitPerPrice") }}: : :
+					{{ $t("pages.orders.openOrders.modal.unitPerPrice") }}:
 					<span> {{ orderDetails.priceInUnit }} تومان </span>
 				</p>
 				<p>
-					{{ $t("pages.orders.openOrders.modal.volume") }}: : :
+					{{ $t("pages.orders.openOrders.modal.volume") }}:
 					<span> {{ orderDetails.volume }} </span>
 				</p>
 				<p>
-					{{ $t("pages.orders.openOrders.modal.filledVolume") }}: : :
+					{{ $t("pages.orders.openOrders.modal.filledVolume") }}:
 					<span> {{ orderDetails.volumeCompleted }} </span>
 				</p>
 
