@@ -25,12 +25,10 @@
 		<ranges />
 		<div class="flex justify-between font-bold text-sm">
 			<p>{{ $t("pages.trade.placeOrder.totalBalance") }}:</p>
-			<p>
-				0
-			</p>
+			<p>0</p>
 		</div>
 		<div>
-			<vs-button class="w-full mt-3" type="gradient" color="danger">
+			<vs-button class="w-full mt-3" color="danger">
 				{{ $t("pages.trade.placeOrder.sell.title") }}
 			</vs-button>
 		</div>
@@ -41,11 +39,11 @@
 import Ranges from "./Ranges.vue";
 export default {
 	components: { Ranges },
-	data () {
+	data() {
 		return {
-			selectedType: 0
+			selectedType: 0,
 		};
-	}
+	},
 };
 </script>
 

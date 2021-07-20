@@ -42,7 +42,7 @@
 				</vs-td>
 
 				<vs-td>
-					<vs-button size="small" type="gradient" color="danger" class="w-full">
+					<vs-button size="small" color="danger" class="w-full">
 						{{ $t("pages.trade.openOrders.cancel") }}
 					</vs-button>
 				</vs-td>
@@ -53,7 +53,7 @@
 
 <script>
 export default {
-	data () {
+	data() {
 		return {
 			openOrders: [
 				{
@@ -61,39 +61,39 @@ export default {
 					price: 30000,
 					amount: 1,
 					value: 5,
-					filled: 0
+					filled: 0,
 				},
 				{
 					date: "1400/1/6",
 					price: 30000,
 					amount: 1,
 					value: 5,
-					filled: 0
+					filled: 0,
 				},
 				{
 					date: "1400/1/6",
 					price: 30000,
 					amount: 1,
 					value: 5,
-					filled: 0
+					filled: 0,
 				},
 				{
 					date: "1400/1/6",
 					price: 30000,
 					amount: 1,
 					value: 5,
-					filled: 0
+					filled: 0,
 				},
 				{
 					date: "1400/1/6",
 					price: 30000,
 					amount: 1,
 					value: 5,
-					filled: 0
-				}
-			]
+					filled: 0,
+				},
+			],
 		};
-	}
+	},
 };
 </script>
 
