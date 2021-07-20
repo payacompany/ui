@@ -5,7 +5,7 @@
 				{{ $t("pages.trade.openOrders.title") }}
 			</p>
 			<div>
-				<vs-button size="small" icon="close">
+				<vs-button size="small" type="flat" icon="close">
 					{{ $t("pages.trade.openOrders.closeAll") }}
 				</vs-button>
 			</div>
@@ -18,7 +18,7 @@
 <script>
 import OpenOrdersList from "./OpenOrdersList.vue";
 export default {
-	components: { OpenOrdersList }
+	components: { OpenOrdersList },
 };
 </script>
 
