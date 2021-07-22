@@ -2,10 +2,10 @@
 	<div class="bg-white shadow-lg mx-3">
 		<vs-tabs alignment="center">
 			<vs-tab label="تاریخچه برداشت">
-				رکوردی موجود نیست
+				{{ $t("attribute.empty") }}
 			</vs-tab>
 			<vs-tab label="تاریخچه واریز">
-				رکوردی موجود نیست
+				{{ $t("attribute.empty") }}
 			</vs-tab>
 		</vs-tabs>
 	</div>

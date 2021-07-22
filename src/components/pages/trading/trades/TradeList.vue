@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<vs-table :data="markets" strip no-data-text="رکوردی موجود نیست">
+		<vs-table :data="markets" strip :no-data-text="$t('attribute.empty')">
 			<template slot="thead">
 				<vs-th
 					v-for="(th, index) in $t('pages.trade.trades.table.fields')"
@@ -27,7 +27,7 @@
 					<vs-td
 						:data="data[indextr].changes"
 						:class="[
-							data[indextr].changes >= 0 ? 'text-success' : 'text-danger'
+							data[indextr].changes >= 0 ? 'text-success' : 'text-danger',
 						]"
 					>
 						{{ data[indextr].changes }}%
@@ -40,14 +40,14 @@
 
 <script>
 export default {
-	data () {
+	data() {
 		return {
 			markets: [
 				{ name: "BTC/USDT", price: 30000, changes: 0 },
-				{ name: "ETH/USDT", price: 1200, changes: -5 }
-			]
+				{ name: "ETH/USDT", price: 1200, changes: -5 },
+			],
 		};
-	}
+	},
 };
 </script>
 

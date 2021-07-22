@@ -5,11 +5,11 @@
 		>
 			<div class="mx-auto flex py-3 justify-evenly border-b rounded-t-lg">
 				<div class="flex justify-between w-8/12">
-					<p>
+					<p class="font-bold">
 						{{ $t("pages.wallet.IRTestimate") }}:
 						<span class="text-success"> {{ balanceIRT }} </span>
 					</p>
-					<p>
+					<p class="font-bold">
 						{{ $t("pages.wallet.USDestimate") }}:
 						<span class="text-success"> {{ balanceIRT }} </span>
 					</p>

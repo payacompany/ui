@@ -9,6 +9,7 @@ export default {
 	},
 	attribute: {
 		yourId: "Your id",
+		empty: "empty",
 	},
 	pages: {
 		auth: {

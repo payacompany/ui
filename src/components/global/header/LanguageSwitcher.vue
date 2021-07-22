@@ -63,8 +63,10 @@ export default {
 			if (this.$i18n.locale === "En") {
 				document.getElementsByTagName("body")[0].style = "direction:ltr";
 				console.log(document.getElementsByTagName("body")[0]);
+				this.$vs.rtl = false;
 			} else {
 				document.getElementsByTagName("body")[0].style = "direction:rtl";
+				this.$vs.rtl = true;
 			}
 			setTimeout(() => {
 				this.$vs.loading.close();

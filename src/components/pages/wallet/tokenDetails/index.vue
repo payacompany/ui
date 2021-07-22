@@ -33,4 +33,17 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+::v-deep {
+	// .vs-tabs--li {
+	// 	.vs-tabs--btn {
+	// 		align-items: center !important;
+	// 	}
+	// 	&:nth-child(2) {
+	// 		.vs-tabs--btn {
+	// 			align-items: baseline !important;
+	// 		}
+	// 	}
+	// }
+}
+</style>

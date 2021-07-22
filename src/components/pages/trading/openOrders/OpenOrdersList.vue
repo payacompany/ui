@@ -4,7 +4,7 @@
 		:max-items="2"
 		pagination
 		strip
-		no-data-text="رکوردی موجود نیست"
+		:no-data-text="$t('attribute.empty')"
 	>
 		<template slot="thead">
 			<vs-th
