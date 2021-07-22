@@ -197,8 +197,8 @@ export default {
 			},
 		},
 		wallet: {
-			IRTestimate: "تخمین دارایی شما به ریال",
-			USDestimate: "تخمین دارایی شما به دلار",
+			IRTestimate: "دارایی (ریال)",
+			USDestimate: "دارایی (دلار)",
 			balance: "موجودی",
 			lockedBalance: "موجودی قفل شده",
 			deposit: {

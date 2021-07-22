@@ -4,7 +4,7 @@
 			<vs-tab :label="$t('pages.wallet.deposit.title')" icon="add">
 				<deposit />
 			</vs-tab>
-			<vs-tab :label="$t('pages.wallet.withdraw.title')" icon="payments">
+			<vs-tab :label="$t('pages.wallet.withdraw.title')" icon="minimize">
 				<withdraw :coins="coins" />
 			</vs-tab>
 			<vs-tab :label="$t('pages.wallet.history.title')" icon="history">
@@ -22,14 +22,14 @@ export default {
 	components: {
 		Withdraw,
 		Deposit,
-		Transactions
+		Transactions,
 	},
 	props: {
 		coins: {
 			type: Array,
-			default: () => []
-		}
-	}
+			default: () => [],
+		},
+	},
 };
 </script>
 
