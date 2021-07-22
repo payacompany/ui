@@ -4,13 +4,11 @@
 			<vs-button type="gradient" icon="expand_more" size="small">
 				{{ $i18n.locale }}
 			</vs-button>
-			<!-- <a href="#">Hola mundo</a> -->
-
 			<vs-dropdown-menu>
 				<vs-dropdown-item
 					v-for="(lang, index) in langs"
 					:key="index"
-					:class="[isRtl == lang.nameEn ? 'text-blue-500' : '']"
+					:class="[isRtl == lang.nameEn ? 'text-blue-500' : 'text-gray-500']"
 					@click="setLocale(lang)"
 				>
 					{{ lang.nameEn }}
