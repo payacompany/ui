@@ -1,8 +1,14 @@
 <template>
 	<div class="locale-switcher">
-		<vs-dropdown>
-			<vs-button type="gradient" icon="expand_more" size="small">
-				{{ $i18n.locale }}
+		<vs-dropdown class="">
+			<vs-button
+				type="gradient"
+				icon="expand_more"
+				size="small"
+				class="text-center"
+			>
+				<span v-if="$i18n.locale == 'Fa'" class="pl-2"> فارسی </span>
+				<span v-else class="pr-2"> En </span>
 			</vs-button>
 			<vs-dropdown-menu>
 				<vs-dropdown-item
@@ -11,7 +17,12 @@
 					:class="[isRtl == lang.nameEn ? 'text-blue-500' : 'text-gray-500']"
 					@click="setLocale(lang)"
 				>
-					{{ lang.nameEn }}
+					<div v-if="isRtl == 'En'" class="text-left">
+						{{ lang.nameEn }}
+					</div>
+					<div v-else class="text-right">
+						{{ lang.nameFa }}
+					</div>
 				</vs-dropdown-item>
 			</vs-dropdown-menu>
 		</vs-dropdown>
