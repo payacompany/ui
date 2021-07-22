@@ -10,7 +10,7 @@
 				<vs-dropdown-item
 					v-for="(lang, index) in langs"
 					:key="index"
-					:disabled="isRtl == lang.nameEn"
+					:class="[isRtl == lang.nameEn ? 'text-blue-500' : '']"
 					@click="setLocale(lang)"
 				>
 					{{ lang.nameEn }}
