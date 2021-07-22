@@ -23,32 +23,32 @@
 import i18n from "@/i18n";
 
 export default {
-	data () {
+	data() {
 		return {
 			langs: [
 				{
 					nameEn: "En",
 					value: "En",
-					nameFa: "انگلیسی"
+					nameFa: "انگلیسی",
 				},
 				{
 					nameEn: "Fa",
 					value: "Fa",
-					nameFa: "فارسی"
-				}
-			]
+					nameFa: "فارسی",
+				},
+			],
 		};
 	},
-	mounted () {
+	mounted() {
 		document.getElementsByTagName("body")[0].style = "direction:rtl";
 	},
 	computed: {
-		isRtl () {
+		isRtl() {
 			return this.$i18n.locale;
-		}
+		},
 	},
 	methods: {
-		setLocale (locale) {
+		setLocale(locale) {
 			this.$vs.loading();
 			this.$i18n.locale = locale.value;
 			if (this.$i18n.locale === "En") {
@@ -60,7 +60,7 @@ export default {
 			setTimeout(() => {
 				this.$vs.loading.close();
 			}, 300);
-		}
-	}
+		},
+	},
 };
 </script>

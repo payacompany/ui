@@ -24,7 +24,7 @@
 						{{ data[indextr].volume }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].type">
+					<vs-td :data="data[indextr].type" class="font-bold">
 						{{
 							data[indextr].type
 								? $t("pages.orders.allOrders.buy")
@@ -64,7 +64,7 @@ export default {
 				volumeCompleted: 0.00051,
 				volume: 0.151603,
 				fee: 13000,
-				status: 1
+				status: 1,
 			},
 			{
 				id: "123456789",
@@ -75,10 +75,10 @@ export default {
 				volumeCompleted: 0.151603,
 				volume: 0.151603,
 				fee: 13000,
-				status: 2
-			}
-		]
-	})
+				status: 2,
+			},
+		],
+	}),
 };
 </script>
 

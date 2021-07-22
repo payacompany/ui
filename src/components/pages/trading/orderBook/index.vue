@@ -36,11 +36,11 @@ import OrderBookList from "./OrderBookList.vue";
 
 export default {
 	components: { OrderBookList },
-	data () {
+	data() {
 		return {
-			borderColor: "primary"
+			borderColor: "primary",
 		};
-	}
+	},
 };
 </script>
 

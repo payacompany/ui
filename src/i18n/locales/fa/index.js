@@ -266,7 +266,7 @@ export default {
 				sell: "فروش",
 				buy: "خرید",
 				modal: {
-					title: "اطلاعات بیشتر",
+					title: "بیشتر",
 					orderDetails: "جزئیات سفارش",
 					orderId: "شناسه سفارش",
 					orderCreatedAt: "تاریخ سفارش",
@@ -285,7 +285,7 @@ export default {
 								title: "نام",
 							},
 							{
-								title: "اطلاعات بیشتر",
+								title: "بیشتر",
 							},
 						],
 					},
@@ -306,7 +306,7 @@ export default {
 							title: "وضعیت",
 						},
 						{
-							title: "اطلاعات بیشتر",
+							title: "بیشتر",
 						},
 					],
 				},
@@ -316,7 +316,7 @@ export default {
 				sell: "فروش",
 				buy: "خرید",
 				modal: {
-					title: "اطلاعات بیشتر",
+					title: "بیشتر",
 					orderDetails: "جزئیات سفارش",
 					orderId: "شناسه سفارش",
 					orderCreatedAt: "تاریخ سفارش",
@@ -336,7 +336,7 @@ export default {
 								title: "نام",
 							},
 							{
-								title: "اطلاعات بیشتر",
+								title: "بیشتر",
 							},
 						],
 					},
@@ -355,7 +355,7 @@ export default {
 						},
 
 						{
-							title: "اطلاعات بیشتر",
+							title: "بیشتر",
 						},
 					],
 				},
@@ -380,7 +380,7 @@ export default {
 							title: "وضعیت",
 						},
 						{
-							title: "اطلاعات بیشتر",
+							title: "بیشتر",
 						},
 					],
 				},
@@ -544,13 +544,13 @@ export default {
 				table: {
 					fields: [
 						{
-							title: "قیمت(واحد)",
+							title: "قیمت",
 						},
 						{
 							title: "حجم",
 						},
 						{
-							title: "تغییر(%)",
+							title: "تغییرات",
 						},
 					],
 				},
