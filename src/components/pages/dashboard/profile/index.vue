@@ -36,7 +36,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="flex justify-between w-full mt-8 items-center">
+						<div class="flex justify-between w-full mt-8 items-baseline">
 							<p>
 								{{ $t("pages.profile.twoAuth.title") }}
 								<span>
