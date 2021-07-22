@@ -11,7 +11,7 @@
 						type="gradient"
 						:to="{ path: '/profile/account-activity' }"
 					>
-						بیشتر...
+						{{ $t("attribute.moreInfo") }}
 					</vs-button>
 				</div>
 			</template>
@@ -32,18 +32,18 @@ import AccountActivityTable from "./accountActivityTable.vue";
 export default {
 	components: {
 		CardWithHeader,
-		AccountActivityTable
+		AccountActivityTable,
 	},
-	data () {
+	data() {
 		return {
 			user: {
 				email: "Nimatorabi@rocketmail.com",
 				refCode: "ID12345678",
-				password: 123456789
+				password: 123456789,
 			},
-			twoFactorAuth: false
+			twoFactorAuth: false,
 		};
-	}
+	},
 };
 </script>
 

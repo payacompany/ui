@@ -10,6 +10,7 @@ export default {
 	attribute: {
 		yourId: "Your id",
 		empty: "empty",
+		moreInfo: "more Info...",
 	},
 	pages: {
 		auth: {

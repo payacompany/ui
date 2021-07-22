@@ -8,7 +8,10 @@
 			</template>
 			<template #body>
 				<div class="flex flex-row justify-between w-full">
-					<div class="width-50 ml-2 d-flex justify-between">
+					<div
+						class="width-50 d-flex justify-between"
+						:class="[isRtl ? 'mx-4' : 'mx-4']"
+					>
 						<p class="text-xl font-bold">
 							{{ user.email }}
 						</p>
@@ -56,7 +59,7 @@
 						</div>
 						<input-with-copy />
 					</div>
-					<div class="width-50 mx-3">
+					<div class="width-50" :class="[isRtl ? 'mx-4' : 'mx-4']">
 						<user-verification />
 					</div>
 				</div>
@@ -70,23 +73,30 @@ import CardWithHeader from "../../../global/cards/CardWithHeader.vue";
 import InputWithCopy from "../../../global/inputs/InputWithCopy.vue";
 import ChangePassModal from "./changePassModal.vue";
 import UserVerification from "./userVerification/index.vue";
+import i18n from "@/i18n";
+
 export default {
 	components: {
 		CardWithHeader,
 		InputWithCopy,
 		UserVerification,
-		ChangePassModal
+		ChangePassModal,
 	},
-	data () {
+	data() {
 		return {
 			user: {
 				email: "Nimatorabi@rocketmail.com",
 				refCode: "ID12345678",
-				password: 123456789
+				password: 123456789,
 			},
-			twoFactorAuth: false
+			twoFactorAuth: false,
 		};
-	}
+	},
+	computed: {
+		isRtl() {
+			return this.$i18n.locale === "Fa" ? false : true;
+		},
+	},
 };
 </script>
 

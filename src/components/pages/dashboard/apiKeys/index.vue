@@ -11,7 +11,7 @@
 						type="gradient"
 						:to="{ path: '/profile/api-management' }"
 					>
-						بیشتر...
+						{{ $t("attribute.moreInfo") }}
 					</vs-button>
 				</div>
 			</template>
@@ -30,18 +30,18 @@
 import CardWithHeader from "../../../global/cards/CardWithHeader.vue";
 export default {
 	components: {
-		CardWithHeader
+		CardWithHeader,
 	},
-	data () {
+	data() {
 		return {
 			user: {
 				email: "Nimatorabi@rocketmail.com",
 				refCode: "ID12345678",
-				password: 123456789
+				password: 123456789,
 			},
-			twoFactorAuth: false
+			twoFactorAuth: false,
 		};
-	}
+	},
 };
 </script>
 

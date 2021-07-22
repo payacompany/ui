@@ -10,6 +10,7 @@ export default {
 	attribute: {
 		yourId: "آی دی شما",
 		empty: "رکوردی موجود نیست",
+		moreInfo: "بیشتر...",
 	},
 	pages: {
 		auth: {
