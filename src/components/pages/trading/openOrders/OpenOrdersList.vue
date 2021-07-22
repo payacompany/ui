@@ -42,7 +42,7 @@
 				</vs-td>
 
 				<vs-td>
-					<vs-button size="small" color="danger" class="w-full">
+					<vs-button size="small" color="danger" class="w-full font-bold">
 						{{ $t("pages.trade.openOrders.cancel") }}
 					</vs-button>
 				</vs-td>

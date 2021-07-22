@@ -5,7 +5,12 @@
 				{{ $t("pages.trade.openOrders.title") }}
 			</p>
 			<div>
-				<vs-button size="small" type="flat" icon="close">
+				<vs-button
+					class="font-bold text-lg"
+					size="small"
+					type="flat"
+					icon="close"
+				>
 					{{ $t("pages.trade.openOrders.closeAll") }}
 				</vs-button>
 			</div>
