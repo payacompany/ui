@@ -119,6 +119,8 @@ export default {
 			},
 			twoAuth: {
 				title: "شناسایی دوعاملی",
+				activation: "فعالسازی",
+				deactivation: "غیرفعالسازی",
 				active: "فعال",
 				deactive: "غیرفعال",
 			},

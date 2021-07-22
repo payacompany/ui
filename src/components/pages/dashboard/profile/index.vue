@@ -27,7 +27,7 @@
 									<vs-button
 										size="small"
 										color="primary"
-										type="filled"
+										type="border"
 										@click="$router.push('/profile/change-password')"
 									>
 										{{ $t("pages.profile.changePassword.title") }}
@@ -36,10 +36,7 @@
 								</div>
 							</div>
 						</div>
-						<div
-							class="flex justify-between w-full mt-8 items-center"
-							@click="$router.push({ name: '2fa' })"
-						>
+						<div class="flex justify-between w-full mt-8 items-center">
 							<p>
 								{{ $t("pages.profile.twoAuth.title") }}
 								<span>
@@ -50,12 +47,33 @@
 									}})
 								</span>
 							</p>
-							<vs-switch
+							<!-- <vs-switch
 								v-model="twoFactorAuth"
 								disabled
 								color="primary"
 								class="ml-2"
-							/>
+							/> -->
+							<p
+								class="
+									flex
+									items-center
+									text-sm
+									font-bold
+									text-blue-500
+									cursor-pointer
+								"
+							>
+								<span class="underline" @click="$router.push({ name: '2fa' })">
+									{{
+										twoFactorAuth
+											? $t("pages.profile.twoAuth.activation")
+											: $t("pages.profile.twoAuth.deactivation")
+									}}
+								</span>
+								<span class="material-icons px-1">
+									{{ isRtl ? "east" : "west" }}
+								</span>
+							</p>
 						</div>
 						<input-with-copy />
 					</div>

@@ -118,6 +118,8 @@ export default {
 			},
 			twoAuth: {
 				title: "two factor authentication",
+				activation: "activation",
+				deactivation: "deactivation",
 				active: "active",
 				deactive: "deactive",
 			},
