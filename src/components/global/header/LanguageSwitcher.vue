@@ -62,7 +62,6 @@ export default {
 			this.$i18n.locale = locale.value;
 			if (this.$i18n.locale === "En") {
 				document.getElementsByTagName("body")[0].style = "direction:ltr";
-				console.log(document.getElementsByTagName("body")[0]);
 				this.$vs.rtl = false;
 			} else {
 				document.getElementsByTagName("body")[0].style = "direction:rtl";

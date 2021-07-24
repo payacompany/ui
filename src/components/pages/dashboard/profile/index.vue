@@ -19,11 +19,10 @@
 							{{ user.refCode }}
 						</p>
 						<div class="flex">
-							<div class="flex justify-between items-baseline w-full ml-2">
-								<p>
-									{{ user.password }}
-								</p>
-								<div class="mt-3">
+							<div class="flex justify-between items-center w-full ml-2">
+								<password-input v-model="user.password" />
+
+								<div>
 									<vs-button
 										size="small"
 										color="primary"
@@ -36,7 +35,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="flex justify-between w-full mt-8 items-baseline">
+						<vs-divider />
+						<div class="flex justify-between w-full my-5 items-baseline">
 							<p>
 								{{ $t("pages.profile.twoAuth.title") }}
 								<span>
@@ -75,6 +75,7 @@
 								</span>
 							</p>
 						</div>
+						<vs-divider />
 						<input-with-copy />
 					</div>
 					<div class="width-50" :class="[isRtl ? 'mx-4' : 'mx-4']">
@@ -92,6 +93,7 @@ import InputWithCopy from "../../../global/inputs/InputWithCopy.vue";
 import ChangePassModal from "./changePassModal.vue";
 import UserVerification from "./userVerification/index.vue";
 import i18n from "@/i18n";
+import PasswordInput from "../../../global/inputs/passwordInput.vue";
 
 export default {
 	components: {
@@ -99,6 +101,7 @@ export default {
 		InputWithCopy,
 		UserVerification,
 		ChangePassModal,
+		PasswordInput,
 	},
 	data() {
 		return {
