@@ -4,6 +4,7 @@
 			id="ref-input"
 			v-model="refCode"
 			:disabled="disabled"
+			class="rtl-radius"
 			:label-placeholder="placeholder"
 			:value="refCode"
 		/>
