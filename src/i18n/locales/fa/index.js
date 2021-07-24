@@ -126,7 +126,7 @@ export default {
 			},
 			copyText: {
 				title: "کپی کردن!",
-				placeHolder: "کد معرف شما",
+				placeHolder: "کد معرف",
 			},
 			userVerification: {
 				title: "احراز هویت",

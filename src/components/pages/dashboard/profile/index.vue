@@ -19,7 +19,10 @@
 							{{ user.refCode }}
 						</p>
 						<div class="flex">
-							<div class="flex justify-between items-center w-full ml-2">
+							<div
+								class="flex justify-between items-center w-full"
+								:class="[isRtl ? 'mr-2' : 'ml-2']"
+							>
 								<password-input v-model="user.password" />
 
 								<div>

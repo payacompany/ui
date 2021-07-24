@@ -13,7 +13,7 @@
 				class="cursor-pointer"
 				@copy="handleCopy"
 			>
-				<vs-button class="text-sm">
+				<vs-button class="text-sm" type="border">
 					{{ $t("pages.profile.copyText.title") }}
 				</vs-button>
 			</copy-to-clipboard>
