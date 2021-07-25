@@ -9,6 +9,8 @@ export default {
 	},
 	attribute: {
 		yourId: "آی دی شما",
+		empty: "رکوردی موجود نیست",
+		moreInfo: "بیشتر...",
 	},
 	pages: {
 		auth: {
@@ -117,12 +119,14 @@ export default {
 			},
 			twoAuth: {
 				title: "شناسایی دوعاملی",
+				activation: "فعالسازی",
+				deactivation: "غیرفعالسازی",
 				active: "فعال",
 				deactive: "غیرفعال",
 			},
 			copyText: {
 				title: "کپی کردن!",
-				placeHolder: "کد معرف شما",
+				placeHolder: "کد معرف",
 			},
 			userVerification: {
 				title: "احراز هویت",
@@ -197,8 +201,8 @@ export default {
 			},
 		},
 		wallet: {
-			IRTestimate: "تخمین دارایی شما به ریال",
-			USDestimate: "تخمین دارایی شما به دلار",
+			IRTestimate: "دارایی (ریال)",
+			USDestimate: "دارایی (دلار)",
 			balance: "موجودی",
 			lockedBalance: "موجودی قفل شده",
 			deposit: {
@@ -266,7 +270,7 @@ export default {
 				sell: "فروش",
 				buy: "خرید",
 				modal: {
-					title: "اطلاعات بیشتر",
+					title: "بیشتر",
 					orderDetails: "جزئیات سفارش",
 					orderId: "شناسه سفارش",
 					orderCreatedAt: "تاریخ سفارش",
@@ -285,7 +289,7 @@ export default {
 								title: "نام",
 							},
 							{
-								title: "اطلاعات بیشتر",
+								title: "بیشتر",
 							},
 						],
 					},
@@ -306,7 +310,7 @@ export default {
 							title: "وضعیت",
 						},
 						{
-							title: "اطلاعات بیشتر",
+							title: "بیشتر",
 						},
 					],
 				},
@@ -316,7 +320,7 @@ export default {
 				sell: "فروش",
 				buy: "خرید",
 				modal: {
-					title: "اطلاعات بیشتر",
+					title: "بیشتر",
 					orderDetails: "جزئیات سفارش",
 					orderId: "شناسه سفارش",
 					orderCreatedAt: "تاریخ سفارش",
@@ -336,7 +340,7 @@ export default {
 								title: "نام",
 							},
 							{
-								title: "اطلاعات بیشتر",
+								title: "بیشتر",
 							},
 						],
 					},
@@ -355,7 +359,7 @@ export default {
 						},
 
 						{
-							title: "اطلاعات بیشتر",
+							title: "بیشتر",
 						},
 					],
 				},
@@ -380,7 +384,7 @@ export default {
 							title: "وضعیت",
 						},
 						{
-							title: "اطلاعات بیشتر",
+							title: "بیشتر",
 						},
 					],
 				},
@@ -544,13 +548,13 @@ export default {
 				table: {
 					fields: [
 						{
-							title: "قیمت(واحد)",
+							title: "قیمت",
 						},
 						{
 							title: "حجم",
 						},
 						{
-							title: "تغییر(%)",
+							title: "تغییرات",
 						},
 					],
 				},

@@ -6,7 +6,7 @@ Vue.use(VueI18n);
 
 const i18n = new VueI18n({
 	lazy: true,
-	locale: "Fa",
+	locale: localStorage.getItem("local") || "Fa",
 	messages: {
 		En: en,
 		Fa: fa,

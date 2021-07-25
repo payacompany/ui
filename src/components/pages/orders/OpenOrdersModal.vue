@@ -1,8 +1,11 @@
 <template lang="html">
 	<div class="centerx">
-		<vs-button color="primary" type="filled" @click="showModal = true">
-			{{ $t("pages.orders.openOrders.modal.title") }}
-		</vs-button>
+		<div
+			@click="showModal = true"
+			class="text-blue-500 underline text-md cursor-pointer"
+		>
+			{{ $t("pages.orders.allOrders.modal.title") }}
+		</div>
 		<vs-popup
 			:title="$t('pages.orders.openOrders.modal.orderDetails')"
 			:active.sync="showModal"
@@ -49,27 +52,27 @@ import RadialProgressBar from "vue-radial-progress";
 
 export default {
 	components: {
-		RadialProgressBar
+		RadialProgressBar,
 	},
 	props: {
 		orderDetails: {
 			type: Object,
-			default: () => {}
-		}
+			default: () => {},
+		},
 	},
-	data () {
+	data() {
 		return {
-			showModal: false
+			showModal: false,
 		};
 	},
 	computed: {
-		totalVol () {
+		totalVol() {
 			return this.orderDetails.volume;
 		},
-		completedVol () {
+		completedVol() {
 			return this.orderDetails.volumeCompleted;
-		}
-	}
+		},
+	},
 };
 </script>
 

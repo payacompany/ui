@@ -53,14 +53,14 @@ import i18n from "@/i18n/index.js";
 
 export default {
 	data: () => ({
-		active: false
+		active: false,
 	}),
-	mounted () {},
+	mounted() {},
 	computed: {
-		isRtl () {
+		isRtl() {
 			return this.$i18n.locale === "Fa" ? false : true;
-		}
-	}
+		},
+	},
 };
 </script>
 

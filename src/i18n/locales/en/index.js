@@ -9,6 +9,8 @@ export default {
 	},
 	attribute: {
 		yourId: "Your id",
+		empty: "empty",
+		moreInfo: "more",
 	},
 	pages: {
 		auth: {
@@ -116,6 +118,8 @@ export default {
 			},
 			twoAuth: {
 				title: "two factor authentication",
+				activation: "activation",
+				deactivation: "deactivation",
 				active: "active",
 				deactive: "deactive",
 			},
@@ -264,7 +268,7 @@ export default {
 				sell: "Sell",
 				buy: "Buy",
 				modal: {
-					title: "more info",
+					title: "more",
 					orderDetails: "Order details",
 					orderId: "ID",
 					orderCreatedAt: "Created at",
@@ -314,7 +318,7 @@ export default {
 				open: "Open",
 				sell: "Sell",
 				modal: {
-					title: "more info",
+					title: "more",
 					orderDetails: "Order details",
 					orderId: "ID",
 					orderCreatedAt: "Created at",
@@ -411,7 +415,7 @@ export default {
 								title: "type",
 							},
 							{
-								title: "more info",
+								title: "more",
 							},
 						],
 					},
@@ -455,7 +459,7 @@ export default {
 								title: "Unit",
 							},
 							{
-								title: "more info",
+								title: "more",
 							},
 						],
 					},

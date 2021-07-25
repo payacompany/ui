@@ -1,8 +1,11 @@
 <template lang="html">
 	<div class="centerx">
-		<vs-button color="primary" type="filled" @click="showModal = true">
+		<div
+			@click="showModal = true"
+			class="text-blue-500 underline text-md cursor-pointer font-bold"
+		>
 			{{ $t("pages.orders.allOrders.modal.title") }}
-		</vs-button>
+		</div>
 		<vs-popup
 			:title="$t('pages.orders.allOrders.modal.orderDetails')"
 			:active.sync="showModal"
@@ -44,14 +47,14 @@ export default {
 	props: {
 		orderDetails: {
 			type: Object,
-			default: () => {}
-		}
+			default: () => {},
+		},
 	},
-	data () {
+	data() {
 		return {
-			showModal: false
+			showModal: false,
 		};
-	}
+	},
 };
 </script>
 

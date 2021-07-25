@@ -5,17 +5,17 @@
 		>
 			<div class="mx-auto flex py-3 justify-evenly border-b rounded-t-lg">
 				<div class="flex justify-between w-8/12">
-					<p>
+					<p class="font-bold">
 						{{ $t("pages.wallet.IRTestimate") }}:
-						<span> {{ balanceIRT }} </span>
+						<span class="text-success"> {{ balanceIRT }} </span>
 					</p>
-					<p>
+					<p class="font-bold">
 						{{ $t("pages.wallet.USDestimate") }}:
-						<span> {{ balanceIRT }} </span>
+						<span class="text-success"> {{ balanceIRT }} </span>
 					</p>
 				</div>
 			</div>
-			<div class="mx-auto flex ">
+			<div class="mx-auto flex">
 				<wallet class="w-1/3 border-l-1" :coins="coins" />
 				<token-details class="w-2/3" :coins="coins" />
 			</div>
@@ -30,7 +30,7 @@ import WalletXs from "../../components/pages/wallet/xs/index.vue";
 import TokenDetails from "../../components/pages/wallet/tokenDetails/index.vue";
 export default {
 	components: { Wallet, TokenDetails, WalletXs },
-	data () {
+	data() {
 		return {
 			balanceIRT: 153000000,
 			coins: [
@@ -42,7 +42,7 @@ export default {
 					lockedBalance: 150,
 					price: "34000",
 					priceIRT: "800000000",
-					isActive: true
+					isActive: true,
 				},
 				{
 					name: "Etherum",
@@ -52,11 +52,11 @@ export default {
 					lockedBalance: 0,
 					price: "1200",
 					priceIRT: "30000000",
-					isActive: false
-				}
-			]
+					isActive: false,
+				},
+			],
 		};
-	}
+	},
 };
 </script>
 

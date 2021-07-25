@@ -1,13 +1,25 @@
 <template>
 	<div>
-		<vs-tabs alignment="left">
-			<vs-tab :label="$t('pages.wallet.deposit.title')" icon="add">
+		<vs-tabs alignment="left" :color="borderColor">
+			<vs-tab
+				:label="$t('pages.wallet.deposit.title')"
+				icon="add"
+				@click="borderColor = 'success'"
+			>
 				<deposit />
 			</vs-tab>
-			<vs-tab :label="$t('pages.wallet.withdraw.title')" icon="payments">
+			<vs-tab
+				:label="$t('pages.wallet.withdraw.title')"
+				icon="minimize"
+				@click="borderColor = 'danger'"
+			>
 				<withdraw :coins="coins" />
 			</vs-tab>
-			<vs-tab :label="$t('pages.wallet.history.title')" icon="history">
+			<vs-tab
+				:label="$t('pages.wallet.history.title')"
+				icon="history"
+				@click="borderColor = 'primary'"
+			>
 				<transactions />
 			</vs-tab>
 		</vs-tabs>
@@ -22,15 +34,26 @@ export default {
 	components: {
 		Withdraw,
 		Deposit,
-		Transactions
+		Transactions,
 	},
 	props: {
 		coins: {
 			type: Array,
-			default: () => []
-		}
-	}
+			default: () => [],
+		},
+	},
+	data() {
+		return {
+			borderColor: "success",
+		};
+	},
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+::v-deep {
+	.material-icons {
+		color: inherit;
+	}
+}
+</style>

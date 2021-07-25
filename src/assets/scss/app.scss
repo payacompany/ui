@@ -1,5 +1,7 @@
 @import "./font.scss";
 @import "./customClasses.scss";
+@import "./vuesax.scss";
+
 body::-webkit-scrollbar {
   width: 12px;
   /* width of the entire scrollbar */
@@ -23,7 +25,7 @@ body::-webkit-scrollbar-thumb {
 *,
 body {
   // direction: rtl;
-  font-family: "IRANSansFa";
+  // font-family: "IRANSansFa";
 }
 
 .center{

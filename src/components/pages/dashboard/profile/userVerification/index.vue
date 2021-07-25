@@ -12,6 +12,7 @@
 				<vs-button
 					size="small"
 					class="w-full font-bold"
+					type="border"
 					:color="step.isCompleted ? 'success' : 'primary'"
 				>
 					{{ step.title }}
@@ -21,7 +22,7 @@
 		<div
 			v-for="(step, index) in $t('pages.profile.userVerification.kycSteps')"
 			:key="index"
-			class="mt-2  border-b last:border-b-0"
+			class="mt-2 border-b last:border-b-0"
 		>
 			<verification-step :step="step" :index="index" />
 		</div>
@@ -32,14 +33,14 @@
 import VerificationStep from "./VerificationStep.vue";
 export default {
 	components: { VerificationStep },
-	data () {
+	data() {
 		return {};
 	},
-	mounted () {
+	mounted() {
 		this.kycStepsAllow();
 	},
 	methods: {
-		kycStepsAllow () {
+		kycStepsAllow() {
 			let allow = false;
 			let steps = this.$t("pages.profile.userVerification.kycSteps");
 			steps.forEach(step => {
@@ -48,8 +49,8 @@ export default {
 					allow = true;
 				}
 			});
-		}
-	}
+		},
+	},
 };
 </script>
 
