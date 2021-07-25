@@ -6,6 +6,7 @@
 		<vs-sidebar
 			v-model="active"
 			parent="body"
+			default-index="1"
 			color="primary"
 			class="text-center"
 			:position-right="isRtl"
@@ -18,6 +19,7 @@
 			<vs-sidebar-item index="1" icon="account_circle" to="/">
 				{{ $t("nav.profile") }}
 			</vs-sidebar-item>
+			<vs-divider />
 			<vs-sidebar-item index="2" icon="stacked_bar_chart" to="/trading">
 				{{ $t("nav.trade") }}
 			</vs-sidebar-item>

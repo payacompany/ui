@@ -50,7 +50,6 @@ export default {
 	},
 	created() {
 		document.documentElement.lang = i18n.locale.toLowerCase();
-		console.log(document.documentElement.lang);
 	},
 	mounted() {
 		document.getElementsByTagName("body")[0].style = "direction:rtl";
