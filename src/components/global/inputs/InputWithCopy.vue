@@ -1,23 +1,50 @@
 <template>
 	<div class="md:mt-8 flex flex-row w-full">
-		<vs-input
-			id="ref-input"
-			v-model="refCode"
-			:disabled="disabled"
-			class="rtl-radius"
-			:label-placeholder="placeholder"
-			:value="refCode"
-		/>
-		<div class="mt-4">
+		<div v-if="!isRtl" class="flex flex-row">
+			<vs-input
+				id="ref-input"
+				v-model="refCode"
+				:disabled="disabled"
+				style="border-radius: 0 5px 5px 0"
+				:value="refCode"
+			/>
+			<!-- :label-placeholder="$t('pages.profile.copyText.placeHolder')" -->
 			<copy-to-clipboard
 				:text="refCode"
 				class="cursor-pointer"
 				@copy="handleCopy"
 			>
-				<vs-button class="text-sm" type="border">
+				<vs-button
+					class="text-sm"
+					type="border"
+					style="border-radius: 5px 0 0 5px"
+				>
 					{{ $t("pages.profile.copyText.title") }}
 				</vs-button>
 			</copy-to-clipboard>
+		</div>
+		<div v-else class="flex flex-row">
+			<vs-input
+				id="ref-input"
+				v-model="refCode"
+				:disabled="disabled"
+				:value="refCode"
+				style="border-radius: 5px 0 0 5px"
+			/>
+			<copy-to-clipboard
+				:text="refCode"
+				class="cursor-pointer"
+				@copy="handleCopy"
+			>
+				<vs-button
+					class="text-sm"
+					type="border"
+					style="border-radius: 0 5px 5px 0"
+				>
+					{{ $t("pages.profile.copyText.title") }}
+				</vs-button>
+			</copy-to-clipboard>
+			<!-- :label-placeholder="$t('pages.profile.copyText.placeHolder')" -->
 		</div>
 	</div>
 </template>
@@ -27,6 +54,7 @@ import CopyToClipboard from "vue-copy-to-clipboard";
 import i18n from "@/i18n";
 
 export default {
+	components: { CopyToClipboard },
 	props: {
 		placeholder: {
 			required: false,
@@ -44,7 +72,6 @@ export default {
 			default: "ID12345678",
 		},
 	},
-	components: { CopyToClipboard },
 	data() {
 		return {};
 	},

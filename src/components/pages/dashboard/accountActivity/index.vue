@@ -8,7 +8,7 @@
 					</p>
 					<vs-button
 						size="small"
-						type="gradient"
+						type="border"
 						:to="{ path: '/profile/account-activity' }"
 					>
 						{{ $t("attribute.moreInfo") }}

@@ -2,7 +2,7 @@
 	<div class="centerx">
 		<div
 			@click="showModal = true"
-			class="text-blue-500 underline text-md cursor-pointer"
+			class="text-blue-500 underline text-md cursor-pointer font-bold"
 		>
 			{{ $t("pages.orders.allOrders.modal.title") }}
 		</div>

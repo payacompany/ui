@@ -13,10 +13,10 @@ export default {
 	/* eslint-disable prettier-vue/prettier */
 
 	computed: {
-		layout () {
+		layout() {
 			return this.$route.meta.layout || "default-layout";
-		}
-	}
+		},
+	},
 };
 </script>
 

@@ -24,7 +24,11 @@
 						{{ data[indextr].volume }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].type" class="font-bold">
+					<vs-td
+						:data="data[indextr].type"
+						class="font-bold"
+						:class="[data[indextr].type ? 'text-success' : 'text-danger']"
+					>
 						{{
 							data[indextr].type
 								? $t("pages.orders.allOrders.buy")
@@ -125,7 +129,7 @@ export default {
 					span {
 						display: flex;
 						justify-content: center;
-						color: black;
+						// color: black;
 					}
 					&:first-child {
 						border-top-left-radius: 0.5rem;
