@@ -3,22 +3,18 @@
 		<div
 			v-for="(coin, index) in coins"
 			:key="index"
-			class="
-				
-				hover:bg-gray-100 
-				
-                cursor-pointer
-				transition
-				ease-in
-				duration-300
-			"
+			class="hover:bg-gray-100 cursor-pointer transition ease-in duration-300"
 		>
 			<div
 				@click="setActive(index)"
-				class="flex flex-row justify-between py-5 pl-3"
+				class="flex flex-row justify-between py-5 px-3"
 				:class="[coin.isActive ? 'bg-gray-200 border-r-4 border-blue-500' : '']"
 			>
-				<img :src="coin.logo" alt="" />
+				<img
+					src="../../../../assets/img/BTC.png"
+					alt=""
+					class="w-10 h-10 mx-2 object-cover"
+				/>
 				<div class="flex flex-col w-11/12">
 					<div class="flex justify-between">
 						<p>
@@ -35,9 +31,7 @@
 						</p>
 						<p class="flex items-center">
 							{{ coin.lockedBalance }}
-							<span class="material-icons text-gray-500 pr-3">
-								lock
-							</span>
+							<span class="material-icons text-gray-500 pr-3"> lock </span>
 						</p>
 					</div>
 				</div>
@@ -51,11 +45,11 @@ export default {
 	props: {
 		coins: {
 			type: Array,
-			default: () => []
-		}
+			default: () => [],
+		},
 	},
 	methods: {
-		setActive (index) {
+		setActive(index) {
 			this.coins.forEach((coin, ind) => {
 				if (index === ind) {
 					coin.isActive = true;
@@ -63,8 +57,8 @@ export default {
 					coin.isActive = false;
 				}
 			});
-		}
-	}
+		},
+	},
 };
 </script>
 
