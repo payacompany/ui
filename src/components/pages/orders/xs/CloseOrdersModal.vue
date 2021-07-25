@@ -24,19 +24,19 @@
 					<span> {{ orderDetails.date }} </span>
 				</p>
 				<p class="pb-8">
-					{{ $t("pages.orders.allOrders.modal.unitPerPrice") }}: : :
+					{{ $t("pages.orders.allOrders.modal.unitPerPrice") }}:
 					<span> {{ orderDetails.priceInUnit }} تومان </span>
 				</p>
 				<p>
-					{{ $t("pages.orders.allOrders.modal.volume") }}: : :
+					{{ $t("pages.orders.allOrders.modal.volume") }}:
 					<span> {{ orderDetails.volume }} </span>
 				</p>
 				<p>
-					{{ $t("pages.orders.allOrders.modal.feeOrder") }}: : :
+					{{ $t("pages.orders.allOrders.modal.feeOrder") }}:
 					<span> {{ orderDetails.fee }} تومان</span>
 				</p>
 				<p>
-					{{ $t("pages.orders.allOrders.modal.totalPrice") }}: : :
+					{{ $t("pages.orders.allOrders.modal.totalPrice") }}:
 					<span> {{ orderDetails.priceInUnit * orderDetails.volume }} </span>
 				</p>
 			</div>

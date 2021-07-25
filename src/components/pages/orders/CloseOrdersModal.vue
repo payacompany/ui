@@ -1,8 +1,11 @@
 <template lang="html">
 	<div class="centerx">
-		<vs-button color="primary" type="filled" @click="showModal = true">
+		<div
+			@click="showModal = true"
+			class="text-blue-500 underline text-md cursor-pointer font-bold"
+		>
 			{{ $t("pages.orders.allOrders.modal.title") }}
-		</vs-button>
+		</div>
 		<vs-popup
 			:title="$t('pages.orders.allOrders.modal.orderDetails')"
 			:active.sync="showModal"
@@ -19,19 +22,19 @@
 					<span> {{ orderDetails.date }} </span>
 				</p>
 				<p class="pb-8">
-					{{ $t("pages.orders.allOrders.modal.unitPerPrice") }}: : :
+					{{ $t("pages.orders.allOrders.modal.unitPerPrice") }}:
 					<span> {{ orderDetails.priceInUnit }} تومان </span>
 				</p>
 				<p>
-					{{ $t("pages.orders.allOrders.modal.volume") }}: : :
+					{{ $t("pages.orders.allOrders.modal.volume") }}:
 					<span> {{ orderDetails.volume }} </span>
 				</p>
 				<p>
-					{{ $t("pages.orders.allOrders.modal.feeOrder") }}: : :
+					{{ $t("pages.orders.allOrders.modal.feeOrder") }}:
 					<span> {{ orderDetails.fee }} تومان</span>
 				</p>
 				<p>
-					{{ $t("pages.orders.allOrders.modal.totalPrice") }}: : :
+					{{ $t("pages.orders.allOrders.modal.totalPrice") }}:
 					<span> {{ orderDetails.priceInUnit * orderDetails.volume }} </span>
 				</p>
 			</div>
@@ -44,14 +47,14 @@ export default {
 	props: {
 		orderDetails: {
 			type: Object,
-			default: () => {}
-		}
+			default: () => {},
+		},
 	},
-	data () {
+	data() {
 		return {
-			showModal: false
+			showModal: false,
 		};
-	}
+	},
 };
 </script>
 

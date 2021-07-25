@@ -39,10 +39,12 @@ Vue.use(VueSweetalert2);
 import Default from "./layouts/default.vue";
 import Error from "./layouts/error.vue";
 import Trade from "./layouts/trade.vue";
+import Xs from "./layouts/xs.vue";
 
 Vue.component("default-layout", Default);
 Vue.component("error", Error);
 Vue.component("trade", Trade);
+Vue.component("xs", Xs);
 
 Vue.config.productionTip = false;
 

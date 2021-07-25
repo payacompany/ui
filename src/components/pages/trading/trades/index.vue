@@ -6,17 +6,11 @@
 			</p>
 		</div>
 		<vs-divider />
-		<vs-tabs alignment="center" class="text-sm" :color="borderColor">
-			<vs-tab
-				:label="$t('pages.trade.trades.myTransactions.title')"
-				@click="borderColor = 'success'"
-			>
+		<vs-tabs alignment="center" class="text-sm" color="primary">
+			<vs-tab :label="$t('pages.trade.trades.myTransactions.title')">
 				<trade-list />
 			</vs-tab>
-			<vs-tab
-				:label="$t('pages.trade.trades.marketTransactions.title')"
-				@click="borderColor = 'danger'"
-			>
+			<vs-tab :label="$t('pages.trade.trades.marketTransactions.title')">
 				<trade-list />
 			</vs-tab>
 		</vs-tabs>
@@ -28,11 +22,11 @@ import TradeList from "./TradeList.vue";
 
 export default {
 	components: { TradeList },
-	data () {
+	data() {
 		return {
-			borderColor: "primary"
+			borderColor: "primary",
 		};
-	}
+	},
 };
 </script>
 

@@ -15,14 +15,13 @@
 				:disabled="!step.isAllow"
 				:to="{ path: setRoute }"
 				size="small"
+				type="border"
 			>
 				{{ $t("pages.profile.userVerification.verify") }}
 			</vs-button>
 			<p v-else class="text-xs text-success">
 				{{ $t("pages.profile.userVerification.confirmed") }}
-				<span class="material-icons">
-					check
-				</span>
+				<span class="material-icons"> check </span>
 			</p>
 		</div>
 	</div>
@@ -33,20 +32,20 @@ export default {
 	props: {
 		index: {
 			type: Number,
-			default: 1
+			default: 1,
 		},
 		step: {
 			type: Object,
-			default: () => {}
-		}
+			default: () => {},
+		},
 	},
-	data () {
+	data() {
 		return {
-			routePath: "/"
+			routePath: "/",
 		};
 	},
 	computed: {
-		setRoute () {
+		setRoute() {
 			switch (this.index) {
 				case 0:
 					return "/profile/confirm-email";
@@ -67,8 +66,8 @@ export default {
 					return "/";
 					break;
 			}
-		}
-	}
+		},
+	},
 };
 </script>
 

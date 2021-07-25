@@ -2,9 +2,18 @@
 	<div>
 		<card-with-header>
 			<template #header>
-				<p class="text-xl font-bold">
-					{{ $t("pages.profile.ApiManagement.title") }}
-				</p>
+				<div class="flex justify-between items-baseline">
+					<p class="text-xl font-bold">
+						{{ $t("pages.profile.ApiManagement.title") }}
+					</p>
+					<vs-button
+						size="small"
+						type="border"
+						:to="{ path: '/profile/api-management' }"
+					>
+						{{ $t("attribute.moreInfo") }}
+					</vs-button>
+				</div>
 			</template>
 			<template #body>
 				<div>
@@ -21,18 +30,18 @@
 import CardWithHeader from "../../../global/cards/CardWithHeader.vue";
 export default {
 	components: {
-		CardWithHeader
+		CardWithHeader,
 	},
-	data () {
+	data() {
 		return {
 			user: {
 				email: "Nimatorabi@rocketmail.com",
 				refCode: "ID12345678",
-				password: 123456789
+				password: 123456789,
 			},
-			twoFactorAuth: false
+			twoFactorAuth: false,
 		};
-	}
+	},
 };
 </script>
 

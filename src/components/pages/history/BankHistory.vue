@@ -16,7 +16,7 @@
 			:max-items="8"
 			pagination
 			:data="history"
-			no-data-text="رکوردی موجود نیست"
+			:no-data-text="$t('attribute.empty')"
 		>
 			<template slot="thead">
 				<vs-th
@@ -58,12 +58,12 @@
 
 <script>
 export default {
-	data () {
+	data() {
 		return {
 			selectedType: 0,
-			history: []
+			history: [],
 		};
-	}
+	},
 };
 </script>
 

@@ -22,11 +22,11 @@ import BuyPlaceOrder from "./BuyPlaceOrder.vue";
 import SellPlaceOrder from "./SellPlaceOrder.vue";
 export default {
 	components: { BuyPlaceOrder, SellPlaceOrder },
-	data () {
+	data() {
 		return {
-			borderColor: "success"
+			borderColor: "success",
 		};
-	}
+	},
 };
 </script>
 

@@ -29,6 +29,33 @@ const routes = [
 			import("../views/dashboard/profile/confirmPhone/index.vue"),
 	},
 	{
+		path: "/profile/change-password",
+		name: "changePassword",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () =>
+			import("../views/dashboard/profile/changePassword/index.vue"),
+	},
+	{
+		path: "/profile/account-activity",
+		name: "accountActivity",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () =>
+			import("../views/dashboard/profile/accountActivity/index.vue"),
+	},
+	{
+		path: "/profile/api-management",
+		name: "apiManagement",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () =>
+			import("../views/dashboard/profile/apiManagement/index.vue"),
+	},
+	{
 		path: "/profile/confirm-email",
 		name: "confirmEmail",
 		meta: {
@@ -81,6 +108,31 @@ const routes = [
 		component: () => import("../views/wallet/index.vue"),
 	},
 	{
+		path: "/wallet/:name",
+		name: "wallet-id",
+		meta: {
+			layout: "xs",
+			requiresAuth: true,
+		},
+		component: () => import("../views/wallet/id/id.vue"),
+	},
+	{
+		path: "/wallet/:name/withdraw",
+		name: "wallet-id-withdraw",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () => import("../views/wallet/id/withdraw.vue"),
+	},
+	{
+		path: "/wallet/:name/deposit",
+		name: "wallet-id-deposit",
+		meta: {
+			requiresAuth: true,
+		},
+		component: () => import("../views/wallet/id/deposit.vue"),
+	},
+	{
 		path: "/orders",
 		name: "orders",
 		meta: {
@@ -100,7 +152,6 @@ const routes = [
 		path: "/trading",
 		name: "	trading",
 		meta: {
-			layout: "trade",
 			requiresAuth: true,
 		},
 		component: () => import("../views/trading/index.vue"),

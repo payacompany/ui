@@ -46,14 +46,14 @@ export default {
 	components: {
 		InputWithCopy,
 		DepositRules,
-		"qr-code": VueQRCodeComponent
+		"qr-code": VueQRCodeComponent,
 	},
 	props: {
 		coins: {
 			type: Array,
-			default: () => []
-		}
-	}
+			default: () => [],
+		},
+	},
 };
 </script>
 

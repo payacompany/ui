@@ -1,52 +1,49 @@
 <template>
-	<div>
-		<div class="border-b flex flex-col justify-between items-center w-full">
-			<div class="flex px-5 justify-between border-b py-3 w-full">
-				<p>{{ $t("pages.wallet.IRTestimate") }}:</p>
-				<p>
-					<span> {{ balanceIRT }} </span>
-				</p>
-			</div>
-			<div class="flex px-5 justify-between border-b py-3 w-full">
-				<p>{{ $t("pages.wallet.USDestimate") }}:</p>
-				<p>
-					<span> {{ balanceIRT }} </span>
-				</p>
-			</div>
-		</div>
-		<div v-for="(coin, index) in coins" :key="index">
-			<div
-				class="border-b py-3 px-5 flex flex-row justify-between items-center"
-			>
-				<div class="flex">
-					<img src="" alt="coin" />
-					<p class="text-gray-400">
-						{{ coin.name }}
-					</p>
-					<p class="px-2">{{ coin.symbol }}</p>
+	<div class="mx-3">
+		<vs-collapse v-for="(coin, index) in coins" :key="index" type="margin">
+			<vs-collapse-item>
+				<div slot="header">
+					{{ coin.name }}
 				</div>
-				<div class="flex">
-					<p>{{ coin.price }}</p>
-				</div>
-			</div>
-		</div>
+				<vs-tabs alignment="left">
+					<vs-tab :label="$t('pages.wallet.deposit.title')" icon="add">
+						<deposit />
+					</vs-tab>
+					<vs-tab :label="$t('pages.wallet.withdraw.title')" icon="payments">
+						<withdraw />
+					</vs-tab>
+					<vs-tab :label="$t('pages.wallet.history.title')" icon="history">
+						<transactions />
+					</vs-tab>
+				</vs-tabs>
+			</vs-collapse-item>
+		</vs-collapse>
 	</div>
 </template>
 
 <script>
+import Deposit from "../tokenDetails/Deposit.vue";
+import Withdraw from "../tokenDetails/Withdraw.vue";
+import Transactions from "../tokenDetails/Transactions.vue";
+
 export default {
+	components: { Deposit, Withdraw, Transactions },
 	props: {
 		coins: {
 			type: Array,
 			default: () => []
 		}
-	},
-	data () {
-		return {
-			balanceIRT: 153000000
-		};
 	}
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+::v-deep {
+	.vs-tabs--li {
+		width: 33%;
+		.vs-tabs--btn {
+			justify-content: center;
+		}
+	}
+}
+</style>

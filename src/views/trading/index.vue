@@ -8,8 +8,8 @@
 				<trading-view class="trading-view" />
 				<open-orders />
 			</div>
-			<order-book class="flex-grow mx-1" />
-			<div class="flex flex-col flex-grow flex-grow-0 mx-1">
+			<order-book class="flex-grow-0 mx-1" />
+			<div class="flex flex-col flex-grow-0 mx-1">
 				<place-order />
 				<markets class="markets" />
 			</div>
@@ -34,8 +34,8 @@ export default {
 		TradingView,
 		OpenOrders,
 		Trades,
-		TradingXs
-	}
+		TradingXs,
+	},
 };
 </script>
 

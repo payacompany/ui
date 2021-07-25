@@ -1,12 +1,12 @@
 <template>
-	<div class="shadow-xl w-6/12 center rounded-md py-8">
+	<div class="shadow-xl w-11/12 md:w-6/12 center rounded-md py-8">
 		<p class="text-bold text-xl text-center px-8">
 			شناسایی دوعاملی
 		</p>
 		<vs-divider />
 		<div class="px-8 mt-5">
-			<div class="flex flex-start">
-				<qr-code text="Text to encode" :size="200" />
+			<div class="flex flex-col md:flex-row justify-center md:flex-start">
+				<qr-code text="Text to encode" :size="200" class="mx-auto" />
 				<div class="mr-8">
 					<p>
 						مراحل فعالسازی:

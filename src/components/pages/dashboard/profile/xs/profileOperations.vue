@@ -4,7 +4,7 @@
 			v-for="(operation, index) in $t('pages.profile.xs')"
 			:key="index"
 			class="py-3 border-b flex flex-row justify-between px-3 items-center"
-			@click="$router.push('/profile/verification')"
+			@click="pushToRoute(index)"
 		>
 			<p>
 				{{ operation.title }}
@@ -41,6 +41,30 @@ export default {
 				twoFactorAuth: false
 			}
 		};
+	},
+	methods: {
+		pushToRoute (index) {
+			switch (index) {
+				case 0:
+					this.$router.push("/profile/verification");
+					break;
+				case 1:
+					this.$router.push("/security/2fa");
+					break;
+				case 2:
+					this.$router.push("/profile/change-password");
+					break;
+				case 3:
+					this.$router.push("/profile/account-activity");
+					break;
+				case 4:
+					this.$router.push("/profile/api-management");
+					break;
+
+				default:
+					break;
+			}
+		}
 	},
 	computed: {
 		isRtl () {

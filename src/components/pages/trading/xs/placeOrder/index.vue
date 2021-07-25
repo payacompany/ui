@@ -43,9 +43,7 @@
 				<ranges />
 				<div class="flex justify-between font-bold text-sm">
 					<p>{{ $t("pages.trade.placeOrder.totalBalance") }}:</p>
-					<p>
-						0
-					</p>
+					<p>0</p>
 				</div>
 				<div>
 					<vs-button class="w-full mt-3" type="gradient" :color="color">
@@ -65,19 +63,18 @@
 import Ranges from "../../placeOrder/Ranges.vue";
 export default {
 	components: { Ranges },
-	data () {
+	data() {
 		return {
 			placeOrderType: 0,
 			selectedType: 0,
-			color: "success"
+			color: "success",
 		};
 	},
 	watch: {
-		placeOrderType (val) {
-			console.log(val);
+		placeOrderType(val) {
 			val == 1 ? (this.color = "danger") : (this.color = "success");
-		}
-	}
+		},
+	},
 };
 </script>
 
