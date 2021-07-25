@@ -48,6 +48,10 @@ export default {
 			],
 		};
 	},
+	created() {
+		document.documentElement.lang = i18n.locale.toLowerCase();
+		console.log(document.documentElement.lang);
+	},
 	mounted() {
 		document.getElementsByTagName("body")[0].style = "direction:rtl";
 	},
@@ -61,17 +65,19 @@ export default {
 			this.$vs.loading();
 			this.$i18n.locale = locale.value;
 			if (this.$i18n.locale === "En") {
-				document.getElementsByTagName("body")[0].style = "direction:ltr";
+				// document.getElementsByTagName("body")[0].style = "direction:ltr";
 				localStorage.setItem("local", "En");
 				this.$vs.rtl = false;
+				window.location.reload();
 			} else {
-				document.getElementsByTagName("body")[0].style = "direction:rtl";
+				// document.getElementsByTagName("body")[0].style = "direction:rtl";
 				localStorage.setItem("local", "Fa");
 				this.$vs.rtl = true;
+				window.location.reload();
 			}
 			setTimeout(() => {
 				this.$vs.loading.close();
-			}, 300);
+			}, 100);
 		},
 	},
 };
