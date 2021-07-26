@@ -2,9 +2,11 @@
 	<div
 		class="
 			shadow-lg
-			w-2/12
+			w-3/12
 			text-center
-			p-2
+			py-2
+			px-2
+			mx-1
 			rounded-md
 			bg-gray-100
 			cursor-pointer
@@ -25,9 +27,9 @@ export default {
 		range: {
 			type: Number,
 			default: 0,
-			required: true
-		}
-	}
+			required: true,
+		},
+	},
 };
 </script>
 
