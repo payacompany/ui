@@ -29,10 +29,10 @@
 				/>
 			</div>
 			<div class="pb-5">
-				<input-with-copy
-					placeholder="آدرس ولت"
-					ref-code="16sAxN2jf2RutFdyyWMn4ktFn2PgfbszaR"
-				/>
+				<span class="font-bold text-xs text-gray-500">
+					{{ $t("pages.wallet.deposit.walletAddress") }}
+				</span>
+				<input-with-copy ref-code="16sAxN2jf2RutFdyyWMn4ktFn2PgfbszaR" />
 			</div>
 		</div>
 	</div>

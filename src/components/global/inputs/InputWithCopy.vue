@@ -1,5 +1,5 @@
 <template>
-	<div class="md:mt-8 flex flex-row w-full">
+	<div class="flex justify-center md:justify-start flex-row w-full">
 		<div v-if="!isRtl" class="flex flex-row">
 			<vs-input
 				id="ref-input"

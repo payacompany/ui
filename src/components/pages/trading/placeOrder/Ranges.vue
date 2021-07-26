@@ -12,11 +12,11 @@
 import RangesChild from "./RangesChild.vue";
 export default {
 	components: { RangesChild },
-	data () {
+	data() {
 		return {
-			ranges: [25, 50, 75, 100]
+			ranges: [25, 50, 75, 100],
 		};
-	}
+	},
 };
 </script>
 

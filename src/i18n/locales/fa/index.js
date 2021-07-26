@@ -207,6 +207,7 @@ export default {
 			lockedBalance: "موجودی قفل شده",
 			deposit: {
 				title: "واریز",
+				walletAddress: "آدرس والت",
 				rules: [
 					{
 						title: "بیشترین",

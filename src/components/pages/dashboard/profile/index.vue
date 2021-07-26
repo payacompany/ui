@@ -79,6 +79,9 @@
 							</p>
 						</div>
 						<vs-divider />
+						<span class="font-bold text-xs text-gray-500">
+							{{ $t("pages.profile.copyText.placeHolder") }}
+						</span>
 						<input-with-copy />
 					</div>
 					<div class="width-50" :class="[isRtl ? 'mx-4' : 'mx-4']">
