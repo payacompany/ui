@@ -205,6 +205,7 @@ export default {
 			lockedBalance: "Locked Balance",
 			deposit: {
 				title: "deposit",
+				walletAddress: "wallet address",
 				rules: [
 					{
 						title: "Max",
