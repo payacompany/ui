@@ -16,12 +16,14 @@ export default {
 		auth: {
 			signUp: {
 				title: "ثبت نام در سایت",
-				userName: "نام کاربری",
-				userNamePlaceHolder: "نام کاربری خود را اینجا وارد نمایید",
+				userName: "ایمیل",
+				userNamePlaceHolder: "ایمیل خود را اینجا وارد نمایید",
 				password: "رمز عبور",
 				passwordPlaceHodler: "رمز عبور خود را اینجا وارد نمایید",
 				repeatPassword: "تکرار رمز عبور",
 				repeatPasswordPlaceHodler: "تکرار رمز عبور خود را اینجا وارد نمایید",
+				refId: "کد معرف",
+				refIdPlaceHolder: "کد معرف خود را اینجا وارد نمایید",
 				faq: {
 					start: "تمامی",
 					middle: "قوانین و مقررات",

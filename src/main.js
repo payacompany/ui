@@ -46,6 +46,10 @@ Vue.component("error", Error);
 Vue.component("trade", Trade);
 Vue.component("xs", Xs);
 
+import axios from "./axios.js";
+Vue.prototype.$http = axios;
+window.axios = axios;
+
 Vue.config.productionTip = false;
 
 new Vue({

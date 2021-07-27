@@ -16,12 +16,14 @@ export default {
 		auth: {
 			signUp: {
 				title: "sign in",
-				userName: "Username",
-				userNamePlaceHolder: "Enter the username",
+				userName: "Email",
+				userNamePlaceHolder: "Enter the Email",
 				password: "Password",
 				passwordPlaceHodler: "Enter the password",
 				repeatPassword: "Enter repeat password",
 				repeatPasswordPlaceHodler: "Enter the repeat password",
+				refId: "refid",
+				refIdPlaceHolder: "Enter the ref code",
 				faq: {
 					start: "I accept and read",
 					middle: "faq",
