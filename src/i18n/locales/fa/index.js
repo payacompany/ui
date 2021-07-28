@@ -42,6 +42,13 @@ export default {
 				submit: "ورود به حساب کاربری",
 				forgetPass: "رمزتو فراموش کردی؟",
 			},
+			forgetPassword: {
+				title: "فراموشی رمز عبور",
+				userName: "ایمیل",
+				userNamePlaceHolder: "ایمیل خود را  وارد نمایید",
+				submit: "ارسال کد روی ایمیل",
+				rememberPassword: "رمز عبور خودم پیدا کردم!",
+			},
 		},
 		profile: {
 			verifiyStep: {

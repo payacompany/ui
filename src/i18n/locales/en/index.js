@@ -43,6 +43,13 @@ export default {
 				submit: "Login",
 				forgetPass: "Forget your password?",
 			},
+			forgetPassword: {
+				title: "Forget password",
+				userName: "Email",
+				userNamePlaceHolder: "Enter your email",
+				submit: "Send code",
+				rememberPassword: "I find my password!",
+			},
 		},
 		profile: {
 			verifiyStep: {

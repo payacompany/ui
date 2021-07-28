@@ -56,7 +56,7 @@
 						</vs-button>
 					</div>
 				</ValidationObserver>
-				<vs-divider class="pt-3" />
+				<vs-divider class="pt-1" />
 				<p
 					@click="$router.push('/auth/forget-password')"
 					class="

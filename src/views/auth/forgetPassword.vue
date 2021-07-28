@@ -3,7 +3,7 @@
 		<card-with-header>
 			<template #header>
 				<p class="text-center font-bold text-lg">
-					{{ $t("pages.auth.login.title") }}
+					{{ $t("pages.auth.forgetPassword.title") }}
 				</p>
 			</template>
 			<template #body>
@@ -20,8 +20,8 @@
 						<vs-input
 							v-model="user.username"
 							class="min-w-full"
-							:label="$t('pages.auth.login.userName')"
-							:placeholder="$t('pages.auth.login.userNamePlaceHolder')"
+							:label="$t('pages.auth.forgetPassword.userName')"
+							:placeholder="$t('pages.auth.forgetPassword.userNamePlaceHolder')"
 						/>
 						<span class="text-danger text-xs">{{ errors[0] }}</span>
 					</ValidationProvider>
@@ -32,13 +32,13 @@
 							:disabled="invalid"
 							@click.prevent="loginAccount"
 						>
-							{{ $t("pages.auth.login.submit") }}
+							{{ $t("pages.auth.forgetPassword.submit") }}
 						</vs-button>
 					</div>
 				</ValidationObserver>
-				<vs-divider class="pt-3" />
+				<vs-divider class="pt-1" />
 				<p
-					@click="$router.push('/auth/forget-password')"
+					@click="$router.push('/auth/login')"
 					class="
 						text-sm text-gray-500 text-center
 						cursor-pointer
@@ -48,7 +48,7 @@
 						ease-in-out
 					"
 				>
-					{{ $t("pages.auth.login.forgetPass") }}
+					{{ $t("pages.auth.forgetPassword.rememberPassword") }}
 				</p>
 			</template>
 		</card-with-header>
@@ -65,20 +65,17 @@ export default {
 		return {
 			user: {
 				username: "nimatorabiv@gmail.com",
-				password: "nimatorabiV@123",
-				rememberMe: false,
 			},
 		};
 	},
 	methods: {
 		loginAccount() {
 			this.$store
-				.dispatch("auth/login", {
+				.dispatch("auth/forgetPassword", {
 					email: this.user.username,
-					password: this.user.password,
 				})
 				.then(res => {
-					this.$router.push("/");
+					this.$router.push("/auth/login");
 				});
 		},
 	},
