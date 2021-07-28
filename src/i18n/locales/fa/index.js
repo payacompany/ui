@@ -38,6 +38,7 @@ export default {
 				userNamePlaceHolder: "نام کاربری خود را اینجا وارد نمایید",
 				password: "رمز عبور",
 				passwordPlaceHodler: "رمز عبور خود را اینجا وارد نمایید",
+				rememberMe: "من را به یاد داشته باش!",
 				submit: "ورود به حساب کاربری",
 			},
 		},

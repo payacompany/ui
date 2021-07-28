@@ -67,7 +67,7 @@
 					/>
 					<div class="flex items-center justify-start mt-3">
 						<vs-checkbox v-model="user.acceptRules" />
-						<p>
+						<p class="text-sm">
 							{{ $t("pages.auth.signUp.faq.start") }}
 							<strong class="text-blue-400 underline">
 								{{ $t("pages.auth.signUp.faq.middle") }}
@@ -112,10 +112,14 @@ export default {
 	},
 	methods: {
 		registerAccount() {
-			axios.post("/barong/identity/users", {
-				email: this.user.email,
-				password: this.user.password,
-			});
+			axios
+				.post("/barong/identity/users", {
+					email: this.user.email,
+					password: this.user.password,
+				})
+				.then(res => {
+					this.$router.push("/auth/login");
+				});
 		},
 	},
 };

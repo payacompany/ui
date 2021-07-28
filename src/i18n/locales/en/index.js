@@ -39,6 +39,7 @@ export default {
 				userNamePlaceHolder: "Enter the username",
 				password: "Password",
 				passwordPlaceHodler: "Enter the password",
+				rememberMe: "Remember me",
 				submit: "Login",
 			},
 		},
