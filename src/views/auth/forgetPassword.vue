@@ -30,7 +30,7 @@
 							class="w-full mt-5"
 							type="gradient"
 							:disabled="invalid"
-							@click.prevent="loginAccount"
+							@click.prevent="forgetPass"
 						>
 							{{ $t("pages.auth.forgetPassword.submit") }}
 						</vs-button>
@@ -69,14 +69,10 @@ export default {
 		};
 	},
 	methods: {
-		loginAccount() {
-			this.$store
-				.dispatch("auth/forgetPassword", {
-					email: this.user.username,
-				})
-				.then(res => {
-					this.$router.push("/auth/login");
-				});
+		forgetPass() {
+			this.$store.dispatch("auth/forgetpassword", {
+				email: this.user.username,
+			});
 		},
 	},
 };

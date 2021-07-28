@@ -10,4 +10,9 @@ export default {
 			commit("AUTH_ERROR");
 		}
 	},
+	forgetpassword({ commit }, payload) {
+		try {
+			axios.post(`/barong/identity/users/password/generate_code`, payload);
+		} catch {}
+	},
 };
