@@ -34,6 +34,12 @@
 						>
 							{{ $t("pages.auth.forgetPassword.submit") }}
 						</vs-button>
+						<vs-popup title="درخواست فراموشی رمز عبور" :active.sync="isActive">
+							<p>
+								دوست گرامی ، لطفا با مراجعه به ایمیل خود و کلیک بر روی دکمه
+								Reset رمز عبور خود را تغییر دهید.
+							</p>
+						</vs-popup>
 					</div>
 				</ValidationObserver>
 				<vs-divider class="pt-1" />
@@ -63,6 +69,7 @@ export default {
 	},
 	data() {
 		return {
+			isActive: false,
 			user: {
 				username: "nimatorabiv@gmail.com",
 			},
@@ -70,9 +77,13 @@ export default {
 	},
 	methods: {
 		forgetPass() {
-			this.$store.dispatch("auth/forgetpassword", {
-				email: this.user.username,
-			});
+			this.$store
+				.dispatch("auth/forgetpassword", {
+					email: this.user.username,
+				})
+				.then(res => {
+					this.isActive = true;
+				});
 		},
 	},
 };
