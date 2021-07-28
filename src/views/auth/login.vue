@@ -70,15 +70,22 @@ export default {
 	data() {
 		return {
 			user: {
-				username: null,
-				password: null,
+				username: "nimatorabiv@gmail.com",
+				password: "nimatorabiV@123",
 				rememberMe: false,
 			},
 		};
 	},
 	methods: {
 		loginAccount() {
-			this.$store.dispatch("auth/login");
+			this.$store
+				.dispatch("auth/login", {
+					email: this.user.username,
+					password: this.user.password,
+				})
+				.then(res => {
+					this.$router.push("/");
+				});
 		},
 	},
 };

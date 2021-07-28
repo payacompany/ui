@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router/index.js";
-import store from "./store/state.js";
+import store from "./store/store.js";
 import i18n from "./i18n/index.js";
 import "./assets/styles/css/index.css";
 
