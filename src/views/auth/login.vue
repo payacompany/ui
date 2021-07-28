@@ -78,14 +78,7 @@ export default {
 	},
 	methods: {
 		loginAccount() {
-			axios
-				.post("/barong/identity/sessions", {
-					email: this.user.username,
-					password: this.user.password,
-				})
-				.then(res => {
-					this.$router.push("/");
-				});
+			this.$store.dispatch("auth/login");
 		},
 	},
 };
