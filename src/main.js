@@ -25,12 +25,14 @@ import {
 	integer,
 	between,
 	min,
+	confirmed,
 } from "vee-validate/dist/rules";
 extend("required", required);
 extend("email", email);
 extend("integer", integer);
 extend("between", between);
-extend("min", between);
+extend("confirmed", confirmed);
+extend("min", min);
 import { ValidationObserver } from "vee-validate";
 import { ValidationProvider } from "vee-validate";
 Vue.component("ValidationProvider", ValidationProvider);

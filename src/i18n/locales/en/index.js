@@ -29,6 +29,8 @@ export default {
 					middle: "faq",
 					end: "all",
 				},
+				rules:
+					"your password must contain uppercase and lowercase letters and numbers.",
 				submit: "sign in",
 			},
 			login: {
