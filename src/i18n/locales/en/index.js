@@ -41,6 +41,7 @@ export default {
 				passwordPlaceHodler: "Enter the password",
 				rememberMe: "Remember me",
 				submit: "Login",
+				forgetPass: "Forget your password?",
 			},
 		},
 		profile: {

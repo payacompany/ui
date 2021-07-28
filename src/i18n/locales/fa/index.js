@@ -40,6 +40,7 @@ export default {
 				passwordPlaceHodler: "رمز عبور خود را اینجا وارد نمایید",
 				rememberMe: "من را به یاد داشته باش!",
 				submit: "ورود به حساب کاربری",
+				forgetPass: "رمزتو فراموش کردی؟",
 			},
 		},
 		profile: {

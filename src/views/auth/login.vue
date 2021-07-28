@@ -56,6 +56,20 @@
 						</vs-button>
 					</div>
 				</ValidationObserver>
+				<vs-divider class="pt-3" />
+				<p
+					@click="$router.push('/auth/forget-password')"
+					class="
+						text-sm text-gray-500 text-center
+						cursor-pointer
+						font-bold
+						hover:text-blue-700
+						transition-300
+						ease-in-out
+					"
+				>
+					{{ $t("pages.auth.login.forgetPass") }}
+				</p>
 			</template>
 		</card-with-header>
 	</div>
