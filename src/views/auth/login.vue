@@ -20,7 +20,11 @@
 					:placeholder="$t('pages.auth.login.passwordPlaceHodler')"
 				/>
 				<div>
-					<vs-button class="w-full mt-5" type="gradient">
+					<vs-button
+						class="w-full mt-5"
+						type="gradient"
+						@click.prevent="loginAccount"
+					>
 						{{ $t("pages.auth.login.submit") }}
 					</vs-button>
 				</div>
@@ -33,16 +37,28 @@
 import CardWithHeader from "../../components/global/cards/CardWithHeader.vue";
 export default {
 	components: {
-		CardWithHeader
+		CardWithHeader,
 	},
-	data () {
+	data() {
 		return {
 			user: {
 				username: null,
-				password: null
-			}
+				password: null,
+			},
 		};
-	}
+	},
+	methods: {
+		loginAccount() {
+			axios
+				.post("/barong/identity/sessions", {
+					email: this.user.username,
+					password: this.user.password,
+				})
+				.then(res => {
+					this.$router.push("/auth/login");
+				});
+		},
+	},
 };
 </script>
 

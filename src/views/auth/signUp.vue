@@ -112,10 +112,14 @@ export default {
 	},
 	methods: {
 		registerAccount() {
-			axios.post("/barong/identity/users", {
-				email: this.user.email,
-				password: this.user.password,
-			});
+			axios
+				.post("/barong/identity/users", {
+					email: this.user.email,
+					password: this.user.password,
+				})
+				.then(res => {
+					this.$router.push("/auth/login");
+				});
 		},
 	},
 };
