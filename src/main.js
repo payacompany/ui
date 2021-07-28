@@ -19,11 +19,18 @@ Vue.use(Toast, {
 });
 
 import { extend } from "vee-validate";
-import { required, email, integer, between } from "vee-validate/dist/rules";
+import {
+	required,
+	email,
+	integer,
+	between,
+	min,
+} from "vee-validate/dist/rules";
 extend("required", required);
 extend("email", email);
 extend("integer", integer);
 extend("between", between);
+extend("min", between);
 import { ValidationObserver } from "vee-validate";
 import { ValidationProvider } from "vee-validate";
 Vue.component("ValidationProvider", ValidationProvider);

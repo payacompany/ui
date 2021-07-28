@@ -48,11 +48,7 @@
 							/>
 							<span>{{ errors[0] }}</span>
 						</ValidationProvider>
-						<ValidationProvider
-							name="E-mail"
-							rules="required|email"
-							v-slot="{ errors }"
-						>
+						<ValidationProvider name="E-mail" rules="min:6" v-slot="{ errors }">
 							<vs-input
 								v-model="user.refid"
 								class="min-w-full"
