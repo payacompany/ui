@@ -67,7 +67,7 @@
 					/>
 					<div class="flex items-center justify-start mt-3">
 						<vs-checkbox v-model="user.acceptRules" />
-						<p>
+						<p class="text-sm">
 							{{ $t("pages.auth.signUp.faq.start") }}
 							<strong class="text-blue-400 underline">
 								{{ $t("pages.auth.signUp.faq.middle") }}
