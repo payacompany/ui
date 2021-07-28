@@ -18,8 +18,16 @@ Vue.use(Toast, {
 	// registration props here
 });
 
+import { extend } from "vee-validate";
+import { required, email, integer, between } from "vee-validate/dist/rules";
+extend("required", required);
+extend("email", email);
+extend("integer", integer);
+extend("between", between);
+import { ValidationObserver } from "vee-validate";
 import { ValidationProvider } from "vee-validate";
 Vue.component("ValidationProvider", ValidationProvider);
+Vue.component("ValidationObserver", ValidationObserver);
 
 import Vuesax from "vuesax";
 
