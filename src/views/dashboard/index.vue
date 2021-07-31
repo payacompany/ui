@@ -19,11 +19,14 @@ import accountActivity from "../../components/pages/dashboard/accountActivity/in
 
 export default {
 	components: { Profile, ApiKeys, accountActivity, ProfileXs },
-	data() {
-		return {};
+	mounted() {
+		this.loadUserInfo();
 	},
-	computed: {},
-	methods: {},
+	methods: {
+		loadUserInfo() {
+			this.$store.dispatch("userInformations");
+		},
+	},
 };
 </script>
 

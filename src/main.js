@@ -68,6 +68,9 @@ import axios from "./axios.js";
 Vue.prototype.$http = axios;
 window.axios = axios;
 
+import VueCookies from "vue-cookies";
+Vue.use(VueCookies);
+
 Vue.config.productionTip = false;
 
 new Vue({

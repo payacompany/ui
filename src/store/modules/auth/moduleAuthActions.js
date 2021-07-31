@@ -4,7 +4,8 @@ export default {
 		commit("AUTH_REQUEST");
 		try {
 			const { data } = await axios.post(`/barong/identity/sessions`, payload);
-			window.axios.defaults.headers.common["X-CSRF-TOKEN"] = data.csrf_token;
+			localStorage.setItem("token_csrf", data.csrf_token);
+			axios.defaults.headers.common["X-CSRF-TOKEN"] = data.csrf_token;
 			commit("AUTH_SUCCESS", data);
 		} catch {
 			commit("AUTH_ERROR");
