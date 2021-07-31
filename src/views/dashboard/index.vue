@@ -19,6 +19,11 @@ import accountActivity from "../../components/pages/dashboard/accountActivity/in
 
 export default {
 	components: { Profile, ApiKeys, accountActivity, ProfileXs },
+	data() {
+		return {};
+	},
+	computed: {},
+	methods: {},
 };
 </script>
 

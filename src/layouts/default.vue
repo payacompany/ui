@@ -16,8 +16,16 @@ export default {
 	components: {
 		HeaderBar,
 		FooterXs,
-		HeaderXs
-	}
+		HeaderXs,
+	},
+	mounted() {
+		this.loadUserInfo();
+	},
+	methods: {
+		loadUserInfo() {
+			this.$store.dispatch("userInformations");
+		},
+	},
 };
 </script>
 
