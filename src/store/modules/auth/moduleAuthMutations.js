@@ -14,4 +14,7 @@ export default {
 		state.status = "";
 		state.token = "";
 	},
+	SET_COOKIE(state, payload) {
+		state.token = payload;
+	},
 };
