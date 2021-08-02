@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router/index.js";
+import store from "./store/store.js";
 import i18n from "./i18n/index.js";
 import "./assets/styles/css/index.css";
 
@@ -18,8 +19,25 @@ Vue.use(Toast, {
 	// registration props here
 });
 
+import { extend } from "vee-validate";
+import {
+	required,
+	email,
+	integer,
+	between,
+	min,
+	confirmed,
+} from "vee-validate/dist/rules";
+extend("required", required);
+extend("email", email);
+extend("integer", integer);
+extend("between", between);
+extend("confirmed", confirmed);
+extend("min", min);
+import { ValidationObserver } from "vee-validate";
 import { ValidationProvider } from "vee-validate";
 Vue.component("ValidationProvider", ValidationProvider);
+Vue.component("ValidationObserver", ValidationObserver);
 
 import Vuesax from "vuesax";
 
@@ -46,11 +64,19 @@ Vue.component("error", Error);
 Vue.component("trade", Trade);
 Vue.component("xs", Xs);
 
+import axios from "./axios.js";
+Vue.prototype.$http = axios;
+window.axios = axios;
+
+import VueCookies from "vue-cookies";
+Vue.use(VueCookies);
+
 Vue.config.productionTip = false;
 
 new Vue({
 	router,
 	i18n,
+	store,
 	// eslint-disable-next-line prettier-vue/prettier
 	render: h => h(App),
 }).$mount("#app");

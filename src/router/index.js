@@ -172,6 +172,14 @@ const routes = [
 		},
 		component: () => import("../views/auth/signUp.vue"),
 	},
+	{
+		path: "/auth/forget-password",
+		name: "forget-password",
+		meta: {
+			requiresAuth: false,
+		},
+		component: () => import("../views/auth/forgetPassword.vue"),
+	},
 ];
 
 const router = new VueRouter({

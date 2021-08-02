@@ -16,17 +16,20 @@ export default {
 		auth: {
 			signUp: {
 				title: "ثبت نام در سایت",
-				userName: "نام کاربری",
-				userNamePlaceHolder: "نام کاربری خود را اینجا وارد نمایید",
+				userName: "ایمیل",
+				userNamePlaceHolder: "ایمیل خود را اینجا وارد نمایید",
 				password: "رمز عبور",
 				passwordPlaceHodler: "رمز عبور خود را اینجا وارد نمایید",
 				repeatPassword: "تکرار رمز عبور",
 				repeatPasswordPlaceHodler: "تکرار رمز عبور خود را اینجا وارد نمایید",
+				refId: "کد معرف",
+				refIdPlaceHolder: "کد معرف خود را اینجا وارد نمایید",
 				faq: {
 					start: "تمامی",
 					middle: "قوانین و مقررات",
 					end: "را مطالعه و قبول دارم.",
 				},
+				rules: "پسورد شما باید شامل 8 رقم با اعداد وحروف بزرگ و کوچک باشد.",
 				submit: "ثبت نام",
 			},
 			login: {
@@ -35,7 +38,16 @@ export default {
 				userNamePlaceHolder: "نام کاربری خود را اینجا وارد نمایید",
 				password: "رمز عبور",
 				passwordPlaceHodler: "رمز عبور خود را اینجا وارد نمایید",
+				rememberMe: "من را به یاد داشته باش!",
 				submit: "ورود به حساب کاربری",
+				forgetPass: "رمزتو فراموش کردی؟",
+			},
+			forgetPassword: {
+				title: "فراموشی رمز عبور",
+				userName: "ایمیل",
+				userNamePlaceHolder: "ایمیل خود را  وارد نمایید",
+				submit: "ارسال کد روی ایمیل",
+				rememberPassword: "رمز عبور خودم پیدا کردم!",
 			},
 		},
 		profile: {

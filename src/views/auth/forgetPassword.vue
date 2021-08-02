@@ -3,7 +3,7 @@
 		<card-with-header>
 			<template #header>
 				<p class="text-center font-bold text-lg">
-					{{ $t("pages.auth.login.title") }}
+					{{ $t("pages.auth.forgetPassword.title") }}
 				</p>
 			</template>
 			<template #body>
@@ -20,45 +20,31 @@
 						<vs-input
 							v-model="user.username"
 							class="min-w-full"
-							:label="$t('pages.auth.login.userName')"
-							:placeholder="$t('pages.auth.login.userNamePlaceHolder')"
+							:label="$t('pages.auth.forgetPassword.userName')"
+							:placeholder="$t('pages.auth.forgetPassword.userNamePlaceHolder')"
 						/>
 						<span class="text-danger text-xs">{{ errors[0] }}</span>
 					</ValidationProvider>
-					<ValidationProvider
-						name="password"
-						rules="required"
-						v-slot="{ errors }"
-					>
-						<vs-input
-							v-model="user.password"
-							class="min-w-full"
-							type="password"
-							:label="$t('pages.auth.login.password')"
-							:placeholder="$t('pages.auth.login.passwordPlaceHodler')"
-						/>
-						<span class="text-danger text-xs">{{ errors[0] }}</span>
-					</ValidationProvider>
-					<div class="flex items-center justify-start mt-3">
-						<vs-checkbox v-model="user.rememberMe" />
-						<p class="text-sm">
-							{{ $t("pages.auth.login.rememberMe") }}
-						</p>
-					</div>
 					<div>
 						<vs-button
 							class="w-full mt-5"
 							type="gradient"
 							:disabled="invalid"
-							@click.prevent="loginAccount"
+							@click.prevent="forgetPass"
 						>
-							{{ $t("pages.auth.login.submit") }}
+							{{ $t("pages.auth.forgetPassword.submit") }}
 						</vs-button>
+						<vs-popup title="درخواست فراموشی رمز عبور" :active.sync="isActive">
+							<p>
+								دوست گرامی ، لطفا با مراجعه به ایمیل خود و کلیک بر روی دکمه
+								Reset رمز عبور خود را تغییر دهید.
+							</p>
+						</vs-popup>
 					</div>
 				</ValidationObserver>
 				<vs-divider class="pt-1" />
 				<p
-					@click="$router.push('/auth/forget-password')"
+					@click="$router.push('/auth/login')"
 					class="
 						text-sm text-gray-500 text-center
 						cursor-pointer
@@ -68,7 +54,7 @@
 						ease-in-out
 					"
 				>
-					{{ $t("pages.auth.login.forgetPass") }}
+					{{ $t("pages.auth.forgetPassword.rememberPassword") }}
 				</p>
 			</template>
 		</card-with-header>
@@ -83,22 +69,20 @@ export default {
 	},
 	data() {
 		return {
+			isActive: false,
 			user: {
-				username: "admin@barong.io",
-				password: "0lDHd9ufs9t@",
-				rememberMe: false,
+				username: "nimatorabiv@gmail.com",
 			},
 		};
 	},
 	methods: {
-		loginAccount() {
+		forgetPass() {
 			this.$store
-				.dispatch("auth/login", {
+				.dispatch("auth/forgetpassword", {
 					email: this.user.username,
-					password: this.user.password,
 				})
 				.then(res => {
-					this.$router.push("/");
+					this.isActive = true;
 				});
 		},
 	},

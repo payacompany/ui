@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="container mx-auto md:mt-12 hidden md:block">
-			<div class="md:w-8/12 lg:w-10/12 mx-auto ">
+			<div class="md:w-8/12 lg:w-10/12 mx-auto">
 				<profile />
 				<api-keys />
 				<account-activity />
@@ -18,7 +18,22 @@ import ApiKeys from "../../components/pages/dashboard/apiKeys/index.vue";
 import accountActivity from "../../components/pages/dashboard/accountActivity/index.vue";
 
 export default {
-	components: { Profile, ApiKeys, accountActivity, ProfileXs }
+	components: { Profile, ApiKeys, accountActivity, ProfileXs },
+	mounted() {
+		// const cookie = this.$cookies.get("_barong_session");
+		// this.$cookies.set("_barong_session", cookie);
+		// axios.defaults.withCredentials = true;
+		// axios.defaults.headers.common["Cookie"] = `_barong_session=${cookie}`;
+		// this.$store.commit("auth/SET_COOKIE", cookie);
+		// if (cookie != null) {
+		this.loadUserInfo();
+		// }
+	},
+	methods: {
+		loadUserInfo() {
+			this.$store.dispatch("userInformations");
+		},
+	},
 };
 </script>
 
