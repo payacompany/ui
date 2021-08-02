@@ -84,8 +84,8 @@ export default {
 	data() {
 		return {
 			user: {
-				username: "nimatorabiv@gmail.com",
-				password: "nimatorabiV@123",
+				username: "admin@barong.io",
+				password: "0lDHd9ufs9t@",
 				rememberMe: false,
 			},
 		};
