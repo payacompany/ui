@@ -107,23 +107,26 @@ export default {
 		InputWithCopy,
 		UserVerification,
 		ChangePassModal,
-		PasswordInput,
+		PasswordInput
 	},
-	data() {
+	data () {
 		return {
 			user: {
 				email: "Nimatorabi@rocketmail.com",
 				refCode: "ID12345678",
-				password: 123456789,
+				password: 123456789
 			},
-			twoFactorAuth: false,
+			twoFactorAuth: false
 		};
 	},
 	computed: {
-		isRtl() {
+		isRtl () {
 			return this.$i18n.locale === "Fa" ? false : true;
 		},
-	},
+		userProfile () {
+			return this.$store.state.myProfile;
+		}
+	}
 };
 </script>
 
