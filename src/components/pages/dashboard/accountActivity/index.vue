@@ -19,6 +19,8 @@
 				<div>
 					<p class="text-center text-bold text-gray-400 text-sm">
 						<account-activity-table :user-activities="userActivities" />
+						<pagination v-model="page" :totalPage="limit" />
+						{{ page }}
 					</p>
 				</div>
 			</template>
@@ -28,11 +30,13 @@
 
 <script>
 import CardWithHeader from "../../../global/cards/CardWithHeader.vue";
+import Pagination from "../../../global/pagination.vue";
 import AccountActivityTable from "./accountActivityTable.vue";
 export default {
 	components: {
 		CardWithHeader,
 		AccountActivityTable,
+		Pagination,
 	},
 	data() {
 		return {
@@ -41,6 +45,8 @@ export default {
 				refCode: "ID12345678",
 				password: 123456789,
 			},
+			page: 1,
+			limit: 10,
 			twoFactorAuth: false,
 		};
 	},
@@ -49,12 +55,20 @@ export default {
 			return this.$store.state.userActivity;
 		},
 	},
+	watch: {
+		page() {
+			this.userActivity();
+		},
+	},
 	mounted() {
 		this.userActivity();
 	},
 	methods: {
 		userActivity() {
-			this.$store.dispatch("userActivities");
+			this.$store.dispatch("userActivities", {
+				page: this.page,
+				limit: this.limit,
+			});
 		},
 	},
 };

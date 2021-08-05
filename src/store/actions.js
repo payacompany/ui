@@ -6,6 +6,7 @@ export default {
 		} catch {}
 	},
 	userActivities({ commit }, payload) {
+		console.log("here");
 		try {
 			const { data } = axios.get(
 				`/barong/resource/users/activity/all?limit=${payload.limit}&page=${payload.page}`

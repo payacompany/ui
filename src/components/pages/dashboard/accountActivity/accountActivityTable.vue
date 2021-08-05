@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<vs-table :max-items="8" pagination :data="userActivities">
+		<vs-table :max-items="10" :data="userActivities">
 			<template slot="thead">
 				<vs-th
 					v-for="(th, index) in $t(
