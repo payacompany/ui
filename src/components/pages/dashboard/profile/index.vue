@@ -1,5 +1,6 @@
 <template>
 	<div>
+		{{ userProfile }}
 		<card-with-header>
 			<template #header>
 				<p class="text-xl font-bold">
