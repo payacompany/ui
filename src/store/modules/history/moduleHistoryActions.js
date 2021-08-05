@@ -13,4 +13,10 @@ export default {
 			console.log(values);
 		});
 	},
+	getDepositsHistory({ commit }, payload) {
+		axios.get("/peatio/account/deposits");
+	},
+	getWithdrawHistory({ commit }, payload) {
+		axios.get("/peatio/account/withdraws");
+	},
 };

@@ -17,7 +17,6 @@ import CryptoHistory from "./CryptoHistory.vue";
 export default {
 	components: { BankHistory, CryptoHistory },
 	mounted() {
-		console.log("mounted");
 		this.getTransactionHistories();
 	},
 	methods: {

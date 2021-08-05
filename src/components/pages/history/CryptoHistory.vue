@@ -64,6 +64,21 @@ export default {
 			history: [],
 		};
 	},
+	watch: {
+		selectedType() {
+			console.log("ddd");
+			this.getTransactionHistory(this.selectedType);
+		},
+	},
+	methods: {
+		getTransactionHistory(type) {
+			if (type == 1) {
+				this.$store.dispatch("history/getDepositsHistory");
+			} else if (type == 2) {
+				this.$store.dispatch("history/getWithdrawHistory");
+			}
+		},
+	},
 };
 </script>
 
