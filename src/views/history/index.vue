@@ -13,8 +13,8 @@ import HistoryXs from "../../components/pages/history/xs/index.vue";
 export default {
 	components: {
 		History,
-		HistoryXs
-	}
+		HistoryXs,
+	},
 };
 </script>
 

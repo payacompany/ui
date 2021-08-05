@@ -7,7 +7,7 @@ import mutations from "./mutations";
 import actions from "./actions";
 
 import auth from "./modules/auth/moduleAuth.js";
-
+import history from "./modules/history/moduleHistory.js";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -17,6 +17,7 @@ export default new Vuex.Store({
 	actions,
 	modules: {
 		auth,
+		history,
 	},
 	strict: process.env.NODE_ENV !== "production",
 });
