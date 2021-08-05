@@ -1,6 +1,10 @@
 <template>
 	<div>
-		<vs-table :max-items="10" :data="userActivities">
+		<vs-table
+			:max-items="10"
+			:data="userActivities"
+			:no-data-text="$t('attribute.empty')"
+		>
 			<template slot="thead">
 				<vs-th
 					v-for="(th, index) in $t(
@@ -15,28 +19,28 @@
 
 			<template slot-scope="{ data }">
 				<vs-tr v-for="(tr, indextr) in data" :key="indextr">
-					<vs-td :data="data[indextr].date">
-						{{ data[indextr].date }}
+					<vs-td :data="data[indextr].created_at">
+						{{ data[indextr].created_at }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].activity">
-						{{ data[indextr].activity }}
+					<vs-td :data="data[indextr].action">
+						{{ data[indextr].action }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].status">
+					<vs-td :data="data[indextr].result">
 						{{
-							data[indextr].status
+							data[indextr].result == "succeed"
 								? $t("pages.profile.AccountActivity.successful")
 								: $t("pages.profile.AccountActivity.unsuccessful")
 						}}
 					</vs-td>
 
-					<vs-td :data="data[indextr].ip">
-						{{ data[indextr].ip }}
+					<vs-td :data="data[indextr].user_ip">
+						{{ data[indextr].user_ip }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].userAgent">
-						{{ data[indextr].userAgent }}
+					<vs-td :data="data[indextr].user_agent">
+						{{ data[indextr].user_agent }}
 					</vs-td>
 				</vs-tr>
 			</template>
