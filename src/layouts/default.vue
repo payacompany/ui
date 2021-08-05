@@ -18,14 +18,14 @@ export default {
 		FooterXs,
 		HeaderXs,
 	},
-	mounted() {
-		this.loadUserInfo();
-	},
-	methods: {
-		loadUserInfo() {
-			this.$store.dispatch("userInformations");
-		},
-	},
+	// mounted() {
+	// 	this.loadUserInfo();
+	// },
+	// methods: {
+	// 	loadUserInfo() {
+	// 		this.$store.dispatch("userInformations");
+	// 	},
+	// },
 };
 </script>
 
