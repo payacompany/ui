@@ -1,9 +1,10 @@
 export default {
 	userInformations({ commit }, payload) {
 		try {
-			const data = axios.get(`/barong/resource/users/me`, payload);
-			console.log(data, "me");
-			commit("SET_MY_PROFILE", data);
+			axios.get(`/barong/resource/users/me`, payload).then(res => {
+				console.log(res, "me");
+			});
+			commit("SET_MY_PROFILE", res.data);
 		} catch {}
 	},
 	userActivities({ commit }, payload) {
