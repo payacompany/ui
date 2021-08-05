@@ -20,6 +20,11 @@ import accountActivity from "../../components/pages/dashboard/accountActivity/in
 export default {
 	components: { Profile, ApiKeys, accountActivity, ProfileXs },
 	mounted() {
+		const cookie = this.$cookies.get("_barong_session");
+		this.$cookies.set("_barong_session", cookie);
+		axios.defaults.withCredentials = true;
+		axios.defaults.headers.common["Cookie"] = `_barong_session=${cookie}`;
+		this.$store.commit("auth/SET_COOKIE", cookie);
 		this.loadUserInfo();
 	},
 	methods: {
