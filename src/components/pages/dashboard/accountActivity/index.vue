@@ -18,7 +18,7 @@
 			<template #body>
 				<div>
 					<p class="text-center text-bold text-gray-400 text-sm">
-						<account-activity-table />
+						<account-activity-table :user-activities="userActivities" />
 					</p>
 				</div>
 			</template>
@@ -43,6 +43,19 @@ export default {
 			},
 			twoFactorAuth: false,
 		};
+	},
+	computed: {
+		userActivities() {
+			return this.$store.state.userActivity;
+		},
+	},
+	mounted() {
+		this.userActivity();
+	},
+	methods: {
+		userActivity() {
+			this.$store.dispatch("userActivities");
+		},
 	},
 };
 </script>

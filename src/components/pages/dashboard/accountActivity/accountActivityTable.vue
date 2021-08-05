@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<vs-table :max-items="8" pagination :data="users">
+		<vs-table :max-items="8" pagination :data="userActivities">
 			<template slot="thead">
 				<vs-th
 					v-for="(th, index) in $t(
@@ -46,6 +46,12 @@
 
 <script>
 export default {
+	props: {
+		userActivities: {
+			type: Array,
+			default: () => [],
+		},
+	},
 	data: () => ({
 		users: [
 			{
@@ -53,10 +59,10 @@ export default {
 				activity: "ورود به حساب کاربری",
 				status: true,
 				ip: "192.168.10.1",
-				userAgent: "Chrome 91 Windows 10"
-			}
-		]
-	})
+				userAgent: "Chrome 91 Windows 10",
+			},
+		],
+	}),
 };
 </script>
 
