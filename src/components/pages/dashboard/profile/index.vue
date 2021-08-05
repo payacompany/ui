@@ -13,10 +13,10 @@
 						:class="[isRtl ? 'mx-4' : 'mx-4']"
 					>
 						<p class="text-xl font-bold">
-							{{ user.email }}
+							{{ userProfile.email }}
 						</p>
 						<p class="text-xl font-bold">
-							{{ user.refCode }}
+							{{ userProfile.uid }}
 						</p>
 						<div class="flex">
 							<div
@@ -82,7 +82,7 @@
 						<span class="font-bold text-xs text-gray-500">
 							{{ $t("pages.profile.copyText.placeHolder") }}
 						</span>
-						<input-with-copy />
+						<input-with-copy :ref-code="refLinkGenerated" />
 					</div>
 					<div class="width-50" :class="[isRtl ? 'mx-4' : 'mx-4']">
 						<user-verification />
@@ -107,26 +107,32 @@ export default {
 		InputWithCopy,
 		UserVerification,
 		ChangePassModal,
-		PasswordInput
+		PasswordInput,
 	},
-	data () {
+	data() {
 		return {
 			user: {
 				email: "Nimatorabi@rocketmail.com",
 				refCode: "ID12345678",
-				password: 123456789
+				password: 123456789,
 			},
-			twoFactorAuth: false
+			twoFactorAuth: false,
 		};
 	},
 	computed: {
-		isRtl () {
+		isRtl() {
 			return this.$i18n.locale === "Fa" ? false : true;
 		},
-		userProfile () {
+		userProfile() {
 			return this.$store.state.myProfile;
-		}
-	}
+		},
+		refLinkGenerated() {
+			return (
+				"http://dax.autovm.ir:8080/auth/sign-up?" +
+				this.$store.state.myProfile.uid
+			);
+		},
+	},
 };
 </script>
 
