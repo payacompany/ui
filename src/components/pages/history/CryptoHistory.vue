@@ -1,5 +1,6 @@
 <template>
 	<div>
+		{{ historyList }}
 		<vs-select
 			v-model="selectedType"
 			:label="$t('pages.history.filterTitle')"
@@ -68,6 +69,11 @@ export default {
 		selectedType() {
 			console.log("ddd");
 			this.getTransactionHistory(this.selectedType);
+		},
+	},
+	computed: {
+		historyList() {
+			return this.$store.state.history.cryptoHistoryList;
 		},
 	},
 	methods: {

@@ -10,7 +10,11 @@ export default {
 		const promise2 = axios.get(URL2);
 
 		Promise.all([promise1, promise2]).then(res => {
-			console.log("res", res);
+			console.log("res", res[0], res[1]);
+			const records = [];
+			records.push(res[0].data);
+			records.push(res[1].data);
+			commit("SET_ALL_RECORDS", records);
 		});
 	},
 	getDepositsHistory({ commit }, payload) {
