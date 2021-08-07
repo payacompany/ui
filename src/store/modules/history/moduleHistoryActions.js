@@ -12,8 +12,7 @@ export default {
 		Promise.all([promise1, promise2]).then(res => {
 			console.log("res", res[0].data, res[1].data);
 			const records = [];
-			records.push(res[0].data);
-			records.push(res[1].data);
+			records = [...res[0].data, ...res[1].data];
 			commit("SET_ALL_RECORDS", records);
 		});
 	},
