@@ -1,6 +1,5 @@
 export default {
-	status: "",
-	user: {},
-	token: null,
-	cryptoHistoryList: [],
+	allOrders: [],
+	openOrders: [],
+	completedOrders: [],
 };

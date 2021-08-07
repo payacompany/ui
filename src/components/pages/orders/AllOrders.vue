@@ -58,31 +58,13 @@ import CloseOrdersModal from "./CloseOrdersModal.vue";
 export default {
 	components: { CloseOrdersModal },
 	data: () => ({
-		orders: [
-			{
-				id: "12345678",
-				date: "1399/12/5",
-				priceInUnit: "800000000",
-				name: "بیت کوین(BTC)",
-				type: 1,
-				volumeCompleted: 0.00051,
-				volume: 0.151603,
-				fee: 13000,
-				status: 1,
-			},
-			{
-				id: "123456789",
-				date: "1399/12/5",
-				priceInUnit: "800000000",
-				name: "بیت کوین(BTC)",
-				type: 0,
-				volumeCompleted: 0.151603,
-				volume: 0.151603,
-				fee: 13000,
-				status: 2,
-			},
-		],
+		orders: [],
 	}),
+	computed: {
+		orders() {
+			return this.$store.state.orders.allOrders;
+		},
+	},
 };
 </script>
 

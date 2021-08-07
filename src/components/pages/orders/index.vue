@@ -23,6 +23,9 @@ import OpenOrders from "./OpenOrders.vue";
 import AllOrders from "./AllOrders.vue";
 export default {
 	components: { OpenOrders, CloseOrders, AllOrders },
+	mounted() {
+		this.getAllOrders();
+	},
 	methods: {
 		getAllOrders() {
 			this.$store.dispatch("orders/getAllOrders");

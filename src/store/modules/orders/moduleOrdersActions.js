@@ -2,13 +2,19 @@ import axios from "../../../axios";
 
 // import axios from "@/axios.js";
 export default {
-	getAllOrders() {
-		axios.get("/peatio/market/orders");
+	getAllOrders({ commit }) {
+		axios.get("/peatio/market/orders").then(res => {
+			commit("SET_ALL_ORDERS", res.data);
+		});
 	},
-	openOrders() {
-		axios.get("/peatio/market/orders?state=wait");
+	openOrders({ commit }) {
+		axios.get("/peatio/market/orders?state=wait").then(res => {
+			commit("SET_OPEN_ORDERS", res.data);
+		});
 	},
-	completedOrders() {
-		axios.get("/peatio/market/orders?state=done");
+	completedOrders({ commit }) {
+		axios.get("/peatio/market/orders?state=done").then(res => {
+			commit("SET_COMPLETED_ORDERS", res.data);
+		});
 	},
 };
