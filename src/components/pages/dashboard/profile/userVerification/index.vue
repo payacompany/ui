@@ -25,7 +25,7 @@
 			:key="index"
 			class="mt-2 border-b last:border-b-0"
 		>
-			<verification-step :step="step" :index="index" />
+			<verification-step :step="step" :level="level" :index="index" />
 		</div>
 	</div>
 </template>

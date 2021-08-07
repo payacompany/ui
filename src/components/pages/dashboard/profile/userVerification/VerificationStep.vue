@@ -1,17 +1,17 @@
 <template>
 	<div class="py-3 flex justify-between items-center">
 		<div>
-			<p class="text-bold" :class="[step.isCompleted ? 'text-gray-400' : '']">
+			<p class="text-bold" :class="[index < level ? 'text-gray-400' : '']">
 				<span> {{ index + 1 }}. </span>
 				{{ step.name }}
 			</p>
-			<p class="text-xs" :class="[step.isCompleted ? 'text-gray-400' : '']">
+			<p class="text-xs" :class="[index < level ? 'text-gray-400' : '']">
 				{{ step.accessTo }}
 			</p>
 		</div>
 		<div>
 			<vs-button
-				v-if="!step.isCompleted"
+				v-if="index > level"
 				:disabled="!step.isAllow"
 				:to="{ path: setRoute }"
 				size="small"
@@ -33,6 +33,10 @@ export default {
 		index: {
 			type: Number,
 			default: 1,
+		},
+		level: {
+			type: Number,
+			default: 0,
 		},
 		step: {
 			type: Object,
