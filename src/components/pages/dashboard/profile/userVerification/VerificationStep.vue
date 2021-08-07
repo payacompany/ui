@@ -2,7 +2,7 @@
 	<div class="py-3 flex justify-between items-center">
 		{{ level }} - {{ index }}
 		<div>
-			<p class="text-bold" :class="[index < level ? 'text-gray-400' : '']">
+			<p class="text-bold" :class="[index < level - 1 ? 'text-gray-400' : '']">
 				<span> {{ index + 1 }}. </span>
 				{{ step.name }}
 			</p>
@@ -13,7 +13,6 @@
 		<div>
 			<vs-button
 				v-if="index > level"
-				:disabled="!step.isAllow"
 				:to="{ path: setRoute }"
 				size="small"
 				type="border"
