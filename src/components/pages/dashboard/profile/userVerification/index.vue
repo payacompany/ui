@@ -1,6 +1,5 @@
 <template>
 	<div>
-		{{ level }}
 		<p class="text-base font-bold">
 			{{ $t("pages.profile.userVerification.title") }}
 		</p>
