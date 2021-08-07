@@ -1,5 +1,6 @@
 <template>
 	<div>
+		{{ level }}
 		<p class="text-base font-bold">
 			{{ $t("pages.profile.userVerification.title") }}
 		</p>
@@ -38,6 +39,11 @@ export default {
 	},
 	mounted() {
 		this.kycStepsAllow();
+	},
+	computed: {
+		level() {
+			return this.$store.state.myProfile.level;
+		},
 	},
 	methods: {
 		kycStepsAllow() {
