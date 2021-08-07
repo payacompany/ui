@@ -9,8 +9,8 @@ export default {
 		const promise1 = axios.get(URL1);
 		const promise2 = axios.get(URL2);
 
-		Promise.all([promise1, promise2]).then(function (values) {
-			console.log(values);
+		Promise.all([promise1, promise2]).then(res => {
+			console.log("res", res);
 		});
 	},
 	getDepositsHistory({ commit }, payload) {

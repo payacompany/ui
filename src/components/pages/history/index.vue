@@ -4,7 +4,10 @@
 			<vs-tab :label="$t('pages.history.bankTransactions.title')">
 				<bank-history />
 			</vs-tab>
-			<vs-tab :label="$t('pages.history.cryptoTransations.title')">
+			<vs-tab
+				:label="$t('pages.history.cryptoTransations.title')"
+				@click="getTransactionHistories"
+			>
 				<crypto-history />
 			</vs-tab>
 		</vs-tabs>
@@ -16,9 +19,6 @@ import BankHistory from "./BankHistory.vue";
 import CryptoHistory from "./CryptoHistory.vue";
 export default {
 	components: { BankHistory, CryptoHistory },
-	mounted() {
-		this.getTransactionHistories();
-	},
 	methods: {
 		getTransactionHistories() {
 			this.$store.dispatch("history/getAllTransactionHistories");
