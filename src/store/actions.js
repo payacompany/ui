@@ -3,8 +3,8 @@ export default {
 		try {
 			axios.get(`/barong/resource/users/me`, payload).then(res => {
 				console.log(res, "me");
+				commit("SET_MY_PROFILE", res.data);
 			});
-			commit("SET_MY_PROFILE", res.data);
 		} catch {}
 	},
 	userActivities({ commit }, payload) {
