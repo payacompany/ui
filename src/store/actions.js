@@ -7,7 +7,6 @@ export default {
 		} catch {}
 	},
 	userActivities({ commit }, payload) {
-		console.log("here");
 		try {
 			axios
 				.get(

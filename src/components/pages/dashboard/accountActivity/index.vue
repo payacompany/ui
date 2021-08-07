@@ -16,7 +16,6 @@
 				</div>
 			</template>
 			<template #body>
-				{{ userActivities }}
 				<div>
 					<p class="text-center text-bold text-gray-400 text-sm">
 						<account-activity-table :user-activities="userActivities" />

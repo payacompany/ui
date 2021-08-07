@@ -1,6 +1,5 @@
 <template>
 	<div>
-		{{ userProfile }}
 		<card-with-header>
 			<template #header>
 				<p class="text-xl font-bold">
@@ -45,7 +44,7 @@
 								{{ $t("pages.profile.twoAuth.title") }}
 								<span>
 									({{
-										twoFactorAuth
+										is2faEnabled
 											? $t("pages.profile.twoAuth.active")
 											: $t("pages.profile.twoAuth.deactive")
 									}})
@@ -117,10 +116,12 @@ export default {
 				refCode: "ID12345678",
 				password: 123456789,
 			},
-			twoFactorAuth: false,
 		};
 	},
 	computed: {
+		is2faEnabled() {
+			return this.$store.state.myProfile.otp;
+		},
 		isRtl() {
 			return this.$i18n.locale === "Fa" ? false : true;
 		},
