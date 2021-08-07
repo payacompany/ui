@@ -42,6 +42,7 @@
 						<div class="flex justify-between w-full my-5 items-baseline">
 							<p>
 								{{ $t("pages.profile.twoAuth.title") }}
+								{{ is2faEnabled }}
 								<span>
 									({{
 										is2faEnabled
