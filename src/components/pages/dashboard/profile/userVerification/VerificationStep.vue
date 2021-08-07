@@ -11,7 +11,7 @@
 		</div>
 		<div>
 			<vs-button
-				v-if="index > level"
+				v-if="index >= level - 1"
 				:to="{ path: setRoute }"
 				size="small"
 				type="border"
