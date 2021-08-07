@@ -23,7 +23,7 @@ export default {
 		const cookie = this.$cookies.get("_barong_session");
 		this.$cookies.set("_barong_session", cookie);
 		axios.defaults.withCredentials = true;
-		axios.defaults.headers.common["Cookie"] = `_barong_session=${cookie}`;
+		// axios.defaults.headers.common["Cookie"] = `_barong_session=${cookie}`;
 		this.$store.commit("auth/SET_COOKIE", cookie);
 		this.loadUserInfo();
 	},
