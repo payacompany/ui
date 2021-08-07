@@ -13,7 +13,7 @@
 					size="small"
 					class="w-full font-bold"
 					type="border"
-					:color="index < level ? 'success' : 'primary'"
+					:color="index < level - 1 ? 'success' : 'primary'"
 				>
 					{{ step.title }}
 				</vs-button>
