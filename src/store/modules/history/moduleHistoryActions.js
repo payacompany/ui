@@ -10,7 +10,7 @@ export default {
 		const promise2 = axios.get(URL2);
 
 		Promise.all([promise1, promise2]).then(res => {
-			console.log("res", res[0], res[1]);
+			console.log("res", res[0].data, res[1].data);
 			const records = [];
 			records.push(res[0].data);
 			records.push(res[1].data);
