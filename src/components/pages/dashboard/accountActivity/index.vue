@@ -61,6 +61,9 @@ export default {
 		},
 	},
 	mounted() {
+		const cookie = this.$cookies.get("_barong_session", { httpOnly: true });
+		this.$cookies.set("_barong_session", cookie, { httpOnly: true });
+		axios.defaults.withCredentials = true;
 		this.userActivity();
 	},
 	methods: {
