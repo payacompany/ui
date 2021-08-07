@@ -17,9 +17,13 @@ export default {
 		});
 	},
 	getDepositsHistory({ commit }, payload) {
-		axios.get("/peatio/account/deposits");
+		axios.get("/peatio/account/deposits").then(res => {
+			commit("SET_ALL_RECORDS", res.data);
+		});
 	},
 	getWithdrawHistory({ commit }, payload) {
-		axios.get("/peatio/account/withdraws");
+		axios.get("/peatio/account/withdraws").then(res => {
+			commit("SET_ALL_RECORDS", res.data);
+		});
 	},
 };

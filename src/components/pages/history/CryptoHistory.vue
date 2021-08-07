@@ -1,6 +1,5 @@
 <template>
 	<div>
-		{{ historyList }}
 		<vs-select
 			v-model="selectedType"
 			:label="$t('pages.history.filterTitle')"
@@ -16,7 +15,7 @@
 		<vs-table
 			:max-items="8"
 			pagination
-			:data="history"
+			:data="historyList"
 			:no-data-text="$t('attribute.empty')"
 		>
 			<template slot="thead">
@@ -32,25 +31,41 @@
 
 			<template slot-scope="{ data }">
 				<vs-tr v-for="(tr, indextr) in data" :key="indextr">
-					<vs-td :data="data[indextr].date">
-						{{ data[indextr].date }}
+					<vs-td :data="data[indextr].id">
+						{{ data[indextr].id }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].name">
-						{{ data[indextr].name }}
+					<vs-td :data="data[indextr].currency">
+						{{ data[indextr].currency }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].volume">
-						{{ data[indextr].volume }}
+					<vs-td :data="data[indextr].amount">
+						{{ data[indextr].amount }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].type">
-						{{ data[indextr].type ? "فروش" : "خرید" }}
+					<vs-td :data="data[indextr].fee">
+						{{ data[indextr].fee }}
 					</vs-td>
 
-					<vs-td>
+					<vs-td :data="data[indextr].state">
+						{{ data[indextr].state }}
+					</vs-td>
+
+					<vs-td :data="data[indextr].txid">
+						{{ data[indextr].state }}
+					</vs-td>
+
+					<vs-td :data="data[indextr].created_at">
+						{{ data[indextr].created_at }}
+					</vs-td>
+
+					<vs-td :data="data[indextr].completed_at">
+						{{ data[indextr].completed_at }}
+					</vs-td>
+
+					<!-- <vs-td>
 						<close-history-modal :order-details="data[indextr]" />
-					</vs-td>
+					</vs-td> -->
 				</vs-tr>
 			</template>
 		</vs-table>
@@ -67,7 +82,6 @@ export default {
 	},
 	watch: {
 		selectedType() {
-			console.log("ddd");
 			this.getTransactionHistory(this.selectedType);
 		},
 	},
@@ -82,6 +96,8 @@ export default {
 				this.$store.dispatch("history/getDepositsHistory");
 			} else if (type == 2) {
 				this.$store.dispatch("history/getWithdrawHistory");
+			} else {
+				this.$store.dispatch("history/getAllTransactionHistories");
 			}
 		},
 	},
