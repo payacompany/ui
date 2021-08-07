@@ -14,7 +14,7 @@ export default {
 					`/barong/resource/users/activity/all?limit=${payload.limit}&page=${payload.page}`
 				)
 				.then(res => {
-					commit("SET_ACTIVITY", data);
+					commit("SET_ACTIVITY", res.data);
 				});
 		} catch {}
 	},
