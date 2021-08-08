@@ -51,6 +51,7 @@ export default {
 	methods: {
 		setActive(index) {
 			this.coins.forEach((coin, ind) => {
+				console.log(coin);
 				if (index === ind) {
 					coin.isActive = true;
 				} else {
