@@ -9,6 +9,7 @@ import actions from "./actions";
 import auth from "./modules/auth/moduleAuth.js";
 import history from "./modules/history/moduleHistory.js";
 import orders from "./modules/orders/moduleOrders.js";
+import wallet from "./modules/wallet/moduleWallet.js";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -20,6 +21,7 @@ export default new Vuex.Store({
 		auth,
 		history,
 		orders,
+		wallet,
 	},
 	strict: process.env.NODE_ENV !== "production",
 });
