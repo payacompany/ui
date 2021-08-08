@@ -18,19 +18,19 @@
 				<div class="flex flex-col w-11/12">
 					<div class="flex justify-between">
 						<p>
-							{{ coin.symbol }}
+							{{ coin.currency }}
 						</p>
 						<p>
 							<span class="pr-2">{{ coin.symbol }}</span>
-							{{ coin.totalBalance }}
+							{{ coin.balance }}
 						</p>
 					</div>
 					<div class="flex justify-between">
 						<p>
-							{{ coin.name }}
+							{{ coin.currency }}
 						</p>
 						<p class="flex items-center">
-							{{ coin.lockedBalance }}
+							{{ coin.locked }}
 							<span class="material-icons text-gray-500 pr-3"> lock </span>
 						</p>
 					</div>
