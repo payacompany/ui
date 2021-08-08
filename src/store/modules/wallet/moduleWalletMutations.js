@@ -7,7 +7,7 @@ export default {
 			payload.forEach(currence => {
 				if (balance.currency === currence.id) {
 					console.log("eq", balance.currency, currence.id);
-					currencieAllDetails.push(balance, currence);
+					state.currencieAllDetails.push(balance, currence);
 				}
 			});
 		});
