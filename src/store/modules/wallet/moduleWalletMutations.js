@@ -6,7 +6,6 @@ export default {
 		state.balances.forEach(balance => {
 			payload.forEach(currence => {
 				if (balance.currency === currence.id) {
-					console.log("eq", balance.currency, currence.id);
 					const coin = Object.assign({}, balance, currence);
 					state.currencieAllDetails.push(coin);
 				}
@@ -17,10 +16,8 @@ export default {
 	SET_ACTIVE(state, payload) {
 		state.currencieAllDetails.forEach(coin => {
 			if (coin.name === payload.name) {
-				console.log("eq", coin);
 				coin.isActive = true;
 			} else {
-				console.log("not eq", coin);
 				coin.isActive = false;
 			}
 		});

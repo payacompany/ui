@@ -10,6 +10,7 @@
 				class="flex flex-row justify-between py-5 px-3"
 				:class="[coin.isActive ? 'bg-gray-200 border-r-4 border-blue-500' : '']"
 			>
+				{{ coin.isActive }}
 				<img
 					src="../../../../assets/img/BTC.png"
 					alt=""
