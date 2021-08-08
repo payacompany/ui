@@ -58,6 +58,14 @@ export default {
 			],
 		};
 	},
+	mounted() {
+		this.getWalletBalances();
+	},
+	methods: {
+		getWalletBalances() {
+			this.$store.dispatch("wallet/getBalances");
+		},
+	},
 	computed: {
 		balances() {
 			return this.$store.state.wallet.balances;
