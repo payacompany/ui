@@ -3,6 +3,7 @@ export default {
 		state.balances = payload;
 	},
 	SET_CURRENCIES(state, payload) {
+		state.currencieAllDetails = [];
 		state.balances.forEach(balance => {
 			payload.forEach(currence => {
 				if (balance.currency === currence.id) {

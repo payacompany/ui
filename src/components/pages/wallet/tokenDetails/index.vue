@@ -6,7 +6,7 @@
 				icon="add"
 				@click="borderColor = 'success'"
 			>
-				<deposit />
+				<deposit :coins="currencieAllDetails" />
 			</vs-tab>
 			<vs-tab
 				:label="$t('pages.wallet.withdraw.title')"

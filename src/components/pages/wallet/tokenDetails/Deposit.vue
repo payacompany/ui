@@ -7,12 +7,12 @@
 			<div class="w-9/12 flex flex-row justify-between">
 				<div class="text-justify">
 					<p>{{ $t("pages.wallet.lockedBalance") }}</p>
-					<p>0</p>
+					<p>{{ coins.locked }}</p>
 				</div>
 				<div>
 					<p>
 						{{ $t("pages.wallet.balance") }}
-						<span>{{ coins.symbol }}</span>
+						<span>{{ coins.balance }}</span>
 					</p>
 					<p>0</p>
 				</div>
