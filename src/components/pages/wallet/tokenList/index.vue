@@ -6,7 +6,7 @@
 			class="hover:bg-gray-100 cursor-pointer transition ease-in duration-300"
 		>
 			<div
-				@click="setActive(index)"
+				@click="setActive(coin)"
 				class="flex flex-row justify-between py-5 px-3"
 				:class="[coin.isActive ? 'bg-gray-200 border-r-4 border-blue-500' : '']"
 			>
@@ -49,15 +49,9 @@ export default {
 		},
 	},
 	methods: {
-		setActive(index) {
-			this.coins.forEach((coin, ind) => {
-				console.log(coin[ind]);
-				if (index === ind) {
-					coin.isActive = true;
-				} else {
-					coin.isActive = false;
-				}
-			});
+		setActive(coin) {
+			console.log(coin, "coin");
+			this.$store.commit("wallet/SET_ACTIVE", coin);
 		},
 	},
 };

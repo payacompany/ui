@@ -7,11 +7,23 @@ export default {
 			payload.forEach(currence => {
 				if (balance.currency === currence.id) {
 					console.log("eq", balance.currency, currence.id);
-					const coin = Object.assign({}, balance, currence);
+					const isActive = false;
+					const coin = Object.assign({}, balance, currence, isActive);
 					state.currencieAllDetails.push(coin);
 				}
 			});
 		});
 		state.currencies = payload;
+	},
+	SET_ACTIVE(state, payload) {
+		state.currencieAllDetails.forEach(coin => {
+			if (coin.name === payload.name) {
+				console.log("eq", coin);
+				coin.isActive = true;
+			} else {
+				console.log("not eq", coin);
+				coin.isActive = false;
+			}
+		});
 	},
 };
