@@ -17,7 +17,7 @@
 				</div>
 			</div>
 			<div class="mx-auto flex">
-				<wallet class="w-1/3 border-l-1" :coins="balances" />
+				<wallet class="w-1/3 border-l-1" :coins="currencieAllDetails" />
 				<token-details class="w-2/3" :coins="coins" />
 			</div>
 		</div>

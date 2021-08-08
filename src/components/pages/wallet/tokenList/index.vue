@@ -27,7 +27,7 @@
 					</div>
 					<div class="flex justify-between">
 						<p>
-							{{ coin.currency }}
+							{{ coin.name }}
 						</p>
 						<p class="flex items-center">
 							{{ coin.locked }}
