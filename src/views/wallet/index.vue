@@ -61,10 +61,14 @@ export default {
 	},
 	mounted() {
 		this.getWalletBalances();
+		this.getCurrencies();
 	},
 	methods: {
 		getWalletBalances() {
 			this.$store.dispatch("wallet/getBalances");
+		},
+		getCurrencies() {
+			this.$store.dispatch("wallet/getCurrencies");
 		},
 	},
 	computed: {
