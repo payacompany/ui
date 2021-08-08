@@ -7,4 +7,9 @@ export default {
 			commit("SET_WALLET_BALANCES", res.data);
 		});
 	},
+	getCurrencies({ commit }) {
+		axios.get("/peatio/public/currencies").then(res => {
+			commit("SET_CURRENCIES", res.data);
+		});
+	},
 };

@@ -1,6 +1,7 @@
 <template>
 	<div class="container mx-auto md:mt-5">
 		{{ balances }}
+		{{ currencies }}
 		<div
 			class="md:w-10/12 lg:w-8/12 mx-auto shadow-lg rounded-md hidden md:block"
 		>
@@ -69,6 +70,9 @@ export default {
 	computed: {
 		balances() {
 			return this.$store.state.wallet.balances;
+		},
+		currencies() {
+			return this.$store.state.wallet.currencies;
 		},
 	},
 };
