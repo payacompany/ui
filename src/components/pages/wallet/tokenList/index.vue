@@ -10,7 +10,6 @@
 				class="flex flex-row justify-between py-5 px-3"
 				:class="[coin.isActive ? 'bg-gray-200 border-r-4 border-blue-500' : '']"
 			>
-				{{ coin }}
 				<img
 					src="../../../../assets/img/BTC.png"
 					alt=""
@@ -19,6 +18,8 @@
 				<div class="flex flex-col w-11/12">
 					<div class="flex justify-between">
 						<p>
+							{{ coin.isActive }}
+
 							{{ coin.currency }}
 						</p>
 						<p>
