@@ -7,8 +7,7 @@ export default {
 			payload.forEach(currence => {
 				if (balance.currency === currence.id) {
 					console.log("eq", balance.currency, currence.id);
-					const isActive = false;
-					const coin = Object.assign({}, balance, currence, isActive);
+					const coin = Object.assign({}, balance, currence);
 					state.currencieAllDetails.push(coin);
 				}
 			});
