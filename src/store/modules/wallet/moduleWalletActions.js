@@ -8,16 +8,9 @@ export default {
 		const requestThree = axios.get("/peatio/account/transactions");
 		axios
 			.all([requestOne, requestTwo, requestThree])
-			.then(
-				axios.spread((...responses) => {
-					const responseOne = responses[0];
-					const responseTwo = responses[1];
-					const responesThree = responses[2];
-
-					// use/access the results
-					console.log(responseOne, responseTwo, responesThree);
-				})
-			)
+			.then(res => {
+				console.log("response", res);
+			})
 			.catch(errors => {
 				// react on errors.
 				console.error(errors);
