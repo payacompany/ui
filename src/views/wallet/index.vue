@@ -32,32 +32,11 @@ export default {
 	components: { Wallet, TokenDetails, WalletXs },
 	data() {
 		return {
-			balanceIRT: 153000000,
-			coins: [
-				{
-					name: "BitCoin",
-					symbol: "BTC",
-					logo: null,
-					totalBalance: 12,
-					lockedBalance: 150,
-					price: "34000",
-					priceIRT: "800000000",
-					isActive: true,
-				},
-				{
-					name: "Etherum",
-					symbol: "ETH",
-					logo: null,
-					totalBalance: 0,
-					lockedBalance: 0,
-					price: "1200",
-					priceIRT: "30000000",
-					isActive: false,
-				},
-			],
+			balanceIRT: 0,
+			coins: [],
 		};
 	},
-	mounted() {
+	created() {
 		this.getWalletBalances();
 		this.getCurrencies();
 	},

@@ -5,8 +5,13 @@ export default {
 	SET_CURRENCIES(state, payload) {
 		state.currencieAllDetails = [];
 		state.balances.forEach(balance => {
-			payload.forEach(currence => {
+			payload.forEach(currence, index => {
 				if (balance.currency === currence.id) {
+					if (index == 0) {
+						balance[index].isActive = true;
+					} else {
+						balance[index].isActive = false;
+					}
 					const coin = Object.assign({}, balance, currence);
 					state.currencieAllDetails.push(coin);
 				}
