@@ -4,8 +4,8 @@ export default {
 	},
 	SET_CURRENCIES(state, payload) {
 		state.currencieAllDetails = [];
-		state.balances.forEach(balance => {
-			payload.forEach(currence, index => {
+		state.balances.forEach((balance, index) => {
+			payload.forEach(currence => {
 				if (balance.currency === currence.id) {
 					if (index == 0) {
 						balance[index].isActive = true;
