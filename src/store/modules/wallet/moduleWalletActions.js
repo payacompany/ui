@@ -4,10 +4,10 @@ import axios from "../../../axios";
 export default {
 	async getMyWalletInformation({ commit }) {
 		await axios.get("/peatio/account/balances").then(balances => {
-			console.log("balances", res);
+			console.log("balances", balances);
 			const coins = [];
 			axios.get("/peatio/public/currencies").then(currencies => {
-				console.log("currencies", res);
+				console.log("currencies", currencies);
 				balances.forEach(balance => {
 					currencies.forEach(currence => {
 						if (balance.currency === currence.id) {
