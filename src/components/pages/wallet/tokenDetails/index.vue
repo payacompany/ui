@@ -47,6 +47,11 @@ export default {
 			borderColor: "success",
 		};
 	},
+	computed: {
+		currencieAllDetails() {
+			return this.$store.state.wallet.currencieAllDetails;
+		},
+	},
 };
 </script>
 

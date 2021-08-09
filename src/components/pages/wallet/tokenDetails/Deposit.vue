@@ -1,5 +1,6 @@
 <template>
 	<div>
+		{{ currencieAllDetails }}
 		<div class="flex flex-row justify-start">
 			<div class="w-2/12">
 				<img :src="coins.logo" alt="" />
