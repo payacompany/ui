@@ -4,19 +4,19 @@ export default {
 	// },
 	// SET_CURRENCIES(state, payload) {
 	// 	state.currencieAllDetails = [];
-	// 	state.balances.forEach((balance, index) => {
-	// 		payload.forEach(currence => {
-	// 			if (balance.currency === currence.id) {
-	// 				if (index == 0) {
-	// 					balance[index].isActive = true;
-	// 				} else {
-	// 					balance[index].isActive = false;
-	// 				}
-	// 				const coin = Object.assign({}, balance, currence);
-	// 				state.currencieAllDetails.push(coin);
+	// state.balances.forEach((balance, index) => {
+	// 	payload.forEach(currence => {
+	// 		if (balance.currency === currence.id) {
+	// 			if (index == 0) {
+	// 				balance[index].isActive = true;
+	// 			} else {
+	// 				balance[index].isActive = false;
 	// 			}
-	// 		});
+	// 			const coin = Object.assign({}, balance, currence);
+	// 			state.currencieAllDetails.push(coin);
+	// 		}
 	// 	});
+	// });
 	// 	state.currencies = payload;
 	// },
 	// SET_ACTIVE(state, payload) {

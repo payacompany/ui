@@ -3,10 +3,19 @@ import axios from "../../../axios";
 // import axios from "@/axios.js";
 export default {
 	async getMyWalletInformation({ commit }) {
-		await axios.get("/peatio/account/balances").then(res => {
+		await axios.get("/peatio/account/balances").then(balances => {
 			console.log("balances", res);
-			axios.get("/peatio/public/currencies").then(res => {
+			const coins = [];
+			axios.get("/peatio/public/currencies").then(currencies => {
 				console.log("currencies", res);
+				balances.forEach(balance => {
+					currencies.forEach(currence => {
+						if (balance.currency === currence.id) {
+							coins = Object.assign({}, balance, currence);
+							console.log(coins);
+						}
+					});
+				});
 			});
 		});
 	},
