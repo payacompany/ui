@@ -24,4 +24,7 @@ export default {
 			}
 		});
 	},
+	SET_TRANSACTIONS(state, payload) {
+		state.transactions = payload;
+	},
 };

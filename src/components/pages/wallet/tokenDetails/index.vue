@@ -18,7 +18,7 @@
 			<vs-tab
 				:label="$t('pages.wallet.history.title')"
 				icon="history"
-				@click="borderColor = 'primary'"
+				@click="getTransactions"
 			>
 				<transactions />
 			</vs-tab>
@@ -50,6 +50,12 @@ export default {
 	computed: {
 		activeCoin() {
 			return this.$store.state.wallet.activeCoin;
+		},
+	},
+	methods: {
+		getTransactions() {
+			this.$store.dispatch("wallet/getTransactions");
+			this.borderColor = "primary";
 		},
 	},
 };

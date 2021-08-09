@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<vs-table :max-items="8" pagination :data="users">
+		<vs-table :max-items="8" pagination :data="transactions">
 			<template slot="thead">
 				<vs-th
 					v-for="(th, index) in $t('pages.wallet.history.table.fields')"
@@ -39,24 +39,12 @@
 
 <script>
 export default {
-	data: () => ({
-		users: [
-			{
-				date: "1399/12/5",
-				name: "بیت کوین(BTC)",
-				type: 1,
-				changes: "0.151603",
-				balance: "0.80615"
-			},
-			{
-				date: "1399/12/5",
-				name: "بیت کوین(BTC)",
-				type: 0,
-				changes: "0.151603",
-				balance: "0.80615"
-			}
-		]
-	})
+	props: {
+		transactions: {
+			type: Array,
+			default: () => [],
+		},
+	},
 };
 </script>
 

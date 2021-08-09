@@ -3,4 +3,5 @@ export default {
 	currencies: [],
 	currencieAllDetails: [],
 	activeCoin: {},
+	transactions: [],
 };
