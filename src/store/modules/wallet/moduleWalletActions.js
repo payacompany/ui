@@ -5,7 +5,7 @@ export default {
 	async getMyWalletInformation({ commit }) {
 		await axios.get("/peatio/account/balances").then(balances => {
 			console.log("balances", balances);
-			const coins = [];
+			let coins = [];
 			axios.get("/peatio/public/currencies").then(currencies => {
 				console.log("currencies", currencies);
 				balances.data.forEach(balance => {
