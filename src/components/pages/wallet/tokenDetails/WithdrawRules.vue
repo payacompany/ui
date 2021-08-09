@@ -17,7 +17,7 @@
 				{{ rule.title }}
 			</p>
 			<p>
-				{{ rule.value }}
+				{{ withdrawRules[index].value }}
 			</p>
 		</div>
 	</div>
