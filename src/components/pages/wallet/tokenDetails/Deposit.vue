@@ -20,7 +20,7 @@
 			</div>
 		</div>
 		<vs-divider />
-		<deposit-rules class="mb-5" />
+		<deposit-rules class="mb-5" :deposit-rules="depositRules" />
 		<div class="flex flex-col items-center">
 			<div>
 				<qr-code
@@ -54,6 +54,45 @@ export default {
 			type: Array,
 			default: () => [],
 		},
+	},
+	mounted() {
+		console.log("depositRules", this.coins);
+		this.depositRules = [
+			{
+				value: this.coins.min_deposit_amount
+					? this.coins.min_deposit_amount
+					: "",
+			},
+			{
+				value: this.coins.min_withdraw_amount
+					? this.coins.min_withdraw_amount
+					: "",
+			},
+			{
+				value: this.coins.withdraw_limit_24h
+					? this.coins.withdraw_limit_24h
+					: "",
+			},
+			{
+				value: this.coins.withdraw_limit_72h
+					? this.coins.withdraw_limit_72h
+					: "",
+			},
+			{
+				value: this.coins.withdraw_fee ? this.coins.withdraw_fee : "",
+			},
+			{
+				value: this.coins.deposit_fee ? this.coins.deposit_fee : "",
+			},
+			{
+				value: this.coins.description ? this.coins.description : "",
+			},
+		];
+	},
+	data() {
+		return {
+			depositRules: [],
+		};
 	},
 };
 </script>

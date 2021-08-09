@@ -6,7 +6,7 @@
 			class="
 				flex flex-row
 				justify-between
-                odd:bg-gray-100
+				odd:bg-gray-100
 				px-3
 				py-2
 				border-b border-gray-300
@@ -17,7 +17,7 @@
 				{{ rule.title }}
 			</p>
 			<p>
-				{{ DepositRules[index].value }}
+				{{ depositRules[index].value }}
 			</p>
 		</div>
 	</div>
@@ -25,33 +25,12 @@
 
 <script>
 export default {
-	data () {
-		return {
-			DepositRules: [
-				{
-					value: "100.00000000"
-				},
-				{
-					value: "0.00000001"
-				},
-				{
-					value: "کمتر از یک ساعت"
-				},
-				{
-					value: "0%"
-				},
-				{
-					value: "0"
-				},
-				{
-					value: "0"
-				},
-				{
-					value: "تراکنش های ارسالی از جایزه ماینینگ پشتیبانی نمیشود"
-				}
-			]
-		};
-	}
+	props: {
+		depositRules: {
+			type: Array,
+			default: () => [],
+		},
+	},
 };
 </script>
 
