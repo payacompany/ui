@@ -1,7 +1,7 @@
 <template>
 	<div class="flex flex-col w-full">
 		{{ withdrawRules }}
-		<withdraw-rules :withdrawrules="withdrawRules" />
+		<withdraw-rules :withdraw-rules="withdrawRules" />
 		<div class="w-min-full mt-2">
 			<vs-input
 				v-model="withdraw.address"
