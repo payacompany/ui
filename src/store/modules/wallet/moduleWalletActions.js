@@ -2,11 +2,11 @@ import axios from "../../../axios";
 
 // import axios from "@/axios.js";
 export default {
-	async getMyWalletInformation({ commit }) {
-		requestOne = axios.get("/peatio/account/balances");
-		requestTwo = axios.get("/peatio/public/currencies");
-		requestThree = axios.get("/peatio/account/transactions");
-		await axios
+	getMyWalletInformation({ commit }) {
+		const requestOne = axios.get("/peatio/account/balances");
+		const requestTwo = axios.get("/peatio/public/currencies");
+		const requestThree = axios.get("/peatio/account/transactions");
+		axios
 			.all([requestOne, requestTwo, requestThree])
 			.then(
 				axios.spread((...responses) => {
