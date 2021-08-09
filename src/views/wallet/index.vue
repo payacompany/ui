@@ -1,6 +1,5 @@
 <template>
 	<div class="container mx-auto md:mt-5">
-		{{ currencieAllDetails }}
 		<div
 			class="md:w-10/12 lg:w-8/12 mx-auto shadow-lg rounded-md hidden md:block"
 		>
@@ -37,29 +36,29 @@ export default {
 			coins: [],
 		};
 	},
-	created() {
-		this.getWalletBalances();
-		this.getCurrencies();
-	},
-	methods: {
-		getWalletBalances() {
-			this.$store.dispatch("wallet/getBalances");
-		},
-		getCurrencies() {
-			this.$store.dispatch("wallet/getCurrencies");
-		},
-	},
-	computed: {
-		balances() {
-			return this.$store.state.wallet.balances;
-		},
-		currencies() {
-			return this.$store.state.wallet.currencies;
-		},
-		currencieAllDetails() {
-			return this.$store.state.wallet.currencieAllDetails;
-		},
-	},
+	// created() {
+	// 	this.getWalletBalances();
+	// 	this.getCurrencies();
+	// },
+	// methods: {
+	// 	getWalletBalances() {
+	// 		this.$store.dispatch("wallet/getBalances");
+	// 	},
+	// 	getCurrencies() {
+	// 		this.$store.dispatch("wallet/getCurrencies");
+	// 	},
+	// },
+	// computed: {
+	// 	balances() {
+	// 		return this.$store.state.wallet.balances;
+	// 	},
+	// 	currencies() {
+	// 		return this.$store.state.wallet.currencies;
+	// 	},
+	// 	currencieAllDetails() {
+	// 		return this.$store.state.wallet.currencieAllDetails;
+	// 	},
+	// },
 };
 </script>
 

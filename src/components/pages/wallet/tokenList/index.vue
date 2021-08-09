@@ -51,10 +51,10 @@ export default {
 		},
 	},
 	methods: {
-		setActive(coin) {
-			console.log(coin, "coin");
-			this.$store.commit("wallet/SET_ACTIVE", coin);
-		},
+		// setActive(coin) {
+		// 	console.log(coin, "coin");
+		// 	this.$store.commit("wallet/SET_ACTIVE", coin);
+		// },
 	},
 };
 </script>
