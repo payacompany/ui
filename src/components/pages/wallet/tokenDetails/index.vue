@@ -13,7 +13,7 @@
 				icon="minimize"
 				@click="borderColor = 'danger'"
 			>
-				<withdraw :coins="activeCoin" />
+				<withdraw />
 			</vs-tab>
 			<vs-tab
 				:label="$t('pages.wallet.history.title')"

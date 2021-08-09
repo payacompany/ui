@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col border border-gray-300 rounded-sm">
-		{{ $t("pages.wallet.withdraw.rules") }}
+		{{ $t("pages.wallet.withdraw") }}
 		<div
 			v-for="(rule, index) in $t('pages.wallet.withdraw.rules')"
 			:key="index"

@@ -61,12 +61,6 @@ export default {
 			// 	},
 		};
 	},
-	props: {
-		coins: {
-			type: Array,
-			default: () => [],
-		},
-	},
 	computed: {
 		activeCoin() {
 			return this.$store.state.wallet.activeCoin;

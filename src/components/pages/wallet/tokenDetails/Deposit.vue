@@ -2,17 +2,17 @@
 	<div>
 		<div class="flex flex-row justify-start">
 			<div class="w-2/12">
-				<img :src="coins.logo" alt="" />
+				<img :src="activeCoin.logo" alt="" />
 			</div>
 			<div class="w-9/12 flex flex-row justify-between">
 				<div class="text-justify">
 					<p>{{ $t("pages.wallet.lockedBalance") }}</p>
-					<p>{{ coins.locked }}</p>
+					<p>{{ activeCoin.locked }}</p>
 				</div>
 				<div>
 					<p>
 						{{ $t("pages.wallet.balance") }}
-						<span>{{ coins.balance }}</span>
+						<span>{{ activeCoin.balance }}</span>
 					</p>
 					<p>0</p>
 				</div>
@@ -47,12 +47,6 @@ export default {
 		InputWithCopy,
 		DepositRules,
 		"qr-code": VueQRCodeComponent,
-	},
-	props: {
-		coins: {
-			type: Array,
-			default: () => [],
-		},
 	},
 	computed: {
 		activeCoin() {
