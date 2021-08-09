@@ -1,8 +1,7 @@
 <template>
 	<div class="flex flex-col border border-gray-300 rounded-sm">
-		{{ $t("pages.wallet.withdraw") }}
 		<div
-			v-for="(rule, index) in $t('pages.wallet.withdraw.rules')"
+			v-for="(rule, index) in $t('pages.wallet.deposit.rules')"
 			:key="index"
 			class="
 				flex flex-row
@@ -14,12 +13,11 @@
 				last:border-0
 			"
 		>
-			{{ rule }}
 			<p>
 				{{ rule.title }}
 			</p>
 			<p>
-				{{ withdrawRules[index].value ? withdrawRules[index].value : "نامشخص" }}
+				{{ depositRules[index].value }}
 			</p>
 		</div>
 	</div>
@@ -28,40 +26,10 @@
 <script>
 export default {
 	props: {
-		withdrawRules: {
+		WithdrawRules: {
 			type: Array,
 			default: () => [],
 		},
-	},
-	data() {
-		return {
-			// withdrawRules: [
-			// 	{
-			// 		title: "حداقل میزان برداشت به بیت کوین",
-			// 		value: "0.00040000",
-			// 	},
-			// 	{
-			// 		title: "حداکثر میزان برداشت به بیت کوین",
-			// 		value: "3",
-			// 	},
-			// 	{
-			// 		title: "کارمزد",
-			// 		value: "0%",
-			// 	},
-			// 	{
-			// 		title: "کارمزد ثابت",
-			// 		value: "0",
-			// 	},
-			// 	{
-			// 		title: "حداکثر کارمزد",
-			// 		value: "0",
-			// 	},
-			// 	{
-			// 		title: "باقی مانده روزانه",
-			// 		value: "0.08783302",
-			// 	},
-			// ],
-		};
 	},
 };
 </script>
