@@ -3,11 +3,12 @@ import axios from "../../../axios";
 // import axios from "@/axios.js";
 export default {
 	getMyWalletInformation({ commit }) {
-		const requestOne = axios.get("/peatio/account/balances");
-		const requestTwo = axios.get("/peatio/public/currencies");
-		const requestThree = axios.get("/peatio/account/transactions");
 		axios
-			.all([requestOne, requestTwo, requestThree])
+			.all([
+				axios.get("/peatio/account/balances"),
+				axios.get("/peatio/public/currencies"),
+				axios.get("/peatio/account/transactions"),
+			])
 			.then(res => {
 				console.log("response", res);
 			})
