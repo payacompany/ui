@@ -1,4 +1,7 @@
 export default {
+	SET_WALLET_CRYPTOLIST(state, payload) {
+		state.coins = payload;
+	},
 	// SET_WALLET_BALANCES(state, payload) {
 	// 	state.balances = payload;
 	// },

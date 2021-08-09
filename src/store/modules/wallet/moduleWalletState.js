@@ -1,7 +1,3 @@
 export default {
-	balances: [],
-	currencies: [],
-	currencieAllDetails: [],
-	activeCoin: {},
-	transactions: [],
+	coins: [],
 };

@@ -11,12 +11,14 @@ export default {
 				balances.data.forEach(balance => {
 					currencies.data.forEach(currence => {
 						if (balance.currency === currence.id) {
-							coins = Object.assign({}, balance, currence);
+							let coin = Object.assign({}, balance, currence);
 							console.log(coins);
+							coins.push(coin);
 						}
 					});
 				});
 			});
+			commit("SET_WALLET_CRYPTOLIST", coins);
 		});
 	},
 	// async getBalances({ commit }) {
