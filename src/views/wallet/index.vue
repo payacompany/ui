@@ -36,10 +36,14 @@ export default {
 			coins: [],
 		};
 	},
-	// created() {
-	// 	this.getWalletBalances();
-	// 	this.getCurrencies();
-	// },
+	created() {
+		this.getMyWalletInformation();
+	},
+	methods: {
+		getMyWalletInformation() {
+			this.$store.dispatch("wallet/getMyWalletInformation");
+		},
+	},
 	// methods: {
 	// 	getWalletBalances() {
 	// 		this.$store.dispatch("wallet/getBalances");
