@@ -17,6 +17,7 @@ export default {
 	SET_ACTIVE(state, payload) {
 		state.currencieAllDetails.forEach(coin => {
 			if (coin.name === payload.name) {
+				state.activeCoin = coin;
 				coin.isActive = true;
 			} else {
 				coin.isActive = false;

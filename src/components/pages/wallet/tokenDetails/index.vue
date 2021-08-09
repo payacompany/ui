@@ -6,7 +6,7 @@
 				icon="add"
 				@click="borderColor = 'success'"
 			>
-				<deposit :coins="currencieAllDetails" />
+				<deposit :coins="activeCoin" />
 			</vs-tab>
 			<vs-tab
 				:label="$t('pages.wallet.withdraw.title')"
@@ -48,11 +48,8 @@ export default {
 		};
 	},
 	computed: {
-		currencieAllDetails() {
-			return this.$store.state.wallet.currencieAllDetails.filter(el => {
-				console.log("el", el);
-				el.isActive == true;
-			});
+		activeCoin() {
+			return this.$store.state.wallet.activeCoin;
 		},
 	},
 };
