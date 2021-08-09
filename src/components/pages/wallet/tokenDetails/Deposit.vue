@@ -1,6 +1,5 @@
 <template>
 	<div>
-		{{ coins }}
 		<div class="flex flex-row justify-start">
 			<div class="w-2/12">
 				<img :src="coins.logo" alt="" />
@@ -55,7 +54,6 @@ export default {
 			default: () => [],
 		},
 	},
-	mounted() {},
 	computed: {
 		activeCoin() {
 			return this.$store.state.wallet.activeCoin;
@@ -75,26 +73,7 @@ export default {
 						? this.activeCoin.min_deposit_amount
 						: "",
 				},
-				{
-					value: this.activeCoin.min_withdraw_amount
-						? this.activeCoin.min_withdraw_amount
-						: "",
-				},
-				{
-					value: this.activeCoin.withdraw_limit_24h
-						? this.activeCoin.withdraw_limit_24h
-						: "",
-				},
-				{
-					value: this.activeCoin.withdraw_limit_72h
-						? this.activeCoin.withdraw_limit_72h
-						: "",
-				},
-				{
-					value: this.activeCoin.withdraw_fee
-						? this.activeCoin.withdraw_fee
-						: "",
-				},
+
 				{
 					value: this.activeCoin.deposit_fee ? this.activeCoin.deposit_fee : "",
 				},
