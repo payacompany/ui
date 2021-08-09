@@ -3,9 +3,9 @@ import axios from "../../../axios";
 // import axios from "@/axios.js";
 export default {
 	async getMyWalletInformation({ commit }) {
-		requestOne = "/peatio/account/balances";
-		requestTwo = "/peatio/public/currencies";
-		requestThree = "/peatio/account/transactions";
+		requestOne = axios.get("/peatio/account/balances");
+		requestTwo = axios.get("/peatio/public/currencies");
+		requestThree = axios.get("/peatio/account/transactions");
 		await axios
 			.all([requestOne, requestTwo, requestThree])
 			.then(
