@@ -34,24 +34,26 @@ export default {
 	components: {
 		Withdraw,
 		Deposit,
-		Transactions,
+		Transactions
 	},
 	props: {
 		coins: {
 			type: Array,
-			default: () => [],
-		},
+			default: () => []
+		}
 	},
-	data() {
+	data () {
 		return {
-			borderColor: "success",
+			borderColor: "success"
 		};
 	},
 	computed: {
-		currencieAllDetails() {
-			return this.$store.state.wallet.currencieAllDetails;
-		},
-	},
+		currencieAllDetails () {
+			return this.$store.state.wallet.currencieAllDetails.filter(
+				el => el.isActive == true
+			);
+		}
+	}
 };
 </script>
 
