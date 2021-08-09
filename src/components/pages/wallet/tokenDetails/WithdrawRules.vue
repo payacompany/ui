@@ -18,7 +18,7 @@
 				{{ rule.title }}
 			</p>
 			<p>
-				{{ withdrawRules[index].value }}
+				{{ withdrawRules[index].value ? withdrawRules[index].value : "نامشخص" }}
 			</p>
 		</div>
 	</div>
