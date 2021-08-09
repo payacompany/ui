@@ -56,38 +56,43 @@ export default {
 		},
 	},
 	mounted() {
-		console.log("depositRules", this.coins);
+		console.log("depositRules", this.activeCoin);
 		this.depositRules = [
 			{
-				value: this.coins.min_deposit_amount
-					? this.coins.min_deposit_amount
+				value: this.activeCoin.min_deposit_amount
+					? this.activeCoin.min_deposit_amount
 					: "",
 			},
 			{
-				value: this.coins.min_withdraw_amount
-					? this.coins.min_withdraw_amount
+				value: this.activeCoin.min_withdraw_amount
+					? this.activeCoin.min_withdraw_amount
 					: "",
 			},
 			{
-				value: this.coins.withdraw_limit_24h
-					? this.coins.withdraw_limit_24h
+				value: this.activeCoin.withdraw_limit_24h
+					? this.activeCoin.withdraw_limit_24h
 					: "",
 			},
 			{
-				value: this.coins.withdraw_limit_72h
-					? this.coins.withdraw_limit_72h
+				value: this.activeCoin.withdraw_limit_72h
+					? this.activeCoin.withdraw_limit_72h
 					: "",
 			},
 			{
-				value: this.coins.withdraw_fee ? this.coins.withdraw_fee : "",
+				value: this.activeCoin.withdraw_fee ? this.activeCoin.withdraw_fee : "",
 			},
 			{
-				value: this.coins.deposit_fee ? this.coins.deposit_fee : "",
+				value: this.activeCoin.deposit_fee ? this.activeCoin.deposit_fee : "",
 			},
 			{
-				value: this.coins.description ? this.coins.description : "",
+				value: this.activeCoin.description ? this.activeCoin.description : "",
 			},
 		];
+	},
+	computed: {
+		activeCoin() {
+			return this.$store.state.wallet.activeCoin;
+		},
 	},
 	data() {
 		return {
