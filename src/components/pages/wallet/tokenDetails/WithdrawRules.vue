@@ -1,7 +1,7 @@
 <template>
 	<div class="flex flex-col border border-gray-300 rounded-sm">
 		<div
-			v-for="(rule, index) in $t('pages.wallet.deposit.rules')"
+			v-for="(rule, index) in $t('pages.wallet.withdraw.rules')"
 			:key="index"
 			class="
 				flex flex-row
@@ -17,7 +17,7 @@
 				{{ rule.title }}
 			</p>
 			<p>
-				{{ depositRules[index].value }}
+				{{ WithdrawRules[index].value }}
 			</p>
 		</div>
 	</div>
