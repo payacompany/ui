@@ -8,8 +8,8 @@ export default {
 			const coins = [];
 			axios.get("/peatio/public/currencies").then(currencies => {
 				console.log("currencies", currencies);
-				balances.forEach(balance => {
-					currencies.forEach(currence => {
+				balances.data.forEach(balance => {
+					currencies.data.forEach(currence => {
 						if (balance.currency === currence.id) {
 							coins = Object.assign({}, balance, currence);
 							console.log(coins);
