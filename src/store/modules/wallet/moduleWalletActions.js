@@ -14,11 +14,13 @@ export default {
 					const responseTwo = responses[1];
 					const responesThree = responses[2];
 
-					console.log([responseOne]);
+					// use/access the results
+					console.log(responseOne, responseTwo, responesThree);
 				})
 			)
 			.catch(errors => {
 				// react on errors.
+				console.error(errors);
 			});
 	},
 	// async getBalances({ commit }) {
