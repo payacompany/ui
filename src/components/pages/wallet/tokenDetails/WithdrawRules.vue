@@ -14,6 +14,7 @@
 				last:border-0
 			"
 		>
+			{{ rule }}
 			<p>
 				{{ rule.title }}
 			</p>
