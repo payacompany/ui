@@ -18,7 +18,7 @@
 				{{ rule.title }}
 			</p>
 			<p>
-				{{ withdrawList }}
+				{{ withdrawRules[index].value }}
 			</p>
 		</div>
 	</div>
@@ -27,7 +27,7 @@
 <script>
 export default {
 	props: {
-		withdrawList: {
+		withdrawRules: {
 			type: Array,
 			default: () => [],
 		},
