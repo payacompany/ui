@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<div class="flex flex-row justify-start">
+			{{ activeCoin }}
 			<div class="w-2/12">
 				<img :src="activeCoin.logo" alt="" />
 			</div>

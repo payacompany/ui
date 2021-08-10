@@ -49,6 +49,9 @@ export default {
 		coinsList() {
 			return this.$store.state.wallet.coins;
 		},
+		activeCoin() {
+			return this.$store.state.wallet.activeCoin;
+		},
 	},
 	// methods: {
 	// 	getWalletBalances() {
