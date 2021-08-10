@@ -53,6 +53,9 @@ export default {
 			return this.$store.state.wallet.activeCoin;
 		},
 	},
+	mounted() {
+		this.setRules();
+	},
 	watch: {
 		activeCoin() {
 			this.setRules();
