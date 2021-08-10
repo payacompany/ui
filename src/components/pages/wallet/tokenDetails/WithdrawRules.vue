@@ -18,7 +18,11 @@
 				{{ rule.title }}
 			</p>
 			<p>
-				{{ withdrawRules[index].value }}
+				{{
+					withdrawRules[index].value !== undefined
+						? withdrawRules[index].value
+						: ""
+				}}
 			</p>
 		</div>
 	</div>
