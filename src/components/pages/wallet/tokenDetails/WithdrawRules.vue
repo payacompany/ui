@@ -2,7 +2,7 @@
 	<div class="flex flex-col border border-gray-300 rounded-sm">
 		{{ $t("pages.wallet.withdraw.rules") }}
 		<div
-			v-for="(rule, index) in $t('pages.wallet.withdraw.rules')"
+			v-for="(rule, index) in $t('pages.wallet.deposit.rules')"
 			:key="index"
 			class="
 				flex flex-row
