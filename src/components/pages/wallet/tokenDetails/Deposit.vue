@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<div class="flex flex-row justify-start">
-			{{ activeCoin }}
 			<div class="w-2/12">
 				<img :src="activeCoin.logo" alt="" />
 			</div>
@@ -61,7 +60,6 @@ export default {
 	},
 	methods: {
 		setRules() {
-			console.log("rules changed!");
 			this.depositRules = [
 				{
 					value: this.activeCoin.min_deposit_amount

@@ -17,7 +17,11 @@
 				{{ rule.title }}
 			</p>
 			<p>
-				{{ depositRules[index].value ? depositRules[index].value : "" }}
+				{{
+					depositRules[index].value != undefined
+						? depositRules[index].value
+						: ""
+				}}
 			</p>
 		</div>
 	</div>
