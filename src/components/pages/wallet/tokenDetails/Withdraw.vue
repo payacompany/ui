@@ -76,13 +76,20 @@ export default {
 			console.log("rules changed!");
 			this.withdrawRules = [
 				{
-					value: this.activeCoin.min_deposit_amount
-						? this.activeCoin.min_deposit_amount
+					value: this.activeCoin.min_withdraw_amount
+						? this.activeCoin.min_withdraw_amount
 						: "",
 				},
 
 				{
-					value: this.activeCoin.deposit_fee ? this.activeCoin.deposit_fee : "",
+					value: this.activeCoin.withdraw_limit_24h
+						? this.activeCoin.withdraw_limit_24h
+						: "",
+				},
+				{
+					value: this.activeCoin.withdraw_limit_72h
+						? this.activeCoin.withdraw_limit_72h
+						: "",
 				},
 				{
 					value: this.activeCoin.description ? this.activeCoin.description : "",

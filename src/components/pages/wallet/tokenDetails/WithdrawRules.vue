@@ -16,44 +16,24 @@
 			<p>
 				{{ rule.title }}
 			</p>
-			<!-- <p>
-				{{ rule.value }}
-			</p> -->
+			<p>
+				{{
+					withdrawList[index].value != undefined
+						? withdrawList[index].value
+						: ""
+				}}
+			</p>
 		</div>
 	</div>
 </template>
 
 <script>
 export default {
-	data() {
-		return {
-			withdrawRules: [
-				{
-					title: "حداقل میزان برداشت به بیت کوین",
-					value: "0.00040000",
-				},
-				{
-					title: "حداکثر میزان برداشت به بیت کوین",
-					value: "3",
-				},
-				{
-					title: "کارمزد",
-					value: "0%",
-				},
-				{
-					title: "کارمزد ثابت",
-					value: "0",
-				},
-				{
-					title: "حداکثر کارمزد",
-					value: "0",
-				},
-				{
-					title: "باقی مانده روزانه",
-					value: "0.08783302",
-				},
-			],
-		};
+	props: {
+		withdrawList: {
+			type: Array,
+			default: () => [],
+		},
 	},
 };
 </script>
