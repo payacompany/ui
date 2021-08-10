@@ -22,16 +22,16 @@ export default {
 	// });
 	// 	state.currencies = payload;
 	// },
-	// SET_ACTIVE(state, payload) {
-	// 	state.currencieAllDetails.forEach(coin => {
-	// 		if (coin.name === payload.name) {
-	// 			state.activeCoin = coin;
-	// 			coin.isActive = true;
-	// 		} else {
-	// 			coin.isActive = false;
-	// 		}
-	// 	});
-	// },
+	SET_ACTIVE(state, payload) {
+		state.coins.forEach(coin => {
+			if (coin.name === payload.name) {
+				state.activeCoin = coin;
+				coin.isActive = true;
+			} else {
+				coin.isActive = false;
+			}
+		});
+	},
 	// SET_TRANSACTIONS(state, payload) {
 	// 	state.transactions = payload;
 	// },

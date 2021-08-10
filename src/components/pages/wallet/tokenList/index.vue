@@ -18,8 +18,6 @@
 				<div class="flex flex-col w-11/12">
 					<div class="flex justify-between">
 						<p>
-							{{ coin.isActive }}
-
 							{{ coin.currency }}
 						</p>
 						<p>
@@ -51,10 +49,9 @@ export default {
 		},
 	},
 	methods: {
-		// setActive(coin) {
-		// 	console.log(coin, "coin");
-		// 	this.$store.commit("wallet/SET_ACTIVE", coin);
-		// },
+		setActive(coin) {
+			this.$store.commit("wallet/SET_ACTIVE", coin);
+		},
 	},
 };
 </script>
