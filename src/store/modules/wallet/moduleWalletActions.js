@@ -26,6 +26,11 @@ export default {
 			commit("SET_WALLET_CRYPTOLIST", coins);
 		});
 	},
+	getTransactions({ commit }) {
+		axios.get("/peatio/account/transactions").then(res => {
+			commit("SET_TRANSACTIONS", res.data);
+		});
+	},
 	// async getBalances({ commit }) {
 	// 	await axios.get("/peatio/account/balances").then(res => {
 	// 		commit("SET_WALLET_BALANCES", res.data);
@@ -34,11 +39,6 @@ export default {
 	// async getCurrencies({ commit }) {
 	// 	await axios.get("/peatio/public/currencies").then(res => {
 	// 		commit("SET_CURRENCIES", res.data);
-	// 	});
-	// },
-	// getTransactions({ commit }) {
-	// 	axios.get("/peatio/account/transactions").then(res => {
-	// 		commit("SET_TRANSACTIONS", res.data);
 	// 	});
 	// },
 };
