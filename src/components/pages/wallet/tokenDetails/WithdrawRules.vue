@@ -17,13 +17,9 @@
 			<p>
 				{{ rule.title }}
 			</p>
-			<!-- <p>
-				{{
-					withdrawList[index].value != undefined
-						? withdrawList[index].value
-						: ""
-				}}
-			</p> -->
+			<p>
+				{{ withdrawList }}
+			</p>
 		</div>
 	</div>
 </template>
