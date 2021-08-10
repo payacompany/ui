@@ -14,9 +14,8 @@ export default {
 							let coin = Object.assign({}, balance, currence);
 							if (index === 0) {
 								coin.isActive = true;
-								console.log(index);
+								commit("SET_ACTIVE", coin);
 							} else {
-								console.log(index, ">0");
 								coin.isActive = false;
 							}
 							coins.push(coin);
