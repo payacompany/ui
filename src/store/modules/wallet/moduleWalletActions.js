@@ -12,7 +12,13 @@ export default {
 					currencies.data.forEach(currence => {
 						if (balance.currency === currence.id) {
 							let coin = Object.assign({}, balance, currence);
-							console.log(coins);
+							if (index === 0) {
+								coin.isActive = true;
+								console.log(index);
+							} else {
+								console.log(index, ">0");
+								coin.isActive = false;
+							}
 							coins.push(coin);
 						}
 					});
