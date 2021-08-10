@@ -39,23 +39,23 @@ export default {
 			withdraw: {},
 			withdrawRules: {},
 			// {
-			// 		value: this.activeCoin.min_withdraw_amount
-			// 			? this.activeCoin.min_withdraw_amount
+			// 		value: coin.min_withdraw_amount
+			// 			? coin.min_withdraw_amount
 			// 			: "",
 			// 	},
 			// 	{
-			// 		value: this.activeCoin.withdraw_limit_24h
-			// 			? this.activeCoin.withdraw_limit_24h
+			// 		value: coin.withdraw_limit_24h
+			// 			? coin.withdraw_limit_24h
 			// 			: "",
 			// 	},
 			// 	{
-			// 		value: this.activeCoin.withdraw_limit_72h
-			// 			? this.activeCoin.withdraw_limit_72h
+			// 		value: coin.withdraw_limit_72h
+			// 			? coin.withdraw_limit_72h
 			// 			: "",
 			// 	},
 			// 	{
-			// 		value: this.activeCoin.withdraw_fee
-			// 			? this.activeCoin.withdraw_fee
+			// 		value: coin.withdraw_fee
+			// 			? coin.withdraw_fee
 			// 			: "",
 			// 	},
 		};
@@ -75,26 +75,21 @@ export default {
 	},
 	methods: {
 		setRules() {
-			console.log("rules changed!");
+			const coin = this.$store.state.wallet.activeCoin;
+
 			this.withdrawRules = [
 				{
-					value: this.activeCoin.min_withdraw_amount
-						? this.activeCoin.min_withdraw_amount
-						: "",
+					value: coin.min_withdraw_amount ? coin.min_withdraw_amount : "",
 				},
 
 				{
-					value: this.activeCoin.withdraw_limit_24h
-						? this.activeCoin.withdraw_limit_24h
-						: "",
+					value: coin.withdraw_limit_24h ? coin.withdraw_limit_24h : "",
 				},
 				{
-					value: this.activeCoin.withdraw_limit_72h
-						? this.activeCoin.withdraw_limit_72h
-						: "",
+					value: coin.withdraw_limit_72h ? coin.withdraw_limit_72h : "",
 				},
 				{
-					value: this.activeCoin.description ? this.activeCoin.description : "",
+					value: coin.description ? coin.description : "",
 				},
 			];
 		},

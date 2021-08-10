@@ -63,18 +63,17 @@ export default {
 	},
 	methods: {
 		setRules() {
+			const coin = this.$store.state.wallet.activeCoin;
 			this.depositRules = [
 				{
-					value: this.activeCoin.min_deposit_amount
-						? this.activeCoin.min_deposit_amount
-						: "",
+					value: coin.min_deposit_amount ? coin.min_deposit_amount : "",
 				},
 
 				{
-					value: this.activeCoin.deposit_fee ? this.activeCoin.deposit_fee : "",
+					value: coin.deposit_fee ? coin.deposit_fee : "",
 				},
 				{
-					value: this.activeCoin.description ? this.activeCoin.description : "",
+					value: coin.description ? coin.description : "",
 				},
 			];
 		},

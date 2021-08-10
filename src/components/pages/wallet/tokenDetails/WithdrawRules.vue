@@ -17,7 +17,7 @@
 			<p>
 				{{ rule.title }}
 			</p>
-			<p>
+			<p v-if="withdrawRules">
 				{{
 					withdrawRules[index].value !== undefined
 						? withdrawRules[index].value

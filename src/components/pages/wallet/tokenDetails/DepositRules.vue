@@ -16,9 +16,9 @@
 			<p>
 				{{ rule.title }}
 			</p>
-			<p>
+			<p v-if="depositRules">
 				{{
-					depositRules[index].value != undefined
+					depositRules[index].value !== undefined
 						? depositRules[index].value
 						: ""
 				}}
