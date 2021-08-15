@@ -64,6 +64,21 @@ Vue.component("error", Error);
 Vue.component("trade", Trade);
 Vue.component("xs", Xs);
 
+import VueSocketIO from "vue-socket.io";
+Vue.use(
+	new VueSocketIO({
+		debug: true,
+		connection:
+			"wss://demo.openware.com/api/v2/ranger/public/?stream=global.tickers&stream=ethusd.trades",
+		vuex: {
+			store,
+			actionPrefix: "SOCKET_",
+			mutationPrefix: "SOCKET_",
+		},
+		options: { path: "/my-app/" }, //Optional options
+	})
+);
+
 import axios from "./axios.js";
 Vue.prototype.$http = axios;
 window.axios = axios;
