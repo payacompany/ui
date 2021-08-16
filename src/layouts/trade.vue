@@ -14,7 +14,14 @@ export default {
 	name: "Trade",
 	components: {
 		HeaderBar,
-		HeaderXs
+		HeaderXs,
+	},
+	mounted() {
+		const cookie = this.$cookies.get("_barong_session", { httpOnly: true });
+		this.$cookies.set("_barong_session", cookie, { httpOnly: true });
+		axios.defaults.withCredentials = true;
+		// axios.defaults.headers.common["Cookie"] = `_barong_session=${cookie}`;
+		this.$store.commit("auth/SET_COOKIE", cookie);
 	},
 	sockets: {
 		connect: function () {
@@ -24,8 +31,8 @@ export default {
 			console.log(
 				'this method was fired by the socket server. eg: io.emit("customEmit", data)'
 			);
-		}
-	}
+		},
+	},
 };
 </script>
 
