@@ -17,8 +17,8 @@ export default {
 		HeaderXs,
 	},
 	mounted() {
-		const cookie = this.$cookies.get("_barong_session", { httpOnly: true });
-		this.$cookies.set("_barong_session", cookie, { httpOnly: true });
+		const cookie = this.$cookies.get("_barong_session", { httpOnly: false });
+		this.$cookies.set("_barong_session", cookie, { httpOnly: false });
 		axios.defaults.withCredentials = true;
 		// axios.defaults.headers.common["Cookie"] = `_barong_session=${cookie}`;
 		this.$store.commit("auth/SET_COOKIE", cookie);
