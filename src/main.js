@@ -70,10 +70,7 @@ Vue.use(
 		debug: true,
 		secure: true,
 		connection:
-			("wss://demo.openware.com/api/v2/ranger/public/?stream=global.tickers&stream=ethusd.trades",
-			{
-				query: { token: store.state.token },
-			}),
+			"wss://demo.openware.com/api/v2/ranger/public/?stream=global.tickers&stream=ethusd.trades",
 		vuex: {
 			store,
 			actionPrefix: "SOCKET_",
