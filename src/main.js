@@ -64,10 +64,6 @@ Vue.component("error", Error);
 Vue.component("trade", Trade);
 Vue.component("xs", Xs);
 
-const cookie = Vue.$cookies.get("_barong_session", { httpOnly: true });
-Vue.$cookies.set("_barong_session", cookie, { httpOnly: true });
-axios.defaults.withCredentials = true;
-
 import VueSocketIO from "vue-socket.io";
 Vue.use(
 	new VueSocketIO({
@@ -76,7 +72,7 @@ Vue.use(
 		connection:
 			("wss://demo.openware.com/api/v2/ranger/public/?stream=global.tickers&stream=ethusd.trades",
 			{
-				query: { token: store.state.auth.token },
+				query: { token: store.state.token },
 			}),
 		vuex: {
 			store,
