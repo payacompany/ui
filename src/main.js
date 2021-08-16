@@ -64,8 +64,8 @@ Vue.component("error", Error);
 Vue.component("trade", Trade);
 Vue.component("xs", Xs);
 
-const cookie = this.$cookies.get("_barong_session", { httpOnly: true });
-this.$cookies.set("_barong_session", cookie, { httpOnly: true });
+const cookie = Vue.$cookies.get("_barong_session", { httpOnly: true });
+Vue.$cookies.set("_barong_session", cookie, { httpOnly: true });
 axios.defaults.withCredentials = true;
 
 import VueSocketIO from "vue-socket.io";
