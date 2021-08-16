@@ -2,8 +2,8 @@ import axios from "../../../axios";
 
 // import axios from "@/axios.js";
 export default {
-	getAllOrders({ commit }) {
-		axios.get("/peatio/market/orders").then(res => {
+	tickers({ commit }) {
+		axios.get("/v2/peatio/public/markets/tickers").then(res => {
 			commit("SET_ALL_ORDERS", res.data);
 		});
 	},

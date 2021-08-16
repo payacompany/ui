@@ -36,6 +36,14 @@ export default {
 		Trades,
 		TradingXs,
 	},
+	mounted() {
+		this.getTokensMarket();
+	},
+	methods: {
+		getTokensMarket() {
+			this.$store.dispatch("market/tickers");
+		},
+	},
 };
 </script>
 
