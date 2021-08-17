@@ -69,8 +69,7 @@ Vue.use(
 	new VueSocketIO({
 		debug: true,
 		secure: true,
-		connection:
-			"wss://dax.autovm.ir/api/v2/ranger/private/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade",
+		connection: "ws://dax.autovm.ir/api/v2/ranger/private/",
 		vuex: {
 			store,
 			actionPrefix: "SOCKET_",
