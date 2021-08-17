@@ -14,13 +14,15 @@ export default {
 		this.socket = new WebSocket(
 			"wss://dax.autovm.ir/api/v2/ranger/private/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade"
 		);
-		this.onOpenConnection();
+		this.socket.onopen = res => {
+			console.log("on open", res);
+		};
 	},
 	methods: {
 		onOpenConnection() {
-			this.socket.onopen(() => {
-				console.log("connection created");
-			});
+			this.socket.onopen = res => {
+				console.log("on open", res);
+			};
 		},
 	},
 };

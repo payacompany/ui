@@ -37,7 +37,7 @@ export default {
 		Trades,
 		TradingXs,
 	},
-	// mixins: [Socket],
+	mixins: [Socket],
 	mounted() {
 		this.getTokensMarket();
 	},
