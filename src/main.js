@@ -70,7 +70,7 @@ Vue.use(
 		debug: true,
 		secure: true,
 		connection:
-			"ws://dax.autovm.ir/api/v2/ranger/private/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade",
+			"wss://dax.autovm.ir/api/v2/ranger/private/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade",
 		vuex: {
 			store,
 			actionPrefix: "SOCKET_",
