@@ -37,9 +37,13 @@ export default {
 		Trades,
 		TradingXs,
 	},
-	mixins: [Socket],
+	// mixins: [Socket],
 	mounted() {
 		this.getTokensMarket();
+		this.socket = new WebSocket(
+			"wss://dax.autovm.ir/api/v2/ranger/private/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade"
+		);
+		console.log(socket);
 	},
 	methods: {
 		getTokensMarket() {
