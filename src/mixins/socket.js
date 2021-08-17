@@ -8,6 +8,7 @@ export default {
 	mounted() {
 		const cookie = Vue.$cookies.get("_barong_session", { httpOnly: false });
 		Vue.$cookies.set("_barong_session", cookie, { httpOnly: false });
+		console.log(cookie);
 		// axios.defaults.headers.common["Cookie"] = `_barong_session=${cookie}`;
 
 		console.log("mixin created", cookie);
