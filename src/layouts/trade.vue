@@ -21,6 +21,14 @@ export default {
 		axios.defaults.withCredentials = true;
 		// axios.defaults.headers.common["Cookie"] = `_barong_session=${cookie}`;
 		this.$store.commit("auth/SET_COOKIE", cookie);
+		try {
+			this.socket = new WebSocket(
+				"wss://dax.autovm.ir/api/v2/ranger/private/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade"
+			);
+			console.log(socket);
+		} catch {
+			console.log(err);
+		}
 	},
 };
 </script>
