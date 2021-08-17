@@ -9,7 +9,6 @@ export default {
 		const cookie = Vue.$cookies.get("_barong_session", { httpOnly: false });
 		Vue.$cookies.set("_barong_session", cookie, { httpOnly: false });
 		// axios.defaults.headers.common["Cookie"] = `_barong_session=${cookie}`;
-		Vue.$store.commit("auth/SET_COOKIE", cookie);
 
 		console.log("mixin created", cookie);
 		this.socket = new WebSocket(
