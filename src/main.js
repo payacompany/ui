@@ -64,20 +64,21 @@ Vue.component("error", Error);
 Vue.component("trade", Trade);
 Vue.component("xs", Xs);
 
-// import VueSocketIO from "vue-socket.io";
-// Vue.use(
-// 	new VueSocketIO({
-// 		debug: true,
-// 		secure: true,
-// 		connection:
-// 			"ws://dax.autovm.ir/api/v2/ranger/public/?stream=global.tickers",
-// 		vuex: {
-// 			store,
-// 			actionPrefix: "SOCKET_",
-// 			mutationPrefix: "SOCKET_",
-// 		},
-// 	})
-// );
+import VueSocketIO from "vue-socket.io";
+Vue.use(
+	new VueSocketIO({
+		debug: true,
+		secure: true,
+		transports: ["websocket"],
+		connection:
+			"ws://dax.autovm.ir/api/v2/ranger/public/?stream=global.tickers",
+		vuex: {
+			store,
+			actionPrefix: "SOCKET_",
+			mutationPrefix: "SOCKET_",
+		},
+	})
+);
 
 import axios from "./axios.js";
 Vue.prototype.$http = axios;
