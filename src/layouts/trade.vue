@@ -9,14 +9,15 @@
 <script>
 import HeaderBar from "../components/global/header/index.vue";
 import HeaderXs from "../components/global/header/xs/index.vue";
-
+import Socket from "../mixin/socket.js";
 export default {
 	name: "Trade",
 	components: {
 		HeaderBar,
-		HeaderXs,
+		HeaderXs
 	},
-	mounted() {
+	mixin: ["Socket"],
+	mounted () {
 		const cookie = this.$cookies.get("_barong_session", { httpOnly: false });
 		this.$cookies.set("_barong_session", cookie, { httpOnly: false });
 		axios.defaults.withCredentials = true;
@@ -31,8 +32,8 @@ export default {
 			console.log(
 				'this method was fired by the socket server. eg: io.emit("customEmit", data)'
 			);
-		},
-	},
+		}
+	}
 };
 </script>
 
