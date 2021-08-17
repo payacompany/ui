@@ -69,7 +69,7 @@ Vue.use(
 	new VueSocketIO({
 		debug: true,
 		secure: true,
-		connection: "ws://dax.autovm.ir/api/v2/ranger/private/",
+		connection: "ws://dax.autovm.ir:8080/api/v2/ranger/private/",
 		vuex: {
 			store,
 			actionPrefix: "SOCKET_",
