@@ -17,5 +17,6 @@ export default {
 				mutationPrefix: "SOCKET_",
 			},
 		});
+		connection.connect();
 	},
 };
