@@ -46,16 +46,16 @@ export default {
 			this.$store.dispatch("market/tickers");
 		},
 	},
-	sockets: {
-		connect: function () {
-			console.log("socket connected");
-		},
-		customEmit: function (data) {
-			console.log(
-				'this method was fired by the socket server. eg: io.emit("customEmit", data)'
-			);
-		},
-	},
+	// sockets: {
+	// 	connect: function () {
+	// 		console.log("socket connected");
+	// 	},
+	// 	customEmit: function (data) {
+	// 		console.log(
+	// 			'this method was fired by the socket server. eg: io.emit("customEmit", data)'
+	// 		);
+	// 	},
+	// },
 };
 </script>
 
