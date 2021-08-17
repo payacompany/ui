@@ -26,6 +26,7 @@ import OrderBook from "../../components/pages/trading/orderBook/index.vue";
 import TradingView from "../../components/pages/trading/tradingView/index.vue";
 import OpenOrders from "../../components/pages/trading/openOrders/index.vue";
 import Trades from "../../components/pages/trading/trades/index.vue";
+import Socket from "../../mixins/socket.js";
 export default {
 	components: {
 		PlaceOrder,
@@ -36,6 +37,7 @@ export default {
 		Trades,
 		TradingXs,
 	},
+	mixins: [Socket],
 	mounted() {
 		this.getTokensMarket();
 	},
