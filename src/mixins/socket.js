@@ -12,7 +12,7 @@ export default {
 
 		console.log("mixin created", cookie);
 		this.socket = new WebSocket(
-			"ws://dax.autovm.ir/api/v2/ranger/private/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade"
+			"ws://dax.autovm.ir/api/v2/ranger/public/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade"
 		);
 		this.socket.onopen = res => {
 			console.log("on open", res);
