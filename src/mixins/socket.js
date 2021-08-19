@@ -6,7 +6,7 @@ export default {
 		};
 	},
 	mounted() {
-		console.log(this.$store.state.auth.token);
+		console.log(this.$store.state.auth);
 		const cookie = Vue.$cookies.get("_barong_session", {
 			httpOnly: false,
 		});
