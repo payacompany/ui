@@ -28,6 +28,9 @@ export default {
 		this.socket.onopen = res => {
 			console.log("on open", res);
 		};
+		this.socket.onerror = function (event) {
+			console.error("WebSocket error observed:", event);
+		};
 	},
 	methods: {
 		onOpenConnection() {
