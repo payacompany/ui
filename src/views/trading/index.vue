@@ -46,10 +46,9 @@ export default {
 	// mixins: [Socket],
 	mounted() {
 		this.getTokensMarket();
-		var WebSocket = require("ws");
 		var cookie = require("cookie");
 
-		var ws = new WebSocket(
+		this.socket = new WebSocket(
 			"ws://dax.autovm.ir/api/v2/ranger/private/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade",
 			[],
 			{
@@ -65,9 +64,9 @@ export default {
 		// this.socket = new WebSocket(
 		// 	"ws://dax.autovm.ir/api/v2/ranger/private/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade"
 		// );
-		// this.socket.onopen = res => {
-		// 	console.log("on open", res);
-		// };
+		this.socket.onopen = res => {
+			console.log("on open", res);
+		};
 	},
 	methods: {
 		getTokensMarket() {
