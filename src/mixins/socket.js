@@ -21,7 +21,7 @@ export default {
 			[],
 			{
 				headers: {
-					Cookie: cookie,
+					Cookie: this.$store.state.auth.token,
 				},
 			}
 		);
