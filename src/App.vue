@@ -15,6 +15,7 @@ export default {
 		const cookie = this.$cookies.get("_barong_session", { httpOnly: true });
 		this.$cookies.set("_barong_session", cookie, { httpOnly: true });
 		axios.defaults.withCredentials = true;
+		console.log(cookie);
 		// axios.defaults.headers.common["Cookie"] = `_barong_session=${cookie}`;
 		this.$store.commit("auth/SET_COOKIE", cookie);
 		console.log(this.$store.state.auth);
