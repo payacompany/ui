@@ -17,6 +17,7 @@ export default {
 		axios.defaults.withCredentials = true;
 		// axios.defaults.headers.common["Cookie"] = `_barong_session=${cookie}`;
 		this.$store.commit("auth/SET_COOKIE", cookie);
+		console.log(this.$store.state.auth);
 	},
 	computed: {
 		layout() {
