@@ -21,7 +21,7 @@ export default {
 			[],
 			{
 				headers: {
-					Cookie: this.$store.state.auth.token,
+					Cookie: "_barong_session=f7001d9081e0f2a14e8db8ff6b9034ab;",
 				},
 			}
 		);
