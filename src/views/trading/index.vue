@@ -27,6 +27,7 @@ import TradingView from "../../components/pages/trading/tradingView/index.vue";
 import OpenOrders from "../../components/pages/trading/openOrders/index.vue";
 import Trades from "../../components/pages/trading/trades/index.vue";
 import Socket from "../../mixins/socket.js";
+
 export default {
 	components: {
 		PlaceOrder,
@@ -45,12 +46,28 @@ export default {
 	// mixins: [Socket],
 	mounted() {
 		this.getTokensMarket();
-		this.socket = new WebSocket(
-			"ws://dax.autovm.ir/api/v2/ranger/private/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade"
+		var WebSocket = require("ws");
+		var cookie = require("cookie");
+
+		var ws = new WebSocket(
+			"ws://dax.autovm.ir/api/v2/ranger/private/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade",
+			[],
+			{
+				headers: {
+					Cookie: cookie.serialize(
+						"_barong_session",
+						"f7001d9081e0f2a14e8db8ff6b9034ab"
+					),
+				},
+			}
 		);
-		this.socket.onopen = res => {
-			console.log("on open", res);
-		};
+
+		// this.socket = new WebSocket(
+		// 	"ws://dax.autovm.ir/api/v2/ranger/private/?stream=deposit_address&stream=ethusd.ob-inc&stream=ethusd.trades&stream=global.tickers&stream=order&stream=trade"
+		// );
+		// this.socket.onopen = res => {
+		// 	console.log("on open", res);
+		// };
 	},
 	methods: {
 		getTokensMarket() {
