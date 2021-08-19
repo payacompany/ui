@@ -82,7 +82,7 @@ Vue.component("xs", Xs);
 import axios from "./axios.js";
 Vue.prototype.$http = axios;
 window.axios = axios;
-
+import interceptors from "./axios-interceptors";
 import VueCookies from "vue-cookies";
 Vue.use(VueCookies);
 
