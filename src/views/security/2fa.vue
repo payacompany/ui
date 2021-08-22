@@ -5,6 +5,7 @@
 		{{ generate2faData.data.url }}
 		<div class="px-8 mt-5">
 			<div class="flex flex-col md:flex-row justify-center md:flex-start">
+				<img :src="generate2faData.data.barcode" alt="" />
 				<qr-code
 					:text="generate2faData.data.barcode"
 					:size="200"
