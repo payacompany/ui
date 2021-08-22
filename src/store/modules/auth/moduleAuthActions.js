@@ -24,4 +24,18 @@ export default {
 			axios.put(`/barong/resource/users/password`, payload);
 		} catch (error) {}
 	},
+	async generate2fa({ commit }, payload) {
+		try {
+			const res = await axios.POST(
+				`/barong/resource/otp/generate_qrcode`,
+				payload
+			);
+			console.log(res);
+		} catch (error) {}
+	},
+	enable2fa({ commit }, payload) {
+		try {
+			axios.POST(`/barong/resource/otp/generate_qrcode`, payload);
+		} catch (error) {}
+	},
 };
