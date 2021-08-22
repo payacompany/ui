@@ -9,10 +9,13 @@ export default {
 		axios.post("/barong/resource/phones/verify", payload).then(res => {});
 	},
 	getVerifyEmailCode({ commit }, payload) {
-		let formData = new FormData();
-		formData.append("email", payload);
 		axios
-			.post("/barong/identity/users/email/generate_code", formData)
+			.post("/barong/identity/users/email/generate_code", payload)
+			.then(res => {});
+	},
+	verifyEmail({ commit }, payload) {
+		axios
+			.post("/barong/identity/users/email/confirm_code", payload)
 			.then(res => {});
 	},
 };
