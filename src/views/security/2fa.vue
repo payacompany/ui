@@ -2,7 +2,7 @@
 	<div class="shadow-xl w-11/12 md:w-6/12 center rounded-md py-8">
 		<p class="text-bold text-xl text-center px-8">شناسایی دوعاملی</p>
 		<vs-divider />
-		{{ generate2faData.data.url.split("secret=") }}
+		{{ generate2faData.data.url.otpauth.split("secret=") }}
 		<div class="px-8 mt-5">
 			<div class="flex flex-col md:flex-row justify-center md:flex-start">
 				<qr-code
