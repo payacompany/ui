@@ -19,4 +19,9 @@ export default {
 			axios.post(`/barong/identity/users/password/generate_code`, payload);
 		} catch {}
 	},
+	changePassword({ commit }, payload) {
+		try {
+			axios.put(`/barong/resource/users/password`, payload);
+		} catch (error) {}
+	},
 };

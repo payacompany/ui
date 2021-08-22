@@ -1,6 +1,16 @@
 <template>
 	<div
-		class="shadow-xl w-11/12 md:w-8/12 lg:w-5/12 xl:w-3/12 center rounded-md py-5 px-5"
+		class="
+			shadow-xl
+			w-11/12
+			md:w-8/12
+			lg:w-5/12
+			xl:w-3/12
+			center
+			rounded-md
+			py-5
+			px-5
+		"
 	>
 		<p class="text-bold text-xl text-center px-8">
 			{{ $t("pages.profile.changePassword.title") }}
@@ -13,12 +23,12 @@
 			:placeholder="$t('pages.profile.changePassword.currentPassword')"
 		/>
 		<vs-input
-			v-model="user.password"
+			v-model="user.newPassword"
 			class="min-w-full mb-3"
 			:placeholder="$t('pages.profile.changePassword.newPassword')"
 		/>
 		<vs-input
-			v-model="user.password"
+			v-model="user.repeatNewPassword"
 			class="min-w-full"
 			:placeholder="$t('pages.profile.changePassword.repeatNewPassword')"
 		/>
@@ -32,11 +42,20 @@
 
 <script>
 export default {
-	data () {
+	data() {
 		return {
-			user: {}
+			user: {},
 		};
-	}
+	},
+	methods: {
+		changePassword() {
+			this.$store.dispatch("auth/changePassword", {
+				old_password: this.user.password,
+				new_password: this.user.newPassword,
+				confirm_password: this.user.repeatNewPassword,
+			});
+		},
+	},
 };
 </script>
 
