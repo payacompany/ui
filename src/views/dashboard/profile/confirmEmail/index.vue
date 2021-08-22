@@ -1,6 +1,15 @@
 <template>
 	<div
-		class="shadow-xl w-11/12 md:w-8/12 lg:w-5/12 xl:w-3/12 center rounded-md py-8"
+		class="
+			shadow-xl
+			w-11/12
+			md:w-8/12
+			lg:w-5/12
+			xl:w-3/12
+			center
+			rounded-md
+			py-8
+		"
 	>
 		<p class="text-bold text-xl text-center px-8">
 			{{ $t("pages.profile.verifiyStep.emailVerification.title") }}
@@ -10,7 +19,7 @@
 			<div class="flex flex-row justify-between">
 				<div class="w-8/12 lg:w-9/12">
 					<vs-input
-						v-model="user.phone"
+						v-model="user.email"
 						:description-text="
 							$t('pages.profile.verifiyStep.emailVerification.exampleText')
 						"
@@ -21,7 +30,7 @@
 					/>
 				</div>
 				<div class="mt-4">
-					<vs-button class="inline-block text-sm">
+					<vs-button class="inline-block text-sm" @click.prevent="getCode">
 						{{ $t("pages.profile.verifiyStep.emailVerification.sendCode") }}
 					</vs-button>
 				</div>
@@ -46,11 +55,18 @@
 
 <script>
 export default {
-	data () {
+	data() {
 		return {
-			user: {}
+			user: {},
 		};
-	}
+	},
+	methods: {
+		getCode() {
+			this.$store.dispatch("profile/getVerifyEmailCode", {
+				phone_number: this.user.phone,
+			});
+		},
+	},
 };
 </script>
 
