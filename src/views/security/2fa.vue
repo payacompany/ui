@@ -2,7 +2,7 @@
 	<div class="shadow-xl w-11/12 md:w-6/12 center rounded-md py-8">
 		<p class="text-bold text-xl text-center px-8">شناسایی دوعاملی</p>
 		<vs-divider />
-		{{ generate2faData.data.url.otpauth }}
+		{{ generate2faData.data.url }}
 		<div class="px-8 mt-5">
 			<div class="flex flex-col md:flex-row justify-center md:flex-start">
 				<qr-code
@@ -31,13 +31,15 @@
 						<li class="mt-3 text-sm flex items-baseline justify-between">
 							3.در مرحله سوم کد نمایش داده شده در googleAuthenticator را وارد
 							نمایید
-							<vs-input class="mt-3 min-w-6/12" />
+							<vs-input class="mt-3 min-w-6/12" v-model="code" />
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="mt-5">
-				<vs-button class="w-full">فعالسازی</vs-button>
+				<vs-button class="w-full" @click.prevent="otpConnect"
+					>فعالسازی</vs-button
+				>
 			</div>
 		</div>
 	</div>
@@ -52,6 +54,7 @@ export default {
 	data() {
 		return {
 			generate2faData: {},
+			code: null,
 		};
 	},
 	mounted() {
@@ -63,6 +66,11 @@ export default {
 			this.$store.dispatch("auth/generate2fa").then(res => {
 				console.log(res, "comp");
 				this.generate2faData = res.data;
+			});
+		},
+		otpConnect() {
+			this.$store.dispatch("auth/enable2fa", { code: this.code }).then(res => {
+				this.$router.push("/");
 			});
 		},
 	},

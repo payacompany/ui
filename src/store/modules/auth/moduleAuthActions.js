@@ -33,7 +33,9 @@ export default {
 	},
 	enable2fa({ commit }, payload) {
 		try {
-			axios.POST(`/barong/resource/otp/generate_qrcode`, payload);
+			const res = axios.post(`/barong/resource/otp/enable`, payload);
+			console.log("c", res);
+			return res;
 		} catch (error) {}
 	},
 };
