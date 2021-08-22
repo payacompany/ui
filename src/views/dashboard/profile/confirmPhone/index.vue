@@ -37,7 +37,7 @@
 			</div>
 			<div>
 				<vs-input
-					v-model="user.phone"
+					v-model="user.verifyCode"
 					class="my-6 min-w-full"
 					:label-placeholder="
 						$t('pages.profile.verifiyStep.phoneVerification.acceptCode')
@@ -55,18 +55,24 @@
 
 <script>
 export default {
-	data () {
+	data() {
 		return {
-			user: {}
+			user: {},
 		};
 	},
 	methods: {
-		getCode () {
+		getCode() {
 			this.$store.dispatch("profile/getVerifyPhoneCode", {
-				phone_number: this.user.phone
+				phone_number: this.user.phone,
 			});
-		}
-	}
+		},
+		verifyPhone() {
+			this.$store.dispatch("profile/verifyPhone", {
+				phone_number: this.user.phone,
+				verification_code: this.user.verifyCode,
+			});
+		},
+	},
 };
 </script>
 
