@@ -33,7 +33,7 @@ axios.interceptors.response.use(
 
 				case 401:
 					Vue.$toast.error(`نشست شما منقضی شده`);
-					// router.push("/auth/login");
+					router.push("/auth/login");
 					break;
 				case 403:
 					router.replace({
