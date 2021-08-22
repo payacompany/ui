@@ -44,6 +44,9 @@ axios.interceptors.response.use(
 				case 404:
 					Vue.$toast.error(`${error.response.data.message}`);
 					break;
+				case 422:
+					Vue.$toast.error(`${error.response.data.message}`);
+					break;
 				case 502:
 					setTimeout(() => {
 						router.replace({
