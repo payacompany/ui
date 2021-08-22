@@ -33,7 +33,7 @@
 			:placeholder="$t('pages.profile.changePassword.repeatNewPassword')"
 		/>
 		<div class="mt-3">
-			<vs-button class="w-full">
+			<vs-button class="w-full" @click.prevent="changePassword">
 				{{ $t("pages.profile.changePassword.title") }}
 			</vs-button>
 		</div>
