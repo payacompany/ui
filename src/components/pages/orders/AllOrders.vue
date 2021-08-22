@@ -1,5 +1,6 @@
 <template>
 	<div>
+		{{ orders }}
 		<vs-table :max-items="8" pagination :data="orders">
 			<template slot="thead">
 				<vs-th
