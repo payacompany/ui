@@ -53,7 +53,9 @@ export default {
 	methods: {
 		generate2fa() {
 			console.log("ddd");
-			this.$store.dispatch("auth/generate2fa");
+			this.$store.dispatch("auth/generate2fa").then(res => {
+				console.log(res, "comp");
+			});
 		},
 	},
 };

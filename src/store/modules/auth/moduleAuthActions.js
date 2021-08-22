@@ -28,6 +28,7 @@ export default {
 		try {
 			const res = await axios.post(`/barong/resource/otp/generate_qrcode`);
 			console.log(res);
+			return res;
 		} catch (error) {}
 	},
 	enable2fa({ commit }, payload) {
