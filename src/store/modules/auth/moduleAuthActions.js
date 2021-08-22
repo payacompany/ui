@@ -26,10 +26,7 @@ export default {
 	},
 	async generate2fa({ commit }, payload) {
 		try {
-			const res = await axios.POST(
-				`/barong/resource/otp/generate_qrcode`,
-				payload
-			);
+			const res = await axios.post(`/barong/resource/otp/generate_qrcode`);
 			console.log(res);
 		} catch (error) {}
 	},
