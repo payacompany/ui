@@ -63,7 +63,7 @@ export default {
 	methods: {
 		getCode() {
 			this.$store.dispatch("profile/getVerifyEmailCode", {
-				phone_number: this.user.phone,
+				email: this.user.email,
 			});
 		},
 	},
