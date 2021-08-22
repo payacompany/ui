@@ -45,7 +45,7 @@
 				/>
 			</div>
 			<div class="w-full">
-				<vs-button class="text-sm w-full">
+				<vs-button class="text-sm w-full" @click.prevent="verifyPhone">
 					{{ $t("pages.profile.verifiyStep.phoneVerification.submit") }}
 				</vs-button>
 			</div>
