@@ -11,6 +11,7 @@ import history from "./modules/history/moduleHistory.js";
 import orders from "./modules/orders/moduleOrders.js";
 import wallet from "./modules/wallet/moduleWallet.js";
 import market from "./modules/market/moduleMarket.js";
+import profile from "./modules/profile/moduleProfile.js";
 
 Vue.use(Vuex);
 
@@ -25,6 +26,7 @@ export default new Vuex.Store({
 		orders,
 		wallet,
 		market,
+		profile,
 	},
 	strict: process.env.NODE_ENV !== "production",
 });
