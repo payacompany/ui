@@ -1,7 +1,6 @@
 <template>
 	<div>
 		{{ orders }}
-		{{ this.$store.state.orders }}
 		<vs-table :max-items="8" pagination :data="orders">
 			<template slot="thead">
 				<vs-th
@@ -59,14 +58,12 @@
 import CloseOrdersModal from "./CloseOrdersModal.vue";
 export default {
 	components: { CloseOrdersModal },
-	data: () => ({
-		orders: []
-	}),
+	data: () => ({}),
 	computed: {
-		orders () {
+		orders() {
 			return this.$store.state.orders.allOrders;
-		}
-	}
+		},
+	},
 };
 </script>
 
