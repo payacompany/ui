@@ -14,7 +14,7 @@
 			<template slot-scope="{ data }">
 				<vs-tr v-for="(tr, indextr) in data" :key="indextr">
 					<vs-td :data="data[indextr].created_at">
-						{{ data[indextr].created_at }}
+						{{ data[indextr].created_at | jdate }}
 					</vs-td>
 
 					<vs-td :data="data[indextr].market">
