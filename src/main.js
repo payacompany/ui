@@ -49,6 +49,8 @@ Vue.use(Vuesax, {
 	rtl: true,
 });
 
+import fitlers from "./filters/filters.js";
+
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 Vue.use(VueSweetalert2);
