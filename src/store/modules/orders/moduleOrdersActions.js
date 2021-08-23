@@ -4,7 +4,6 @@ import axios from "../../../axios";
 export default {
 	getAllOrders({ commit }) {
 		axios.get("/peatio/market/orders").then(res => {
-			console.log(res.data);
 			commit("SET_ALL_ORDERS", res.data);
 		});
 	},

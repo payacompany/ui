@@ -12,21 +12,21 @@
 
 			<template slot-scope="{ data }">
 				<vs-tr v-for="(tr, indextr) in data" :key="indextr">
-					<vs-td :data="data[indextr].date">
-						{{ data[indextr].date }}
+					<vs-td :data="data[indextr].created_at">
+						{{ data[indextr].created_at | jdate }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].name">
-						{{ data[indextr].name }}
+					<vs-td :data="data[indextr].market">
+						{{ data[indextr].market }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].volume">
-						{{ data[indextr].volume }}
+					<vs-td :data="data[indextr].origin_volume">
+						{{ data[indextr].origin_volume }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].type">
+					<vs-td :data="data[indextr].side">
 						{{
-							data[indextr].type
+							data[indextr].side
 								? $t("pages.orders.allOrders.buy")
 								: $t("pages.orders.allOrders.sell")
 						}}
@@ -45,9 +45,7 @@
 import CloseOrdersModal from "./CloseOrdersModal.vue";
 export default {
 	components: { CloseOrdersModal },
-	data: () => ({
-		orders: [],
-	}),
+	data: () => ({}),
 	computed: {
 		orders() {
 			return this.$store.state.orders.completedOrders;
