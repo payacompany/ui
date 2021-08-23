@@ -13,33 +13,35 @@
 
 			<template slot-scope="{ data }">
 				<vs-tr v-for="(tr, indextr) in data" :key="indextr">
-					<vs-td :data="data[indextr].date">
-						{{ data[indextr].date }}
+					<vs-td :data="data[indextr].created_at">
+						{{ data[indextr].created_at }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].name">
-						{{ data[indextr].name }}
+					<vs-td :data="data[indextr].market">
+						{{ data[indextr].market }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].volume">
-						{{ data[indextr].volume }}
+					<vs-td :data="data[indextr].origin_volume">
+						{{ data[indextr].origin_volume }}
 					</vs-td>
 
 					<vs-td
-						:data="data[indextr].type"
+						:data="data[indextr].side"
 						class="font-bold"
-						:class="[data[indextr].type ? 'text-success' : 'text-danger']"
+						:class="[
+							data[indextr].side == 'buy' ? 'text-success' : 'text-danger',
+						]"
 					>
 						{{
-							data[indextr].type
+							data[indextr].side == "buy"
 								? $t("pages.orders.allOrders.buy")
 								: $t("pages.orders.allOrders.sell")
 						}}
 					</vs-td>
 
-					<vs-td :data="data[indextr].status">
+					<vs-td :data="data[indextr].state">
 						{{
-							data[indextr].status
+							data[indextr].state === "wait"
 								? $t("pages.orders.allOrders.open")
 								: $t("pages.orders.allOrders.close")
 						}}
