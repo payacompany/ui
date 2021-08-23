@@ -10,33 +10,43 @@
 			:title="$t('pages.orders.allOrders.modal.orderDetails')"
 			:active.sync="showModal"
 		>
-			<div class="flex flex-wrap justify-between">
-				<p class="pb-8">
-					{{ $t("pages.orders.allOrders.modal.orderId") }}:
-					<span>
+			<div class="flex flex-col justify-between">
+				<div class="flex justify-between">
+					<p class="pb-8">{{ $t("pages.orders.allOrders.modal.orderId") }}:</p>
+					<p>
 						{{ orderDetails.id }}
-					</span>
-				</p>
-				<p class="pb-8">
-					{{ $t("pages.orders.allOrders.modal.orderCreatedAt") }}: :
-					<span> {{ orderDetails.date }} </span>
-				</p>
-				<p class="pb-8">
-					{{ $t("pages.orders.allOrders.modal.unitPerPrice") }}:
-					<span> {{ orderDetails.priceInUnit }} تومان </span>
-				</p>
-				<p>
-					{{ $t("pages.orders.allOrders.modal.volume") }}:
-					<span> {{ orderDetails.volume }} </span>
-				</p>
-				<p>
-					{{ $t("pages.orders.allOrders.modal.feeOrder") }}:
-					<span> {{ orderDetails.fee }} تومان</span>
-				</p>
-				<p>
-					{{ $t("pages.orders.allOrders.modal.totalPrice") }}:
-					<span> {{ orderDetails.priceInUnit * orderDetails.volume }} </span>
-				</p>
+					</p>
+				</div>
+				<div class="flex justify-between">
+					<p class="pb-8">
+						{{ $t("pages.orders.allOrders.modal.orderCreatedAt") }}:
+					</p>
+					<p>
+						{{ orderDetails.created_at | jdate }}
+					</p>
+				</div>
+
+				<div class="flex justify-between">
+					<p class="pb-8">
+						{{ $t("pages.orders.allOrders.modal.unitPerPrice") }}:
+					</p>
+					<p>
+						{{ orderDetails.price }}
+					</p>
+				</div>
+
+				<div class="flex justify-between">
+					<p class="pb-8">{{ $t("pages.orders.allOrders.modal.volume") }}:</p>
+					<p>
+						{{ orderDetails.origin_volume }}
+					</p>
+				</div>
+				<div class="flex justify-between">
+					<p class="pb-8">{{ $t("pages.orders.allOrders.modal.feeOrder") }}:</p>
+					<p>
+						{{ orderDetails.taker_fee }}
+					</p>
+				</div>
 			</div>
 		</vs-popup>
 	</div>
