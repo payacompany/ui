@@ -22,12 +22,13 @@
 		<vs-divider />
 		<deposit-rules class="mb-5" :deposit-rules="depositRules" />
 		<div class="flex flex-col items-center">
-			<div v-if="activeCoin?.deposit_address?.address">
+			<div v-if="activeCoin">
 				<qr-code
 					text="16sAxN2jf2RutFdyyWMn4ktFn2PgfbszaR"
 					:size="200"
 					class="pl-5"
 				/>
+				{{ activeCoin.deposit_address.address }}
 			</div>
 			<div v-else>dosent exist</div>
 			<div class="pb-5">
