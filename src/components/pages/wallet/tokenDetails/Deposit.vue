@@ -69,7 +69,7 @@ export default {
 	},
 	methods: {
 		generateDepositAddress() {
-			const activeToken = activeCoin;
+			const activeToken = this.$store.state.wallet.activeCoin.currency;
 			console.log(activeToken);
 			this.$store.dispatch(
 				"wallet/generateDepositAddress",
