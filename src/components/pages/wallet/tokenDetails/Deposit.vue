@@ -22,13 +22,14 @@
 		<vs-divider />
 		<deposit-rules class="mb-5" :deposit-rules="depositRules" />
 		<div class="flex flex-col items-center">
-			<div>
+			<div v-if="activeCoin?.deposit_address?.address">
 				<qr-code
 					text="16sAxN2jf2RutFdyyWMn4ktFn2PgfbszaR"
 					:size="200"
 					class="pl-5"
 				/>
 			</div>
+			<div v-else>dosent exist</div>
 			<div class="pb-5">
 				<span class="font-bold text-xs text-gray-500">
 					{{ $t("pages.wallet.deposit.walletAddress") }}
