@@ -12,16 +12,16 @@
 
 			<template slot-scope="{ data }">
 				<vs-tr v-for="(tr, indextr) in data" :key="indextr">
-					<vs-td :data="data[indextr].date">
-						{{ data[indextr].date }}
+					<vs-td :data="data[indextr].created_at">
+						{{ data[indextr].created_at | jdate }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].name">
-						{{ data[indextr].name }}
+					<vs-td :data="data[indextr].market">
+						{{ data[indextr].market }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].type">
-						{{ data[indextr].type ? "برداشت/واریز" : "معامله" }}
+					<vs-td :data="data[indextr].side">
+						{{ checkType(data[indextr].side) }}
 					</vs-td>
 
 					<vs-td :data="data[indextr].changes">
@@ -43,6 +43,20 @@ export default {
 		transactions: {
 			type: Array,
 			default: () => [],
+		},
+	},
+	methods: {
+		checkType(type) {
+			switch (type) {
+				case "sell":
+					return this.$t("common.buy");
+					break;
+				case "buy":
+					return this.$t("common.buy");
+					break;
+				default:
+					break;
+			}
 		},
 	},
 };

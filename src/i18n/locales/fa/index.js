@@ -1,4 +1,8 @@
 export default {
+	common: {
+		buy: "خرید",
+		sell: "فروش",
+	},
 	nav: {
 		profile: "پرفایل کاربری",
 		wallet: "کیف پول",
