@@ -28,7 +28,7 @@
 					:size="200"
 					class="pl-5"
 				/>
-				{{ activeCoin.deposit_address.address }}
+				{{ activeCoin.deposit_address }}
 			</div>
 			<div v-else>dosent exist</div>
 			<div class="pb-5">
