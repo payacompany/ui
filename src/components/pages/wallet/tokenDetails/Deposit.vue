@@ -22,7 +22,7 @@
 		<vs-divider />
 		<deposit-rules class="mb-5" :deposit-rules="depositRules" />
 		<div class="flex flex-col items-center">
-			<div v-if="activeCoin.deposit_address.address != null">
+			<div>
 				<qr-code
 					text="16sAxN2jf2RutFdyyWMn4ktFn2PgfbszaR"
 					:size="200"
