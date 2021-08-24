@@ -10,30 +10,37 @@
 			:title="$t('pages.orders.openOrders.modal.orderDetails')"
 			:active.sync="showModal"
 		>
-			<div class="flex flex-wrap justify-between">
-				<p class="pb-8">
-					{{ $t("pages.orders.openOrders.modal.orderId") }}:
-					<span>
+			{{ orderDetails }}
+			<div class="flex flex-col justify-between">
+				<div class="flex justify-between">
+					<p class="pb-8">{{ $t("pages.orders.openOrders.modal.orderId") }}:</p>
+					<p>
 						{{ orderDetails.id }}
-					</span>
-				</p>
-				<p class="pb-8">
-					{{ $t("pages.orders.openOrders.modal.orderCreatedAt") }}: :
-					<span> {{ orderDetails.date }} </span>
-				</p>
-				<p class="pb-8">
-					{{ $t("pages.orders.openOrders.modal.unitPerPrice") }}:
-					<span> {{ orderDetails.priceInUnit }} تومان </span>
-				</p>
-				<p>
-					{{ $t("pages.orders.openOrders.modal.volume") }}:
-					<span> {{ orderDetails.volume }} </span>
-				</p>
-				<p>
-					{{ $t("pages.orders.openOrders.modal.filledVolume") }}:
-					<span> {{ orderDetails.volumeCompleted }} </span>
-				</p>
+					</p>
+				</div>
+				<div class="flex justify-between">
+					<p class="pb-8">
+						{{ $t("pages.orders.openOrders.modal.orderCreatedAt") }}: :
+					</p>
+					<p>{{ orderDetails.created_at | jdate }}</p>
+				</div>
+				<div class="flex justify-between">
+					<p class="pb-8">
+						{{ $t("pages.orders.openOrders.modal.unitPerPrice") }}:
+					</p>
+					<p>{{ orderDetails.price }}</p>
+				</div>
+				<div class="flex justify-between">
+					<p>{{ $t("pages.orders.openOrders.modal.volume") }}:</p>
+					<p>
+						{{ orderDetails.origin_volume }}
+					</p>
+				</div>
+				<div class="flex justify-between">
+					<p>{{ orderDetails.volumeCompleted }}</p>
 
+					<p>{{ $t("pages.orders.openOrders.modal.filledVolume") }}:</p>
+				</div>
 				<radial-progress-bar
 					:diameter="100"
 					:completed-steps="orderDetails.volumeCompleted"
