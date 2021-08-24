@@ -266,16 +266,16 @@ export default {
 							title: "تاریخ",
 						},
 						{
-							title: "نام",
+							title: "مارکت",
 						},
 						{
 							title: "نوع",
 						},
 						{
-							title: "تغییر",
+							title: "کارمزد",
 						},
 						{
-							title: "موجودی",
+							title: "قیمت",
 						},
 					],
 				},

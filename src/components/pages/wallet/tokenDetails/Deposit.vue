@@ -1,5 +1,6 @@
 <template>
 	<div>
+		{{ activeCoin }}
 		<div class="flex flex-row justify-start">
 			<div class="w-2/12">
 				<img :src="activeCoin.logo" alt="" />
@@ -21,7 +22,7 @@
 		<vs-divider />
 		<deposit-rules class="mb-5" :deposit-rules="depositRules" />
 		<div class="flex flex-col items-center">
-			<div>
+			<div v-if="activeCoin.deposit_address.address != null">
 				<qr-code
 					text="16sAxN2jf2RutFdyyWMn4ktFn2PgfbszaR"
 					:size="200"

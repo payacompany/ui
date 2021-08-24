@@ -24,12 +24,12 @@
 						{{ checkType(data[indextr].side) }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].changes">
-						{{ data[indextr].changes }}
+					<vs-td :data="data[indextr].fee">
+						{{ data[indextr].fee }}
 					</vs-td>
 
-					<vs-td :data="data[indextr].balance">
-						{{ data[indextr].balance }}
+					<vs-td :data="data[indextr].price">
+						{{ data[indextr].price }}
 					</vs-td>
 				</vs-tr>
 			</template>

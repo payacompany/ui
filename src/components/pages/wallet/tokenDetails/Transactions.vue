@@ -1,6 +1,5 @@
 <template>
 	<div>
-		{{ transactions }}
 		<transactions-table :transactions="transactions" />
 	</div>
 </template>
