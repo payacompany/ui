@@ -10,7 +10,6 @@
 			:title="$t('pages.orders.openOrders.modal.orderDetails')"
 			:active.sync="showModal"
 		>
-			{{ orderDetails }}
 			<div class="flex flex-col justify-between">
 				<div class="flex justify-between">
 					<p class="pb-8">{{ $t("pages.orders.openOrders.modal.orderId") }}:</p>
@@ -45,7 +44,9 @@
 				<div>
 					<radial-progress-bar
 						:diameter="100"
-						:completed-steps="orderDetails.remaining_volume"
+						:completed-steps="
+							orderDetails.origin_volume - orderDetails.remaining_volume
+						"
 						:total-steps="orderDetails.origin_volume"
 						start-color="#CD113B"
 						stop-color="#4AA96C"
