@@ -33,7 +33,9 @@ export default {
 	},
 	generateDepositAddress({ commit }, payload) {
 		console.log(payload);
-		const address = axios.get(`/peatio/account/deposit_address/${payload}`);
+		const address = axios.get(
+			`/peatio/account/deposit_address/${payload.currency}`
+		);
 		return address;
 	},
 	// async getBalances({ commit }) {
