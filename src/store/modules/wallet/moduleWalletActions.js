@@ -27,7 +27,7 @@ export default {
 		});
 	},
 	getTransactions({ commit }) {
-		axios.get("/peatio/account/transactions").then(res => {
+		axios.get("/peatio/market/trades").then(res => {
 			commit("SET_TRANSACTIONS", res.data);
 		});
 	},
