@@ -29,9 +29,9 @@
 					:size="200"
 					class="pl-5"
 				/>
-				<p v-else>
-					{{ activeCoin.deposit_address }}
-				</p>
+				<vs-button v-else @click.prevent="generateDepositAddress">
+					ایجاد آدرس
+				</vs-button>
 			</div>
 			<div v-else>dosent exist</div>
 			<div class="pb-5">
@@ -68,6 +68,14 @@ export default {
 		},
 	},
 	methods: {
+		generateDepositAddress() {
+			const activeToken = activeCoin;
+			console.log(activeToken);
+			this.$store.dispatch(
+				"wallet/generateDepositAddress",
+				activeToken.currency
+			);
+		},
 		setRules() {
 			const coin = this.$store.state.wallet.activeCoin;
 			this.depositRules = [

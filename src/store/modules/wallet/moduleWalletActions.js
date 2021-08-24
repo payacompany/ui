@@ -31,6 +31,10 @@ export default {
 			commit("SET_TRANSACTIONS", res.data);
 		});
 	},
+	generateDepositAddress({ commit }, payload) {
+		const address = axios.get(`/peatio/account/deposit_address/${payload}`);
+		return address;
+	},
 	// async getBalances({ commit }) {
 	// 	await axios.get("/peatio/account/balances").then(res => {
 	// 		commit("SET_WALLET_BALANCES", res.data);
