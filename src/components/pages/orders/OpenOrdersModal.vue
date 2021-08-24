@@ -37,18 +37,21 @@
 					</p>
 				</div>
 				<div class="flex justify-between">
-					<p>{{ orderDetails.volumeCompleted }}</p>
-
 					<p>{{ $t("pages.orders.openOrders.modal.filledVolume") }}:</p>
+					<p>
+						{{ orderDetails.origin_volume - orderDetails.remaining_volume }}
+					</p>
 				</div>
-				<radial-progress-bar
-					:diameter="100"
-					:completed-steps="orderDetails.volumeCompleted"
-					:total-steps="totalVol"
-					start-color="#CD113B"
-					stop-color="#4AA96C"
-					inner-stroke-color="#F1F6F9"
-				/>
+				<div>
+					<radial-progress-bar
+						:diameter="100"
+						:completed-steps="orderDetails.remaining_volume"
+						:total-steps="orderDetails.origin_volume"
+						start-color="#CD113B"
+						stop-color="#4AA96C"
+						inner-stroke-color="#F1F6F9"
+					/>
+				</div>
 			</div>
 		</vs-popup>
 	</div>
