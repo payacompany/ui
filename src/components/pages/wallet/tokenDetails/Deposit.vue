@@ -1,6 +1,5 @@
 <template>
 	<div>
-		{{ activeCoin }}
 		<div class="flex flex-row justify-start">
 			<div class="w-2/12">
 				<img :src="activeCoin.logo" alt="" />
@@ -33,7 +32,11 @@
 					ایجاد آدرس
 				</vs-button>
 			</div>
-			<div v-else>dosent exist</div>
+			<div v-else>
+				<vs-button @click.prevent="generateDepositAddress">
+					ایجاد آدرس
+				</vs-button>
+			</div>
 			<div class="pb-5">
 				<span class="font-bold text-xs text-gray-500">
 					{{ $t("pages.wallet.deposit.walletAddress") }}
