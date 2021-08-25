@@ -82,6 +82,7 @@ export default {
 		imageUpload(e) {
 			console.log("e", e);
 			this.residence.docs = event.target.files[0];
+			console.log(this.residence.docs);
 		},
 		identifyUser() {
 			const payload = new FormData();
