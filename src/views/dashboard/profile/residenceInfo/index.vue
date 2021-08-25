@@ -81,7 +81,7 @@ export default {
 	methods: {
 		imageUpload(e) {
 			console.log("e", e);
-			this.residence.docs = event.target.files[0];
+			this.residence.docs = e.target.files[0];
 			console.log(this.residence.docs);
 		},
 		identifyUser() {
