@@ -25,7 +25,7 @@
 			<div v-if="activeCoin.deposit_address">
 				<qr-code
 					v-if="activeCoin.deposit_address.address"
-					text="16sAxN2jf2RutFdyyWMn4ktFn2PgfbszaR"
+					:text="activeCoin.deposit_address.address"
 					:size="200"
 					class="pl-5"
 				/>

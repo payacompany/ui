@@ -6,7 +6,9 @@ export default {
 		};
 	},
 	mounted() {
-		this.socket = new WebSocket("ws://dax.autovm.ir/7071");
+		this.socket = new WebSocket(
+			"ws://dax.autovm.ir/api/v2/ranger/public/?stream=global.tickers"
+		);
 		this.socket.onopen = res => {
 			console.log("on open", res);
 		};

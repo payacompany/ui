@@ -32,7 +32,6 @@ export default {
 		});
 	},
 	generateDepositAddress({ commit }, payload) {
-		console.log(payload);
 		const address = axios.get(
 			`/peatio/account/deposit_address/${payload.currency}`
 		);
