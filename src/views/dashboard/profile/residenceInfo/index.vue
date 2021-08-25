@@ -54,7 +54,7 @@
 					/>
 				</div>
 			</div>
-			<div>
+			<div class="mt-2">
 				<input type="file" @change="imageUpload" />
 			</div>
 		</div>
@@ -74,14 +74,22 @@ export default {
 				country: null,
 				city: null,
 				address: null,
+				docs: undefined,
 			},
 		};
 	},
 	methods: {
 		imageUpload(e) {
 			console.log("e", e);
+			this.residence.docs = event.target.files[0];
 		},
 		identifyUser() {
+			const payload = new FormData();
+			payload.append("country", this.residence.country);
+			payload.append("city", this.residence.city);
+			payload.append("address", this.residence.address);
+			payload.append("postcode", this.residence.postcode);
+			payload.append("upload", this.residence.docs);
 			this.$store.dispatch("profile/identifyUser", this.residence);
 		},
 	},
