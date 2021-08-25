@@ -82,7 +82,7 @@ export default {
 		imageUpload(e) {
 			console.log("e", e);
 			this.residence.docs = e.target.files[0];
-			console.log(this.residence.docs);
+			console.log(this.residence.docs, "e");
 		},
 		identifyUser() {
 			const payload = new FormData();
