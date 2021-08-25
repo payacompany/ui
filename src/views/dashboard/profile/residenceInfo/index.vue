@@ -74,14 +74,15 @@ export default {
 				country: null,
 				city: null,
 				address: null,
-				docs: undefined,
+				docs: null,
 			},
 		};
 	},
 	methods: {
 		imageUpload(e) {
 			console.log("e", e);
-			this.residence.docs = e.target.files[0];
+			console.log(e.target.files);
+			this.residence.docs = e.target.files;
 			console.log(this.residence.docs, "e");
 		},
 		identifyUser() {
