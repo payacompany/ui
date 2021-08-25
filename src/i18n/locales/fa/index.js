@@ -91,7 +91,7 @@ export default {
 				},
 				residenceInfoVerification: {
 					title: "اطلاعات محل سکونت",
-					state: "استان",
+					country: "کشور",
 					city: "شهر",
 					address: "آدرس",
 					postalCode: "کد پستی",

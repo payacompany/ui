@@ -18,4 +18,7 @@ export default {
 			.post("/barong/identity/users/email/confirm_code", payload)
 			.then(res => {});
 	},
+	identifyUser({ commit }, payload) {
+		axios.post("/barong/resource/addresses", payload).then(res => {});
+	},
 };
