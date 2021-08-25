@@ -54,6 +54,9 @@
 					/>
 				</div>
 			</div>
+			<div>
+				<input type="file" @change="imageUpload" />
+			</div>
 		</div>
 		<div class="mt-5 px-8">
 			<vs-button class="w-full" @click.prevent="identifyUser">
@@ -71,12 +74,13 @@ export default {
 				country: null,
 				city: null,
 				address: null,
-				postalCode: null,
-				tel: null,
 			},
 		};
 	},
 	methods: {
+		imageUpload(e) {
+			console.log("e", e);
+		},
 		identifyUser() {
 			this.$store.dispatch("profile/identifyUser", this.residence);
 		},
