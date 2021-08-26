@@ -5,7 +5,7 @@
 		{{ generate2faData.data.url }}
 		<div class="px-8 mt-5">
 			<div class="flex flex-col md:flex-row justify-center md:flex-start">
-				<img :src="generate2faData.data.barcode" alt="" />
+				{{ generate2faData.data.barcode }}
 				<qr-code
 					:text="generate2faData.data.barcode"
 					:size="200"
@@ -50,31 +50,31 @@
 import VueQRCodeComponent from "vue-qrcode-component";
 export default {
 	components: {
-		"qr-code": VueQRCodeComponent,
+		"qr-code": VueQRCodeComponent
 	},
-	data() {
+	data () {
 		return {
 			generate2faData: {},
-			code: null,
+			code: null
 		};
 	},
-	mounted() {
+	mounted () {
 		this.generate2fa();
 	},
 	methods: {
-		generate2fa() {
+		generate2fa () {
 			console.log("ddd");
 			this.$store.dispatch("auth/generate2fa").then(res => {
 				console.log(res, "comp");
 				this.generate2faData = res.data;
 			});
 		},
-		otpConnect() {
+		otpConnect () {
 			this.$store.dispatch("auth/enable2fa", { code: this.code }).then(res => {
 				this.$router.push("/");
 			});
-		},
-	},
+		}
+	}
 };
 </script>
 
