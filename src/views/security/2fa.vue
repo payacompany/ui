@@ -66,7 +66,9 @@ export default {
 	},
 	methods: {
 		convertToBase64(barcode) {
+			console.log({ barcode });
 			return btoa(barcode);
+			console.log(btoa(barcode));
 		},
 		generate2fa() {
 			console.log("ddd");
