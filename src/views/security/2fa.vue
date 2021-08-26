@@ -10,7 +10,7 @@
 				</p>
 				{{ generate2faData.data.barcode }}
 				<qr-code
-					:text="generate2faData.data.barcode"
+					:text="convertToBase64(generate2faData.data.barcode)"
 					:size="200"
 					class="mx-auto"
 				/>
