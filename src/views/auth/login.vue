@@ -1,9 +1,9 @@
 <template>
 	<div class="w-11/12 lg:w-8/12 mx-auto center rounded-md p-8">
-		<card-with-header :hasHeader="false">
+		<card-with-header :has-header="false">
 			<template #body>
-				<div class="flex flex-row">
-					<div class="w-6/12">
+				<div class="flex flex-row justify-between items-center">
+					<div class="w-full md:w-6/12 mx-2">
 						<p class="text-center font-bold text-lg">
 							{{ $t("pages.auth.login.title") }}
 						</p>
@@ -71,8 +71,8 @@
 							{{ $t("pages.auth.login.forgetPass") }}
 						</p>
 					</div>
-					<div class="w-6/12">
-						<img src="../../assets/img/login.png" alt="" />
+					<div class="hidden md:flex w-5/12 mx-2">
+						<img src="../../assets/img/login.png" class="object-cover" alt="" />
 					</div>
 				</div>
 			</template>
