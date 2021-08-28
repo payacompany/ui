@@ -1,5 +1,5 @@
 <template>
-	<div class="w-11/12 lg:w-8/12 mx-auto center rounded-md p-8">
+	<div class="w-11/12 lg:w-6/12 mx-auto center rounded-md p-8">
 		<card-with-header :has-header="false">
 			<template #body>
 				<div class="flex flex-row justify-between items-center py-3">
