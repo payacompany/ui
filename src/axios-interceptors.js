@@ -4,7 +4,7 @@ import Vue from "vue";
 
 axios.interceptors.request.use(
 	config => {
-		const token = localStorage.getItem("token");
+		// const token = localStorage.getItem("token");
 		// if (token) {
 		// config.headers.common["X-API-TOKEN"] = token;
 		// }
@@ -33,13 +33,13 @@ axios.interceptors.response.use(
 
 				case 401:
 					Vue.$toast.error(`نشست شما منقضی شده`);
-					router.push("/auth/login");
+					// router.push("/auth/login");
 					break;
 				case 403:
-					router.replace({
-						path: "/auth/login",
-						query: { redirect: router.currentRoute.fullPath },
-					});
+					// router.replace({
+					// 	path: "/auth/login",
+					// 	query: { redirect: router.currentRoute.fullPath },
+					// });
 					break;
 				case 404:
 					Vue.$toast.error(`${error.response.data.message}`);
@@ -48,14 +48,14 @@ axios.interceptors.response.use(
 					Vue.$toast.error(`${error.response.data.message}`);
 					break;
 				case 502:
-					setTimeout(() => {
-						router.replace({
-							path: "/login",
-							query: {
-								redirect: router.currentRoute.fullPath,
-							},
-						});
-					}, 1000);
+				// setTimeout(() => {
+				// 	router.replace({
+				// 		path: "/login",
+				// 		query: {
+				// 			redirect: router.currentRoute.fullPath,
+				// 		},
+				// 	});
+				// }, 1000);
 			}
 			return Promise.reject(error.response);
 		}
