@@ -1,5 +1,5 @@
 <template>
-	<div class="w-8/12 mx-auto shadow-lg rounded-md">
+	<div class="w-full md:w-full lg:w-10/12 mx-auto shadow-lg">
 		<vs-tabs alignment="left">
 			<vs-tab :label="$t('pages.orders.allOrders.title')" @click="getAllOrders">
 				<all-orders />

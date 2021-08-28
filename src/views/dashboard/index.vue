@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="container mx-auto md:mt-12 hidden md:block">
-			<div class="md:w-8/12 lg:w-10/12 mx-auto">
+			<div class="w-full md:w-full lg:w-10/12 mx-auto">
 				<profile />
 				<api-keys />
 				<account-activity />
@@ -21,8 +21,6 @@ export default {
 	components: { Profile, ApiKeys, accountActivity, ProfileXs },
 	mounted() {
 		const cookie = this.$cookies.get("_barong_session", { httpOnly: true });
-		this.$cookies.set("_barong_session", cookie, { httpOnly: true });
-		axios.defaults.withCredentials = true;
 		// axios.defaults.headers.common["Cookie"] = `_barong_session=${cookie}`;
 		this.$store.commit("auth/SET_COOKIE", cookie);
 		this.loadUserInfo();
