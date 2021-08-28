@@ -1,75 +1,80 @@
 <template>
-	<div class="w-11/12 lg:w-4/12 mx-auto center rounded-md p-8">
-		<card-with-header>
-			<template #header>
-				<p class="text-center font-bold text-lg">
-					{{ $t("pages.auth.login.title") }}
-				</p>
-			</template>
+	<div class="w-11/12 lg:w-8/12 mx-auto center rounded-md p-8">
+		<card-with-header :hasHeader="false">
 			<template #body>
-				<ValidationObserver
-					v-slot="{ invalid }"
-					tag="form"
-					@submit.prevent="onSubmit"
-				>
-					<ValidationProvider
-						name="E-mail"
-						rules="required|email"
-						v-slot="{ errors }"
-					>
-						<vs-input
-							v-model="user.username"
-							class="min-w-full"
-							:label="$t('pages.auth.login.userName')"
-							:placeholder="$t('pages.auth.login.userNamePlaceHolder')"
-						/>
-						<span class="text-danger text-xs">{{ errors[0] }}</span>
-					</ValidationProvider>
-					<ValidationProvider
-						name="password"
-						rules="required"
-						v-slot="{ errors }"
-					>
-						<vs-input
-							v-model="user.password"
-							class="min-w-full"
-							type="password"
-							:label="$t('pages.auth.login.password')"
-							:placeholder="$t('pages.auth.login.passwordPlaceHodler')"
-						/>
-						<span class="text-danger text-xs">{{ errors[0] }}</span>
-					</ValidationProvider>
-					<div class="flex items-center justify-start mt-3">
-						<vs-checkbox v-model="user.rememberMe" />
-						<p class="text-sm">
-							{{ $t("pages.auth.login.rememberMe") }}
+				<div class="flex flex-row">
+					<div class="w-6/12">
+						<p class="text-center font-bold text-lg">
+							{{ $t("pages.auth.login.title") }}
+						</p>
+						<ValidationObserver
+							v-slot="{ invalid }"
+							tag="form"
+							@submit.prevent="onSubmit"
+						>
+							<ValidationProvider
+								name="E-mail"
+								rules="required|email"
+								v-slot="{ errors }"
+							>
+								<vs-input
+									v-model="user.username"
+									class="min-w-full"
+									:label="$t('pages.auth.login.userName')"
+									:placeholder="$t('pages.auth.login.userNamePlaceHolder')"
+								/>
+								<span class="text-danger text-xs">{{ errors[0] }}</span>
+							</ValidationProvider>
+							<ValidationProvider
+								name="password"
+								rules="required"
+								v-slot="{ errors }"
+							>
+								<vs-input
+									v-model="user.password"
+									class="min-w-full"
+									type="password"
+									:label="$t('pages.auth.login.password')"
+									:placeholder="$t('pages.auth.login.passwordPlaceHodler')"
+								/>
+								<span class="text-danger text-xs">{{ errors[0] }}</span>
+							</ValidationProvider>
+							<div class="flex items-center justify-start mt-3">
+								<vs-checkbox v-model="user.rememberMe" />
+								<p class="text-sm">
+									{{ $t("pages.auth.login.rememberMe") }}
+								</p>
+							</div>
+							<div>
+								<vs-button
+									class="w-full mt-5"
+									type="gradient"
+									:disabled="invalid"
+									@click.prevent="loginAccount"
+								>
+									{{ $t("pages.auth.login.submit") }}
+								</vs-button>
+							</div>
+						</ValidationObserver>
+						<vs-divider class="pt-1" />
+						<p
+							@click="$router.push('/auth/forget-password')"
+							class="
+								text-sm text-gray-500 text-center
+								cursor-pointer
+								font-bold
+								hover:text-blue-700
+								transition-300
+								ease-in-out
+							"
+						>
+							{{ $t("pages.auth.login.forgetPass") }}
 						</p>
 					</div>
-					<div>
-						<vs-button
-							class="w-full mt-5"
-							type="gradient"
-							:disabled="invalid"
-							@click.prevent="loginAccount"
-						>
-							{{ $t("pages.auth.login.submit") }}
-						</vs-button>
+					<div class="w-6/12">
+						<img src="../../assets/img/login.png" alt="" />
 					</div>
-				</ValidationObserver>
-				<vs-divider class="pt-1" />
-				<p
-					@click="$router.push('/auth/forget-password')"
-					class="
-						text-sm text-gray-500 text-center
-						cursor-pointer
-						font-bold
-						hover:text-blue-700
-						transition-300
-						ease-in-out
-					"
-				>
-					{{ $t("pages.auth.login.forgetPass") }}
-				</p>
+				</div>
 			</template>
 		</card-with-header>
 	</div>
