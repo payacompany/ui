@@ -11,7 +11,7 @@
 import OrdersXs from "../../components/pages/orders/xs/index.vue";
 import Orders from "../../components/pages/orders/index.vue";
 export default {
-	components: { Orders, OrdersXs }
+	components: { Orders, OrdersXs },
 };
 </script>
 

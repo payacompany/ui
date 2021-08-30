@@ -1,5 +1,5 @@
 <template>
-	<div class="block md:hidden overflow-scroll">
+	<div class="block md:hidden overflow-hidden">
 		<my-account />
 		<profile-operations />
 		<div class="flex justify-between items-center px-3">
@@ -18,7 +18,7 @@ import InputWithCopy from "../../../../global/inputs/InputWithCopy.vue";
 import myAccount from "./myAccount.vue";
 import ProfileOperations from "./profileOperations.vue";
 export default {
-	components: { myAccount, ProfileOperations, InputWithCopy, LanguageSwitcher }
+	components: { myAccount, ProfileOperations, InputWithCopy, LanguageSwitcher },
 };
 </script>
 
