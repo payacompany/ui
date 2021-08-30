@@ -11,7 +11,9 @@
 			"
 		>
 			<!-- <night-mode /> -->
-			<side-bar />
+			<span class="material-icons cursor-pointer" @click="toggleSidebar">
+				menu
+			</span>
 			<language-switcher />
 		</div>
 	</div>
@@ -20,9 +22,13 @@
 <script>
 import LanguageSwitcher from "./LanguageSwitcher.vue";
 import NightMode from "./NightMode.vue";
-import SideBar from "./SideBar.vue";
 export default {
-	components: { NightMode, SideBar, LanguageSwitcher },
+	components: { NightMode, LanguageSwitcher },
+	methods: {
+		toggleSidebar() {
+			this.$store.commit("TOGGLE_SIDEBAR");
+		},
+	},
 };
 </script>
 
