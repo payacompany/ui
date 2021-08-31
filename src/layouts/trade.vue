@@ -29,7 +29,7 @@ export default {
 @media screen and (min-width: 1200px) {
 	.trade {
 		height: 100vh;
-		overflow: hidden;
+		overflow: hidden !important;
 	}
 }
 </style>

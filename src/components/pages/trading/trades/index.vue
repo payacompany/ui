@@ -1,5 +1,5 @@
 <template>
-	<div class="shadow-md bg-white rounded-md mt-1 py-1 min-h-screen">
+	<div class="shadow-md bg-white rounded-md mt-1 py-1">
 		<div class="px-5 pt-2">
 			<p class="font-bold text-sm">
 				{{ $t("pages.trade.trades.title") }}

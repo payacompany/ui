@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="trade">
 		<div
 			class="hidden md:flex flex-col-reverse lg:flex-row justify-between mx-1"
 		>
@@ -60,6 +60,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.trade {
+	overflow: hidden;
+	height: 100vh;
+}
 .trading-view {
 	height: 60vh;
 }
