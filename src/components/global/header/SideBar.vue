@@ -1,78 +1,73 @@
-<template>
-	<transition name="show">
-		<div class="sidebar" v-if="isOpen">
-			<transition-group appear name="fade">
-				<a
-					href="#"
-					class="sidebar-element"
-					v-for="(item, index) in navElements"
-					:key="item"
-					:style="{ '--index': index }"
+<template lang="html">
+	<div id="parentx">
+		<span class="material-icons cursor-pointer" @click="active = !active">
+			menu
+		</span>
+		<vs-sidebar
+			v-model="active"
+			parent="body"
+			default-index="1"
+			color="primary"
+			class="text-center"
+			:position-right="isRtl"
+			spacer
+		>
+			<div slot="header" class="header-sidebar">
+				<h4>جایگاه لوگو</h4>
+			</div>
+
+			<vs-sidebar-item index="1" icon="account_circle" to="/">
+				{{ $t("nav.profile") }}
+			</vs-sidebar-item>
+			<vs-divider />
+			<vs-sidebar-item index="2" icon="stacked_bar_chart" to="/trading">
+				{{ $t("nav.trade") }}
+			</vs-sidebar-item>
+
+			<vs-sidebar-item index="3" icon="account_balance_wallet" to="/wallet">
+				{{ $t("nav.wallet") }}
+			</vs-sidebar-item>
+			<vs-sidebar-item index="4" icon="receipt_long" to="/orders">
+				{{ $t("nav.orders") }}
+			</vs-sidebar-item>
+			<vs-sidebar-item index="5" icon="history" to="/history">
+				{{ $t("nav.history") }}
+			</vs-sidebar-item>
+
+			<div slot="footer" class="text-center w-full">
+				<vs-button
+					icon="logout"
+					color="danger"
+					class="text-center w-100 flex justify-center"
+					type="flat"
 				>
-					<fa-icon class="icon" :icon="['fas', item]" size="2x" />
-				</a>
-			</transition-group>
-		</div>
-	</transition>
+					خروج از حساب کاربری
+				</vs-button>
+			</div>
+		</vs-sidebar>
+	</div>
 </template>
 
 <script>
+import i18n from "@/i18n/index.js";
+
 export default {
-	data: () => {
-		return {
-			navElements: ["user", "cogs", "th", "share-alt", "star", "comment"],
-		};
-	},
+	data: () => ({
+		active: false,
+	}),
+	mounted() {},
 	computed: {
-		isOpen() {
-			return this.$store.state.isOpen;
+		isRtl() {
+			return this.$i18n.locale === "Fa" ? false : true;
 		},
 	},
 };
 </script>
 
 <style lang="scss" scoped>
-.sidebar {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	position: absolute;
-	flex-direction: column;
-	width: 60px;
-	height: calc(100vh - 50px);
-	padding-top: 48px;
-	background-color: rgba($color: #242424, $alpha: 0.6);
-	.sidebar-element {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 60px;
-		height: 60px;
-		margin-bottom: 8px;
-		cursor: pointer;
-		color: #fefefe;
-		background-color: #242424;
-	}
-}
-.show {
-	&-enter,
-	&-leave-to {
-		opacity: 0;
-		transform: translateX(-60px);
-	}
-	&-enter-active,
-	&-leave-active {
-		transition: all 500ms;
-	}
-}
-.fade {
-	&-enter {
-		opacity: 0;
-		transform: translateX(-60px);
-	}
-	&-enter-active {
-		transition: all 500ms ease-in-out;
-		transition-delay: calc(50ms * var(--index));
+::v-deep {
+	.vs-button-danger.vs-button-flat {
+		width: 100%;
 	}
 }
 </style>
