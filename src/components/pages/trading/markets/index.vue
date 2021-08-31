@@ -21,11 +21,11 @@ import MarketList from "./MarketList.vue";
 
 export default {
 	components: { MarketList },
-	data () {
+	data() {
 		return {
-			search: ""
+			search: "",
 		};
-	}
+	},
 };
 </script>
 
@@ -34,6 +34,6 @@ export default {
 	margin: 10px 0;
 }
 .market-list {
-	height: 28vh;
+	height: 29vh;
 }
 </style>
